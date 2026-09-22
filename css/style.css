@@ -2329,3 +2329,981 @@ a{
   .pvm-mission-icon{width:40px;height:40px;font-size:1.05rem;}
   .pvm-value-card{padding:1.45rem 1.25rem;}
 }
+
+
+
+
+
+
+
+/* Governance Quality and Standards */
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   GOVERNANCE, QUALITY & STANDARDS — PAGE-SPECIFIC STYLESHEET
+
+   • Every custom class uses the "gqs-" prefix.
+   • Depends on the shared site stylesheet (style.css) for CSS
+     variables, base typography, buttons, header/topbar and
+     footer components. No global styles are modified.
+   • Mobile-first. Hardened for 430px and below.
+
+   SECTIONS
+   01. PAGE SCOPE & ACTIVE NAV STATE
+   02. HERO
+   03. GOVERNANCE PRINCIPLES
+   04. PROGRAMME QUALITY CYCLE
+   05. ASSESSMENT INTEGRITY
+   06. RECOGNITION AND ACCREDITATION STATEMENT
+   07. COMPLAINTS AND APPEALS
+   08. SCROLL REVEAL
+   09. REDUCED MOTION
+   10. SMALL SCREEN HARDENING (≤575px / ≤430px)
+========================================================= */
+
+
+/* =========================
+   01. PAGE SCOPE & ACTIVE NAV STATE
+========================= */
+.gqs-page .navbar-nav .nav-link.active{
+  color:var(--primary-dark);
+  background:var(--primary-tint);
+}
+
+
+/* =========================
+   02. HERO
+========================= */
+.gqs-hero{
+  position:relative;
+  background:var(--dark-bg);
+  color:var(--secondary-color);
+  overflow:hidden;
+  padding:88px 0 96px;
+  text-align:center;
+}
+.gqs-hero::before{
+  content:"";
+  position:absolute;
+  top:-260px;
+  left:50%;
+  transform:translateX(-50%);
+  width:760px;
+  height:760px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(255,0,0,.28), transparent 65%);
+}
+.gqs-hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+  background-size:44px 44px;
+  -webkit-mask-image:radial-gradient(ellipse at 50% 18%, rgba(0,0,0,.85), transparent 72%);
+  mask-image:radial-gradient(ellipse at 50% 18%, rgba(0,0,0,.85), transparent 72%);
+}
+.gqs-hero .container-xxl{
+  position:relative;
+  z-index:2;
+}
+
+/* Breadcrumb */
+.gqs-breadcrumb ol{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:.35rem .55rem;
+  list-style:none;
+  margin:0 0 26px;
+  padding:0;
+  font-size:.82rem;
+  font-weight:600;
+  color:#8d97a5;
+}
+.gqs-breadcrumb li{
+  display:flex;
+  align-items:center;
+  gap:.55rem;
+}
+.gqs-breadcrumb li + li::before{
+  content:"/";
+  color:rgba(255,255,255,.25);
+}
+.gqs-breadcrumb a{
+  color:#c3cad4;
+  text-decoration:none;
+}
+.gqs-breadcrumb a:hover{
+  color:var(--secondary-color);
+  text-decoration:underline;
+}
+.gqs-breadcrumb [aria-current]{
+  color:var(--secondary-color);
+}
+
+/* Hero copy */
+.gqs-hero-title{
+  color:var(--secondary-color);
+  font-size:clamp(2rem, 1.35rem + 3vw, 3.4rem);
+  line-height:1.12;
+  letter-spacing:-.02em;
+  max-width:880px;
+  margin:14px auto 16px;
+}
+.gqs-hero-lead{
+  color:#c3cad4;
+  font-size:1.03rem;
+  max-width:680px;
+  margin:0 auto 30px;
+}
+
+/* In-page section navigation pills */
+.gqs-hero-nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:.6rem;
+  margin:0;
+}
+.gqs-nav-pill{
+  display:inline-flex;
+  align-items:center;
+  gap:.55rem;
+  background:var(--dark-card);
+  border:1px solid var(--dark-border);
+  border-radius:999px;
+  padding:.62rem 1.15rem;
+  font-family:var(--font-head);
+  font-weight:700;
+  font-size:.85rem;
+  color:#c3cad4;
+  text-decoration:none;
+  transition:all .25s ease;
+}
+.gqs-nav-pill .bi{
+  color:var(--primary-soft);
+  font-size:1rem;
+  transition:color .25s ease;
+}
+.gqs-nav-pill:hover{
+  color:var(--secondary-color);
+  border-color:rgba(255,0,0,.5);
+  background:rgba(255,0,0,.08);
+  transform:translateY(-2px);
+}
+.gqs-nav-pill:hover .bi{color:var(--primary-color);}
+
+/* Hero entrance animation (pure CSS, no JS required) */
+@keyframes gqs-fade-up{
+  from{opacity:0;transform:translateY(22px);}
+  to{opacity:1;transform:none;}
+}
+.gqs-hero-anim{
+  animation:gqs-fade-up .8s cubic-bezier(.22,.61,.36,1) both;
+}
+.gqs-hero-anim-2{animation-delay:.15s;}
+.gqs-hero-anim-3{animation-delay:.3s;}
+
+
+/* =========================
+   03. GOVERNANCE PRINCIPLES
+========================= */
+.gqs-principles{background:var(--secondary-color);}
+
+.gqs-principle-card{
+  position:relative;
+  background:var(--secondary-color);
+  border:1px solid var(--line);
+  border-radius:var(--radius-lg);
+  padding:1.8rem 1.5rem;
+  height:100%;
+  overflow:hidden;
+  transition:all .3s ease;
+}
+.gqs-principle-card::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:0;
+  height:4px;
+  background:linear-gradient(90deg,var(--primary-color),var(--primary-darker));
+  transition:width .35s ease;
+}
+.gqs-principle-card:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow-md);
+  border-color:transparent;
+}
+.gqs-principle-card:hover::after{width:100%;}
+
+.gqs-principle-icon{
+  width:56px;
+  height:56px;
+  border-radius:16px;
+  background:var(--primary-tint);
+  color:var(--primary-dark);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.5rem;
+  margin-bottom:1.05rem;
+  transition:all .3s ease;
+}
+.gqs-principle-card:hover .gqs-principle-icon{
+  background:linear-gradient(140deg,var(--primary-color),var(--primary-darker));
+  color:var(--secondary-color);
+  box-shadow:0 12px 24px rgba(255,0,0,.3);
+}
+.gqs-principle-card p{
+  margin:0;
+  font-size:.95rem;
+  line-height:1.7;
+}
+
+
+/* =========================
+   04. PROGRAMME QUALITY CYCLE
+========================= */
+.gqs-cycle{background:var(--light-bg);}
+
+.gqs-step-card{
+  background:var(--secondary-color);
+  border:1px solid var(--line);
+  border-radius:var(--radius-lg);
+  padding:1.6rem 1.4rem 1.5rem;
+  height:100%;
+  transition:all .3s ease;
+}
+.gqs-step-card:hover{
+  transform:translateY(-5px);
+  box-shadow:var(--shadow-md);
+  border-color:var(--primary-tint-2);
+}
+.gqs-step-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:14px;
+}
+.gqs-step-num{
+  width:48px;
+  height:48px;
+  border-radius:14px;
+  background:linear-gradient(140deg,var(--primary-color),var(--primary-darker));
+  color:var(--secondary-color);
+  font-family:var(--font-head);
+  font-weight:800;
+  font-size:1rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 10px 20px rgba(255,0,0,.25);
+}
+.gqs-step-icon{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:var(--primary-tint);
+  color:var(--primary-dark);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.2rem;
+}
+.gqs-step-title{
+  font-size:1.05rem;
+  margin:0 0 .5rem;
+}
+.gqs-step-card p{
+  margin:0;
+  font-size:.95rem;
+  line-height:1.65;
+  color:var(--body-text);
+}
+
+
+/* =========================
+   05. ASSESSMENT INTEGRITY
+========================= */
+.gqs-integrity{background:var(--secondary-color);}
+.gqs-integrity .section-title{margin:0 0 14px;}
+
+.gqs-intro{
+  margin:0;
+  font-size:1.02rem;
+}
+
+/* Highlighter effect (styling only — text unchanged) */
+.gqs-hl{
+  background:linear-gradient(transparent 62%, var(--primary-tint-2) 62%);
+  padding:0 .05em;
+  -webkit-box-decoration-break:clone;
+  box-decoration-break:clone;
+}
+
+/* Methods panel */
+.gqs-methods-panel{
+  display:flex;
+  align-items:center;
+  background:var(--light-bg);
+  border:1px solid var(--line);
+  border-radius:var(--radius-lg);
+  padding:26px;
+}
+.gqs-methods{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-wrap:wrap;
+  gap:.6rem;
+}
+.gqs-method{
+  display:inline-flex;
+  align-items:center;
+  gap:.45rem;
+  background:var(--secondary-color);
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:.55rem 1rem;
+  font-family:var(--font-head);
+  font-weight:700;
+  font-size:.87rem;
+  color:var(--ink);
+  transition:all .25s ease;
+}
+.gqs-method .bi{
+  color:var(--primary-dark);
+  font-size:1rem;
+  transition:color .25s ease;
+}
+.gqs-method:hover{
+  border-color:var(--primary-tint-2);
+  box-shadow:var(--shadow-sm);
+  transform:translateY(-2px);
+}
+.gqs-method:hover .bi{color:var(--primary-color);}
+
+/* Verbatim controls statement strip */
+.gqs-controls-strip{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  background:var(--primary-tint);
+  border:1px solid var(--primary-tint-2);
+  border-radius:var(--radius-md);
+  padding:1.2rem 1.4rem;
+}
+.gqs-controls-icon{
+  flex:0 0 auto;
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  background:var(--secondary-color);
+  color:var(--primary-dark);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.3rem;
+  box-shadow:var(--shadow-sm);
+}
+.gqs-controls-strip p{
+  margin:0;
+  font-weight:600;
+  color:var(--ink);
+  font-size:.98rem;
+  line-height:1.65;
+}
+
+
+/* =========================
+   06. RECOGNITION AND ACCREDITATION STATEMENT
+========================= */
+.gqs-recognition{
+  position:relative;
+  background:var(--dark-bg);
+  color:var(--secondary-color);
+  overflow:hidden;
+}
+.gqs-recognition::before{
+  content:"";
+  position:absolute;
+  right:-180px;
+  top:-160px;
+  width:520px;
+  height:520px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(255,0,0,.2), transparent 65%);
+}
+.gqs-recognition .container-xxl{
+  position:relative;
+  z-index:2;
+}
+.gqs-recognition .section-title{color:var(--secondary-color);}
+
+.gqs-recognition-icon{
+  width:64px;
+  height:64px;
+  border-radius:50%;
+  background:linear-gradient(140deg,var(--primary-color),var(--primary-darker));
+  color:var(--secondary-color);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.6rem;
+  box-shadow:var(--shadow-red);
+  margin-bottom:16px;
+}
+.gqs-recognition p{color:#c3cad4;}
+
+/* Red emphasis on the compliance phrase (styling only) */
+.gqs-hl-dark{
+  color:var(--primary-soft);
+  background:rgba(255,0,0,.14);
+  padding:.04em .18em;
+  border-radius:.35em;
+  -webkit-box-decoration-break:clone;
+  box-decoration-break:clone;
+}
+
+/* Disclaimer panel */
+.gqs-recognition-note{
+  display:flex;
+  align-items:flex-start;
+  gap:.9rem;
+  background:var(--dark-card);
+  border:1px solid var(--dark-border);
+  border-left:3px solid var(--primary-color);
+  border-radius:var(--radius-md);
+  padding:1.15rem 1.25rem;
+  margin-top:1.25rem;
+}
+.gqs-recognition-note > .bi{
+  flex:0 0 auto;
+  color:var(--primary-soft);
+  font-size:1.2rem;
+  margin-top:.15rem;
+}
+.gqs-recognition-note p{
+  margin:0;
+  font-weight:600;
+  color:var(--secondary-color);
+  font-size:.97rem;
+  line-height:1.65;
+}
+
+
+/* =========================
+   07. COMPLAINTS AND APPEALS
+========================= */
+.gqs-complaints{background:var(--secondary-color);}
+.gqs-complaints-wrap{
+  max-width:760px;
+  margin:0 auto;
+  text-align:center;
+}
+.gqs-complaints-wrap p{
+  margin:0 0 26px;
+}
+
+
+/* =========================
+   08. SCROLL REVEAL
+   (page-specific hook — never conflicts with the
+   .pvm-reveal / .about-cpa-reveal observers on other pages)
+========================= */
+.gqs-js .gqs-reveal{
+  opacity:0;
+  transform:translateY(26px);
+  transition:opacity .7s cubic-bezier(.22,.61,.36,1),
+             transform .7s cubic-bezier(.22,.61,.36,1);
+  will-change:opacity, transform;
+}
+.gqs-js .gqs-reveal.is-visible{
+  opacity:1;
+  transform:none;
+}
+.gqs-js .gqs-reveal.gqs-d1{transition-delay:.1s;}
+.gqs-js .gqs-reveal.gqs-d2{transition-delay:.2s;}
+
+
+/* =========================
+   09. REDUCED MOTION
+========================= */
+@media (prefers-reduced-motion: reduce){
+  .gqs-hero-anim{animation:none !important;}
+  .gqs-js .gqs-reveal{opacity:1;transform:none;transition:none;}
+  .gqs-principle-card,
+  .gqs-principle-icon,
+  .gqs-step-card,
+  .gqs-method,
+  .gqs-nav-pill{transition:none;}
+}
+
+
+/* =========================
+   10. SMALL SCREEN HARDENING
+========================= */
+@media (max-width:575.98px){
+  .gqs-hero{padding:64px 0 76px;}
+  .gqs-methods-panel{padding:20px;}
+  .gqs-controls-strip{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:.85rem;
+    padding:1.15rem 1.15rem;
+  }
+  .gqs-recognition-note{
+    flex-direction:column;
+    gap:.6rem;
+    padding:1.1rem 1.15rem;
+  }
+}
+
+@media (max-width:430px){
+  .gqs-hero{padding:56px 0 68px;}
+  .gqs-breadcrumb{margin-bottom:20px;}
+  .gqs-hero-lead{font-size:.96rem;margin-bottom:26px;}
+  .gqs-nav-pill{font-size:.8rem;padding:.55rem .95rem;gap:.45rem;}
+  .gqs-principle-card{padding:1.5rem 1.3rem;}
+  .gqs-step-num{width:44px;height:44px;font-size:.95rem;}
+  .gqs-step-icon{width:38px;height:38px;font-size:1.05rem;}
+  .gqs-step-card{padding:1.4rem 1.2rem;}
+  .gqs-methods-panel{padding:16px;}
+  .gqs-method{font-size:.82rem;padding:.5rem .85rem;gap:.4rem;}
+  .gqs-controls-icon{width:42px;height:42px;font-size:1.1rem;}
+  .gqs-recognition-icon{width:56px;height:56px;font-size:1.4rem;}
+}
+
+
+
+
+
+
+
+
+/* Why choose us  */
+
+
+
+
+
+
+
+
+/* =========================================================
+   WHY CHOOSE CPA INDONESIA — PAGE-SPECIFIC STYLESHEET
+
+   • Every custom class uses the "wcc-" prefix.
+   • Depends on the shared site stylesheet (style.css) for CSS
+     variables, base typography, buttons, header/topbar and
+     footer components. No global styles are modified.
+   • Mobile-first. Hardened for 430px and below.
+
+   SECTIONS
+   01. PAGE SCOPE & ACTIVE NAV STATE
+   02. HERO
+   03. WHAT YOU CAN EXPECT (ledger)
+   04. THE RIGHT PROGRAMME / RIGHT QUESTION
+   05. SCROLL REVEAL
+   06. REDUCED MOTION
+   07. SMALL SCREEN HARDENING (≤575px / ≤430px)
+========================================================= */
+
+
+/* =========================
+   01. PAGE SCOPE & ACTIVE NAV STATE
+========================= */
+.wcc-page .navbar-nav .nav-link.active{
+  color:var(--primary-dark);
+  background:var(--primary-tint);
+}
+
+
+/* =========================
+   02. HERO
+========================= */
+.wcc-hero{
+  position:relative;
+  background:var(--dark-bg);
+  color:var(--secondary-color);
+  overflow:hidden;
+  padding:88px 0 96px;
+  text-align:center;
+}
+.wcc-hero::before{
+  content:"";
+  position:absolute;
+  top:-260px;
+  left:50%;
+  transform:translateX(-50%);
+  width:760px;
+  height:760px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(255,0,0,.28), transparent 65%);
+}
+.wcc-hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+  background-size:44px 44px;
+  -webkit-mask-image:radial-gradient(ellipse at 50% 18%, rgba(0,0,0,.85), transparent 72%);
+  mask-image:radial-gradient(ellipse at 50% 18%, rgba(0,0,0,.85), transparent 72%);
+}
+.wcc-hero .container-xxl{
+  position:relative;
+  z-index:2;
+}
+
+/* Breadcrumb */
+.wcc-breadcrumb ol{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:.35rem .55rem;
+  list-style:none;
+  margin:0 0 26px;
+  padding:0;
+  font-size:.82rem;
+  font-weight:600;
+  color:#8d97a5;
+}
+.wcc-breadcrumb li{
+  display:flex;
+  align-items:center;
+  gap:.55rem;
+}
+.wcc-breadcrumb li + li::before{
+  content:"/";
+  color:rgba(255,255,255,.25);
+}
+.wcc-breadcrumb a{
+  color:#c3cad4;
+  text-decoration:none;
+}
+.wcc-breadcrumb a:hover{
+  color:var(--secondary-color);
+  text-decoration:underline;
+}
+.wcc-breadcrumb [aria-current]{
+  color:var(--secondary-color);
+}
+
+/* Hero copy */
+.wcc-hero-title{
+  color:var(--secondary-color);
+  font-size:clamp(2rem, 1.35rem + 3vw, 3.4rem);
+  line-height:1.12;
+  letter-spacing:-.02em;
+  max-width:880px;
+  margin:14px auto 16px;
+}
+.wcc-hero-lead{
+  color:#c3cad4;
+  font-size:1.03rem;
+  max-width:640px;
+  margin:0 auto 30px;
+}
+
+/* Hero entrance animation (pure CSS, no JS required) */
+@keyframes wcc-fade-up{
+  from{opacity:0;transform:translateY(22px);}
+  to{opacity:1;transform:none;}
+}
+.wcc-hero-anim{
+  animation:wcc-fade-up .8s cubic-bezier(.22,.61,.36,1) both;
+}
+.wcc-hero-anim-2{animation-delay:.15s;}
+
+
+/* =========================
+   03. WHAT YOU CAN EXPECT (ledger)
+========================= */
+.wcc-expect{background:var(--secondary-color);}
+.wcc-expect .section-head{margin-bottom:40px;}
+
+/* Column labels strip — mirrors the document table headers */
+.wcc-expect-head{
+  padding:0 1.5rem;
+  margin-bottom:12px;
+}
+.wcc-expect-head-label{
+  display:inline-block;
+  font-family:var(--font-head);
+  font-size:.72rem;
+  font-weight:700;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+
+/* Ledger rows */
+.wcc-expect-list{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  max-width:960px;
+  margin:0 auto;
+}
+.wcc-expect-row{
+  background:var(--secondary-color);
+  border:1px solid var(--line);
+  border-radius:var(--radius-md);
+  overflow:hidden;
+  transition:all .3s ease;
+}
+.wcc-expect-row:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--shadow-md);
+  border-color:transparent;
+}
+
+/* Left panel — the expectation */
+.wcc-expect-main{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  background:var(--light-bg);
+  padding:1.3rem 1.5rem;
+  height:100%;
+}
+.wcc-expect-icon{
+  flex:0 0 auto;
+  width:52px;
+  height:52px;
+  border-radius:14px;
+  background:var(--primary-tint);
+  color:var(--primary-dark);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.4rem;
+  transition:all .3s ease;
+}
+.wcc-expect-row:hover .wcc-expect-icon{
+  background:linear-gradient(140deg,var(--primary-color),var(--primary-darker));
+  color:var(--secondary-color);
+  box-shadow:0 12px 24px rgba(255,0,0,.3);
+}
+.wcc-expect-num{
+  display:block;
+  font-family:var(--font-head);
+  font-size:.7rem;
+  font-weight:800;
+  letter-spacing:.14em;
+  color:var(--primary-dark);
+  margin-bottom:2px;
+}
+.wcc-expect-title{
+  font-size:1.05rem;
+  margin:0;
+  line-height:1.3;
+}
+
+/* Right panel — the value */
+.wcc-expect-value{
+  display:flex;
+  align-items:center;
+  padding:1.3rem 1.5rem;
+  height:100%;
+}
+.wcc-expect-value p{
+  margin:0;
+  font-size:.97rem;
+  line-height:1.7;
+}
+
+/* Divider between panels and column alignment (md and up) */
+@media (min-width:768px){
+  .wcc-expect-value{
+    border-left:1px solid var(--line);
+  }
+}
+
+/* Divider on stacked mobile layout */
+@media (max-width:767.98px){
+  .wcc-expect-value{
+    border-top:1px solid var(--line);
+  }
+}
+
+
+/* =========================
+   04. THE RIGHT PROGRAMME / RIGHT QUESTION
+========================= */
+.wcc-question{
+  position:relative;
+  background:var(--dark-bg);
+  color:var(--secondary-color);
+  overflow:hidden;
+}
+.wcc-question::before{
+  content:"";
+  position:absolute;
+  right:-180px;
+  top:-160px;
+  width:560px;
+  height:560px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(255,0,0,.2), transparent 65%);
+}
+.wcc-question::after{
+  content:"";
+  position:absolute;
+  left:-200px;
+  bottom:-220px;
+  width:480px;
+  height:480px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(255,0,0,.12), transparent 65%);
+}
+.wcc-question .container-xxl{
+  position:relative;
+  z-index:2;
+}
+.wcc-question .section-title{color:var(--secondary-color);}
+
+.wcc-question-lead{
+  font-family:var(--font-head);
+  font-weight:700;
+  color:var(--primary-soft);
+  font-size:1.05rem;
+  margin:0;
+}
+
+/* Consideration cards */
+.wcc-question-card{
+  position:relative;
+  background:var(--dark-card);
+  border:1px solid var(--dark-border);
+  border-radius:var(--radius-md);
+  padding:1.7rem 1.3rem 1.5rem;
+  height:100%;
+  text-align:center;
+  transition:all .3s ease;
+}
+.wcc-question-card:hover{
+  transform:translateY(-5px);
+  border-color:rgba(255,0,0,.5);
+  background:rgba(255,0,0,.06);
+}
+.wcc-question-num{
+  position:absolute;
+  top:14px;
+  right:16px;
+  font-family:var(--font-head);
+  font-size:.72rem;
+  font-weight:800;
+  letter-spacing:.12em;
+  color:rgba(255,107,107,.55);
+}
+.wcc-question-icon{
+  width:56px;
+  height:56px;
+  margin:0 auto 1rem;
+  border-radius:50%;
+  background:linear-gradient(140deg,var(--primary-color),var(--primary-darker));
+  color:var(--secondary-color);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.4rem;
+  box-shadow:0 12px 26px rgba(255,0,0,.3);
+  transition:transform .3s ease;
+}
+.wcc-question-card:hover .wcc-question-icon{
+  transform:scale(1.06);
+}
+.wcc-question-card p{
+  margin:0;
+  font-family:var(--font-head);
+  font-weight:700;
+  color:var(--secondary-color);
+  font-size:1rem;
+  line-height:1.5;
+}
+
+/* Closing line + CTA */
+.wcc-question-close{
+  text-align:center;
+  margin-top:44px;
+}
+.wcc-question-close p{
+  color:#c3cad4;
+  font-size:1.05rem;
+  margin:0 0 24px;
+}
+
+
+/* =========================
+   05. SCROLL REVEAL
+   (page-specific hook — never conflicts with the
+   reveal observers used on other pages)
+========================= */
+.wcc-js .wcc-reveal{
+  opacity:0;
+  transform:translateY(26px);
+  transition:opacity .7s cubic-bezier(.22,.61,.36,1),
+             transform .7s cubic-bezier(.22,.61,.36,1);
+  will-change:opacity, transform;
+}
+.wcc-js .wcc-reveal.is-visible{
+  opacity:1;
+  transform:none;
+}
+.wcc-js .wcc-reveal.wcc-d1{transition-delay:.1s;}
+.wcc-js .wcc-reveal.wcc-d2{transition-delay:.2s;}
+
+
+/* =========================
+   06. REDUCED MOTION
+========================= */
+@media (prefers-reduced-motion: reduce){
+  .wcc-hero-anim{animation:none !important;}
+  .wcc-js .wcc-reveal{opacity:1;transform:none;transition:none;}
+  .wcc-expect-row,
+  .wcc-expect-icon,
+  .wcc-question-card,
+  .wcc-question-icon{transition:none;}
+}
+
+
+/* =========================
+   07. SMALL SCREEN HARDENING
+========================= */
+@media (max-width:575.98px){
+  .wcc-hero{padding:64px 0 76px;}
+  .wcc-expect-main{padding:1.15rem 1.2rem;gap:.85rem;}
+  .wcc-expect-value{padding:1.15rem 1.2rem;}
+  .wcc-expect-icon{width:46px;height:46px;font-size:1.25rem;}
+  .wcc-question-card{padding:1.5rem 1.15rem 1.35rem;}
+}
+
+@media (max-width:430px){
+  .wcc-hero{padding:56px 0 68px;}
+  .wcc-breadcrumb{margin-bottom:20px;}
+  .wcc-hero-lead{font-size:.96rem;margin-bottom:26px;}
+  .wcc-expect .section-head{margin-bottom:32px;}
+  .wcc-expect-main{padding:1.05rem 1.05rem;gap:.75rem;}
+  .wcc-expect-icon{width:42px;height:42px;font-size:1.15rem;border-radius:12px;}
+  .wcc-expect-title{font-size:1rem;}
+  .wcc-expect-value{padding:1.05rem 1.05rem;}
+  .wcc-expect-value p{font-size:.93rem;}
+  .wcc-expect-num{font-size:.66rem;}
+  .wcc-question-icon{width:50px;height:50px;font-size:1.25rem;}
+  .wcc-question-card p{font-size:.95rem;}
+  .wcc-question-close{margin-top:36px;}
+}
