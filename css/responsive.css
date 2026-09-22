@@ -117,7 +117,7 @@
         text-align: center;
     }
 
-     .about-cpa-hero {
+    .about-cpa-hero {
         padding: 56px 0 68px;
     }
 
@@ -197,7 +197,7 @@
     }
 
 
-     .pvm-hero {
+    .pvm-hero {
         padding: 56px 0 68px;
     }
 
@@ -249,7 +249,7 @@
         padding: 1.45rem 1.25rem;
     }
 
-     .gqs-hero {
+    .gqs-hero {
         padding: 56px 0 68px;
     }
 
@@ -454,7 +454,8 @@
     .pcert-standard-item p {
         font-size: .9rem;
     }
-     .carea-hero {
+
+    .carea-hero {
         padding: 56px 0 68px;
     }
 
@@ -498,6 +499,7 @@
         padding: .55rem .95rem;
         gap: .45rem;
     }
+
     .cpath-hero {
         padding: 56px 0 68px;
     }
@@ -575,6 +577,88 @@
         padding: .55rem .95rem;
         gap: .45rem;
     }
+
+    .acs-hero {
+        padding: 56px 0 68px;
+    }
+
+    .acs-breadcrumb {
+        margin-bottom: 20px;
+    }
+
+    .acs-hero-lead {
+        font-size: .96rem;
+        margin-bottom: 26px;
+    }
+
+    .acs-nav-pill {
+        font-size: .8rem;
+        padding: .55rem .95rem;
+        gap: .45rem;
+    }
+
+    .acs-principle-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 1.4rem;
+    }
+
+    .acs-method-card {
+        padding: 1.35rem 1.2rem;
+    }
+
+    .acs-method-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1.2rem;
+    }
+
+    .acs-method-card p {
+        font-size: .93rem;
+    }
+
+    .acs-resp-num {
+        width: 44px;
+        height: 44px;
+        font-size: .95rem;
+    }
+
+    .acs-resp-row p {
+        font-size: .93rem;
+    }
+
+    .acs-decisions-panel {
+        padding: 16px;
+    }
+
+    .acs-chip {
+        font-size: .82rem;
+        padding: .5rem .9rem;
+        gap: .4rem;
+    }
+
+    .acs-note p,
+    .acs-ai-warning p {
+        font-size: .93rem;
+    }
+
+    .acs-note>.bi,
+    .acs-ai-warning>.bi {
+        font-size: 1.1rem;
+    }
+
+    .acs-ai-panel {
+        padding: 20px 16px;
+    }
+
+    .acs-ai-item {
+        padding: .85rem .9rem;
+        gap: .7rem;
+    }
+
+    .acs-appeals-statement {
+        padding: 1.25rem 1.2rem;
+    }
 }
 
 
@@ -590,6 +674,7 @@
     .footer-links {
         grid-template-columns: 1fr 1fr;
     }
+
     .about-cpa-hero {
         padding: 64px 0 72px;
     }
@@ -685,6 +770,7 @@
     .pcert-standard-panel {
         padding: 28px 20px;
     }
+
     .carea-hero {
         padding: 64px 0 76px;
     }
@@ -696,6 +782,7 @@
     .carea-filters-panel {
         padding: 28px 20px;
     }
+
     .cpath-hero {
         padding: 64px 0 76px;
     }
@@ -714,6 +801,34 @@
     }
 
     .cpath-guidance-note {
+        padding: 1.05rem 1.15rem;
+    }
+
+    .acs-hero {
+        padding: 64px 0 76px;
+    }
+
+    .acs-principle-statement {
+        padding-left: 1.15rem;
+    }
+
+    .acs-decisions-panel {
+        padding: 20px;
+    }
+
+    .acs-ai-panel {
+        padding: 22px 20px;
+    }
+
+    .acs-resp-row {
+        align-items: flex-start;
+        gap: .9rem;
+        padding: 1.1rem 1.15rem;
+    }
+
+    .acs-note,
+    .acs-ai-warning {
+        gap: .7rem;
         padding: 1.05rem 1.15rem;
     }
 }
@@ -743,6 +858,7 @@
     .section {
         padding: 104px 0;
     }
+
     .topbar-inner {
         flex-direction: row;
         justify-content: space-between;
@@ -812,10 +928,9 @@
     .navbar {
         --bs-navbar-padding-y: .8rem;
     }
+
     .navbar .dropdown:hover>.dropdown-menu,
     .navbar .dropdown:focus-within>.dropdown-menu {
         display: block;
     }
 }
-
-
