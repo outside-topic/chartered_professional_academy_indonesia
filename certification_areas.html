@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- SEO METADATA (from document) -->
-  <title>Purpose Vision Mission and Values | CPA Indonesia</title>
-  <meta name="description" content="Discover the purpose, vision, mission and values guiding professional certification and development at CPA Indonesia." />
-  <link rel="canonical" href="/about/purpose-vision-values/" />
+  <title>Certification Areas for Professionals | CPA Indonesia</title>
+  <meta name="description" content="Browse professional certification areas including HR, finance, leadership, projects, supply chain, sales, digital transformation and governance." />
+  <link rel="canonical" href="/certifications/areas/" />
   <meta name="theme-color" content="#ff0000" />
 
   <!-- Fonts (same as Home) -->
@@ -20,10 +20,11 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
 
   <!-- SHARED site stylesheet (variables, base, buttons, header/topbar, footer — unchanged) -->
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Certification Areas — page-specific stylesheet (carea- prefix only) -->
+  <link rel="stylesheet" href="carea.css" />
 </head>
-<body id="top" class="pvm-page">
+<body id="top" class="carea-page">
 
   <!-- Accessibility: skip link -->
   <a class="visually-hidden-focusable" href="#main">Skip to main content</a>
@@ -89,25 +90,25 @@
           <ul class="navbar-nav mx-auto">
             <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
 
-            <!-- About (current section) -->
+            <!-- About -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle active" href="#" role="button"
-                 data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">About</a>
+              <a class="nav-link dropdown-toggle" href="#" role="button"
+                 data-bs-toggle="dropdown" aria-expanded="false">About</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="/about/">About CPA Indonesia</a></li>
-                <li><a class="dropdown-item" href="/about/purpose-vision-values/" aria-current="page">Purpose Vision and Values</a></li>
-                <li><a class="dropdown-item" href="#">Governance and Quality</a></li>
-                <li><a class="dropdown-item" href="#">Why Choose Us</a></li>
+                <li><a class="dropdown-item" href="/about/purpose-vision-values/">Purpose Vision and Values</a></li>
+                <li><a class="dropdown-item" href="/about/governance-quality/">Governance and Quality</a></li>
+                <li><a class="dropdown-item" href="/about/why-choose-us/">Why Choose Us</a></li>
               </ul>
             </li>
 
-            <!-- Certifications -->
+            <!-- Certifications (current section) -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button"
-                 data-bs-toggle="dropdown" aria-expanded="false">Certifications</a>
+              <a class="nav-link dropdown-toggle active" href="#" role="button"
+                 data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">Certifications</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Explore Certifications</a></li>
-                <li><a class="dropdown-item" href="#">Certification Areas</a></li>
+                <li><a class="dropdown-item" href="/certifications/">Explore Certifications</a></li>
+                <li><a class="dropdown-item" href="/certifications/areas/" aria-current="page">Certification Areas</a></li>
                 <li><a class="dropdown-item" href="#">Certification Pathway</a></li>
                 <li><a class="dropdown-item" href="#">Assessment</a></li>
                 <li><a class="dropdown-item" href="#">Renewal and CPD</a></li>
@@ -209,196 +210,150 @@
     <!-- =========================
          HERO
     ========================== -->
-    <section class="pvm-hero" aria-labelledby="pvmHeroTitle">
+    <section class="carea-hero" aria-labelledby="careaHeroTitle">
       <div class="container-xxl">
 
-        <div class="pvm-hero-anim">
-          <nav class="pvm-breadcrumb" aria-label="Breadcrumb">
+        <div class="carea-hero-anim">
+          <nav class="carea-breadcrumb" aria-label="Breadcrumb">
             <ol>
               <li><a href="/">Home</a></li>
-              <li><a href="/about/">About</a></li>
-              <li><span aria-current="page">Purpose Vision and Values</span></li>
+              <li><a href="/certifications/">Certifications</a></li>
+              <li><span aria-current="page">Certification Areas</span></li>
             </ol>
           </nav>
         </div>
 
-        <div class="pvm-hero-anim pvm-hero-anim-2">
-          <p class="eyebrow eyebrow-on-dark">professional development academy Indonesia</p>
-          <h1 class="pvm-hero-title" id="pvmHeroTitle">Purpose Vision Mission and Values</h1>
-          <p class="pvm-hero-lead">Define a credible institutional direction and behavioral standards.</p>
-        </div>
-
-        <!-- In-page section navigation: Purpose → Vision → Mission → Values -->
-        <nav class="pvm-hero-anim pvm-hero-anim-3 pvm-hero-nav" aria-label="Page sections">
-          <a class="pvm-nav-pill" href="#pvm-purpose"><i class="bi bi-compass" aria-hidden="true"></i>Purpose</a>
-          <a class="pvm-nav-pill" href="#pvm-vision"><i class="bi bi-eye" aria-hidden="true"></i>Vision</a>
-          <a class="pvm-nav-pill" href="#pvm-mission"><i class="bi bi-bullseye" aria-hidden="true"></i>Mission</a>
-          <a class="pvm-nav-pill" href="#pvm-values"><i class="bi bi-gem" aria-hidden="true"></i>Values</a>
-        </nav>
-
-      </div>
-    </section>
-
-    <!-- =========================
-         OUR PURPOSE
-    ========================== -->
-    <section class="section pvm-purpose" id="pvm-purpose" aria-labelledby="pvmPurposeTitle">
-      <div class="container-xxl">
-        <div class="row align-items-center gy-4 gy-lg-0">
-
-          <div class="col-lg-4 pvm-reveal">
-            <span class="pvm-purpose-icon"><i class="bi bi-compass" aria-hidden="true"></i></span>
-            <h2 class="section-title" id="pvmPurposeTitle">Our purpose</h2>
-          </div>
-
-          <div class="col-lg-8 pvm-reveal pvm-d1">
-            <p class="pvm-purpose-statement">
-              To help professionals and organizations turn learning into
-              <span class="pvm-hl">demonstrated capability</span>,
-              <span class="pvm-hl">stronger performance</span> and
-              <span class="pvm-hl">responsible professional growth</span>.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================
-         OUR VISION
-    ========================== -->
-    <section class="section pvm-vision" id="pvm-vision" aria-labelledby="pvmVisionTitle">
-      <div class="container-xxl">
-        <div class="pvm-vision-card pvm-reveal">
-          <span class="pvm-vision-badge" aria-hidden="true"><i class="bi bi-eye"></i></span>
-          <h2 class="pvm-vision-label" id="pvmVisionTitle">Our vision</h2>
-          <p class="pvm-vision-statement">
-            To be a trusted Indonesia-based professional development community recognized for
-            <span class="pvm-hl-dark">practical learning</span>,
-            <span class="pvm-hl-dark">fair assessment</span> and
-            <span class="pvm-hl-dark">meaningful career-long development</span>.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================
-         OUR MISSION
-    ========================== -->
-    <section class="section pvm-mission" id="pvm-mission" aria-labelledby="pvmMissionTitle">
-      <div class="container-xxl">
-
-        <div class="section-head text-center pvm-reveal">
-          <h2 class="section-title" id="pvmMissionTitle">Our mission</h2>
-        </div>
-
-        <div class="pvm-mission-list">
-          <div class="pvm-mission-item pvm-reveal">
-            <div class="pvm-mission-head">
-              <span class="pvm-mission-num" aria-hidden="true">01</span>
-              <span class="pvm-mission-icon"><i class="bi bi-signpost-2" aria-hidden="true"></i></span>
-            </div>
-            <p>Develop relevant certification and learning pathways informed by workplace needs.</p>
-          </div>
-
-          <div class="pvm-mission-item pvm-reveal pvm-d1">
-            <div class="pvm-mission-head">
-              <span class="pvm-mission-num" aria-hidden="true">02</span>
-              <span class="pvm-mission-icon"><i class="bi bi-clipboard-check" aria-hidden="true"></i></span>
-            </div>
-            <p>Use transparent standards and fit-for-purpose assessment to recognize applied competence.</p>
-          </div>
-
-          <div class="pvm-mission-item pvm-reveal pvm-d2">
-            <div class="pvm-mission-head">
-              <span class="pvm-mission-num" aria-hidden="true">03</span>
-              <span class="pvm-mission-icon"><i class="bi bi-person-check" aria-hidden="true"></i></span>
-            </div>
-            <p>Support members in maintaining ethical practice and continuous professional development.</p>
-          </div>
-
-          <div class="pvm-mission-item pvm-reveal">
-            <div class="pvm-mission-head">
-              <span class="pvm-mission-num" aria-hidden="true">04</span>
-              <span class="pvm-mission-icon"><i class="bi bi-handshake" aria-hidden="true"></i></span>
-            </div>
-            <p>Partner with employers, educators and practitioners to strengthen professional capability.</p>
-          </div>
-
-          <div class="pvm-mission-item pvm-reveal pvm-d1">
-            <div class="pvm-mission-head">
-              <span class="pvm-mission-num" aria-hidden="true">05</span>
-              <span class="pvm-mission-icon"><i class="bi bi-universal-access" aria-hidden="true"></i></span>
-            </div>
-            <p>Make professional development accessible through flexible delivery and clear learner support.</p>
-          </div>
+        <div class="carea-hero-anim carea-hero-anim-2">
+          <p class="eyebrow eyebrow-on-dark">career certification Indonesia</p>
+          <h1 class="carea-hero-title" id="careaHeroTitle">Certification Areas</h1>
+          <p class="carea-hero-lead">Browse professional certification areas including HR, finance, leadership, projects, supply chain, sales, digital transformation and governance.</p>
         </div>
 
       </div>
     </section>
 
     <!-- =========================
-         OUR VALUES
+         CERTIFICATION AREAS
     ========================== -->
-    <section class="section pvm-values" id="pvm-values" aria-labelledby="pvmValuesTitle">
+    <section class="section carea-areas" id="carea-areas" aria-label="Certification areas">
       <div class="container-xxl">
 
-        <div class="section-head text-center pvm-reveal">
-          <h2 class="section-title" id="pvmValuesTitle">Our values</h2>
-          <p class="section-lead">What it means in practice</p>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+
+          <div class="col carea-reveal">
+            <article class="carea-card h-100">
+              <div class="carea-card-top">
+                <span class="carea-card-icon"><i class="bi bi-people" aria-hidden="true"></i></span>
+                <span class="carea-card-num" aria-hidden="true">01</span>
+              </div>
+              <h2 class="carea-card-name">Human Resources and Learning Development</h2>
+              <p>Develop capability in HR operations, talent acquisition, workforce planning, learning and development, performance management, employee experience and strategic people leadership.</p>
+            </article>
+          </div>
+
+          <div class="col carea-reveal carea-d1">
+            <article class="carea-card h-100">
+              <div class="carea-card-top">
+                <span class="carea-card-icon"><i class="bi bi-calculator" aria-hidden="true"></i></span>
+                <span class="carea-card-num" aria-hidden="true">02</span>
+              </div>
+              <h2 class="carea-card-name">Finance Accounting and Business Analysis</h2>
+              <p>Strengthen practical capability in accounting, financial reporting, budgeting, forecasting, management accounting, financial analysis, internal controls and finance business partnering.</p>
+            </article>
+          </div>
+
+          <div class="col carea-reveal">
+            <article class="carea-card h-100">
+              <div class="carea-card-top">
+                <span class="carea-card-icon"><i class="bi bi-compass" aria-hidden="true"></i></span>
+                <span class="carea-card-num" aria-hidden="true">03</span>
+              </div>
+              <h2 class="carea-card-name">Leadership Management and Strategy</h2>
+              <p>Build the judgement and leadership practices needed to set direction, manage performance, lead change, make decisions and translate strategy into coordinated action.</p>
+            </article>
+          </div>
+
+          <div class="col carea-reveal carea-d1">
+            <article class="carea-card h-100">
+              <div class="carea-card-top">
+                <span class="carea-card-icon"><i class="bi bi-kanban" aria-hidden="true"></i></span>
+                <span class="carea-card-num" aria-hidden="true">04</span>
+              </div>
+              <h2 class="carea-card-name">Project Operations and Quality Management</h2>
+              <p>Develop skills in project planning, stakeholder coordination, process improvement, operational control, quality management, productivity and delivery discipline.</p>
+            </article>
+          </div>
+
+          <div class="col carea-reveal">
+            <article class="carea-card h-100">
+              <div class="carea-card-top">
+                <span class="carea-card-icon"><i class="bi bi-truck" aria-hidden="true"></i></span>
+                <span class="carea-card-num" aria-hidden="true">05</span>
+              </div>
+              <h2 class="carea-card-name">Supply Chain Procurement and Logistics</h2>
+              <p>Build capability across sourcing, procurement, inventory, logistics, supplier management, demand planning, supply chain performance and resilience.</p>
+            </article>
+          </div>
+
+          <div class="col carea-reveal carea-d1">
+            <article class="carea-card h-100">
+              <div class="carea-card-top">
+                <span class="carea-card-icon"><i class="bi bi-megaphone" aria-hidden="true"></i></span>
+                <span class="carea-card-num" aria-hidden="true">06</span>
+              </div>
+              <h2 class="carea-card-name">Sales Marketing and Customer Experience</h2>
+              <p>Improve commercial capability in market insight, customer value, consultative selling, key account management, digital marketing, service quality and customer experience.</p>
+            </article>
+          </div>
+
+          <div class="col carea-reveal">
+            <article class="carea-card h-100">
+              <div class="carea-card-top">
+                <span class="carea-card-icon"><i class="bi bi-cpu" aria-hidden="true"></i></span>
+                <span class="carea-card-num" aria-hidden="true">07</span>
+              </div>
+              <h2 class="carea-card-name">Digital Transformation Data and Artificial Intelligence</h2>
+              <p>Learn to use digital tools, data and artificial intelligence responsibly to improve decisions, workflows, customer outcomes and organizational capability.</p>
+            </article>
+          </div>
+
+          <div class="col carea-reveal carea-d1">
+            <article class="carea-card h-100">
+              <div class="carea-card-top">
+                <span class="carea-card-icon"><i class="bi bi-shield-check" aria-hidden="true"></i></span>
+                <span class="carea-card-num" aria-hidden="true">08</span>
+              </div>
+              <h2 class="carea-card-name">Governance Risk Compliance and Sustainability</h2>
+              <p>Develop practical understanding of governance, risk, compliance, internal control, ethics, ESG and sustainability-related management responsibilities.</p>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         PROGRAMME FINDER FILTERS
+    ========================== -->
+    <section class="section carea-filters" id="carea-filters" aria-labelledby="careaFiltersTitle">
+      <div class="container-xxl">
+
+        <div class="section-head text-center carea-reveal">
+          <h2 class="section-title" id="careaFiltersTitle">Programme finder filters</h2>
         </div>
 
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
-
-          <div class="col pvm-reveal">
-            <article class="pvm-value-card h-100">
-              <span class="pvm-value-icon"><i class="bi bi-shield-check" aria-hidden="true"></i></span>
-              <h3 class="pvm-value-name">Integrity</h3>
-              <p>We communicate honestly, protect assessment decisions and avoid claims we cannot support.</p>
-            </article>
-          </div>
-
-          <div class="col pvm-reveal pvm-d1">
-            <article class="pvm-value-card h-100">
-              <span class="pvm-value-icon"><i class="bi bi-briefcase" aria-hidden="true"></i></span>
-              <h3 class="pvm-value-name">Relevance</h3>
-              <p>We design learning around current responsibilities, career goals and organizational needs.</p>
-            </article>
-          </div>
-
-          <div class="col pvm-reveal pvm-d2">
-            <article class="pvm-value-card h-100">
-              <span class="pvm-value-icon"><i class="bi bi-tools" aria-hidden="true"></i></span>
-              <h3 class="pvm-value-name">Application</h3>
-              <p>We connect concepts with decisions, tools, projects and workplace evidence.</p>
-            </article>
-          </div>
-
-          <div class="col pvm-reveal">
-            <article class="pvm-value-card h-100">
-              <span class="pvm-value-icon"><i class="bi bi-balance" aria-hidden="true"></i></span>
-              <h3 class="pvm-value-name">Fairness</h3>
-              <p>We use clear requirements, consistent processes and accessible routes for review and appeal.</p>
-            </article>
-          </div>
-
-          <div class="col pvm-reveal pvm-d1">
-            <article class="pvm-value-card h-100">
-              <span class="pvm-value-icon"><i class="bi bi-arrow-repeat" aria-hidden="true"></i></span>
-              <h3 class="pvm-value-name">Continuous improvement</h3>
-              <p>We use feedback, performance evidence and periodic review to improve our programmes.</p>
-            </article>
-          </div>
-
-          <div class="col pvm-reveal pvm-d2">
-            <article class="pvm-value-card h-100">
-              <span class="pvm-value-icon"><i class="bi bi-people" aria-hidden="true"></i></span>
-              <h3 class="pvm-value-name">Professional community</h3>
-              <p>We encourage respectful exchange, shared learning and responsible contribution.</p>
-            </article>
-          </div>
-
+        <div class="carea-filters-panel carea-reveal carea-d1">
+          <ul class="carea-filters" role="list">
+            <li class="carea-filter"><i class="bi bi-grid-1x2" aria-hidden="true"></i>Professional area</li>
+            <li class="carea-filter"><i class="bi bi-bar-chart-steps" aria-hidden="true"></i>Career level</li>
+            <li class="carea-filter"><i class="bi bi-laptop" aria-hidden="true"></i>Delivery mode</li>
+            <li class="carea-filter"><i class="bi bi-clock" aria-hidden="true"></i>Programme duration</li>
+            <li class="carea-filter"><i class="bi bi-clipboard-check" aria-hidden="true"></i>Assessment type</li>
+            <li class="carea-filter"><i class="bi bi-translate" aria-hidden="true"></i>Language</li>
+            <li class="carea-filter"><i class="bi bi-calendar-event" aria-hidden="true"></i>Upcoming intake</li>
+          </ul>
         </div>
+
       </div>
     </section>
 

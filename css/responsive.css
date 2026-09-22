@@ -1,0 +1,724 @@
+/* =========================
+   16. SMALL SCREEN HARDENING (≤430px)
+========================= */
+@media (max-width:430px) {
+
+    html {
+        scroll-padding-top: 84px;
+    }
+
+    /* Announcement bar */
+    .topbar-message {
+        min-height: 3.1em;
+        font-size: .76rem;
+    }
+
+    .topbar-utility {
+        font-size: .7rem;
+        gap: .1rem .5rem;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 56px 0 72px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 28px;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-search-field {
+        padding-left: .85rem;
+    }
+
+    .hero-search-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero-visual {
+        padding-bottom: 56px;
+    }
+
+    .cert-card {
+        padding: 20px;
+    }
+
+    .float-orb {
+        width: 52px;
+        height: 52px;
+        font-size: 1.2rem;
+        top: -14px;
+        right: 0;
+    }
+
+    .float-badge {
+        left: 0;
+        bottom: -4px;
+        font-size: .76rem;
+        padding: .55rem .85rem;
+    }
+
+    /* Sections & cards */
+    .section {
+        padding: 56px 0;
+    }
+
+    .section-head {
+        margin-bottom: 36px;
+    }
+
+    .btn-lg {
+        padding: .75rem 1.4rem;
+        font-size: .95rem;
+    }
+
+    .grow-card {
+        padding: 1.5rem 1.3rem;
+    }
+
+    .cert-feature {
+        padding: 26px 20px;
+    }
+
+    .member-card {
+        padding: 24px 20px 56px;
+    }
+
+    .member-float {
+        right: 0;
+        font-size: .8rem;
+        padding: .6rem 1rem;
+    }
+
+    .delivery-card {
+        padding: 24px 20px;
+    }
+
+    /* Footer */
+    .footer-cta-panel {
+        padding: 26px 20px;
+        margin: 44px 0;
+    }
+
+    .newsletter-field .btn {
+        width: 100%;
+    }
+
+    .footer-bottom {
+        justify-content: center;
+        text-align: center;
+    }
+
+     .about-cpa-hero {
+        padding: 56px 0 68px;
+    }
+
+    .about-cpa-breadcrumb {
+        margin-bottom: 20px;
+    }
+
+    .about-cpa-hero-title {
+        margin: 12px auto 14px;
+    }
+
+    .about-cpa-hero-lead {
+        font-size: .96rem;
+        margin-bottom: 26px;
+    }
+
+    .about-cpa-visual {
+        padding-bottom: 48px;
+    }
+
+    .about-cpa-brand-card {
+        padding: 24px 20px;
+    }
+
+    .about-cpa-orb {
+        width: 52px;
+        height: 52px;
+        font-size: 1.15rem;
+        top: -14px;
+        right: -2px;
+    }
+
+    .about-cpa-float-badge {
+        left: 0;
+        bottom: -4px;
+        font-size: .72rem;
+        padding: .55rem .85rem;
+        gap: .45rem;
+    }
+
+    .about-cpa-do-card {
+        padding: 1.5rem 1.3rem;
+    }
+
+    .about-cpa-promise-card {
+        padding: 1.4rem 1.1rem;
+    }
+
+    .about-cpa-chip {
+        font-size: .82rem;
+        padding: .55rem .95rem;
+        gap: .5rem;
+    }
+
+    .about-cpa-step {
+        gap: .9rem;
+        padding-bottom: 24px;
+    }
+
+    .about-cpa-step-num {
+        width: 44px;
+        height: 44px;
+        font-size: .95rem;
+    }
+
+    .about-cpa-step::before {
+        left: 21px;
+        top: 48px;
+    }
+
+    .about-cpa-step-text {
+        font-size: .95rem;
+    }
+
+    .about-cpa-cta {
+        padding: 56px 0;
+    }
+
+
+     .pvm-hero {
+        padding: 56px 0 68px;
+    }
+
+    .pvm-breadcrumb {
+        margin-bottom: 20px;
+    }
+
+    .pvm-hero-lead {
+        font-size: .96rem;
+        margin-bottom: 26px;
+    }
+
+    .pvm-nav-pill {
+        font-size: .8rem;
+        padding: .55rem .95rem;
+        gap: .45rem;
+    }
+
+    .pvm-purpose-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 1.4rem;
+    }
+
+    .pvm-vision-badge {
+        width: 52px;
+        height: 52px;
+        font-size: 1.2rem;
+        top: -26px;
+    }
+
+    .pvm-vision-card {
+        padding: 46px 18px 38px;
+    }
+
+    .pvm-mission-num {
+        width: 44px;
+        height: 44px;
+        font-size: .95rem;
+    }
+
+    .pvm-mission-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.05rem;
+    }
+
+    .pvm-value-card {
+        padding: 1.45rem 1.25rem;
+    }
+
+     .gqs-hero {
+        padding: 56px 0 68px;
+    }
+
+    .gqs-breadcrumb {
+        margin-bottom: 20px;
+    }
+
+    .gqs-hero-lead {
+        font-size: .96rem;
+        margin-bottom: 26px;
+    }
+
+    .gqs-nav-pill {
+        font-size: .8rem;
+        padding: .55rem .95rem;
+        gap: .45rem;
+    }
+
+    .gqs-principle-card {
+        padding: 1.5rem 1.3rem;
+    }
+
+    .gqs-step-num {
+        width: 44px;
+        height: 44px;
+        font-size: .95rem;
+    }
+
+    .gqs-step-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 1.05rem;
+    }
+
+    .gqs-step-card {
+        padding: 1.4rem 1.2rem;
+    }
+
+    .gqs-methods-panel {
+        padding: 16px;
+    }
+
+    .gqs-method {
+        font-size: .82rem;
+        padding: .5rem .85rem;
+        gap: .4rem;
+    }
+
+    .gqs-controls-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 1.1rem;
+    }
+
+    .gqs-recognition-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 1.4rem;
+    }
+
+    .wcc-hero {
+        padding: 56px 0 68px;
+    }
+
+    .wcc-breadcrumb {
+        margin-bottom: 20px;
+    }
+
+    .wcc-hero-lead {
+        font-size: .96rem;
+        margin-bottom: 26px;
+    }
+
+    .wcc-expect .section-head {
+        margin-bottom: 32px;
+    }
+
+    .wcc-expect-main {
+        padding: 1.05rem 1.05rem;
+        gap: .75rem;
+    }
+
+    .wcc-expect-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 1.15rem;
+        border-radius: 12px;
+    }
+
+    .wcc-expect-title {
+        font-size: 1rem;
+    }
+
+    .wcc-expect-value {
+        padding: 1.05rem 1.05rem;
+    }
+
+    .wcc-expect-value p {
+        font-size: .93rem;
+    }
+
+    .wcc-expect-num {
+        font-size: .66rem;
+    }
+
+    .wcc-question-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+
+    .wcc-question-card p {
+        font-size: .95rem;
+    }
+
+    .wcc-question-close {
+        margin-top: 36px;
+    }
+
+    .pcert-hero {
+        padding: 56px 0 68px;
+    }
+
+    .pcert-breadcrumb {
+        margin-bottom: 20px;
+    }
+
+    .pcert-hero-lead {
+        font-size: .96rem;
+        margin-bottom: 26px;
+    }
+
+    .pcert-what .section-title {
+        margin-bottom: 14px;
+    }
+
+    .pcert-definition {
+        padding-left: 1.1rem;
+    }
+
+    .pcert-what-panel {
+        padding: 20px 16px;
+    }
+
+    .pcert-what-item {
+        padding: .6rem .7rem;
+        gap: .5rem;
+    }
+
+    .pcert-what-icon {
+        width: 26px;
+        height: 26px;
+        font-size: .85rem;
+    }
+
+    .pcert-what-item>span:last-child {
+        font-size: .79rem;
+    }
+
+    .pcert-areas .section-head,
+    .pcert-stages .section-head,
+    .pcert-standard .section-head {
+        margin-bottom: 32px;
+    }
+
+    .pcert-area-card {
+        padding: .9rem .95rem;
+        gap: .75rem;
+    }
+
+    .pcert-area-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+
+    .pcert-stage-card {
+        padding: 1.4rem 1.2rem;
+    }
+
+    .pcert-stage-num {
+        width: 44px;
+        height: 44px;
+        font-size: .95rem;
+    }
+
+    .pcert-stage-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 1.05rem;
+    }
+
+    .pcert-standard-panel {
+        padding: 24px 16px;
+    }
+
+    .pcert-standard-item {
+        padding: .85rem .9rem;
+        gap: .7rem;
+    }
+
+    .pcert-standard-item p {
+        font-size: .9rem;
+    }
+     .carea-hero {
+        padding: 56px 0 68px;
+    }
+
+    .carea-breadcrumb {
+        margin-bottom: 20px;
+    }
+
+    .carea-hero-lead {
+        font-size: .96rem;
+    }
+
+    .carea-areas .section-head,
+    .carea-filters .section-head {
+        margin-bottom: 32px;
+    }
+
+    .carea-card {
+        padding: 1.45rem 1.2rem;
+    }
+
+    .carea-card-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.3rem;
+    }
+
+    .carea-card-name {
+        font-size: 1.05rem;
+    }
+
+    .carea-card p {
+        font-size: .93rem;
+    }
+
+    .carea-filters-panel {
+        padding: 24px 16px;
+    }
+
+    .carea-filter {
+        font-size: .82rem;
+        padding: .55rem .95rem;
+        gap: .45rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media (min-width:576px) {
+    .footer-links {
+        grid-template-columns: 1fr 1fr;
+    }
+    .about-cpa-hero {
+        padding: 64px 0 72px;
+    }
+
+    .about-cpa-hero-lead {
+        font-size: .98rem;
+        margin-bottom: 28px;
+    }
+
+    .about-cpa-cta-actions .btn {
+        flex: 1 1 100%;
+        max-width: 340px;
+    }
+
+    .pvm-hero {
+        padding: 64px 0 76px;
+    }
+
+    .pvm-vision-card {
+        padding: 48px 22px 40px;
+    }
+
+    .pvm-purpose-statement {
+        padding-left: 1.15rem;
+    }
+
+    /* Mission rows: stack the badge row above the text */
+    .pvm-mission-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .85rem;
+        padding: 1.1rem 1.15rem;
+    }
+
+
+    .gqs-hero {
+        padding: 64px 0 76px;
+    }
+
+    .gqs-methods-panel {
+        padding: 20px;
+    }
+
+    .gqs-controls-strip {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .85rem;
+        padding: 1.15rem 1.15rem;
+    }
+
+    .gqs-recognition-note {
+        flex-direction: column;
+        gap: .6rem;
+        padding: 1.1rem 1.15rem;
+    }
+
+    .wcc-hero {
+        padding: 64px 0 76px;
+    }
+
+    .wcc-expect-main {
+        padding: 1.15rem 1.2rem;
+        gap: .85rem;
+    }
+
+    .wcc-expect-value {
+        padding: 1.15rem 1.2rem;
+    }
+
+    .wcc-expect-icon {
+        width: 46px;
+        height: 46px;
+        font-size: 1.25rem;
+    }
+
+    .wcc-question-card {
+        padding: 1.5rem 1.15rem 1.35rem;
+    }
+
+    .pcert-hero {
+        padding: 64px 0 76px;
+    }
+
+    .pcert-hero-actions .btn {
+        flex: 1 1 100%;
+        max-width: 340px;
+    }
+
+    .pcert-what-panel {
+        padding: 22px 20px;
+    }
+
+    .pcert-standard-panel {
+        padding: 28px 20px;
+    }
+    .carea-hero {
+        padding: 64px 0 76px;
+    }
+
+    .carea-card {
+        padding: 1.55rem 1.3rem;
+    }
+
+    .carea-filters-panel {
+        padding: 28px 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media (min-width:768px) {
+    .wcc-expect-value {
+        border-left: 1px solid var(--line);
+    }
+}
+
+
+
+
+
+
+
+
+@media (min-width:992px) {
+    .section {
+        padding: 104px 0;
+    }
+    .topbar-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding: 7px 0;
+    }
+
+    .topbar-message {
+        flex: 1 1 auto;
+        min-height: 1.6em;
+        font-size: .82rem;
+    }
+
+    .topbar-slide {
+        justify-content: flex-start;
+    }
+
+    .topbar-utility {
+        flex: 0 0 auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1199.98px) {
+    .navbar-collapse {
+        background: var(--secondary-color);
+        border: 1px solid var(--line);
+        border-radius: var(--radius-md);
+        margin-top: .75rem;
+        padding: 1rem;
+        box-shadow: var(--shadow-md);
+    }
+
+    .navbar .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        border: 0;
+        background: transparent;
+        min-width: 0;
+        padding: .15rem 0 .15rem .8rem;
+    }
+
+    .navbar .dropdown-item {
+        color: var(--body-text);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media (min-width:1200px) {
+    .navbar {
+        --bs-navbar-padding-y: .8rem;
+    }
+    .navbar .dropdown:hover>.dropdown-menu,
+    .navbar .dropdown:focus-within>.dropdown-menu {
+        display: block;
+    }
+}
+
+
