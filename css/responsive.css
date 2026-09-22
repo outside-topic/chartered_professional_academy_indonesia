@@ -498,6 +498,83 @@
         padding: .55rem .95rem;
         gap: .45rem;
     }
+    .cpath-hero {
+        padding: 56px 0 68px;
+    }
+
+    .cpath-breadcrumb {
+        margin-bottom: 20px;
+    }
+
+    .cpath-hero-lead {
+        font-size: .96rem;
+        margin-bottom: 26px;
+    }
+
+    .cpath-steps .section-head {
+        margin-bottom: 36px;
+    }
+
+    .cpath-step {
+        gap: .85rem;
+        padding-bottom: 20px;
+    }
+
+    .cpath-step::before {
+        left: 21px;
+        top: 50px;
+    }
+
+    .cpath-node {
+        width: 44px;
+        height: 44px;
+        font-size: .95rem;
+    }
+
+    .cpath-card {
+        padding: 1.05rem 1.05rem;
+    }
+
+    .cpath-card-head {
+        gap: .6rem;
+    }
+
+    .cpath-card-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 1.05rem;
+        border-radius: 10px;
+    }
+
+    .cpath-step-title {
+        font-size: 1rem;
+    }
+
+    .cpath-card p {
+        font-size: .92rem;
+    }
+
+    .cpath-rpl-note,
+    .cpath-guidance-note {
+        gap: .7rem;
+        padding: 1rem 1.05rem;
+    }
+
+    .cpath-rpl-note p,
+    .cpath-guidance-note p {
+        font-size: .93rem;
+    }
+
+    .cpath-rpl-note>.bi,
+    .cpath-guidance-note>.bi {
+        font-size: 1.1rem;
+    }
+
+    .cpath-chip {
+        font-size: .82rem;
+        padding: .55rem .95rem;
+        gap: .45rem;
+    }
 }
 
 
@@ -618,6 +695,26 @@
 
     .carea-filters-panel {
         padding: 28px 20px;
+    }
+    .cpath-hero {
+        padding: 64px 0 76px;
+    }
+
+    .cpath-step {
+        gap: 1rem;
+        padding-bottom: 22px;
+    }
+
+    .cpath-card {
+        padding: 1.15rem 1.2rem;
+    }
+
+    .cpath-rpl-note {
+        padding: 1.1rem 1.15rem;
+    }
+
+    .cpath-guidance-note {
+        padding: 1.05rem 1.15rem;
     }
 }
 

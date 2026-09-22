@@ -4528,6 +4528,456 @@ a {
 }
 
 
+
+
+
+
+
+
+
+
+/* Certification Pathway */
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   CERTIFICATION PATHWAY — PAGE-SPECIFIC STYLESHEET
+
+   • Every custom class uses the "cpath-" prefix.
+   • Depends on the shared site stylesheet (style.css) for CSS
+     variables, base typography, buttons, header/topbar and
+     footer components. No global styles are modified.
+   • Mobile-first. Hardened for 430px and below.
+
+   SECTIONS
+   01. PAGE SCOPE & ACTIVE NAV STATE
+   02. HERO
+   03. CERTIFICATION PATHWAY TIMELINE
+   04. RECOGNITION OF PRIOR LEARNING
+   05. NEED HELP CHOOSING
+   06. SCROLL REVEAL
+   07. REDUCED MOTION
+   08. SMALL SCREEN HARDENING (≤575px / ≤430px)
+========================================================= */
+
+
+/* =========================
+   01. PAGE SCOPE & ACTIVE NAV STATE
+========================= */
+.cpath-page .navbar-nav .nav-link.active {
+    color: var(--primary-dark);
+    background: var(--primary-tint);
+}
+
+
+/* =========================
+   02. HERO
+========================= */
+.cpath-hero {
+    position: relative;
+    background: var(--dark-bg);
+    color: var(--secondary-color);
+    overflow: hidden;
+    padding: 88px 0 96px;
+    text-align: center;
+}
+
+.cpath-hero::before {
+    content: "";
+    position: absolute;
+    top: -260px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 760px;
+    height: 760px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 0, 0, .28), transparent 65%);
+}
+
+.cpath-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, .05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .05) 1px, transparent 1px);
+    background-size: 44px 44px;
+    -webkit-mask-image: radial-gradient(ellipse at 50% 18%, rgba(0, 0, 0, .85), transparent 72%);
+    mask-image: radial-gradient(ellipse at 50% 18%, rgba(0, 0, 0, .85), transparent 72%);
+}
+
+.cpath-hero .container-xxl {
+    position: relative;
+    z-index: 2;
+}
+
+/* Breadcrumb */
+.cpath-breadcrumb ol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .35rem .55rem;
+    list-style: none;
+    margin: 0 0 26px;
+    padding: 0;
+    font-size: .82rem;
+    font-weight: 600;
+    color: #8d97a5;
+}
+
+.cpath-breadcrumb li {
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+}
+
+.cpath-breadcrumb li+li::before {
+    content: "/";
+    color: rgba(255, 255, 255, .25);
+}
+
+.cpath-breadcrumb a {
+    color: #c3cad4;
+    text-decoration: none;
+}
+
+.cpath-breadcrumb a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.cpath-breadcrumb [aria-current] {
+    color: var(--secondary-color);
+}
+
+/* Hero copy */
+.cpath-hero-title {
+    color: var(--secondary-color);
+    font-size: clamp(2rem, 1.35rem + 3vw, 3.4rem);
+    line-height: 1.12;
+    letter-spacing: -.02em;
+    max-width: 880px;
+    margin: 14px auto 16px;
+}
+
+.cpath-hero-lead {
+    color: #c3cad4;
+    font-size: 1.03rem;
+    max-width: 660px;
+    margin: 0 auto 30px;
+}
+
+/* Hero entrance animation (pure CSS, no JS required) */
+@keyframes cpath-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.cpath-hero-anim {
+    animation: cpath-fade-up .8s cubic-bezier(.22, .61, .36, 1) both;
+}
+
+.cpath-hero-anim-2 {
+    animation-delay: .15s;
+}
+
+
+/* =========================
+   03. CERTIFICATION PATHWAY TIMELINE
+========================= */
+.cpath-steps {
+    background: var(--secondary-color);
+}
+
+.cpath-steps .section-head {
+    margin-bottom: 48px;
+}
+
+/* Ordered vertical timeline */
+.cpath-timeline {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 800px;
+}
+
+.cpath-step {
+    position: relative;
+    display: flex;
+    gap: 1.25rem;
+    padding-bottom: 26px;
+}
+
+.cpath-step:last-child {
+    padding-bottom: 0;
+}
+
+/* Connecting rail */
+.cpath-step::before {
+    content: "";
+    position: absolute;
+    left: 25px;
+    top: 58px;
+    bottom: 2px;
+    width: 2px;
+    background: linear-gradient(180deg, rgba(255, 0, 0, .5), var(--line));
+}
+
+.cpath-step:last-child::before {
+    display: none;
+}
+
+/* Number node */
+.cpath-node {
+    position: relative;
+    z-index: 2;
+    flex: 0 0 auto;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
+    color: var(--secondary-color);
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(255, 0, 0, .28);
+}
+
+/* Step card */
+.cpath-card {
+    flex: 1 1 auto;
+    min-width: 0;
+    background: var(--light-bg);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    padding: 1.25rem 1.35rem;
+    transition: all .3s ease;
+}
+
+.cpath-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-tint-2);
+}
+
+.cpath-card-head {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    margin-bottom: .5rem;
+}
+
+.cpath-card-icon {
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: var(--primary-tint);
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+}
+
+.cpath-step-title {
+    font-size: 1.05rem;
+    line-height: 1.35;
+    margin: 0;
+}
+
+.cpath-card p {
+    margin: 0;
+    font-size: .95rem;
+    line-height: 1.7;
+    color: var(--body-text);
+}
+
+
+/* =========================
+   04. RECOGNITION OF PRIOR LEARNING
+========================= */
+.cpath-rpl {
+    background: var(--light-bg);
+}
+
+.cpath-rpl .section-title {
+    margin-bottom: 16px;
+}
+
+.cpath-rpl-statement {
+    margin: 0;
+    font-size: 1.02rem;
+    line-height: 1.75;
+    max-width: 460px;
+}
+
+/* Note cards */
+.cpath-rpl-note {
+    display: flex;
+    align-items: flex-start;
+    gap: .9rem;
+    background: var(--secondary-color);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--primary-color);
+    border-radius: var(--radius-md);
+    padding: 1.2rem 1.3rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.cpath-rpl-note+.cpath-rpl-note {
+    margin-top: 1rem;
+}
+
+.cpath-rpl-note>.bi {
+    flex: 0 0 auto;
+    color: var(--primary-dark);
+    font-size: 1.25rem;
+    margin-top: .15rem;
+}
+
+.cpath-rpl-note p {
+    margin: 0;
+    font-weight: 600;
+    color: var(--ink);
+    font-size: .98rem;
+    line-height: 1.65;
+}
+
+
+/* =========================
+   05. NEED HELP CHOOSING
+========================= */
+.cpath-guidance {
+    background: var(--secondary-color);
+}
+
+.cpath-guidance .section-head {
+    margin-bottom: 36px;
+}
+
+.cpath-guidance-lead {
+    font-family: var(--font-head);
+    font-weight: 700;
+    color: var(--ink);
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Information chips */
+.cpath-chips {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .7rem;
+    max-width: 760px;
+}
+
+.cpath-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    background: var(--light-bg);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: .65rem 1.15rem;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: .88rem;
+    color: var(--ink);
+    transition: all .25s ease;
+}
+
+.cpath-chip .bi {
+    color: var(--primary-dark);
+    font-size: 1rem;
+    transition: color .25s ease;
+}
+
+.cpath-chip:hover {
+    border-color: var(--primary-tint-2);
+    box-shadow: var(--shadow-sm);
+    transform: translateY(-2px);
+}
+
+.cpath-chip:hover .bi {
+    color: var(--primary-color);
+}
+
+/* Guidance expectation note */
+.cpath-guidance-note {
+    display: flex;
+    align-items: flex-start;
+    gap: .9rem;
+    max-width: 720px;
+    margin: 26px auto 32px;
+    background: var(--primary-tint);
+    border: 1px solid var(--primary-tint-2);
+    border-radius: var(--radius-md);
+    padding: 1.15rem 1.3rem;
+}
+
+.cpath-guidance-note>.bi {
+    flex: 0 0 auto;
+    color: var(--primary-dark);
+    font-size: 1.25rem;
+    margin-top: .15rem;
+}
+
+.cpath-guidance-note p {
+    margin: 0;
+    font-weight: 600;
+    color: var(--ink);
+    font-size: .97rem;
+    line-height: 1.65;
+}
+
+
+/* =========================
+   06. SCROLL REVEAL
+   (page-specific hook — never conflicts with the
+   reveal observers used on other pages)
+========================= */
+.cpath-js .cpath-reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity .7s cubic-bezier(.22, .61, .36, 1),
+        transform .7s cubic-bezier(.22, .61, .36, 1);
+    will-change: opacity, transform;
+}
+
+.cpath-js .cpath-reveal.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.cpath-js .cpath-reveal.cpath-d1 {
+    transition-delay: .1s;
+}
+
+.cpath-js .cpath-reveal.cpath-d2 {
+    transition-delay: .2s;
+}
+
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -4640,6 +5090,7 @@ a {
     .pcert-standard-item {
         transition: none;
     }
+
     .carea-hero-anim {
         animation: none !important;
     }
@@ -4655,5 +5106,18 @@ a {
     .carea-filter {
         transition: none;
     }
-}
+    .cpath-hero-anim {
+        animation: none !important;
+    }
 
+    .cpath-js .cpath-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .cpath-card,
+    .cpath-chip {
+        transition: none;
+    }
+}
