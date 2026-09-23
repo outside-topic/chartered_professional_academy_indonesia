@@ -1161,6 +1161,39 @@
   .corporate-proposal-card p{font-size:.92rem;}
   .corporate-proposal-response-note p{font-size:.92rem;}
   .corporate-proposal-response-note > .bi{font-size:1.1rem;}
+  .individual-development-hero{padding:56px 0 68px;}
+  .individual-development-breadcrumb{margin-bottom:20px;}
+  .individual-development-hero-lead{font-size:.96rem;margin-bottom:26px;}
+  .individual-development-nav-pill{font-size:.8rem;padding:.55rem .95rem;gap:.45rem;}
+  .individual-development-moments .section-head,
+  .individual-development-formats .section-head{margin-bottom:32px;}
+  .individual-development-moment{padding:1.25rem 1.1rem;}
+  .individual-development-moment-num{width:42px;height:42px;font-size:.9rem;}
+  .individual-development-moment-icon{width:38px;height:38px;font-size:1.05rem;}
+  .individual-development-moment p{font-size:.94rem;}
+  .individual-development-formats-wrap{padding:18px 14px;}
+  .individual-development-format p{font-size:.91rem;}
+  .individual-development-format-check{width:26px;height:26px;font-size:.9rem;}
+  .individual-development-choose-review{font-size:1.02rem;margin:22px 0 12px;}
+  .individual-development-choose-chip{font-size:.82rem;padding:.5rem .95rem;}
+  .individual-development-choose-note p{font-size:.92rem;}
+  .individual-development-choose-note > .bi{font-size:1.1rem;}
+  .short-courses-hero{padding:56px 0 68px;}
+  .short-courses-breadcrumb{margin-bottom:20px;}
+  .short-courses-hero-lead{font-size:.96rem;margin-bottom:26px;}
+  .short-courses-nav-pill{font-size:.8rem;padding:.55rem .95rem;gap:.45rem;}
+  .short-courses-expect .section-head,
+  .short-courses-categories .section-head,
+  .short-courses-card .section-head{margin-bottom:32px;}
+  .short-courses-expect-icon{width:36px;height:36px;font-size:1rem;}
+  .short-courses-expect-item p{font-size:.91rem;padding-top:.25rem;}
+  .short-courses-category{padding:1.15rem 1.05rem;}
+  .short-courses-category-icon{width:42px;height:42px;font-size:1.2rem;}
+  .short-courses-category p{font-size:.92rem;}
+  .short-courses-card-panel{padding:18px 14px;}
+  .short-courses-card-row{padding:.75rem .85rem;gap:.7rem;}
+  .short-courses-card-num{width:30px;height:30px;font-size:.74rem;}
+  .short-courses-card-text{font-size:.9rem;}
 }
 
 
@@ -1499,6 +1532,18 @@
   .corporate-proposal-card{padding:1.05rem 1.1rem;}
   .corporate-proposal-response-card{padding:1.25rem 1.2rem;}
   .corporate-proposal-response-note{padding:1.05rem 1.1rem;}
+  .individual-development-hero{padding:64px 0 76px;}
+  .individual-development-hero-actions .btn{flex:1 1 100%;max-width:340px;}
+  .individual-development-moment{padding:1.35rem 1.2rem;}
+  .individual-development-formats-wrap{padding:20px;}
+  .individual-development-format{padding:.95rem 1rem;}
+  .individual-development-choose-statement{padding:1.25rem 1.2rem;}
+  .individual-development-choose-note{padding:1.05rem 1.15rem;}
+  .short-courses-hero{padding:64px 0 76px;}
+  .short-courses-expect-panel{padding:20px;}
+  .short-courses-expect-item{padding:.95rem 1rem;}
+  .short-courses-category{padding:1.25rem 1.15rem;}
+  .short-courses-card-panel{padding:20px;}
 }
 
 

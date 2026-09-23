@@ -13707,6 +13707,1122 @@ a {
 
 
 
+
+
+
+/* Individual Professional Developement */
+
+
+
+
+/* =========================================================
+   INDIVIDUAL PROFESSIONAL DEVELOPMENT — PAGE-SPECIFIC CSS
+
+   • Every custom class uses the "individual-development-" prefix.
+   • Depends on the shared site stylesheet (style.css) for CSS
+     variables, base typography, buttons, header/topbar and
+     footer components. No global styles are modified.
+   • Mobile-first. Hardened for 430px and below.
+
+   SECTIONS
+   01. PAGE SCOPE & ACTIVE NAV STATE
+   02. HERO
+   03. DEVELOPMENT FOR REAL CAREER MOMENTS (6 CARDS)
+   04. LEARNING FORMATS
+   05. HOW TO CHOOSE
+   06. COMPLETION AND RECOGNITION (CLOSING BAND)
+   07. SCROLL REVEAL
+   08. REDUCED MOTION
+   09. SMALL SCREEN HARDENING (≤575px / ≤430px)
+========================================================= */
+
+
+/* =========================
+   01. PAGE SCOPE & ACTIVE NAV STATE
+========================= */
+.individual-development-page .navbar-nav .nav-link.active {
+    color: var(--primary-dark);
+    background: var(--primary-tint);
+}
+
+
+/* =========================
+   02. HERO
+========================= */
+.individual-development-hero {
+    position: relative;
+    background: var(--dark-bg);
+    color: var(--secondary-color);
+    overflow: hidden;
+    padding: 88px 0 96px;
+    text-align: center;
+}
+
+.individual-development-hero::before {
+    content: "";
+    position: absolute;
+    top: -260px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 760px;
+    height: 760px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 0, 0, .28), transparent 65%);
+}
+
+.individual-development-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, .05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .05) 1px, transparent 1px);
+    background-size: 44px 44px;
+    -webkit-mask-image: radial-gradient(ellipse at 50% 18%, rgba(0, 0, 0, .85), transparent 72%);
+    mask-image: radial-gradient(ellipse at 50% 18%, rgba(0, 0, 0, .85), transparent 72%);
+}
+
+.individual-development-hero .container-xxl {
+    position: relative;
+    z-index: 2;
+}
+
+/* Breadcrumb */
+.individual-development-breadcrumb ol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .35rem .55rem;
+    list-style: none;
+    margin: 0 0 26px;
+    padding: 0;
+    font-size: .82rem;
+    font-weight: 600;
+    color: #8d97a5;
+}
+
+.individual-development-breadcrumb li {
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+}
+
+.individual-development-breadcrumb li+li::before {
+    content: "/";
+    color: rgba(255, 255, 255, .25);
+}
+
+.individual-development-breadcrumb a {
+    color: #c3cad4;
+    text-decoration: none;
+}
+
+.individual-development-breadcrumb a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.individual-development-breadcrumb [aria-current] {
+    color: var(--secondary-color);
+}
+
+/* Hero copy */
+.individual-development-hero-title {
+    color: var(--secondary-color);
+    font-size: clamp(2rem, 1.35rem + 3vw, 3.4rem);
+    line-height: 1.12;
+    letter-spacing: -.02em;
+    max-width: 880px;
+    margin: 14px auto 16px;
+}
+
+.individual-development-hero-lead {
+    color: #c3cad4;
+    font-size: 1.03rem;
+    max-width: 680px;
+    margin: 0 auto 30px;
+}
+
+.individual-development-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .9rem;
+}
+
+/* In-page section navigation pills */
+.individual-development-hero-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .6rem;
+    margin: 0;
+}
+
+.individual-development-nav-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: 999px;
+    padding: .62rem 1.15rem;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: .85rem;
+    color: #c3cad4;
+    text-decoration: none;
+    transition: all .25s ease;
+}
+
+.individual-development-nav-pill .bi {
+    color: var(--primary-soft);
+    font-size: 1rem;
+    transition: color .25s ease;
+}
+
+.individual-development-nav-pill:hover {
+    color: var(--secondary-color);
+    border-color: rgba(255, 0, 0, .5);
+    background: rgba(255, 0, 0, .08);
+    transform: translateY(-2px);
+}
+
+.individual-development-nav-pill:hover .bi {
+    color: var(--primary-color);
+}
+
+/* Hero entrance animation (pure CSS, no JS required) */
+@keyframes individual-development-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.individual-development-hero-anim {
+    animation: individual-development-fade-up .8s cubic-bezier(.22, .61, .36, 1) both;
+}
+
+.individual-development-hero-anim-2 {
+    animation-delay: .15s;
+}
+
+.individual-development-hero-anim-3 {
+    animation-delay: .3s;
+}
+
+
+/* =========================
+   03. DEVELOPMENT FOR REAL CAREER MOMENTS (6 CARDS)
+========================= */
+.individual-development-moments {
+    background: var(--light-bg);
+}
+
+.individual-development-moments .section-head {
+    margin-bottom: 40px;
+}
+
+.individual-development-moment {
+    background: var(--secondary-color);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem 1.4rem;
+    height: 100%;
+    transition: all .3s ease;
+}
+
+.individual-development-moment:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-tint-2);
+}
+
+.individual-development-moment-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.individual-development-moment-num {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
+    color: var(--secondary-color);
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: .95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(255, 0, 0, .25);
+}
+
+.individual-development-moment-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--primary-tint);
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+}
+
+.individual-development-moment p {
+    margin: 0;
+    font-family: var(--font-head);
+    font-weight: 600;
+    color: var(--ink);
+    font-size: .98rem;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   04. LEARNING FORMATS
+========================= */
+.individual-development-formats {
+    background: var(--secondary-color);
+}
+
+.individual-development-formats .section-head {
+    margin-bottom: 36px;
+}
+
+/* Formats panel with red top accent */
+.individual-development-formats-wrap {
+    position: relative;
+    max-width: 920px;
+    margin: 0 auto;
+    background: var(--light-bg);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 26px;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+.individual-development-formats-wrap::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 24px;
+    right: 24px;
+    height: 4px;
+    border-radius: 0 0 4px 4px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+}
+
+.individual-development-formats-list {
+    margin: 0;
+}
+
+.individual-development-format {
+    display: flex;
+    align-items: center;
+    gap: .85rem;
+    background: var(--secondary-color);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    padding: 1.05rem 1.15rem;
+    height: 100%;
+    transition: all .25s ease;
+}
+
+.individual-development-format:hover {
+    border-color: var(--primary-tint-2);
+    box-shadow: var(--shadow-sm);
+    transform: translateY(-2px);
+}
+
+.individual-development-format-check {
+    flex: 0 0 auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--primary-tint);
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.individual-development-format p {
+    margin: 0;
+    font-family: var(--font-head);
+    font-weight: 700;
+    color: var(--ink);
+    font-size: .95rem;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   05. HOW TO CHOOSE
+========================= */
+.individual-development-choose {
+    position: relative;
+    background: var(--dark-bg);
+    color: var(--secondary-color);
+    overflow: hidden;
+}
+
+.individual-development-choose::before {
+    content: "";
+    position: absolute;
+    right: -180px;
+    top: -160px;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 0, 0, .2), transparent 65%);
+}
+
+.individual-development-choose .container-xxl {
+    position: relative;
+    z-index: 2;
+}
+
+.individual-development-choose .section-title {
+    color: var(--secondary-color);
+}
+
+/* Statement card (sentence 1, verbatim) */
+.individual-development-choose-statement {
+    max-width: 640px;
+    margin: 0 auto;
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-left: 3px solid var(--primary-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem 1.6rem;
+}
+
+.individual-development-choose-statement p {
+    margin: 0;
+    font-family: var(--font-head);
+    font-weight: 700;
+    color: var(--secondary-color);
+    font-size: clamp(1.2rem, 1rem + 1vw, 1.6rem);
+    line-height: 1.55;
+    letter-spacing: -.01em;
+    text-align: center;
+}
+
+/* Red emphasis (styling only — text unchanged) */
+.individual-development-hl-dark {
+    color: var(--primary-soft);
+    background: rgba(255, 0, 0, .14);
+    padding: .04em .18em;
+    border-radius: .35em;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+.individual-development-choose-review {
+    font-family: var(--font-head);
+    font-weight: 700;
+    color: var(--primary-soft);
+    font-size: 1.08rem;
+    text-align: center;
+    margin: 26px 0 14px;
+}
+
+/* Review chips (dark surface) */
+.individual-development-choose-chips {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .6rem;
+    max-width: 760px;
+}
+
+.individual-development-choose-chip {
+    display: inline-flex;
+    align-items: center;
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: 999px;
+    padding: .65rem 1.15rem;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: .88rem;
+    color: var(--secondary-color);
+    transition: all .25s ease;
+}
+
+.individual-development-choose-chip:hover {
+    border-color: rgba(255, 0, 0, .5);
+    background: rgba(255, 0, 0, .06);
+    transform: translateY(-2px);
+}
+
+/* Verbatim note (sentence 3) */
+.individual-development-choose-note {
+    display: flex;
+    align-items: flex-start;
+    gap: .9rem;
+    max-width: 640px;
+    margin: 26px auto 0;
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: var(--radius-md);
+    padding: 1.2rem 1.3rem;
+}
+
+.individual-development-choose-note>.bi {
+    flex: 0 0 auto;
+    color: var(--primary-soft);
+    font-size: 1.25rem;
+    margin-top: .15rem;
+}
+
+.individual-development-choose-note p {
+    margin: 0;
+    font-weight: 600;
+    color: var(--secondary-color);
+    font-size: .97rem;
+    line-height: 1.65;
+}
+
+
+/* =========================
+   06. COMPLETION AND RECOGNITION (CLOSING BAND)
+========================= */
+.individual-development-cta {
+    position: relative;
+    background: linear-gradient(130deg,
+            var(--primary-color) 0%,
+            var(--primary-dark) 55%,
+            var(--primary-darker) 100%);
+    color: var(--secondary-color);
+    overflow: hidden;
+    padding: 72px 0;
+    text-align: center;
+}
+
+.individual-development-cta::before,
+.individual-development-cta::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, .18);
+    pointer-events: none;
+}
+
+.individual-development-cta::before {
+    width: 320px;
+    height: 320px;
+    top: -130px;
+    left: -100px;
+}
+
+.individual-development-cta::after {
+    width: 420px;
+    height: 420px;
+    bottom: -210px;
+    right: -140px;
+    border-color: rgba(255, 255, 255, .12);
+}
+
+.individual-development-cta .container-xxl {
+    position: relative;
+    z-index: 2;
+}
+
+.individual-development-cta h2 {
+    color: var(--secondary-color);
+    font-size: clamp(1.5rem, 1.1rem + 2.2vw, 2.4rem);
+    line-height: 1.25;
+    margin: 0 auto 18px;
+}
+
+.individual-development-cta p {
+    color: rgba(255, 255, 255, .94);
+    max-width: 680px;
+    margin: 0 auto 12px;
+}
+
+.individual-development-cta strong {
+    color: var(--secondary-color);
+    font-family: var(--font-head);
+    font-weight: 800;
+}
+
+
+/* =========================
+   07. SCROLL REVEAL
+   (page-specific hook — never conflicts with the
+   reveal observers used on other pages)
+========================= */
+.individual-development-js .individual-development-reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity .7s cubic-bezier(.22, .61, .36, 1),
+        transform .7s cubic-bezier(.22, .61, .36, 1);
+    will-change: opacity, transform;
+}
+
+.individual-development-js .individual-development-reveal.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.individual-development-js .individual-development-reveal.individual-development-d1 {
+    transition-delay: .1s;
+}
+
+.individual-development-js .individual-development-reveal.individual-development-d2 {
+    transition-delay: .2s;
+}
+
+
+
+
+
+
+/* short Courses */
+
+
+
+
+
+/* =========================================================
+   SHORT COURSES — PAGE-SPECIFIC STYLESHEET
+
+   • Every custom class uses the "short-courses-" prefix.
+   • Depends on the shared site stylesheet (style.css) for CSS
+     variables, base typography, buttons, header/topbar and
+     footer components. No global styles are modified.
+   • Mobile-first. Hardened for 430px and below.
+
+   SECTIONS
+   01. PAGE SCOPE & ACTIVE NAV STATE
+   02. HERO
+   03. WHAT TO EXPECT
+   04. SUGGESTED CATEGORIES
+   05. COURSE CARD CONTENT
+   06. QUALITY DISTINCTION (CLOSING BAND)
+   07. SCROLL REVEAL
+   08. REDUCED MOTION
+   09. SMALL SCREEN HARDENING (≤575px / ≤430px)
+========================================================= */
+
+
+/* =========================
+   01. PAGE SCOPE & ACTIVE NAV STATE
+========================= */
+.short-courses-page .navbar-nav .nav-link.active {
+    color: var(--primary-dark);
+    background: var(--primary-tint);
+}
+
+
+/* =========================
+   02. HERO
+========================= */
+.short-courses-hero {
+    position: relative;
+    background: var(--dark-bg);
+    color: var(--secondary-color);
+    overflow: hidden;
+    padding: 88px 0 96px;
+    text-align: center;
+}
+
+.short-courses-hero::before {
+    content: "";
+    position: absolute;
+    top: -260px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 760px;
+    height: 760px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 0, 0, .28), transparent 65%);
+}
+
+.short-courses-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, .05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .05) 1px, transparent 1px);
+    background-size: 44px 44px;
+    -webkit-mask-image: radial-gradient(ellipse at 50% 18%, rgba(0, 0, 0, .85), transparent 72%);
+    mask-image: radial-gradient(ellipse at 50% 18%, rgba(0, 0, 0, .85), transparent 72%);
+}
+
+.short-courses-hero .container-xxl {
+    position: relative;
+    z-index: 2;
+}
+
+/* Breadcrumb */
+.short-courses-breadcrumb ol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .35rem .55rem;
+    list-style: none;
+    margin: 0 0 26px;
+    padding: 0;
+    font-size: .82rem;
+    font-weight: 600;
+    color: #8d97a5;
+}
+
+.short-courses-breadcrumb li {
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+}
+
+.short-courses-breadcrumb li+li::before {
+    content: "/";
+    color: rgba(255, 255, 255, .25);
+}
+
+.short-courses-breadcrumb a {
+    color: #c3cad4;
+    text-decoration: none;
+}
+
+.short-courses-breadcrumb a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.short-courses-breadcrumb [aria-current] {
+    color: var(--secondary-color);
+}
+
+/* Hero copy */
+.short-courses-hero-title {
+    color: var(--secondary-color);
+    font-size: clamp(2rem, 1.35rem + 3vw, 3.4rem);
+    line-height: 1.12;
+    letter-spacing: -.02em;
+    max-width: 880px;
+    margin: 14px auto 16px;
+}
+
+.short-courses-hero-lead {
+    color: #c3cad4;
+    font-size: 1.03rem;
+    max-width: 640px;
+    margin: 0 auto 30px;
+}
+
+/* In-page section navigation pills */
+.short-courses-hero-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .6rem;
+    margin: 0;
+}
+
+.short-courses-nav-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: 999px;
+    padding: .62rem 1.15rem;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: .85rem;
+    color: #c3cad4;
+    text-decoration: none;
+    transition: all .25s ease;
+}
+
+.short-courses-nav-pill .bi {
+    color: var(--primary-soft);
+    font-size: 1rem;
+    transition: color .25s ease;
+}
+
+.short-courses-nav-pill:hover {
+    color: var(--secondary-color);
+    border-color: rgba(255, 0, 0, .5);
+    background: rgba(255, 0, 0, .08);
+    transform: translateY(-2px);
+}
+
+.short-courses-nav-pill:hover .bi {
+    color: var(--primary-color);
+}
+
+/* Hero entrance animation (pure CSS, no JS required) */
+@keyframes short-courses-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.short-courses-hero-anim {
+    animation: short-courses-fade-up .8s cubic-bezier(.22, .61, .36, 1) both;
+}
+
+.short-courses-hero-anim-2 {
+    animation-delay: .15s;
+}
+
+.short-courses-hero-anim-3 {
+    animation-delay: .3s;
+}
+
+
+/* =========================
+   03. WHAT TO EXPECT
+========================= */
+.short-courses-expect {
+    background: var(--secondary-color);
+}
+
+.short-courses-expect .section-head {
+    margin-bottom: 36px;
+}
+
+/* Checklist panel with red top accent */
+.short-courses-expect-panel {
+    position: relative;
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--light-bg);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 26px;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+.short-courses-expect-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 24px;
+    right: 24px;
+    height: 4px;
+    border-radius: 0 0 4px 4px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+}
+
+.short-courses-expect-item {
+    display: flex;
+    align-items: flex-start;
+    gap: .9rem;
+    background: var(--secondary-color);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    padding: 1.05rem 1.15rem;
+    height: 100%;
+    transition: all .25s ease;
+}
+
+.short-courses-expect-item:hover {
+    border-color: var(--primary-tint-2);
+    box-shadow: var(--shadow-sm);
+    transform: translateY(-2px);
+}
+
+.short-courses-expect-icon {
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary-tint);
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.short-courses-expect-item p {
+    margin: 0;
+    padding-top: .3rem;
+    font-family: var(--font-head);
+    font-weight: 600;
+    color: var(--ink);
+    font-size: .95rem;
+    line-height: 1.55;
+}
+
+
+/* =========================
+   04. SUGGESTED CATEGORIES
+========================= */
+.short-courses-categories {
+    background: var(--light-bg);
+}
+
+.short-courses-categories .section-head {
+    margin-bottom: 40px;
+}
+
+/* Category tile — names only, no invented descriptions */
+.short-courses-category {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: var(--secondary-color);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 1.4rem 1.3rem;
+    height: 100%;
+    overflow: hidden;
+    transition: all .3s ease;
+}
+
+.short-courses-category:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-tint-2);
+}
+
+.short-courses-category-num {
+    font-family: var(--font-head);
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+    color: var(--primary-dark);
+    opacity: .4;
+    margin-bottom: .8rem;
+}
+
+.short-courses-category-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    background: var(--primary-tint);
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    transition: all .3s ease;
+}
+
+.short-courses-category:hover .short-courses-category-icon {
+    background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
+    color: var(--secondary-color);
+    box-shadow: 0 10px 20px rgba(255, 0, 0, .25);
+}
+
+.short-courses-category p {
+    margin: 0;
+    font-family: var(--font-head);
+    font-weight: 700;
+    color: var(--ink);
+    font-size: .96rem;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   05. COURSE CARD CONTENT
+========================= */
+.short-courses-card {
+    background: var(--secondary-color);
+}
+
+.short-courses-card .section-head {
+    margin-bottom: 36px;
+}
+
+/* Spec panel with red top accent */
+.short-courses-card-panel {
+    position: relative;
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--light-bg);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 26px;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+.short-courses-card-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 24px;
+    right: 24px;
+    height: 4px;
+    border-radius: 0 0 4px 4px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+}
+
+.short-courses-card-row {
+    display: flex;
+    align-items: center;
+    gap: .85rem;
+    background: var(--secondary-color);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    padding: .85rem 1rem;
+    transition: all .25s ease;
+}
+
+.short-courses-card-row:hover {
+    border-color: var(--primary-tint-2);
+    box-shadow: var(--shadow-sm);
+}
+
+.short-courses-card-row+.short-courses-card-row {
+    margin-top: .7rem;
+}
+
+.short-courses-card-num {
+    flex: 0 0 auto;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: var(--primary-tint);
+    color: var(--primary-dark);
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.short-courses-card-text {
+    margin: 0;
+    font-family: var(--font-head);
+    font-weight: 700;
+    color: var(--ink);
+    font-size: .95rem;
+    line-height: 1.45;
+}
+
+
+/* =========================
+   06. QUALITY DISTINCTION (CLOSING BAND)
+========================= */
+.short-courses-cta {
+    position: relative;
+    background: linear-gradient(130deg,
+            var(--primary-color) 0%,
+            var(--primary-dark) 55%,
+            var(--primary-darker) 100%);
+    color: var(--secondary-color);
+    overflow: hidden;
+    padding: 72px 0;
+    text-align: center;
+}
+
+.short-courses-cta::before,
+.short-courses-cta::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, .18);
+    pointer-events: none;
+}
+
+.short-courses-cta::before {
+    width: 320px;
+    height: 320px;
+    top: -130px;
+    left: -100px;
+}
+
+.short-courses-cta::after {
+    width: 420px;
+    height: 420px;
+    bottom: -210px;
+    right: -140px;
+    border-color: rgba(255, 255, 255, .12);
+}
+
+.short-courses-cta .container-xxl {
+    position: relative;
+    z-index: 2;
+}
+
+.short-courses-cta h2 {
+    color: var(--secondary-color);
+    font-size: clamp(1.5rem, 1.1rem + 2.2vw, 2.4rem);
+    line-height: 1.25;
+    margin: 0 auto 18px;
+}
+
+.short-courses-cta p {
+    color: rgba(255, 255, 255, .94);
+    max-width: 680px;
+    margin: 0 auto 12px;
+}
+
+.short-courses-cta strong {
+    color: var(--secondary-color);
+    font-family: var(--font-head);
+    font-weight: 800;
+}
+
+
+/* =========================
+   07. SCROLL REVEAL
+   (page-specific hook — never conflicts with the
+   reveal observers used on other pages)
+========================= */
+.short-courses-js .short-courses-reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity .7s cubic-bezier(.22, .61, .36, 1),
+        transform .7s cubic-bezier(.22, .61, .36, 1);
+    will-change: opacity, transform;
+}
+
+.short-courses-js .short-courses-reveal.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.short-courses-js .short-courses-reveal.short-courses-d1 {
+    transition-delay: .1s;
+}
+
+.short-courses-js .short-courses-reveal.short-courses-d2 {
+    transition-delay: .2s;
+}
+
+
+
+
+
+
+
+
+
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -14120,6 +15236,41 @@ a {
     .corporate-proposal-form .form-check-input,
     .corporate-proposal-card,
     .corporate-proposal-nav-pill {
+        transition: none;
+    }
+
+    .individual-development-hero-anim {
+        animation: none !important;
+    }
+
+    .individual-development-js .individual-development-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .individual-development-moment,
+    .individual-development-format,
+    .individual-development-choose-chip,
+    .individual-development-nav-pill {
+        transition: none;
+    }
+
+    .short-courses-hero-anim {
+        animation: none !important;
+    }
+
+    .short-courses-js .short-courses-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .short-courses-expect-item,
+    .short-courses-category,
+    .short-courses-category-icon,
+    .short-courses-card-row,
+    .short-courses-nav-pill {
         transition: none;
     }
 }
