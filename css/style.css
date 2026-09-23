@@ -15365,6 +15365,962 @@ a {
 
 
 
+/* Executive Learning */
+
+
+
+
+/* =========================================================
+   EXECUTIVE LEARNING — PAGE-SPECIFIC STYLESHEET
+
+   • Every custom class uses the "executive-learning-" prefix.
+   • Depends on the shared site stylesheet (style.css) for CSS
+     variables, base typography, buttons, header/topbar and
+     footer components. No global styles are modified.
+   • Mobile-first. Hardened for 430px and below.
+
+   SECTIONS
+   01. PAGE SCOPE & ACTIVE NAV STATE
+   02. HERO
+   03. POTENTIAL THEMES (8 AREAS)
+   04. DELIVERY OPTIONS
+   05. DESIGN PRINCIPLES (5 TILES)
+   06. PRIVATE COHORTS (CLOSING BAND)
+   07. SCROLL REVEAL
+   08. REDUCED MOTION
+   09. SMALL SCREEN HARDENING (≤575px / ≤430px)
+========================================================= */
+
+
+/* =========================
+   01. PAGE SCOPE & ACTIVE NAV STATE
+========================= */
+.executive-learning-page .navbar-nav .nav-link.active {
+    color: var(--primary-dark);
+    background: var(--primary-tint);
+}
+
+
+/* =========================
+   02. HERO
+========================= */
+.executive-learning-hero {
+    position: relative;
+    background: var(--dark-bg);
+    color: var(--secondary-color);
+    overflow: hidden;
+    padding: 88px 0 96px;
+    text-align: center;
+}
+
+.executive-learning-hero::before {
+    content: "";
+    position: absolute;
+    top: -260px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 760px;
+    height: 760px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 0, 0, .28), transparent 65%);
+}
+
+.executive-learning-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, .05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .05) 1px, transparent 1px);
+    background-size: 44px 44px;
+    -webkit-mask-image: radial-gradient(ellipse at 50% 18%, rgba(0, 0, 0, .85), transparent 72%);
+    mask-image: radial-gradient(ellipse at 50% 18%, rgba(0, 0, 0, .85), transparent 72%);
+}
+
+.executive-learning-hero .container-xxl {
+    position: relative;
+    z-index: 2;
+}
+
+/* Breadcrumb */
+.executive-learning-breadcrumb ol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .35rem .55rem;
+    list-style: none;
+    margin: 0 0 26px;
+    padding: 0;
+    font-size: .82rem;
+    font-weight: 600;
+    color: #8d97a5;
+}
+
+.executive-learning-breadcrumb li {
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+}
+
+.executive-learning-breadcrumb li+li::before {
+    content: "/";
+    color: rgba(255, 255, 255, .25);
+}
+
+.executive-learning-breadcrumb a {
+    color: #c3cad4;
+    text-decoration: none;
+}
+
+.executive-learning-breadcrumb a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.executive-learning-breadcrumb [aria-current] {
+    color: var(--secondary-color);
+}
+
+/* Hero copy */
+.executive-learning-hero-title {
+    color: var(--secondary-color);
+    font-size: clamp(2rem, 1.35rem + 3vw, 3.4rem);
+    line-height: 1.12;
+    letter-spacing: -.02em;
+    max-width: 880px;
+    margin: 14px auto 16px;
+}
+
+.executive-learning-hero-lead {
+    color: #c3cad4;
+    font-size: 1.03rem;
+    max-width: 680px;
+    margin: 0 auto 30px;
+}
+
+/* In-page section navigation pills */
+.executive-learning-hero-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .6rem;
+    margin: 0;
+}
+
+.executive-learning-nav-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: 999px;
+    padding: .62rem 1.15rem;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: .85rem;
+    color: #c3cad4;
+    text-decoration: none;
+    transition: all .25s ease;
+}
+
+.executive-learning-nav-pill .bi {
+    color: var(--primary-soft);
+    font-size: 1rem;
+    transition: color .25s ease;
+}
+
+.executive-learning-nav-pill:hover {
+    color: var(--secondary-color);
+    border-color: rgba(255, 0, 0, .5);
+    background: rgba(255, 0, 0, .08);
+    transform: translateY(-2px);
+}
+
+.executive-learning-nav-pill:hover .bi {
+    color: var(--primary-color);
+}
+
+/* Hero entrance animation (pure CSS, no JS required) */
+@keyframes executive-learning-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.executive-learning-hero-anim {
+    animation: executive-learning-fade-up .8s cubic-bezier(.22, .61, .36, 1) both;
+}
+
+.executive-learning-hero-anim-2 {
+    animation-delay: .15s;
+}
+
+.executive-learning-hero-anim-3 {
+    animation-delay: .3s;
+}
+
+
+/* =========================
+   03. POTENTIAL THEMES (8 AREAS)
+========================= */
+.executive-learning-themes {
+    background: var(--secondary-color);
+}
+
+.executive-learning-themes .section-head {
+    margin-bottom: 40px;
+}
+
+/* Editorial theme row — names only, no invented descriptions */
+.executive-learning-theme {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--light-bg);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    padding: 1.15rem 1.3rem;
+    height: 100%;
+    transition: all .3s ease;
+}
+
+.executive-learning-theme:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-tint-2);
+}
+
+.executive-learning-theme-icon {
+    flex: 0 0 auto;
+    width: 46px;
+    height: 46px;
+    border-radius: 13px;
+    background: var(--primary-tint);
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    transition: all .3s ease;
+}
+
+.executive-learning-theme:hover .executive-learning-theme-icon {
+    background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
+    color: var(--secondary-color);
+    box-shadow: 0 10px 20px rgba(255, 0, 0, .25);
+}
+
+.executive-learning-theme-name {
+    flex: 1 1 auto;
+    min-width: 0;
+    margin: 0;
+    font-family: var(--font-head);
+    font-weight: 700;
+    color: var(--ink);
+    font-size: .98rem;
+    line-height: 1.45;
+}
+
+.executive-learning-theme-num {
+    flex: 0 0 auto;
+    font-family: var(--font-head);
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+    color: var(--primary-dark);
+    opacity: .35;
+}
+
+
+/* =========================
+   04. DELIVERY OPTIONS
+========================= */
+.executive-learning-delivery {
+    background: var(--light-bg);
+}
+
+.executive-learning-delivery .section-head {
+    margin-bottom: 36px;
+}
+
+/* Delivery panel with red top accent */
+.executive-learning-delivery-panel {
+    position: relative;
+    max-width: 920px;
+    margin: 0 auto;
+    background: var(--secondary-color);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 26px;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+.executive-learning-delivery-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 24px;
+    right: 24px;
+    height: 4px;
+    border-radius: 0 0 4px 4px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+}
+
+.executive-learning-delivery-item {
+    display: flex;
+    align-items: flex-start;
+    gap: .9rem;
+    background: var(--light-bg);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    padding: 1.05rem 1.15rem;
+    height: 100%;
+    transition: all .25s ease;
+}
+
+.executive-learning-delivery-item:hover {
+    border-color: var(--primary-tint-2);
+    box-shadow: var(--shadow-sm);
+    transform: translateY(-2px);
+}
+
+.executive-learning-delivery-icon {
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary-tint);
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.executive-learning-delivery-item p {
+    margin: 0;
+    padding-top: .3rem;
+    font-family: var(--font-head);
+    font-weight: 600;
+    color: var(--ink);
+    font-size: .95rem;
+    line-height: 1.55;
+}
+
+
+/* =========================
+   05. DESIGN PRINCIPLES (5 TILES)
+========================= */
+.executive-learning-principles {
+    position: relative;
+    background: var(--dark-bg);
+    color: var(--secondary-color);
+    overflow: hidden;
+}
+
+.executive-learning-principles::before {
+    content: "";
+    position: absolute;
+    right: -180px;
+    top: -160px;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 0, 0, .2), transparent 65%);
+}
+
+.executive-learning-principles .container-xxl {
+    position: relative;
+    z-index: 2;
+}
+
+.executive-learning-principles .section-title {
+    color: var(--secondary-color);
+}
+
+.executive-learning-principles-lead {
+    font-family: var(--font-head);
+    font-weight: 700;
+    color: var(--primary-soft);
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Principle tile */
+.executive-learning-principle {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: var(--radius-md);
+    padding: 1.2rem 1.3rem;
+    height: 100%;
+    transition: all .3s ease;
+}
+
+.executive-learning-principle:hover {
+    border-color: rgba(255, 0, 0, .5);
+    background: rgba(255, 0, 0, .06);
+    transform: translateY(-3px);
+}
+
+.executive-learning-principle-icon {
+    flex: 0 0 auto;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 10px 20px rgba(255, 0, 0, .28);
+}
+
+.executive-learning-principle p {
+    margin: 0;
+    font-family: var(--font-head);
+    font-weight: 700;
+    color: var(--secondary-color);
+    font-size: .96rem;
+    line-height: 1.55;
+}
+
+/* Final, longest principle spans the full row */
+@media (min-width:768px) {
+    .executive-learning-principle-wide {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+
+
+/* =========================
+   06. PRIVATE COHORTS (CLOSING BAND)
+========================= */
+.executive-learning-cta {
+    position: relative;
+    background: linear-gradient(130deg,
+            var(--primary-color) 0%,
+            var(--primary-dark) 55%,
+            var(--primary-darker) 100%);
+    color: var(--secondary-color);
+    overflow: hidden;
+    padding: 72px 0;
+    text-align: center;
+}
+
+.executive-learning-cta::before,
+.executive-learning-cta::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, .18);
+    pointer-events: none;
+}
+
+.executive-learning-cta::before {
+    width: 320px;
+    height: 320px;
+    top: -130px;
+    left: -100px;
+}
+
+.executive-learning-cta::after {
+    width: 420px;
+    height: 420px;
+    bottom: -210px;
+    right: -140px;
+    border-color: rgba(255, 255, 255, .12);
+}
+
+.executive-learning-cta .container-xxl {
+    position: relative;
+    z-index: 2;
+}
+
+.executive-learning-cta h2 {
+    color: var(--secondary-color);
+    font-size: clamp(1.5rem, 1.1rem + 2.2vw, 2.4rem);
+    line-height: 1.25;
+    margin: 0 auto 14px;
+}
+
+.executive-learning-cta p {
+    color: rgba(255, 255, 255, .94);
+    max-width: 620px;
+    margin: 0 auto 26px;
+}
+
+
+/* =========================
+   07. SCROLL REVEAL
+   (page-specific hook — never conflicts with the
+   reveal observers used on other pages)
+========================= */
+.executive-learning-js .executive-learning-reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity .7s cubic-bezier(.22, .61, .36, 1),
+        transform .7s cubic-bezier(.22, .61, .36, 1);
+    will-change: opacity, transform;
+}
+
+.executive-learning-js .executive-learning-reveal.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.executive-learning-js .executive-learning-reveal.executive-learning-d1 {
+    transition-delay: .1s;
+}
+
+.executive-learning-js .executive-learning-reveal.executive-learning-d2 {
+    transition-delay: .2s;
+}
+
+
+
+
+
+
+
+
+
+/* Career Developement Pathways */
+
+
+
+
+/* =========================================================
+   CAREER DEVELOPMENT PATHWAYS — PAGE-SPECIFIC STYLESHEET
+
+   • Every custom class uses the "career-development-pathways-" prefix.
+   • Depends on the shared site stylesheet (style.css) for CSS
+     variables, base typography, buttons, header/topbar and
+     footer components. No global styles are modified.
+   • Mobile-first. Hardened for 430px and below.
+
+   SECTIONS
+   01. PAGE SCOPE & ACTIVE NAV STATE
+   02. HERO
+   03. PATHWAY STAGES (6-STAGE FRAMEWORK)
+   04. PATHWAY GUIDANCE QUESTIONS
+   05. CAREER DISCLAIMER (CLOSING BAND)
+   06. SCROLL REVEAL
+   07. REDUCED MOTION
+   08. SMALL SCREEN HARDENING (≤575px / ≤430px)
+========================================================= */
+
+
+/* =========================
+   01. PAGE SCOPE & ACTIVE NAV STATE
+========================= */
+.career-development-pathways-page .navbar-nav .nav-link.active{
+  color:var(--primary-dark);
+  background:var(--primary-tint);
+}
+
+
+/* =========================
+   02. HERO
+========================= */
+.career-development-pathways-hero{
+  position:relative;
+  background:var(--dark-bg);
+  color:var(--secondary-color);
+  overflow:hidden;
+  padding:88px 0 96px;
+  text-align:center;
+}
+.career-development-pathways-hero::before{
+  content:"";
+  position:absolute;
+  top:-260px;
+  left:50%;
+  transform:translateX(-50%);
+  width:760px;
+  height:760px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(255,0,0,.28), transparent 65%);
+}
+.career-development-pathways-hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+  background-size:44px 44px;
+  -webkit-mask-image:radial-gradient(ellipse at 50% 18%, rgba(0,0,0,.85), transparent 72%);
+  mask-image:radial-gradient(ellipse at 50% 18%, rgba(0,0,0,.85), transparent 72%);
+}
+.career-development-pathways-hero .container-xxl{
+  position:relative;
+  z-index:2;
+}
+
+/* Breadcrumb */
+.career-development-pathways-breadcrumb ol{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:.35rem .55rem;
+  list-style:none;
+  margin:0 0 26px;
+  padding:0;
+  font-size:.82rem;
+  font-weight:600;
+  color:#8d97a5;
+}
+.career-development-pathways-breadcrumb li{
+  display:flex;
+  align-items:center;
+  gap:.55rem;
+}
+.career-development-pathways-breadcrumb li + li::before{
+  content:"/";
+  color:rgba(255,255,255,.25);
+}
+.career-development-pathways-breadcrumb a{
+  color:#c3cad4;
+  text-decoration:none;
+}
+.career-development-pathways-breadcrumb a:hover{
+  color:var(--secondary-color);
+  text-decoration:underline;
+}
+.career-development-pathways-breadcrumb [aria-current]{
+  color:var(--secondary-color);
+}
+
+/* Hero copy */
+.career-development-pathways-hero-title{
+  color:var(--secondary-color);
+  font-size:clamp(2rem, 1.35rem + 3vw, 3.4rem);
+  line-height:1.12;
+  letter-spacing:-.02em;
+  max-width:880px;
+  margin:14px auto 16px;
+}
+.career-development-pathways-hero-lead{
+  color:#c3cad4;
+  font-size:1.03rem;
+  max-width:660px;
+  margin:0 auto 30px;
+}
+
+/* In-page section navigation pills */
+.career-development-pathways-hero-nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:.6rem;
+  margin:0;
+}
+.career-development-pathways-nav-pill{
+  display:inline-flex;
+  align-items:center;
+  gap:.55rem;
+  background:var(--dark-card);
+  border:1px solid var(--dark-border);
+  border-radius:999px;
+  padding:.62rem 1.15rem;
+  font-family:var(--font-head);
+  font-weight:700;
+  font-size:.85rem;
+  color:#c3cad4;
+  text-decoration:none;
+  transition:all .25s ease;
+}
+.career-development-pathways-nav-pill .bi{
+  color:var(--primary-soft);
+  font-size:1rem;
+  transition:color .25s ease;
+}
+.career-development-pathways-nav-pill:hover{
+  color:var(--secondary-color);
+  border-color:rgba(255,0,0,.5);
+  background:rgba(255,0,0,.08);
+  transform:translateY(-2px);
+}
+.career-development-pathways-nav-pill:hover .bi{color:var(--primary-color);}
+
+/* Hero entrance animation (pure CSS, no JS required) */
+@keyframes career-development-pathways-fade-up{
+  from{opacity:0;transform:translateY(22px);}
+  to{opacity:1;transform:none;}
+}
+.career-development-pathways-hero-anim{
+  animation:career-development-pathways-fade-up .8s cubic-bezier(.22,.61,.36,1) both;
+}
+.career-development-pathways-hero-anim-2{animation-delay:.15s;}
+.career-development-pathways-hero-anim-3{animation-delay:.3s;}
+
+
+/* =========================
+   03. PATHWAY STAGES (6-STAGE FRAMEWORK)
+========================= */
+.career-development-pathways-stages{background:var(--secondary-color);}
+
+/* Stage card — genuine sequential pathway (01–06) */
+.career-development-pathways-stage{
+  position:relative;
+  background:var(--light-bg);
+  border:1px solid var(--line);
+  border-radius:var(--radius-lg);
+  padding:1.6rem 1.4rem 1.5rem;
+  height:100%;
+  overflow:hidden;
+  transition:all .3s ease;
+}
+.career-development-pathways-stage::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:4px;
+  height:0;
+  background:linear-gradient(180deg,var(--primary-color),var(--primary-darker));
+  transition:height .35s ease;
+}
+.career-development-pathways-stage:hover{
+  transform:translateY(-5px);
+  box-shadow:var(--shadow-md);
+  border-color:var(--primary-tint-2);
+}
+.career-development-pathways-stage:hover::before{height:100%;}
+
+.career-development-pathways-stage-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:14px;
+}
+.career-development-pathways-stage-num{
+  width:46px;
+  height:46px;
+  border-radius:14px;
+  background:linear-gradient(140deg,var(--primary-color),var(--primary-darker));
+  color:var(--secondary-color);
+  font-family:var(--font-head);
+  font-weight:800;
+  font-size:.95rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 10px 20px rgba(255,0,0,.25);
+}
+.career-development-pathways-stage-icon{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:var(--secondary-color);
+  color:var(--primary-dark);
+  border:1px solid var(--primary-tint-2);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.15rem;
+}
+.career-development-pathways-stage-name{
+  font-size:1.15rem;
+  line-height:1.3;
+  margin:0 0 14px;
+}
+
+/* Field blocks — labels use the document's own column headers */
+.career-development-pathways-field{
+  border:1px solid var(--line);
+  border-radius:var(--radius-sm);
+  padding:.85rem .95rem;
+  background:var(--secondary-color);
+}
+.career-development-pathways-field + .career-development-pathways-field{
+  margin-top:.7rem;
+}
+.career-development-pathways-field-label{
+  display:flex;
+  align-items:center;
+  gap:.4rem;
+  font-family:var(--font-head);
+  font-size:.66rem;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:4px;
+}
+.career-development-pathways-field-text{
+  margin:0;
+  font-size:.92rem;
+  line-height:1.6;
+  color:var(--body-text);
+}
+.career-development-pathways-field-dev{
+  background:var(--primary-tint);
+  border-color:var(--primary-tint-2);
+}
+.career-development-pathways-field-dev .career-development-pathways-field-label{
+  color:var(--primary-dark);
+}
+.career-development-pathways-field-dev .career-development-pathways-field-label .bi{
+  font-size:.85rem;
+  flex:0 0 auto;
+}
+.career-development-pathways-field-dev .career-development-pathways-field-text{
+  color:var(--ink);
+  font-weight:500;
+}
+
+
+/* =========================
+   04. PATHWAY GUIDANCE QUESTIONS
+========================= */
+.career-development-pathways-questions{background:var(--light-bg);}
+.career-development-pathways-questions .section-head{margin-bottom:36px;}
+
+/* Questions panel with red top accent */
+.career-development-pathways-questions-panel{
+  position:relative;
+  max-width:880px;
+  margin:0 auto;
+  background:var(--secondary-color);
+  border:1px solid var(--line);
+  border-radius:var(--radius-lg);
+  padding:26px;
+  box-shadow:var(--shadow-sm);
+  overflow:hidden;
+}
+.career-development-pathways-questions-panel::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:24px;
+  right:24px;
+  height:4px;
+  border-radius:0 0 4px 4px;
+  background:linear-gradient(90deg, transparent, var(--primary-color), transparent);
+}
+.career-development-pathways-question{
+  display:flex;
+  align-items:flex-start;
+  gap:.85rem;
+  background:var(--light-bg);
+  border:1px solid var(--line);
+  border-radius:var(--radius-sm);
+  padding:.95rem 1.05rem;
+  transition:all .25s ease;
+}
+.career-development-pathways-question:hover{
+  border-color:var(--primary-tint-2);
+  box-shadow:var(--shadow-sm);
+}
+.career-development-pathways-question + .career-development-pathways-question{
+  margin-top:.7rem;
+}
+.career-development-pathways-question-num{
+  flex:0 0 auto;
+  width:34px;
+  height:34px;
+  border-radius:10px;
+  background:var(--primary-tint);
+  color:var(--primary-dark);
+  font-family:var(--font-head);
+  font-weight:800;
+  font-size:.8rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.career-development-pathways-question-text{
+  margin:0;
+  padding-top:.3rem;
+  font-family:var(--font-head);
+  font-weight:600;
+  color:var(--ink);
+  font-size:.95rem;
+  line-height:1.55;
+}
+
+
+/* =========================
+   05. CAREER DISCLAIMER (CLOSING BAND)
+========================= */
+.career-development-pathways-cta{
+  position:relative;
+  background:linear-gradient(130deg,
+    var(--primary-color) 0%,
+    var(--primary-dark) 55%,
+    var(--primary-darker) 100%);
+  color:var(--secondary-color);
+  overflow:hidden;
+  padding:72px 0;
+  text-align:center;
+}
+.career-development-pathways-cta::before,
+.career-development-pathways-cta::after{
+  content:"";
+  position:absolute;
+  border-radius:50%;
+  border:2px solid rgba(255,255,255,.18);
+  pointer-events:none;
+}
+.career-development-pathways-cta::before{width:320px;height:320px;top:-130px;left:-100px;}
+.career-development-pathways-cta::after{width:420px;height:420px;bottom:-210px;right:-140px;border-color:rgba(255,255,255,.12);}
+.career-development-pathways-cta .container-xxl{
+  position:relative;
+  z-index:2;
+}
+.career-development-pathways-cta h2{
+  color:var(--secondary-color);
+  font-size:clamp(1.5rem, 1.1rem + 2.2vw, 2.4rem);
+  line-height:1.25;
+  margin:0 auto 16px;
+}
+.career-development-pathways-cta p{
+  color:rgba(255,255,255,.94);
+  max-width:680px;
+  margin:0 auto;
+}
+.career-development-pathways-cta strong{
+  color:var(--secondary-color);
+  font-family:var(--font-head);
+  font-weight:800;
+}
+
+
+/* =========================
+   06. SCROLL REVEAL
+   (page-specific hook — never conflicts with the
+   reveal observers used on other pages)
+========================= */
+.career-development-pathways-js .career-development-pathways-reveal{
+  opacity:0;
+  transform:translateY(26px);
+  transition:opacity .7s cubic-bezier(.22,.61,.36,1),
+             transform .7s cubic-bezier(.22,.61,.36,1);
+  will-change:opacity, transform;
+}
+.career-development-pathways-js .career-development-pathways-reveal.is-visible{
+  opacity:1;
+  transform:none;
+}
+.career-development-pathways-js .career-development-pathways-reveal.career-development-pathways-d1{transition-delay:.1s;}
+.career-development-pathways-js .career-development-pathways-reveal.career-development-pathways-d2{transition-delay:.2s;}
+
+
+
+
 
 
 @media (prefers-reduced-motion: reduce) {
@@ -15836,4 +16792,28 @@ a {
     .professional-masterclasses-nav-pill {
         transition: none;
     }
+
+    executive-learning-hero-anim {
+        animation: none !important;
+    }
+
+    .executive-learning-js .executive-learning-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .executive-learning-theme,
+    .executive-learning-theme-icon,
+    .executive-learning-delivery-item,
+    .executive-learning-principle,
+    .executive-learning-nav-pill {
+        transition: none;
+    }
+    .career-development-pathways-hero-anim{animation:none !important;}
+  .career-development-pathways-js .career-development-pathways-reveal{opacity:1;transform:none;transition:none;}
+  .career-development-pathways-stage,
+  .career-development-pathways-stage::before,
+  .career-development-pathways-question,
+  .career-development-pathways-nav-pill{transition:none;}
 }

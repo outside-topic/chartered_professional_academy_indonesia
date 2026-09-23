@@ -1968,6 +1968,91 @@
         padding: .5rem .95rem;
         gap: .4rem;
     }
+
+    .executive-learning-hero {
+        padding: 56px 0 68px;
+    }
+
+    .executive-learning-breadcrumb {
+        margin-bottom: 20px;
+    }
+
+    .executive-learning-hero-lead {
+        font-size: .96rem;
+        margin-bottom: 26px;
+    }
+
+    .executive-learning-nav-pill {
+        font-size: .8rem;
+        padding: .55rem .95rem;
+        gap: .45rem;
+    }
+
+    .executive-learning-themes .section-head,
+    .executive-learning-delivery .section-head,
+    .executive-learning-principles .section-head {
+        margin-bottom: 32px;
+    }
+
+    .executive-learning-theme {
+        padding: .95rem 1rem;
+        gap: .75rem;
+    }
+
+    .executive-learning-theme-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 1.05rem;
+        border-radius: 11px;
+    }
+
+    .executive-learning-theme-name {
+        font-size: .93rem;
+    }
+
+    .executive-learning-theme-num {
+        font-size: .72rem;
+    }
+
+    .executive-learning-delivery-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+
+    .executive-learning-delivery-item p {
+        font-size: .91rem;
+        padding-top: .25rem;
+    }
+
+    .executive-learning-principle {
+        gap: .8rem;
+        padding: 1rem 1.05rem;
+    }
+
+    .executive-learning-principle-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.05rem;
+    }
+
+    .executive-learning-principle p {
+        font-size: .92rem;
+    }
+    .career-development-pathways-hero{padding:56px 0 68px;}
+  .career-development-pathways-breadcrumb{margin-bottom:20px;}
+  .career-development-pathways-hero-lead{font-size:.96rem;margin-bottom:26px;}
+  .career-development-pathways-nav-pill{font-size:.8rem;padding:.55rem .95rem;gap:.45rem;}
+  .career-development-pathways-questions .section-head{margin-bottom:32px;}
+  .career-development-pathways-stage{padding:1.25rem 1.1rem;}
+  .career-development-pathways-stage-num{width:42px;height:42px;font-size:.9rem;}
+  .career-development-pathways-stage-icon{width:38px;height:38px;font-size:1.05rem;}
+  .career-development-pathways-stage-name{font-size:1.08rem;}
+  .career-development-pathways-field{padding:.75rem .8rem;}
+  .career-development-pathways-field-text{font-size:.89rem;}
+  .career-development-pathways-question{padding:.8rem .85rem;gap:.7rem;}
+  .career-development-pathways-question-num{width:30px;height:30px;font-size:.74rem;}
+  .career-development-pathways-question-text{font-size:.91rem;}
 }
 
 
@@ -2595,6 +2680,37 @@
     .professional-masterclasses-filters-panel {
         padding: 24px 20px;
     }
+
+    .executive-learning-hero {
+        padding: 64px 0 76px;
+    }
+
+    .executive-learning-theme {
+        padding: 1.05rem 1.1rem;
+        gap: .85rem;
+    }
+
+    .executive-learning-theme-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 1.15rem;
+    }
+
+    .executive-learning-delivery-panel {
+        padding: 20px;
+    }
+
+    .executive-learning-delivery-item {
+        padding: .95rem 1rem;
+    }
+
+    .executive-learning-principle {
+        padding: 1.1rem 1.15rem;
+    }
+    .career-development-pathways-hero{padding:64px 0 76px;}
+  .career-development-pathways-stage{padding:1.4rem 1.2rem;}
+  .career-development-pathways-questions-panel{padding:20px;}
+  .career-development-pathways-question{padding:.85rem .95rem;}
 }
 
 
