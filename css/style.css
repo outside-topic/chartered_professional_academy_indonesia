@@ -10719,6 +10719,472 @@ a {
 
 
 
+
+
+
+
+/* Customized Trainnig */
+
+
+
+
+
+/* =========================================================
+   CUSTOMIZED TRAINING — PAGE-SPECIFIC STYLESHEET
+
+   • Every custom class uses the "custom-training-" prefix.
+   • Depends on the shared site stylesheet (style.css) for CSS
+     variables, base typography, buttons, header/topbar and
+     footer components. No global styles are modified.
+   • Mobile-first. Hardened for 430px and below.
+
+   SECTIONS
+   01. PAGE SCOPE & ACTIVE NAV STATE
+   02. HERO
+   03. OUR CUSTOMIZATION PROCESS (7 STAGES)
+   04. WHAT WE NEED FROM THE CLIENT
+   05. CUSTOMIZATION BOUNDARIES
+   06. PROPOSAL INFORMATION
+   07. SCROLL REVEAL
+   08. REDUCED MOTION
+   09. SMALL SCREEN HARDENING (≤575px / ≤430px)
+========================================================= */
+
+
+/* =========================
+   01. PAGE SCOPE & ACTIVE NAV STATE
+========================= */
+.custom-training-page .navbar-nav .nav-link.active{
+  color:var(--primary-dark);
+  background:var(--primary-tint);
+}
+
+
+/* =========================
+   02. HERO
+========================= */
+.custom-training-hero{
+  position:relative;
+  background:var(--dark-bg);
+  color:var(--secondary-color);
+  overflow:hidden;
+  padding:88px 0 96px;
+  text-align:center;
+}
+.custom-training-hero::before{
+  content:"";
+  position:absolute;
+  top:-260px;
+  left:50%;
+  transform:translateX(-50%);
+  width:760px;
+  height:760px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(255,0,0,.28), transparent 65%);
+}
+.custom-training-hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+  background-size:44px 44px;
+  -webkit-mask-image:radial-gradient(ellipse at 50% 18%, rgba(0,0,0,.85), transparent 72%);
+  mask-image:radial-gradient(ellipse at 50% 18%, rgba(0,0,0,.85), transparent 72%);
+}
+.custom-training-hero .container-xxl{
+  position:relative;
+  z-index:2;
+}
+
+/* Breadcrumb */
+.custom-training-breadcrumb ol{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:.35rem .55rem;
+  list-style:none;
+  margin:0 0 26px;
+  padding:0;
+  font-size:.82rem;
+  font-weight:600;
+  color:#8d97a5;
+}
+.custom-training-breadcrumb li{
+  display:flex;
+  align-items:center;
+  gap:.55rem;
+}
+.custom-training-breadcrumb li + li::before{
+  content:"/";
+  color:rgba(255,255,255,.25);
+}
+.custom-training-breadcrumb a{
+  color:#c3cad4;
+  text-decoration:none;
+}
+.custom-training-breadcrumb a:hover{
+  color:var(--secondary-color);
+  text-decoration:underline;
+}
+.custom-training-breadcrumb [aria-current]{
+  color:var(--secondary-color);
+}
+
+/* Hero copy */
+.custom-training-hero-title{
+  color:var(--secondary-color);
+  font-size:clamp(2rem, 1.35rem + 3vw, 3.4rem);
+  line-height:1.12;
+  letter-spacing:-.02em;
+  max-width:880px;
+  margin:14px auto 16px;
+}
+.custom-training-hero-lead{
+  color:#c3cad4;
+  font-size:1.03rem;
+  max-width:660px;
+  margin:0 auto 30px;
+}
+
+/* In-page section navigation pills */
+.custom-training-hero-nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:.6rem;
+  margin:0;
+}
+.custom-training-nav-pill{
+  display:inline-flex;
+  align-items:center;
+  gap:.55rem;
+  background:var(--dark-card);
+  border:1px solid var(--dark-border);
+  border-radius:999px;
+  padding:.62rem 1.15rem;
+  font-family:var(--font-head);
+  font-weight:700;
+  font-size:.85rem;
+  color:#c3cad4;
+  text-decoration:none;
+  transition:all .25s ease;
+}
+.custom-training-nav-pill .bi{
+  color:var(--primary-soft);
+  font-size:1rem;
+  transition:color .25s ease;
+}
+.custom-training-nav-pill:hover{
+  color:var(--secondary-color);
+  border-color:rgba(255,0,0,.5);
+  background:rgba(255,0,0,.08);
+  transform:translateY(-2px);
+}
+.custom-training-nav-pill:hover .bi{color:var(--primary-color);}
+
+/* Hero entrance animation (pure CSS, no JS required) */
+@keyframes custom-training-fade-up{
+  from{opacity:0;transform:translateY(22px);}
+  to{opacity:1;transform:none;}
+}
+.custom-training-hero-anim{
+  animation:custom-training-fade-up .8s cubic-bezier(.22,.61,.36,1) both;
+}
+.custom-training-hero-anim-2{animation-delay:.15s;}
+.custom-training-hero-anim-3{animation-delay:.3s;}
+
+
+/* =========================
+   03. OUR CUSTOMIZATION PROCESS (7 STAGES)
+========================= */
+.custom-training-process{background:var(--secondary-color);}
+.custom-training-process .section-head{margin-bottom:40px;}
+
+.custom-training-stage{
+  background:var(--light-bg);
+  border:1px solid var(--line);
+  border-radius:var(--radius-lg);
+  padding:1.6rem 1.4rem 1.5rem;
+  height:100%;
+  transition:all .3s ease;
+}
+.custom-training-stage:hover{
+  transform:translateY(-5px);
+  box-shadow:var(--shadow-md);
+  border-color:var(--primary-tint-2);
+}
+.custom-training-stage-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:14px;
+}
+.custom-training-stage-num{
+  width:46px;
+  height:46px;
+  border-radius:14px;
+  background:linear-gradient(140deg,var(--primary-color),var(--primary-darker));
+  color:var(--secondary-color);
+  font-family:var(--font-head);
+  font-weight:800;
+  font-size:.95rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 10px 20px rgba(255,0,0,.25);
+}
+.custom-training-stage-icon{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:var(--secondary-color);
+  color:var(--primary-dark);
+  border:1px solid var(--primary-tint-2);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.15rem;
+}
+.custom-training-stage-name{
+  font-size:1.1rem;
+  margin:0 0 .5rem;
+}
+.custom-training-stage p{
+  margin:0;
+  font-size:.94rem;
+  line-height:1.65;
+  color:var(--body-text);
+}
+
+
+/* =========================
+   04. WHAT WE NEED FROM THE CLIENT
+========================= */
+.custom-training-needs{background:var(--light-bg);}
+.custom-training-needs .section-head{margin-bottom:36px;}
+
+/* Checklist panel with red top accent */
+.custom-training-needs-panel{
+  position:relative;
+  max-width:880px;
+  margin:0 auto;
+  background:var(--secondary-color);
+  border:1px solid var(--line);
+  border-radius:var(--radius-lg);
+  padding:26px;
+  box-shadow:var(--shadow-sm);
+  overflow:hidden;
+}
+.custom-training-needs-panel::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:24px;
+  right:24px;
+  height:4px;
+  border-radius:0 0 4px 4px;
+  background:linear-gradient(90deg, transparent, var(--primary-color), transparent);
+}
+.custom-training-need{
+  display:flex;
+  align-items:flex-start;
+  gap:.85rem;
+  background:var(--light-bg);
+  border:1px solid var(--line);
+  border-radius:var(--radius-md);
+  padding:1.05rem 1.15rem;
+  height:100%;
+  transition:all .25s ease;
+}
+.custom-training-need:hover{
+  border-color:var(--primary-tint-2);
+  box-shadow:var(--shadow-sm);
+  transform:translateY(-2px);
+}
+.custom-training-need-check{
+  flex:0 0 auto;
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  background:var(--primary-tint);
+  color:var(--primary-dark);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1rem;
+  margin-top:.1rem;
+}
+.custom-training-need p{
+  margin:0;
+  padding-top:.3rem;
+  font-family:var(--font-head);
+  font-weight:600;
+  color:var(--ink);
+  font-size:.95rem;
+  line-height:1.55;
+}
+
+
+/* =========================
+   05. CUSTOMIZATION BOUNDARIES
+========================= */
+.custom-training-boundaries{background:var(--secondary-color);}
+.custom-training-boundaries .section-title{margin-bottom:16px;}
+
+/* Editorial statement (sentence 1, verbatim) */
+.custom-training-statement{
+  margin:0;
+  max-width:480px;
+  padding-left:1.5rem;
+  border-left:4px solid var(--primary-color);
+  font-size:1rem;
+  line-height:1.8;
+  color:var(--body-text);
+}
+.custom-training-statement span{
+  font-family:var(--font-head);
+  font-weight:700;
+  color:var(--ink);
+}
+
+/* Highlighter effect (styling only — text unchanged) */
+.custom-training-hl{
+  background:linear-gradient(transparent 62%, var(--primary-tint-2) 62%);
+  padding:0 .05em;
+  -webkit-box-decoration-break:clone;
+  box-decoration-break:clone;
+}
+
+/* Compliance warning strip (sentence 2, verbatim) */
+.custom-training-boundary-note{
+  display:flex;
+  align-items:flex-start;
+  gap:.9rem;
+  background:var(--primary-tint);
+  border:1px solid var(--primary-tint-2);
+  border-left:3px solid var(--primary-color);
+  border-radius:var(--radius-md);
+  padding:1.35rem 1.4rem;
+  height:100%;
+}
+.custom-training-boundary-note > .bi{
+  flex:0 0 auto;
+  color:var(--primary-color);
+  font-size:1.3rem;
+  margin-top:.15rem;
+}
+.custom-training-boundary-note p{
+  margin:0;
+  font-family:var(--font-head);
+  font-weight:700;
+  color:var(--ink);
+  font-size:1.02rem;
+  line-height:1.6;
+}
+
+
+/* =========================
+   06. PROPOSAL INFORMATION
+========================= */
+.custom-training-proposal{
+  position:relative;
+  background:var(--dark-bg);
+  color:var(--secondary-color);
+  overflow:hidden;
+}
+.custom-training-proposal::before{
+  content:"";
+  position:absolute;
+  right:-180px;
+  top:-160px;
+  width:520px;
+  height:520px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(255,0,0,.2), transparent 65%);
+}
+.custom-training-proposal .container-xxl{
+  position:relative;
+  z-index:2;
+}
+.custom-training-proposal .section-title{color:var(--secondary-color);}
+
+/* Numbered information panel */
+.custom-training-proposal-panel{
+  max-width:920px;
+  margin:0 auto;
+  background:var(--dark-card);
+  border:1px solid var(--dark-border);
+  border-radius:var(--radius-lg);
+  padding:26px;
+}
+.custom-training-prop-row{
+  display:flex;
+  align-items:center;
+  gap:.95rem;
+  background:rgba(255,255,255,.03);
+  border:1px solid var(--dark-border);
+  border-radius:var(--radius-md);
+  padding:1.05rem 1.15rem;
+  height:100%;
+  transition:all .25s ease;
+}
+.custom-training-prop-row:hover{
+  border-color:rgba(255,0,0,.5);
+  background:rgba(255,0,0,.06);
+  transform:translateX(4px);
+}
+.custom-training-prop-num{
+  flex:0 0 auto;
+  width:38px;
+  height:38px;
+  border-radius:11px;
+  background:linear-gradient(140deg,var(--primary-color),var(--primary-darker));
+  color:var(--secondary-color);
+  font-family:var(--font-head);
+  font-weight:800;
+  font-size:.85rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 8px 18px rgba(255,0,0,.25);
+}
+.custom-training-prop-text{
+  margin:0;
+  font-family:var(--font-head);
+  font-weight:700;
+  color:var(--secondary-color);
+  font-size:.96rem;
+  line-height:1.5;
+}
+
+
+/* =========================
+   07. SCROLL REVEAL
+   (page-specific hook — never conflicts with the
+   reveal observers used on other pages)
+========================= */
+.custom-training-js .custom-training-reveal{
+  opacity:0;
+  transform:translateY(26px);
+  transition:opacity .7s cubic-bezier(.22,.61,.36,1),
+             transform .7s cubic-bezier(.22,.61,.36,1);
+  will-change:opacity, transform;
+}
+.custom-training-js .custom-training-reveal.is-visible{
+  opacity:1;
+  transform:none;
+}
+.custom-training-js .custom-training-reveal.custom-training-d1{transition-delay:.1s;}
+.custom-training-js .custom-training-reveal.custom-training-d2{transition-delay:.2s;}
+
+
+
+
+
+
+
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -11031,4 +11497,10 @@ a {
   .cls-del-row,
   .cls-chip,
   .cls-nav-pill{transition:none;}
+  .custom-training-hero-anim{animation:none !important;}
+  .custom-training-js .custom-training-reveal{opacity:1;transform:none;transition:none;}
+  .custom-training-stage,
+  .custom-training-need,
+  .custom-training-prop-row,
+  .custom-training-nav-pill{transition:none;}
 }
