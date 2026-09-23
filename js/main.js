@@ -23,7 +23,7 @@ document.documentElement.classList.add('js');
 
 // Shared reduced-motion preference (respects user settings).
 const prefersReducedMotion =
-    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 
 /* =========================
@@ -32,41 +32,41 @@ const prefersReducedMotion =
    messages. Pauses on hover / keyboard focus.
 ========================= */
 (function () {
-    const bar = document.querySelector('.topbar');
-    const slides = document.querySelectorAll('#topbarMessage .topbar-slide');
-    if (!bar || !slides.length) return;
+  const bar = document.querySelector('.topbar');
+  const slides = document.querySelectorAll('#topbarMessage .topbar-slide');
+  if (!bar || !slides.length) return;
 
-    const ROTATE_MS = 4600;
-    let current = 0;
-    let timer = null;
+  const ROTATE_MS = 4600;
+  let current = 0;
+  let timer = null;
 
-    function goTo(nextIndex) {
-        slides[current].classList.remove('is-active');
-        current = (nextIndex + slides.length) % slides.length;
-        slides[current].classList.add('is-active');
+  function goTo(nextIndex) {
+    slides[current].classList.remove('is-active');
+    current = (nextIndex + slides.length) % slides.length;
+    slides[current].classList.add('is-active');
+  }
+
+  function startRotation() {
+    if (prefersReducedMotion || slides.length < 2) return;
+    stopRotation();
+    timer = window.setInterval(function () {
+      goTo(current + 1);
+    }, ROTATE_MS);
+  }
+
+  function stopRotation() {
+    if (timer) {
+      window.clearInterval(timer);
+      timer = null;
     }
+  }
 
-    function startRotation() {
-        if (prefersReducedMotion || slides.length < 2) return;
-        stopRotation();
-        timer = window.setInterval(function () {
-            goTo(current + 1);
-        }, ROTATE_MS);
-    }
+  bar.addEventListener('mouseenter', stopRotation);
+  bar.addEventListener('mouseleave', startRotation);
+  bar.addEventListener('focusin', stopRotation);
+  bar.addEventListener('focusout', startRotation);
 
-    function stopRotation() {
-        if (timer) {
-            window.clearInterval(timer);
-            timer = null;
-        }
-    }
-
-    bar.addEventListener('mouseenter', stopRotation);
-    bar.addEventListener('mouseleave', startRotation);
-    bar.addEventListener('focusin', stopRotation);
-    bar.addEventListener('focusout', startRotation);
-
-    startRotation();
+  startRotation();
 })();
 
 
@@ -78,37 +78,37 @@ const prefersReducedMotion =
 ========================= */
 (function () {
 
-    // Sticky header shadow on scroll
-    const header = document.getElementById('siteHeader');
-    if (header) {
-        const onScroll = function () {
-            header.classList.toggle('is-scrolled', window.scrollY > 8);
-        };
-        onScroll();
-        window.addEventListener('scroll', onScroll, { passive: true });
-    }
+  // Sticky header shadow on scroll
+  const header = document.getElementById('siteHeader');
+  if (header) {
+    const onScroll = function () {
+      header.classList.toggle('is-scrolled', window.scrollY > 8);
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
 
-    // Close collapsed mobile menu after choosing a link
-    const navCollapse = document.getElementById('mainNav');
-    if (navCollapse && typeof bootstrap !== 'undefined') {
-        navCollapse.addEventListener('click', function (event) {
-            const link = event.target.closest('a');
-            if (!link) return;
-            const isDesktop = window.innerWidth >= 1400; // navbar-expand-xxl
-            if (!isDesktop && navCollapse.classList.contains('show')) {
-                const instance =
-                    bootstrap.Collapse.getOrCreateInstance(navCollapse, { toggle: false });
-                instance.hide();
-            }
-        });
-    }
-
-    // Placeholder links ("#") should not jump the page
-    document.querySelectorAll('a[href="#"]').forEach(function (link) {
-        link.addEventListener('click', function (event) {
-            event.preventDefault();
-        });
+  // Close collapsed mobile menu after choosing a link
+  const navCollapse = document.getElementById('mainNav');
+  if (navCollapse && typeof bootstrap !== 'undefined') {
+    navCollapse.addEventListener('click', function (event) {
+      const link = event.target.closest('a');
+      if (!link) return;
+      const isDesktop = window.innerWidth >= 1400; // navbar-expand-xxl
+      if (!isDesktop && navCollapse.classList.contains('show')) {
+        const instance =
+          bootstrap.Collapse.getOrCreateInstance(navCollapse, { toggle: false });
+        instance.hide();
+      }
     });
+  }
+
+  // Placeholder links ("#") should not jump the page
+  document.querySelectorAll('a[href="#"]').forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
+    });
+  });
 })();
 
 
@@ -118,22 +118,22 @@ const prefersReducedMotion =
    field. Connect to the backend search later.
 ========================= */
 (function () {
-    const form = document.querySelector('.hero-search');
-    if (!form) return;
+  const form = document.querySelector('.hero-search');
+  if (!form) return;
 
-    const input = form.querySelector('input[type="search"]');
+  const input = form.querySelector('input[type="search"]');
 
-    form.addEventListener('submit', function (event) {
-        event.preventDefault();
-        if (!input) return;
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    if (!input) return;
 
-        if (!input.value.trim()) {
-            input.focus();
-            return;
-        }
-        // Backend search is not connected in this template.
-        input.select();
-    });
+    if (!input.value.trim()) {
+      input.focus();
+      return;
+    }
+    // Backend search is not connected in this template.
+    input.select();
+  });
 })();
 
 
@@ -143,32 +143,32 @@ const prefersReducedMotion =
    the viewport. Falls back gracefully.
 ========================= */
 (function () {
-    const items = document.querySelectorAll('.reveal');
-    if (!items.length) return;
+  const items = document.querySelectorAll('.reveal');
+  if (!items.length) return;
 
-    const showAll = function () {
-        items.forEach(function (el) {
-            el.classList.add('is-visible');
-        });
-    };
-
-    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
-        showAll();
-        return;
-    }
-
-    const observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-
+  const showAll = function () {
     items.forEach(function (el) {
-        observer.observe(el);
+      el.classList.add('is-visible');
     });
+  };
+
+  if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+    showAll();
+    return;
+  }
+
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+  items.forEach(function (el) {
+    observer.observe(el);
+  });
 })();
 
 
@@ -178,23 +178,23 @@ const prefersReducedMotion =
    Wire the submission endpoint later.
 ========================= */
 (function () {
-    const form = document.getElementById('newsletterForm');
-    if (!form) return;
+  const form = document.getElementById('newsletterForm');
+  if (!form) return;
 
-    const input = form.querySelector('input[type="email"]');
+  const input = form.querySelector('input[type="email"]');
 
-    form.addEventListener('submit', function (event) {
-        event.preventDefault();
-        if (!input) return;
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    if (!input) return;
 
-        const isValid = input.checkValidity() && input.value.trim() !== '';
-        if (!isValid) {
-            input.focus();
-            return;
-        }
-        // Backend subscription is not connected in this template.
-        form.reset();
-    });
+    const isValid = input.checkValidity() && input.value.trim() !== '';
+    if (!isValid) {
+      input.focus();
+      return;
+    }
+    // Backend subscription is not connected in this template.
+    form.reset();
+  });
 })();
 
 
@@ -203,16 +203,16 @@ const prefersReducedMotion =
    Smooth scroll back to the top of the page.
 ========================= */
 (function () {
-    const button = document.getElementById('backToTop');
-    if (!button) return;
+  const button = document.getElementById('backToTop');
+  if (!button) return;
 
-    button.addEventListener('click', function (event) {
-        event.preventDefault();
-        window.scrollTo({
-            top: 0,
-            behavior: prefersReducedMotion ? 'auto' : 'smooth'
-        });
+  button.addEventListener('click', function (event) {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: prefersReducedMotion ? 'auto' : 'smooth'
     });
+  });
 })();
 
 
@@ -245,151 +245,151 @@ const prefersReducedMotion =
 ========================================================= */
 
 (function () {
-    'use strict';
+  'use strict';
 
-    /* =========================
-       GLOBAL HELPERS
-    ========================= */
+  /* =========================
+     GLOBAL HELPERS
+  ========================= */
 
-    // Enables reveal styles only when JS is available, so no
-    // content is ever hidden for users without JavaScript.
-    document.documentElement.classList.add('about-cpa-js');
+  // Enables reveal styles only when JS is available, so no
+  // content is ever hidden for users without JavaScript.
+  document.documentElement.classList.add('about-cpa-js');
 
-    // Shared reduced-motion preference (respects user settings).
-    var prefersReducedMotion =
-        window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Shared reduced-motion preference (respects user settings).
+  var prefersReducedMotion =
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    /* =========================
-       SCROLL REVEAL JS  (page-specific — always required)
-       Reveals .about-cpa-reveal blocks as they enter the
-       viewport. Falls back to fully visible without JS or
-       IntersectionObserver support.
-    ========================= */
-    (function scrollReveal() {
-        var items = document.querySelectorAll('.about-cpa-reveal');
-        if (!items.length) return;
+  /* =========================
+     SCROLL REVEAL JS  (page-specific — always required)
+     Reveals .about-cpa-reveal blocks as they enter the
+     viewport. Falls back to fully visible without JS or
+     IntersectionObserver support.
+  ========================= */
+  (function scrollReveal() {
+    var items = document.querySelectorAll('.about-cpa-reveal');
+    if (!items.length) return;
 
-        var showAll = function () {
-            items.forEach(function (el) { el.classList.add('is-visible'); });
-        };
+    var showAll = function () {
+      items.forEach(function (el) { el.classList.add('is-visible'); });
+    };
 
-        if (prefersReducedMotion || !('IntersectionObserver' in window)) {
-            showAll();
-            return;
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+      showAll();
+      return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
         }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 
-        var observer = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    items.forEach(function (el) { observer.observe(el); });
+  })();
 
-        items.forEach(function (el) { observer.observe(el); });
-    })();
+  /* =====================================================
+     [SHARED] Everything below mirrors script.js behaviour.
+     Delete this block if script.js is already loaded on
+     every page of the site.
+  ===================================================== */
 
-    /* =====================================================
-       [SHARED] Everything below mirrors script.js behaviour.
-       Delete this block if script.js is already loaded on
-       every page of the site.
-    ===================================================== */
+  /* =========================
+     [SHARED] ANNOUNCEMENT BAR JS
+     Rotates the suggested announcement messages and pauses
+     on hover and keyboard focus.
+  ========================= */
+  (function announcementBar() {
+    var bar = document.querySelector('.topbar');
+    var slides = document.querySelectorAll('#topbarMessage .topbar-slide');
+    if (!bar || !slides.length) return;
 
-    /* =========================
-       [SHARED] ANNOUNCEMENT BAR JS
-       Rotates the suggested announcement messages and pauses
-       on hover and keyboard focus.
-    ========================= */
-    (function announcementBar() {
-        var bar = document.querySelector('.topbar');
-        var slides = document.querySelectorAll('#topbarMessage .topbar-slide');
-        if (!bar || !slides.length) return;
+    var ROTATE_MS = 4600;
+    var current = 0;
+    var timer = null;
 
-        var ROTATE_MS = 4600;
-        var current = 0;
-        var timer = null;
+    function goTo(nextIndex) {
+      slides[current].classList.remove('is-active');
+      current = (nextIndex + slides.length) % slides.length;
+      slides[current].classList.add('is-active');
+    }
 
-        function goTo(nextIndex) {
-            slides[current].classList.remove('is-active');
-            current = (nextIndex + slides.length) % slides.length;
-            slides[current].classList.add('is-active');
+    function startRotation() {
+      if (prefersReducedMotion || slides.length < 2 || timer) return;
+      timer = window.setInterval(function () {
+        goTo(current + 1);
+      }, ROTATE_MS);
+    }
+
+    function stopRotation() {
+      if (timer) {
+        window.clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    bar.addEventListener('mouseenter', stopRotation);
+    bar.addEventListener('mouseleave', startRotation);
+    bar.addEventListener('focusin', stopRotation);
+    bar.addEventListener('focusout', startRotation);
+    startRotation();
+  })();
+
+  /* =========================
+     [SHARED] NAVIGATION JS
+     Sticky header state, mobile menu close-on-navigate and
+     placeholder link protection.
+  ========================= */
+  (function navigation() {
+
+    // Sticky header shadow on scroll
+    var header = document.getElementById('siteHeader');
+    if (header) {
+      var onScroll = function () {
+        header.classList.toggle('is-scrolled', window.scrollY > 8);
+      };
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+    }
+
+    // Close the collapsed mobile menu after a link is used
+    var navCollapse = document.getElementById('mainNav');
+    if (navCollapse && typeof bootstrap !== 'undefined') {
+      navCollapse.addEventListener('click', function (event) {
+        var link = event.target.closest('a');
+        if (!link) return;
+        var isDesktop = window.innerWidth >= 1400; // navbar-expand-xxl
+        if (!isDesktop && navCollapse.classList.contains('show')) {
+          bootstrap.Collapse.getOrCreateInstance(navCollapse, { toggle: false }).hide();
         }
+      });
+    }
 
-        function startRotation() {
-            if (prefersReducedMotion || slides.length < 2 || timer) return;
-            timer = window.setInterval(function () {
-                goTo(current + 1);
-            }, ROTATE_MS);
-        }
+    // Placeholder links ("#") must not jump the page
+    document.querySelectorAll('a[href="#"]').forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+      });
+    });
+  })();
 
-        function stopRotation() {
-            if (timer) {
-                window.clearInterval(timer);
-                timer = null;
-            }
-        }
-
-        bar.addEventListener('mouseenter', stopRotation);
-        bar.addEventListener('mouseleave', startRotation);
-        bar.addEventListener('focusin', stopRotation);
-        bar.addEventListener('focusout', startRotation);
-        startRotation();
-    })();
-
-    /* =========================
-       [SHARED] NAVIGATION JS
-       Sticky header state, mobile menu close-on-navigate and
-       placeholder link protection.
-    ========================= */
-    (function navigation() {
-
-        // Sticky header shadow on scroll
-        var header = document.getElementById('siteHeader');
-        if (header) {
-            var onScroll = function () {
-                header.classList.toggle('is-scrolled', window.scrollY > 8);
-            };
-            onScroll();
-            window.addEventListener('scroll', onScroll, { passive: true });
-        }
-
-        // Close the collapsed mobile menu after a link is used
-        var navCollapse = document.getElementById('mainNav');
-        if (navCollapse && typeof bootstrap !== 'undefined') {
-            navCollapse.addEventListener('click', function (event) {
-                var link = event.target.closest('a');
-                if (!link) return;
-                var isDesktop = window.innerWidth >= 1400; // navbar-expand-xxl
-                if (!isDesktop && navCollapse.classList.contains('show')) {
-                    bootstrap.Collapse.getOrCreateInstance(navCollapse, { toggle: false }).hide();
-                }
-            });
-        }
-
-        // Placeholder links ("#") must not jump the page
-        document.querySelectorAll('a[href="#"]').forEach(function (link) {
-            link.addEventListener('click', function (event) {
-                event.preventDefault();
-            });
-        });
-    })();
-
-    /* =========================
-       [SHARED] BACK TO TOP JS
-       Smooth scroll back to the top of the page.
-    ========================= */
-    (function backToTop() {
-        var button = document.getElementById('backToTop');
-        if (!button) return;
-        button.addEventListener('click', function (event) {
-            event.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: prefersReducedMotion ? 'auto' : 'smooth'
-            });
-        });
-    })();
+  /* =========================
+     [SHARED] BACK TO TOP JS
+     Smooth scroll back to the top of the page.
+  ========================= */
+  (function backToTop() {
+    var button = document.getElementById('backToTop');
+    if (!button) return;
+    button.addEventListener('click', function (event) {
+      event.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: prefersReducedMotion ? 'auto' : 'smooth'
+      });
+    });
+  })();
 
 })();
 
@@ -428,176 +428,176 @@ const prefersReducedMotion =
 ========================================================= */
 
 (function () {
-    'use strict';
+  'use strict';
 
-    /* =========================
-       GLOBAL HELPERS
-    ========================= */
+  /* =========================
+     GLOBAL HELPERS
+  ========================= */
 
-    // Enables reveal styles only when JS is available, so no
-    // content is ever hidden for users without JavaScript.
-    document.documentElement.classList.add('pvm-js');
+  // Enables reveal styles only when JS is available, so no
+  // content is ever hidden for users without JavaScript.
+  document.documentElement.classList.add('pvm-js');
 
-    // Shared reduced-motion preference (respects user settings).
-    var prefersReducedMotion =
-        window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Shared reduced-motion preference (respects user settings).
+  var prefersReducedMotion =
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    /* =========================
-       SCROLL REVEAL JS  (page-specific — always required)
-       Reveals .pvm-reveal blocks as they enter the viewport.
-       Falls back to fully visible without JS or
-       IntersectionObserver support.
-    ========================= */
-    (function scrollReveal() {
-        var items = document.querySelectorAll('.pvm-reveal');
-        if (!items.length) return;
+  /* =========================
+     SCROLL REVEAL JS  (page-specific — always required)
+     Reveals .pvm-reveal blocks as they enter the viewport.
+     Falls back to fully visible without JS or
+     IntersectionObserver support.
+  ========================= */
+  (function scrollReveal() {
+    var items = document.querySelectorAll('.pvm-reveal');
+    if (!items.length) return;
 
-        var showAll = function () {
-            items.forEach(function (el) { el.classList.add('is-visible'); });
-        };
+    var showAll = function () {
+      items.forEach(function (el) { el.classList.add('is-visible'); });
+    };
 
-        if (prefersReducedMotion || !('IntersectionObserver' in window)) {
-            showAll();
-            return;
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+      showAll();
+      return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
         }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 
-        var observer = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    items.forEach(function (el) { observer.observe(el); });
+  })();
 
-        items.forEach(function (el) { observer.observe(el); });
-    })();
+  /* =====================================================
+     [SHARED] Everything below mirrors script.js behaviour.
+     Delete this block if script.js is already loaded on
+     every page of the site.
+  ===================================================== */
 
-    /* =====================================================
-       [SHARED] Everything below mirrors script.js behaviour.
-       Delete this block if script.js is already loaded on
-       every page of the site.
-    ===================================================== */
+  /* =========================
+     [SHARED] ANNOUNCEMENT BAR JS
+     Rotates the suggested announcement messages and pauses
+     on hover and keyboard focus.
+  ========================= */
+  (function announcementBar() {
+    var bar = document.querySelector('.topbar');
+    var slides = document.querySelectorAll('#topbarMessage .topbar-slide');
+    if (!bar || !slides.length) return;
 
-    /* =========================
-       [SHARED] ANNOUNCEMENT BAR JS
-       Rotates the suggested announcement messages and pauses
-       on hover and keyboard focus.
-    ========================= */
-    (function announcementBar() {
-        var bar = document.querySelector('.topbar');
-        var slides = document.querySelectorAll('#topbarMessage .topbar-slide');
-        if (!bar || !slides.length) return;
+    var ROTATE_MS = 4600;
+    var current = 0;
+    var timer = null;
 
-        var ROTATE_MS = 4600;
-        var current = 0;
-        var timer = null;
+    function goTo(nextIndex) {
+      slides[current].classList.remove('is-active');
+      current = (nextIndex + slides.length) % slides.length;
+      slides[current].classList.add('is-active');
+    }
 
-        function goTo(nextIndex) {
-            slides[current].classList.remove('is-active');
-            current = (nextIndex + slides.length) % slides.length;
-            slides[current].classList.add('is-active');
+    function startRotation() {
+      if (prefersReducedMotion || slides.length < 2 || timer) return;
+      timer = window.setInterval(function () {
+        goTo(current + 1);
+      }, ROTATE_MS);
+    }
+
+    function stopRotation() {
+      if (timer) {
+        window.clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    bar.addEventListener('mouseenter', stopRotation);
+    bar.addEventListener('mouseleave', startRotation);
+    bar.addEventListener('focusin', stopRotation);
+    bar.addEventListener('focusout', startRotation);
+    startRotation();
+  })();
+
+  /* =========================
+     [SHARED] NAVIGATION JS
+     Sticky header state, mobile menu close-on-navigate and
+     placeholder link protection.
+  ========================= */
+  (function navigation() {
+
+    // Sticky header shadow on scroll
+    var header = document.getElementById('siteHeader');
+    if (header) {
+      var onScroll = function () {
+        header.classList.toggle('is-scrolled', window.scrollY > 8);
+      };
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+    }
+
+    // Close the collapsed mobile menu after a link is used
+    var navCollapse = document.getElementById('mainNav');
+    if (navCollapse && typeof bootstrap !== 'undefined') {
+      navCollapse.addEventListener('click', function (event) {
+        var link = event.target.closest('a');
+        if (!link) return;
+        var isDesktop = window.innerWidth >= 1400; // navbar-expand-xxl
+        if (!isDesktop && navCollapse.classList.contains('show')) {
+          bootstrap.Collapse.getOrCreateInstance(navCollapse, { toggle: false }).hide();
         }
+      });
+    }
 
-        function startRotation() {
-            if (prefersReducedMotion || slides.length < 2 || timer) return;
-            timer = window.setInterval(function () {
-                goTo(current + 1);
-            }, ROTATE_MS);
-        }
+    // Placeholder links ("#") must not jump the page
+    document.querySelectorAll('a[href="#"]').forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+      });
+    });
+  })();
 
-        function stopRotation() {
-            if (timer) {
-                window.clearInterval(timer);
-                timer = null;
-            }
-        }
+  /* =========================
+     [SHARED] FORMS JS
+     Newsletter subscribe — front-end only.
+     Wire the submission endpoint later.
+  ========================= */
+  (function newsletter() {
+    var form = document.getElementById('newsletterForm');
+    if (!form) return;
 
-        bar.addEventListener('mouseenter', stopRotation);
-        bar.addEventListener('mouseleave', startRotation);
-        bar.addEventListener('focusin', stopRotation);
-        bar.addEventListener('focusout', startRotation);
-        startRotation();
-    })();
+    var input = form.querySelector('input[type="email"]');
 
-    /* =========================
-       [SHARED] NAVIGATION JS
-       Sticky header state, mobile menu close-on-navigate and
-       placeholder link protection.
-    ========================= */
-    (function navigation() {
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      if (!input) return;
 
-        // Sticky header shadow on scroll
-        var header = document.getElementById('siteHeader');
-        if (header) {
-            var onScroll = function () {
-                header.classList.toggle('is-scrolled', window.scrollY > 8);
-            };
-            onScroll();
-            window.addEventListener('scroll', onScroll, { passive: true });
-        }
+      var isValid = input.checkValidity() && input.value.trim() !== '';
+      if (!isValid) {
+        input.focus();
+        return;
+      }
+      // Backend subscription is not connected in this template.
+      form.reset();
+    });
+  })();
 
-        // Close the collapsed mobile menu after a link is used
-        var navCollapse = document.getElementById('mainNav');
-        if (navCollapse && typeof bootstrap !== 'undefined') {
-            navCollapse.addEventListener('click', function (event) {
-                var link = event.target.closest('a');
-                if (!link) return;
-                var isDesktop = window.innerWidth >= 1400; // navbar-expand-xxl
-                if (!isDesktop && navCollapse.classList.contains('show')) {
-                    bootstrap.Collapse.getOrCreateInstance(navCollapse, { toggle: false }).hide();
-                }
-            });
-        }
-
-        // Placeholder links ("#") must not jump the page
-        document.querySelectorAll('a[href="#"]').forEach(function (link) {
-            link.addEventListener('click', function (event) {
-                event.preventDefault();
-            });
-        });
-    })();
-
-    /* =========================
-       [SHARED] FORMS JS
-       Newsletter subscribe — front-end only.
-       Wire the submission endpoint later.
-    ========================= */
-    (function newsletter() {
-        var form = document.getElementById('newsletterForm');
-        if (!form) return;
-
-        var input = form.querySelector('input[type="email"]');
-
-        form.addEventListener('submit', function (event) {
-            event.preventDefault();
-            if (!input) return;
-
-            var isValid = input.checkValidity() && input.value.trim() !== '';
-            if (!isValid) {
-                input.focus();
-                return;
-            }
-            // Backend subscription is not connected in this template.
-            form.reset();
-        });
-    })();
-
-    /* =========================
-       [SHARED] BACK TO TOP JS
-       Smooth scroll back to the top of the page.
-    ========================= */
-    (function backToTop() {
-        var button = document.getElementById('backToTop');
-        if (!button) return;
-        button.addEventListener('click', function (event) {
-            event.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: prefersReducedMotion ? 'auto' : 'smooth'
-            });
-        });
-    })();
+  /* =========================
+     [SHARED] BACK TO TOP JS
+     Smooth scroll back to the top of the page.
+  ========================= */
+  (function backToTop() {
+    var button = document.getElementById('backToTop');
+    if (!button) return;
+    button.addEventListener('click', function (event) {
+      event.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: prefersReducedMotion ? 'auto' : 'smooth'
+      });
+    });
+  })();
 
 })();
 
@@ -635,176 +635,176 @@ const prefersReducedMotion =
 ========================================================= */
 
 (function () {
-    'use strict';
+  'use strict';
 
-    /* =========================
-       GLOBAL HELPERS
-    ========================= */
+  /* =========================
+     GLOBAL HELPERS
+  ========================= */
 
-    // Enables reveal styles only when JS is available, so no
-    // content is ever hidden for users without JavaScript.
-    document.documentElement.classList.add('gqs-js');
+  // Enables reveal styles only when JS is available, so no
+  // content is ever hidden for users without JavaScript.
+  document.documentElement.classList.add('gqs-js');
 
-    // Shared reduced-motion preference (respects user settings).
-    var prefersReducedMotion =
-        window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Shared reduced-motion preference (respects user settings).
+  var prefersReducedMotion =
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    /* =========================
-       SCROLL REVEAL JS  (page-specific — always required)
-       Reveals .gqs-reveal blocks as they enter the viewport.
-       Falls back to fully visible without JS or
-       IntersectionObserver support.
-    ========================= */
-    (function scrollReveal() {
-        var items = document.querySelectorAll('.gqs-reveal');
-        if (!items.length) return;
+  /* =========================
+     SCROLL REVEAL JS  (page-specific — always required)
+     Reveals .gqs-reveal blocks as they enter the viewport.
+     Falls back to fully visible without JS or
+     IntersectionObserver support.
+  ========================= */
+  (function scrollReveal() {
+    var items = document.querySelectorAll('.gqs-reveal');
+    if (!items.length) return;
 
-        var showAll = function () {
-            items.forEach(function (el) { el.classList.add('is-visible'); });
-        };
+    var showAll = function () {
+      items.forEach(function (el) { el.classList.add('is-visible'); });
+    };
 
-        if (prefersReducedMotion || !('IntersectionObserver' in window)) {
-            showAll();
-            return;
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+      showAll();
+      return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
         }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 
-        var observer = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    items.forEach(function (el) { observer.observe(el); });
+  })();
 
-        items.forEach(function (el) { observer.observe(el); });
-    })();
+  /* =====================================================
+     [SHARED] Everything below mirrors script.js behaviour.
+     Delete this block if script.js is already loaded on
+     every page of the site.
+  ===================================================== */
 
-    /* =====================================================
-       [SHARED] Everything below mirrors script.js behaviour.
-       Delete this block if script.js is already loaded on
-       every page of the site.
-    ===================================================== */
+  /* =========================
+     [SHARED] ANNOUNCEMENT BAR JS
+     Rotates the suggested announcement messages and pauses
+     on hover and keyboard focus.
+  ========================= */
+  (function announcementBar() {
+    var bar = document.querySelector('.topbar');
+    var slides = document.querySelectorAll('#topbarMessage .topbar-slide');
+    if (!bar || !slides.length) return;
 
-    /* =========================
-       [SHARED] ANNOUNCEMENT BAR JS
-       Rotates the suggested announcement messages and pauses
-       on hover and keyboard focus.
-    ========================= */
-    (function announcementBar() {
-        var bar = document.querySelector('.topbar');
-        var slides = document.querySelectorAll('#topbarMessage .topbar-slide');
-        if (!bar || !slides.length) return;
+    var ROTATE_MS = 4600;
+    var current = 0;
+    var timer = null;
 
-        var ROTATE_MS = 4600;
-        var current = 0;
-        var timer = null;
+    function goTo(nextIndex) {
+      slides[current].classList.remove('is-active');
+      current = (nextIndex + slides.length) % slides.length;
+      slides[current].classList.add('is-active');
+    }
 
-        function goTo(nextIndex) {
-            slides[current].classList.remove('is-active');
-            current = (nextIndex + slides.length) % slides.length;
-            slides[current].classList.add('is-active');
+    function startRotation() {
+      if (prefersReducedMotion || slides.length < 2 || timer) return;
+      timer = window.setInterval(function () {
+        goTo(current + 1);
+      }, ROTATE_MS);
+    }
+
+    function stopRotation() {
+      if (timer) {
+        window.clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    bar.addEventListener('mouseenter', stopRotation);
+    bar.addEventListener('mouseleave', startRotation);
+    bar.addEventListener('focusin', stopRotation);
+    bar.addEventListener('focusout', startRotation);
+    startRotation();
+  })();
+
+  /* =========================
+     [SHARED] NAVIGATION JS
+     Sticky header state, mobile menu close-on-navigate and
+     placeholder link protection.
+  ========================= */
+  (function navigation() {
+
+    // Sticky header shadow on scroll
+    var header = document.getElementById('siteHeader');
+    if (header) {
+      var onScroll = function () {
+        header.classList.toggle('is-scrolled', window.scrollY > 8);
+      };
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+    }
+
+    // Close the collapsed mobile menu after a link is used
+    var navCollapse = document.getElementById('mainNav');
+    if (navCollapse && typeof bootstrap !== 'undefined') {
+      navCollapse.addEventListener('click', function (event) {
+        var link = event.target.closest('a');
+        if (!link) return;
+        var isDesktop = window.innerWidth >= 1400; // navbar-expand-xxl
+        if (!isDesktop && navCollapse.classList.contains('show')) {
+          bootstrap.Collapse.getOrCreateInstance(navCollapse, { toggle: false }).hide();
         }
+      });
+    }
 
-        function startRotation() {
-            if (prefersReducedMotion || slides.length < 2 || timer) return;
-            timer = window.setInterval(function () {
-                goTo(current + 1);
-            }, ROTATE_MS);
-        }
+    // Placeholder links ("#") must not jump the page
+    document.querySelectorAll('a[href="#"]').forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+      });
+    });
+  })();
 
-        function stopRotation() {
-            if (timer) {
-                window.clearInterval(timer);
-                timer = null;
-            }
-        }
+  /* =========================
+     [SHARED] FORMS JS
+     Newsletter subscribe — front-end only.
+     Wire the submission endpoint later.
+  ========================= */
+  (function newsletter() {
+    var form = document.getElementById('newsletterForm');
+    if (!form) return;
 
-        bar.addEventListener('mouseenter', stopRotation);
-        bar.addEventListener('mouseleave', startRotation);
-        bar.addEventListener('focusin', stopRotation);
-        bar.addEventListener('focusout', startRotation);
-        startRotation();
-    })();
+    var input = form.querySelector('input[type="email"]');
 
-    /* =========================
-       [SHARED] NAVIGATION JS
-       Sticky header state, mobile menu close-on-navigate and
-       placeholder link protection.
-    ========================= */
-    (function navigation() {
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      if (!input) return;
 
-        // Sticky header shadow on scroll
-        var header = document.getElementById('siteHeader');
-        if (header) {
-            var onScroll = function () {
-                header.classList.toggle('is-scrolled', window.scrollY > 8);
-            };
-            onScroll();
-            window.addEventListener('scroll', onScroll, { passive: true });
-        }
+      var isValid = input.checkValidity() && input.value.trim() !== '';
+      if (!isValid) {
+        input.focus();
+        return;
+      }
+      // Backend subscription is not connected in this template.
+      form.reset();
+    });
+  })();
 
-        // Close the collapsed mobile menu after a link is used
-        var navCollapse = document.getElementById('mainNav');
-        if (navCollapse && typeof bootstrap !== 'undefined') {
-            navCollapse.addEventListener('click', function (event) {
-                var link = event.target.closest('a');
-                if (!link) return;
-                var isDesktop = window.innerWidth >= 1400; // navbar-expand-xxl
-                if (!isDesktop && navCollapse.classList.contains('show')) {
-                    bootstrap.Collapse.getOrCreateInstance(navCollapse, { toggle: false }).hide();
-                }
-            });
-        }
-
-        // Placeholder links ("#") must not jump the page
-        document.querySelectorAll('a[href="#"]').forEach(function (link) {
-            link.addEventListener('click', function (event) {
-                event.preventDefault();
-            });
-        });
-    })();
-
-    /* =========================
-       [SHARED] FORMS JS
-       Newsletter subscribe — front-end only.
-       Wire the submission endpoint later.
-    ========================= */
-    (function newsletter() {
-        var form = document.getElementById('newsletterForm');
-        if (!form) return;
-
-        var input = form.querySelector('input[type="email"]');
-
-        form.addEventListener('submit', function (event) {
-            event.preventDefault();
-            if (!input) return;
-
-            var isValid = input.checkValidity() && input.value.trim() !== '';
-            if (!isValid) {
-                input.focus();
-                return;
-            }
-            // Backend subscription is not connected in this template.
-            form.reset();
-        });
-    })();
-
-    /* =========================
-       [SHARED] BACK TO TOP JS
-       Smooth scroll back to the top of the page.
-    ========================= */
-    (function backToTop() {
-        var button = document.getElementById('backToTop');
-        if (!button) return;
-        button.addEventListener('click', function (event) {
-            event.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: prefersReducedMotion ? 'auto' : 'smooth'
-            });
-        });
-    })();
+  /* =========================
+     [SHARED] BACK TO TOP JS
+     Smooth scroll back to the top of the page.
+  ========================= */
+  (function backToTop() {
+    var button = document.getElementById('backToTop');
+    if (!button) return;
+    button.addEventListener('click', function (event) {
+      event.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: prefersReducedMotion ? 'auto' : 'smooth'
+      });
+    });
+  })();
 
 })();
 
@@ -845,176 +845,176 @@ const prefersReducedMotion =
 ========================================================= */
 
 (function () {
-    'use strict';
+  'use strict';
 
-    /* =========================
-       GLOBAL HELPERS
-    ========================= */
+  /* =========================
+     GLOBAL HELPERS
+  ========================= */
 
-    // Enables reveal styles only when JS is available, so no
-    // content is ever hidden for users without JavaScript.
-    document.documentElement.classList.add('wcc-js');
+  // Enables reveal styles only when JS is available, so no
+  // content is ever hidden for users without JavaScript.
+  document.documentElement.classList.add('wcc-js');
 
-    // Shared reduced-motion preference (respects user settings).
-    var prefersReducedMotion =
-        window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Shared reduced-motion preference (respects user settings).
+  var prefersReducedMotion =
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    /* =========================
-       SCROLL REVEAL JS  (page-specific — always required)
-       Reveals .wcc-reveal blocks as they enter the viewport.
-       Falls back to fully visible without JS or
-       IntersectionObserver support.
-    ========================= */
-    (function scrollReveal() {
-        var items = document.querySelectorAll('.wcc-reveal');
-        if (!items.length) return;
+  /* =========================
+     SCROLL REVEAL JS  (page-specific — always required)
+     Reveals .wcc-reveal blocks as they enter the viewport.
+     Falls back to fully visible without JS or
+     IntersectionObserver support.
+  ========================= */
+  (function scrollReveal() {
+    var items = document.querySelectorAll('.wcc-reveal');
+    if (!items.length) return;
 
-        var showAll = function () {
-            items.forEach(function (el) { el.classList.add('is-visible'); });
-        };
+    var showAll = function () {
+      items.forEach(function (el) { el.classList.add('is-visible'); });
+    };
 
-        if (prefersReducedMotion || !('IntersectionObserver' in window)) {
-            showAll();
-            return;
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+      showAll();
+      return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
         }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 
-        var observer = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    items.forEach(function (el) { observer.observe(el); });
+  })();
 
-        items.forEach(function (el) { observer.observe(el); });
-    })();
+  /* =====================================================
+     [SHARED] Everything below mirrors script.js behaviour.
+     Delete this block if script.js is already loaded on
+     every page of the site.
+  ===================================================== */
 
-    /* =====================================================
-       [SHARED] Everything below mirrors script.js behaviour.
-       Delete this block if script.js is already loaded on
-       every page of the site.
-    ===================================================== */
+  /* =========================
+     [SHARED] ANNOUNCEMENT BAR JS
+     Rotates the suggested announcement messages and pauses
+     on hover and keyboard focus.
+  ========================= */
+  (function announcementBar() {
+    var bar = document.querySelector('.topbar');
+    var slides = document.querySelectorAll('#topbarMessage .topbar-slide');
+    if (!bar || !slides.length) return;
 
-    /* =========================
-       [SHARED] ANNOUNCEMENT BAR JS
-       Rotates the suggested announcement messages and pauses
-       on hover and keyboard focus.
-    ========================= */
-    (function announcementBar() {
-        var bar = document.querySelector('.topbar');
-        var slides = document.querySelectorAll('#topbarMessage .topbar-slide');
-        if (!bar || !slides.length) return;
+    var ROTATE_MS = 4600;
+    var current = 0;
+    var timer = null;
 
-        var ROTATE_MS = 4600;
-        var current = 0;
-        var timer = null;
+    function goTo(nextIndex) {
+      slides[current].classList.remove('is-active');
+      current = (nextIndex + slides.length) % slides.length;
+      slides[current].classList.add('is-active');
+    }
 
-        function goTo(nextIndex) {
-            slides[current].classList.remove('is-active');
-            current = (nextIndex + slides.length) % slides.length;
-            slides[current].classList.add('is-active');
+    function startRotation() {
+      if (prefersReducedMotion || slides.length < 2 || timer) return;
+      timer = window.setInterval(function () {
+        goTo(current + 1);
+      }, ROTATE_MS);
+    }
+
+    function stopRotation() {
+      if (timer) {
+        window.clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    bar.addEventListener('mouseenter', stopRotation);
+    bar.addEventListener('mouseleave', startRotation);
+    bar.addEventListener('focusin', stopRotation);
+    bar.addEventListener('focusout', startRotation);
+    startRotation();
+  })();
+
+  /* =========================
+     [SHARED] NAVIGATION JS
+     Sticky header state, mobile menu close-on-navigate and
+     placeholder link protection.
+  ========================= */
+  (function navigation() {
+
+    // Sticky header shadow on scroll
+    var header = document.getElementById('siteHeader');
+    if (header) {
+      var onScroll = function () {
+        header.classList.toggle('is-scrolled', window.scrollY > 8);
+      };
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+    }
+
+    // Close the collapsed mobile menu after a link is used
+    var navCollapse = document.getElementById('mainNav');
+    if (navCollapse && typeof bootstrap !== 'undefined') {
+      navCollapse.addEventListener('click', function (event) {
+        var link = event.target.closest('a');
+        if (!link) return;
+        var isDesktop = window.innerWidth >= 1400; // navbar-expand-xxl
+        if (!isDesktop && navCollapse.classList.contains('show')) {
+          bootstrap.Collapse.getOrCreateInstance(navCollapse, { toggle: false }).hide();
         }
+      });
+    }
 
-        function startRotation() {
-            if (prefersReducedMotion || slides.length < 2 || timer) return;
-            timer = window.setInterval(function () {
-                goTo(current + 1);
-            }, ROTATE_MS);
-        }
+    // Placeholder links ("#") must not jump the page
+    document.querySelectorAll('a[href="#"]').forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+      });
+    });
+  })();
 
-        function stopRotation() {
-            if (timer) {
-                window.clearInterval(timer);
-                timer = null;
-            }
-        }
+  /* =========================
+     [SHARED] FORMS JS
+     Newsletter subscribe — front-end only.
+     Wire the submission endpoint later.
+  ========================= */
+  (function newsletter() {
+    var form = document.getElementById('newsletterForm');
+    if (!form) return;
 
-        bar.addEventListener('mouseenter', stopRotation);
-        bar.addEventListener('mouseleave', startRotation);
-        bar.addEventListener('focusin', stopRotation);
-        bar.addEventListener('focusout', startRotation);
-        startRotation();
-    })();
+    var input = form.querySelector('input[type="email"]');
 
-    /* =========================
-       [SHARED] NAVIGATION JS
-       Sticky header state, mobile menu close-on-navigate and
-       placeholder link protection.
-    ========================= */
-    (function navigation() {
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      if (!input) return;
 
-        // Sticky header shadow on scroll
-        var header = document.getElementById('siteHeader');
-        if (header) {
-            var onScroll = function () {
-                header.classList.toggle('is-scrolled', window.scrollY > 8);
-            };
-            onScroll();
-            window.addEventListener('scroll', onScroll, { passive: true });
-        }
+      var isValid = input.checkValidity() && input.value.trim() !== '';
+      if (!isValid) {
+        input.focus();
+        return;
+      }
+      // Backend subscription is not connected in this template.
+      form.reset();
+    });
+  })();
 
-        // Close the collapsed mobile menu after a link is used
-        var navCollapse = document.getElementById('mainNav');
-        if (navCollapse && typeof bootstrap !== 'undefined') {
-            navCollapse.addEventListener('click', function (event) {
-                var link = event.target.closest('a');
-                if (!link) return;
-                var isDesktop = window.innerWidth >= 1400; // navbar-expand-xxl
-                if (!isDesktop && navCollapse.classList.contains('show')) {
-                    bootstrap.Collapse.getOrCreateInstance(navCollapse, { toggle: false }).hide();
-                }
-            });
-        }
-
-        // Placeholder links ("#") must not jump the page
-        document.querySelectorAll('a[href="#"]').forEach(function (link) {
-            link.addEventListener('click', function (event) {
-                event.preventDefault();
-            });
-        });
-    })();
-
-    /* =========================
-       [SHARED] FORMS JS
-       Newsletter subscribe — front-end only.
-       Wire the submission endpoint later.
-    ========================= */
-    (function newsletter() {
-        var form = document.getElementById('newsletterForm');
-        if (!form) return;
-
-        var input = form.querySelector('input[type="email"]');
-
-        form.addEventListener('submit', function (event) {
-            event.preventDefault();
-            if (!input) return;
-
-            var isValid = input.checkValidity() && input.value.trim() !== '';
-            if (!isValid) {
-                input.focus();
-                return;
-            }
-            // Backend subscription is not connected in this template.
-            form.reset();
-        });
-    })();
-
-    /* =========================
-       [SHARED] BACK TO TOP JS
-       Smooth scroll back to the top of the page.
-    ========================= */
-    (function backToTop() {
-        var button = document.getElementById('backToTop');
-        if (!button) return;
-        button.addEventListener('click', function (event) {
-            event.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: prefersReducedMotion ? 'auto' : 'smooth'
-            });
-        });
-    })();
+  /* =========================
+     [SHARED] BACK TO TOP JS
+     Smooth scroll back to the top of the page.
+  ========================= */
+  (function backToTop() {
+    var button = document.getElementById('backToTop');
+    if (!button) return;
+    button.addEventListener('click', function (event) {
+      event.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: prefersReducedMotion ? 'auto' : 'smooth'
+      });
+    });
+  })();
 
 })();
 
@@ -1417,7 +1417,7 @@ const prefersReducedMotion =
   })();
 
 
-  
+
 
 })();
 
@@ -1611,8 +1611,8 @@ const prefersReducedMotion =
     });
   })();
 
- 
-  
+
+
 
 })();
 
@@ -1807,8 +1807,8 @@ const prefersReducedMotion =
     });
   })();
 
- 
-  
+
+
 
 })();
 
@@ -2002,7 +2002,7 @@ const prefersReducedMotion =
     });
   })();
 
- 
+
 
 
 })();
@@ -4317,7 +4317,7 @@ const prefersReducedMotion =
     });
   })();
 
-  
+
 
 })();
 
@@ -5495,4 +5495,201 @@ const prefersReducedMotion =
       form.reset();
     });
   })();
+})();
+
+
+
+
+// Events and webinar
+
+
+
+
+/* =========================================================
+   EVENTS AND WEBINARS — PAGE SCRIPT (events-webinars.js)
+
+   • No inline JavaScript is used anywhere in the page.
+   • Everything is wrapped in ONE IIFE, so this file can
+     never collide with script.js (Home) or any other page
+     script (about, pvm, gqs, wcc, pcert, carea, cpath, acs,
+     crcpd, cfq, pmem, mcat, mben, howjoin, cpd, cpc, cls,
+     custom-training, functional-academies,
+     leadership-development, delivery-evaluation,
+     corporate-proposal, individual-development,
+     short-courses, professional-masterclasses,
+     executive-learning, career-development-pathways,
+     learning-calendar, professional-resources,
+     insights-articles) — no shared globals.
+
+   • No filtering JavaScript is added: the document defines
+     event TYPES and event-page requirements but lists no
+     actual events to filter (brief §23).
+
+   INTEGRATION NOTE
+   The [SHARED] sections reproduce the header/topbar/footer
+   behaviours that already exist in script.js. Include this
+   file as-is if script.js is only loaded on the Home page.
+   If script.js is ALREADY loaded on every page, delete the
+   [SHARED] block below and keep only the page-specific
+   SCROLL REVEAL section — it uses the events-webinars- hook
+   and never conflicts with the other pages' observers.
+========================================================= */
+
+(function () {
+  'use strict';
+
+  /* =========================
+     GLOBAL HELPERS
+  ========================= */
+
+  // Enables reveal styles only when JS is available, so no
+  // content is ever hidden for users without JavaScript.
+  document.documentElement.classList.add('events-webinars-js');
+
+  // Shared reduced-motion preference (respects user settings).
+  var prefersReducedMotion =
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* =========================
+     SCROLL REVEAL JS  (page-specific — always required)
+     Reveals .events-webinars-reveal blocks as they enter the
+     viewport. Falls back to fully visible without JS or
+     IntersectionObserver support.
+  ========================= */
+  (function scrollReveal() {
+    var items = document.querySelectorAll('.events-webinars-reveal');
+    if (!items.length) return;
+
+    var showAll = function () {
+      items.forEach(function (el) { el.classList.add('is-visible'); });
+    };
+
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+      showAll();
+      return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    items.forEach(function (el) { observer.observe(el); });
+  })();
+
+  /* =====================================================
+     [SHARED] Everything below mirrors script.js behaviour.
+     Delete this block if script.js is already loaded on
+     every page of the site.
+  ===================================================== */
+
+  /* =========================
+     [SHARED] ANNOUNCEMENT BAR JS
+     Rotates the suggested announcement messages and pauses
+     on hover and keyboard focus.
+  ========================= */
+  (function announcementBar() {
+    var bar = document.querySelector('.topbar');
+    var slides = document.querySelectorAll('#topbarMessage .topbar-slide');
+    if (!bar || !slides.length) return;
+
+    var ROTATE_MS = 4600;
+    var current = 0;
+    var timer = null;
+
+    function goTo(nextIndex) {
+      slides[current].classList.remove('is-active');
+      current = (nextIndex + slides.length) % slides.length;
+      slides[current].classList.add('is-active');
+    }
+
+    function startRotation() {
+      if (prefersReducedMotion || slides.length < 2 || timer) return;
+      timer = window.setInterval(function () {
+        goTo(current + 1);
+      }, ROTATE_MS);
+    }
+
+    function stopRotation() {
+      if (timer) {
+        window.clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    bar.addEventListener('mouseenter', stopRotation);
+    bar.addEventListener('mouseleave', startRotation);
+    bar.addEventListener('focusin', stopRotation);
+    bar.addEventListener('focusout', startRotation);
+    startRotation();
+  })();
+
+  /* =========================
+     [SHARED] NAVIGATION JS
+     Sticky header state, mobile menu close-on-navigate and
+     placeholder link protection.
+  ========================= */
+  (function navigation() {
+
+    // Sticky header shadow on scroll
+    var header = document.getElementById('siteHeader');
+    if (header) {
+      var onScroll = function () {
+        header.classList.toggle('is-scrolled', window.scrollY > 8);
+      };
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+    }
+
+    // Close the collapsed mobile menu after a link is used
+    var navCollapse = document.getElementById('mainNav');
+    if (navCollapse && typeof bootstrap !== 'undefined') {
+      navCollapse.addEventListener('click', function (event) {
+        var link = event.target.closest('a');
+        if (!link) return;
+        var isDesktop = window.innerWidth >= 1400; // navbar-expand-xxl
+        if (!isDesktop && navCollapse.classList.contains('show')) {
+          bootstrap.Collapse.getOrCreateInstance(navCollapse, { toggle: false }).hide();
+        }
+      });
+    }
+
+    // Placeholder links ("#") must not jump the page
+    document.querySelectorAll('a[href="#"]').forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+      });
+    });
+  })();
+
+  /* =========================
+     [SHARED] FORMS JS
+     Newsletter subscribe — front-end only.
+     Wire the submission endpoint later.
+  ========================= */
+  (function newsletter() {
+    var form = document.getElementById('newsletterForm');
+    if (!form) return;
+
+    var input = form.querySelector('input[type="email"]');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      if (!input) return;
+
+      var isValid = input.checkValidity() && input.value.trim() !== '';
+      if (!isValid) {
+        input.focus();
+        return;
+      }
+      // Backend subscription is not connected in this template.
+      form.reset();
+    });
+  })();
+
+
 })();

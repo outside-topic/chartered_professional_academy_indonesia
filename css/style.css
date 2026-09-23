@@ -1417,18 +1417,6 @@ a {
     transform: none;
 }
 
-.js .reveal.d-1 {
-    transition-delay: .1s;
-}
-
-.js .reveal.d-2 {
-    transition-delay: .2s;
-}
-
-.js .reveal.d-3 {
-    transition-delay: .3s;
-}
-
 
 
 
@@ -2097,13 +2085,6 @@ a {
     transform: none;
 }
 
-.about-cpa-js .about-cpa-reveal.about-cpa-d1 {
-    transition-delay: .1s;
-}
-
-.about-cpa-js .about-cpa-reveal.about-cpa-d2 {
-    transition-delay: .2s;
-}
 
 
 
@@ -2632,14 +2613,6 @@ a {
 .pvm-js .pvm-reveal.is-visible {
     opacity: 1;
     transform: none;
-}
-
-.pvm-js .pvm-reveal.pvm-d1 {
-    transition-delay: .1s;
-}
-
-.pvm-js .pvm-reveal.pvm-d2 {
-    transition-delay: .2s;
 }
 
 
@@ -3222,14 +3195,6 @@ a {
     transform: none;
 }
 
-.gqs-js .gqs-reveal.gqs-d1 {
-    transition-delay: .1s;
-}
-
-.gqs-js .gqs-reveal.gqs-d2 {
-    transition-delay: .2s;
-}
-
 
 
 
@@ -3649,15 +3614,6 @@ a {
     opacity: 1;
     transform: none;
 }
-
-.wcc-js .wcc-reveal.wcc-d1 {
-    transition-delay: .1s;
-}
-
-.wcc-js .wcc-reveal.wcc-d2 {
-    transition-delay: .2s;
-}
-
 
 
 
@@ -4157,13 +4113,6 @@ a {
     transform: none;
 }
 
-.pcert-js .pcert-reveal.pcert-d1 {
-    transition-delay: .1s;
-}
-
-.pcert-js .pcert-reveal.pcert-d2 {
-    transition-delay: .2s;
-}
 
 
 
@@ -4522,13 +4471,6 @@ a {
     transform: none;
 }
 
-.carea-js .carea-reveal.carea-d1 {
-    transition-delay: .1s;
-}
-
-.carea-js .carea-reveal.carea-d2 {
-    transition-delay: .2s;
-}
 
 
 
@@ -4973,13 +4915,6 @@ a {
     transform: none;
 }
 
-.cpath-js .cpath-reveal.cpath-d1 {
-    transition-delay: .1s;
-}
-
-.cpath-js .cpath-reveal.cpath-d2 {
-    transition-delay: .2s;
-}
 
 
 
@@ -5696,13 +5631,6 @@ a {
     transform: none;
 }
 
-.acs-js .acs-reveal.acs-d1 {
-    transition-delay: .1s;
-}
-
-.acs-js .acs-reveal.acs-d2 {
-    transition-delay: .2s;
-}
 
 
 
@@ -6382,13 +6310,6 @@ a {
     transform: none;
 }
 
-.crcpd-js .crcpd-reveal.crcpd-d1 {
-    transition-delay: .1s;
-}
-
-.crcpd-js .crcpd-reveal.crcpd-d2 {
-    transition-delay: .2s;
-}
 
 
 
@@ -6784,14 +6705,6 @@ a {
 .cfq-js .cfq-reveal.is-visible {
     opacity: 1;
     transform: none;
-}
-
-.cfq-js .cfq-reveal.cfq-d1 {
-    transition-delay: .1s;
-}
-
-.cfq-js .cfq-reveal.cfq-d2 {
-    transition-delay: .2s;
 }
 
 
@@ -7297,13 +7210,6 @@ a {
     transform: none;
 }
 
-.pmem-js .pmem-reveal.pmem-d1 {
-    transition-delay: .1s;
-}
-
-.pmem-js .pmem-reveal.pmem-d2 {
-    transition-delay: .2s;
-}
 
 
 
@@ -7886,15 +7792,6 @@ a {
     transform: none;
 }
 
-.mcat-js .mcat-reveal.mcat-d1 {
-    transition-delay: .1s;
-}
-
-.mcat-js .mcat-reveal.mcat-d2 {
-    transition-delay: .2s;
-}
-
-
 
 
 
@@ -8358,14 +8255,6 @@ a {
 .mben-js .mben-reveal.is-visible {
     opacity: 1;
     transform: none;
-}
-
-.mben-js .mben-reveal.mben-d1 {
-    transition-delay: .1s;
-}
-
-.mben-js .mben-reveal.mben-d2 {
-    transition-delay: .2s;
 }
 
 
@@ -8940,14 +8829,6 @@ a {
     transform: none;
 }
 
-.howjoin-js .howjoin-reveal.howjoin-d1 {
-    transition-delay: .1s;
-}
-
-.howjoin-js .howjoin-reveal.howjoin-d2 {
-    transition-delay: .2s;
-}
-
 
 
 
@@ -9488,14 +9369,6 @@ a {
 .cpd-js .cpd-reveal.is-visible {
     opacity: 1;
     transform: none;
-}
-
-.cpd-js .cpd-reveal.cpd-d1 {
-    transition-delay: .1s;
-}
-
-.cpd-js .cpd-reveal.cpd-d2 {
-    transition-delay: .2s;
 }
 
 
@@ -10145,14 +10018,6 @@ a {
 .cpc-js .cpc-reveal.is-visible {
     opacity: 1;
     transform: none;
-}
-
-.cpc-js .cpc-reveal.cpc-d1 {
-    transition-delay: .1s;
-}
-
-.cpc-js .cpc-reveal.cpc-d2 {
-    transition-delay: .2s;
 }
 
 
@@ -10807,14 +10672,6 @@ a {
     transform: none;
 }
 
-.cls-js .cls-reveal.cls-d1 {
-    transition-delay: .1s;
-}
-
-.cls-js .cls-reveal.cls-d2 {
-    transition-delay: .2s;
-}
-
 
 
 
@@ -11341,14 +11198,6 @@ a {
 .custom-training-js .custom-training-reveal.is-visible {
     opacity: 1;
     transform: none;
-}
-
-.custom-training-js .custom-training-reveal.custom-training-d1 {
-    transition-delay: .1s;
-}
-
-.custom-training-js .custom-training-reveal.custom-training-d2 {
-    transition-delay: .2s;
 }
 
 
@@ -11986,14 +11835,6 @@ a {
     transform: none;
 }
 
-.functional-academies-js .functional-academies-reveal.functional-academies-d1 {
-    transition-delay: .1s;
-}
-
-.functional-academies-js .functional-academies-reveal.functional-academies-d2 {
-    transition-delay: .2s;
-}
-
 
 
 
@@ -12507,14 +12348,6 @@ a {
 .leadership-development-js .leadership-development-reveal.is-visible {
     opacity: 1;
     transform: none;
-}
-
-.leadership-development-js .leadership-development-reveal.leadership-development-d1 {
-    transition-delay: .1s;
-}
-
-.leadership-development-js .leadership-development-reveal.leadership-development-d2 {
-    transition-delay: .2s;
 }
 
 
@@ -13154,13 +12987,6 @@ a {
     transform: none;
 }
 
-.delivery-evaluation-js .delivery-evaluation-reveal.delivery-evaluation-d1 {
-    transition-delay: .1s;
-}
-
-.delivery-evaluation-js .delivery-evaluation-reveal.delivery-evaluation-d2 {
-    transition-delay: .2s;
-}
 
 
 
@@ -13695,14 +13521,6 @@ a {
 .corporate-proposal-js .corporate-proposal-reveal.is-visible {
     opacity: 1;
     transform: none;
-}
-
-.corporate-proposal-js .corporate-proposal-reveal.corporate-proposal-d1 {
-    transition-delay: .1s;
-}
-
-.corporate-proposal-js .corporate-proposal-reveal.corporate-proposal-d2 {
-    transition-delay: .2s;
 }
 
 
@@ -14282,14 +14100,6 @@ a {
     transform: none;
 }
 
-.individual-development-js .individual-development-reveal.individual-development-d1 {
-    transition-delay: .1s;
-}
-
-.individual-development-js .individual-development-reveal.individual-development-d2 {
-    transition-delay: .2s;
-}
-
 
 
 
@@ -14805,14 +14615,6 @@ a {
 .short-courses-js .short-courses-reveal.is-visible {
     opacity: 1;
     transform: none;
-}
-
-.short-courses-js .short-courses-reveal.short-courses-d1 {
-    transition-delay: .1s;
-}
-
-.short-courses-js .short-courses-reveal.short-courses-d2 {
-    transition-delay: .2s;
 }
 
 
@@ -15350,13 +15152,6 @@ a {
     transform: none;
 }
 
-.professional-masterclasses-js .professional-masterclasses-reveal.professional-masterclasses-d1 {
-    transition-delay: .1s;
-}
-
-.professional-masterclasses-js .professional-masterclasses-reveal.professional-masterclasses-d2 {
-    transition-delay: .2s;
-}
 
 
 
@@ -15880,14 +15675,6 @@ a {
     transform: none;
 }
 
-.executive-learning-js .executive-learning-reveal.executive-learning-d1 {
-    transition-delay: .1s;
-}
-
-.executive-learning-js .executive-learning-reveal.executive-learning-d2 {
-    transition-delay: .2s;
-}
-
 
 
 
@@ -16392,15 +16179,6 @@ a {
     transform: none;
 }
 
-.career-development-pathways-js .career-development-pathways-reveal.career-development-pathways-d1 {
-    transition-delay: .1s;
-}
-
-.career-development-pathways-js .career-development-pathways-reveal.career-development-pathways-d2 {
-    transition-delay: .2s;
-}
-
-
 
 
 
@@ -16829,13 +16607,6 @@ a {
     transform: none;
 }
 
-.learning-calendar-js .learning-calendar-reveal.learning-calendar-d1 {
-    transition-delay: .1s;
-}
-
-.learning-calendar-js .learning-calendar-reveal.learning-calendar-d2 {
-    transition-delay: .2s;
-}
 
 
 
@@ -17380,13 +17151,7 @@ a {
     transform: none;
 }
 
-.professional-resources-js .professional-resources-reveal.professional-resources-d1 {
-    transition-delay: .1s;
-}
 
-.professional-resources-js .professional-resources-reveal.professional-resources-d2 {
-    transition-delay: .2s;
-}
 
 
 
@@ -17862,573 +17627,456 @@ a {
     transform: none;
 }
 
-.insights-articles-js .insights-articles-reveal.insights-articles-d1 {
-    transition-delay: .1s;
+
+
+
+
+
+
+/* Events and Webinars */
+
+
+
+
+/* =========================================================
+   EVENTS AND WEBINARS — PAGE-SPECIFIC STYLESHEET
+
+   • Every custom class uses the "events-webinars-" prefix.
+   • Depends on the shared site stylesheet (style.css) for CSS
+     variables, base typography, buttons, header/topbar and
+     footer components. No global styles are modified.
+   • Mobile-first. Hardened for 430px and below.
+
+   SECTIONS
+   01. PAGE SCOPE & ACTIVE NAV STATE
+   02. HERO
+   03. EVENT TYPES
+   04. EVENT PAGE REQUIREMENTS
+   05. REGISTRATION CONFIRMATION (CLOSING BAND)
+   06. SCROLL REVEAL
+   07. REDUCED MOTION
+   08. SMALL SCREEN HARDENING (≤575px / ≤430px)
+========================================================= */
+
+
+/* =========================
+   01. PAGE SCOPE & ACTIVE NAV STATE
+========================= */
+.events-webinars-page .navbar-nav .nav-link.active {
+    color: var(--primary-dark);
+    background: var(--primary-tint);
 }
 
-.insights-articles-js .insights-articles-reveal.insights-articles-d2 {
-    transition-delay: .2s;
+
+/* =========================
+   02. HERO
+========================= */
+.events-webinars-hero {
+    position: relative;
+    background: var(--dark-bg);
+    color: var(--secondary-color);
+    overflow: hidden;
+    padding: 88px 0 96px;
+    text-align: center;
+}
+
+.events-webinars-hero::before {
+    content: "";
+    position: absolute;
+    top: -260px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 760px;
+    height: 760px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 0, 0, .28), transparent 65%);
+}
+
+.events-webinars-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, .05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .05) 1px, transparent 1px);
+    background-size: 44px 44px;
+    -webkit-mask-image: radial-gradient(ellipse at 50% 18%, rgba(0, 0, 0, .85), transparent 72%);
+    mask-image: radial-gradient(ellipse at 50% 18%, rgba(0, 0, 0, .85), transparent 72%);
+}
+
+.events-webinars-hero .container-xxl {
+    position: relative;
+    z-index: 2;
+}
+
+/* Breadcrumb */
+.events-webinars-breadcrumb ol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .35rem .55rem;
+    list-style: none;
+    margin: 0 0 26px;
+    padding: 0;
+    font-size: .82rem;
+    font-weight: 600;
+    color: #8d97a5;
+}
+
+.events-webinars-breadcrumb li {
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+}
+
+.events-webinars-breadcrumb li+li::before {
+    content: "/";
+    color: rgba(255, 255, 255, .25);
+}
+
+.events-webinars-breadcrumb a {
+    color: #c3cad4;
+    text-decoration: none;
+}
+
+.events-webinars-breadcrumb a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.events-webinars-breadcrumb [aria-current] {
+    color: var(--secondary-color);
+}
+
+/* Hero copy */
+.events-webinars-hero-title {
+    color: var(--secondary-color);
+    font-size: clamp(2rem, 1.35rem + 3vw, 3.4rem);
+    line-height: 1.12;
+    letter-spacing: -.02em;
+    max-width: 880px;
+    margin: 14px auto 16px;
+}
+
+.events-webinars-hero-lead {
+    color: #c3cad4;
+    font-size: 1.03rem;
+    max-width: 640px;
+    margin: 0 auto 30px;
+}
+
+/* In-page section navigation pills */
+.events-webinars-hero-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .6rem;
+    margin: 0;
+}
+
+.events-webinars-nav-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: 999px;
+    padding: .62rem 1.15rem;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: .85rem;
+    color: #c3cad4;
+    text-decoration: none;
+    transition: all .25s ease;
+}
+
+.events-webinars-nav-pill .bi {
+    color: var(--primary-soft);
+    font-size: 1rem;
+    transition: color .25s ease;
+}
+
+.events-webinars-nav-pill:hover {
+    color: var(--secondary-color);
+    border-color: rgba(255, 0, 0, .5);
+    background: rgba(255, 0, 0, .08);
+    transform: translateY(-2px);
+}
+
+.events-webinars-nav-pill:hover .bi {
+    color: var(--primary-color);
+}
+
+/* Hero entrance animation (pure CSS, no JS required) */
+@keyframes events-webinars-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.events-webinars-hero-anim {
+    animation: events-webinars-fade-up .8s cubic-bezier(.22, .61, .36, 1) both;
+}
+
+.events-webinars-hero-anim-2 {
+    animation-delay: .15s;
+}
+
+.events-webinars-hero-anim-3 {
+    animation-delay: .3s;
 }
 
 
-
-
-
-
-@media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
-
-    .hero-anim {
-        animation: none !important;
-    }
-
-    .float-badge {
-        animation: none !important;
-    }
-
-    .js .reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    * {
-        transition-duration: .01ms !important;
-    }
-
-    .about-cpa-hero-anim {
-        animation: none !important;
-    }
-
-    .about-cpa-float-badge {
-        animation: none !important;
-    }
-
-    .about-cpa-js .about-cpa-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .about-cpa-do-card,
-    .about-cpa-promise-card,
-    .about-cpa-chip {
-        transition: none;
-    }
-
-    .pvm-hero-anim {
-        animation: none !important;
-    }
-
-    .pvm-js .pvm-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .pvm-mission-item,
-    .pvm-value-card,
-    .pvm-value-icon,
-    .pvm-nav-pill {
-        transition: none;
-    }
-
-    .gqs-hero-anim {
-        animation: none !important;
-    }
-
-    .gqs-js .gqs-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .gqs-principle-card,
-    .gqs-principle-icon,
-    .gqs-step-card,
-    .gqs-method,
-    .gqs-nav-pill {
-        transition: none;
-    }
-
-    .wcc-hero-anim {
-        animation: none !important;
-    }
-
-    .wcc-js .wcc-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .wcc-expect-row,
-    .wcc-expect-icon,
-    .wcc-question-card,
-    .wcc-question-icon {
-        transition: none;
-    }
-
-    .pcert-hero-anim {
-        animation: none !important;
-    }
-
-    .pcert-js .pcert-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .pcert-what-item,
-    .pcert-area-card,
-    .pcert-area-icon,
-    .pcert-stage-card,
-    .pcert-standard-item {
-        transition: none;
-    }
-
-    .carea-hero-anim {
-        animation: none !important;
-    }
-
-    .carea-js .carea-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .carea-card,
-    .carea-card-icon,
-    .carea-filter {
-        transition: none;
-    }
-
-    .cpath-hero-anim {
-        animation: none !important;
-    }
-
-    .cpath-js .cpath-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .cpath-card,
-    .cpath-chip {
-        transition: none;
-    }
-
-    .acs-hero-anim {
-        animation: none !important;
-    }
-
-    .acs-js .acs-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .acs-method-card,
-    .acs-method-icon,
-    .acs-resp-row,
-    .acs-chip,
-    .acs-ai-item,
-    .acs-nav-pill {
-        transition: none;
-    }
-
-    .crcpd-hero-anim {
-        animation: none !important;
-    }
-
-    .crcpd-js .crcpd-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .crcpd-status-card,
-    .crcpd-evidence-card,
-    .crcpd-cat-card,
-    .crcpd-quality-tile,
-    .crcpd-chip,
-    .crcpd-nav-pill {
-        transition: none;
-    }
-
-    .cfq-hero-anim {
-        animation: none !important;
-    }
-
-    .cfq-js .cfq-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .cfq-item,
-    .cfq-question-btn,
-    .cfq-toggle .bi,
-    .cfq-chip {
-        transition: none;
-    }
-
-    /* Collapse without animation */
-    .cfq-accordion .collapsing {
-        transition: none;
-    }
-
-    .mcat-hero-anim {
-        animation: none !important;
-    }
-
-    .mcat-js .mcat-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .mcat-card,
-    .mcat-card::before,
-    .mcat-chip,
-    .mcat-nav-pill {
-        transition: none;
-    }
-
-    .mben-hero-anim {
-        animation: none !important;
-    }
-
-    .mben-js .mben-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .mben-card,
-    .mben-card-icon,
-    .mben-nav-pill {
-        transition: none;
-    }
-
-    .howjoin-hero-anim {
-        animation: none !important;
-    }
-
-    .howjoin-js .howjoin-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .howjoin-card,
-    .howjoin-evidence-card,
-    .howjoin-chip,
-    .howjoin-nav-pill {
-        transition: none;
-    }
-
-    .cpd-hero-anim {
-        animation: none !important;
-    }
-
-    .cpd-js .cpd-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .cpd-cycle-card,
-    .cpd-act-item,
-    .cpd-field-row,
-    .cpd-nav-pill {
-        transition: none;
-    }
-
-    .pmem-hero-anim {
-        animation: none !important;
-    }
-
-    .pmem-js .pmem-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .pmem-pillar,
-    .pmem-benefit-card,
-    .pmem-benefit-icon,
-    .pmem-resp-row {
-        transition: none;
-    }
-
-    .cpc-hero-anim {
-        animation: none !important;
-    }
-
-    .cpc-js .cpc-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .cpc-principle,
-    .cpc-chip,
-    .cpc-nav-pill {
-        transition: none;
-    }
-
-    .cls-hero-anim {
-        animation: none !important;
-    }
-
-    .cls-js .cls-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .cls-result-row,
-    .cls-area-row,
-    .cls-area-icon,
-    .cls-custom-item,
-    .cls-del-row,
-    .cls-chip,
-    .cls-nav-pill {
-        transition: none;
-    }
-
-    .custom-training-hero-anim {
-        animation: none !important;
-    }
-
-    .custom-training-js .custom-training-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .custom-training-stage,
-    .custom-training-need,
-    .custom-training-prop-row,
-    .custom-training-nav-pill {
-        transition: none;
-    }
-
-    .functional-academies-hero-anim {
-        animation: none !important;
-    }
-
-    .functional-academies-js .functional-academies-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .functional-academies-connect-item,
-    .functional-academies-card,
-    .functional-academies-card::before,
-    .functional-academies-component,
-    .functional-academies-phase,
-    .functional-academies-tile,
-    .functional-academies-nav-pill {
-        transition: none;
-    }
-
-    .leadership-development-hero-anim {
-        animation: none !important;
-    }
-
-    .leadership-development-js .leadership-development-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .leadership-development-level,
-    .leadership-development-level::before,
-    .leadership-development-focus-chip,
-    .leadership-development-method,
-    .leadership-development-measure-chip,
-    .leadership-development-nav-pill {
-        transition: none;
-    }
-
-    .delivery-evaluation-hero-anim {
-        animation: none !important;
-    }
-
-    .delivery-evaluation-js .delivery-evaluation-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .delivery-evaluation-table tbody tr,
-    .delivery-evaluation-mode-card,
-    .delivery-evaluation-standard,
-    .delivery-evaluation-area,
-    .delivery-evaluation-report-chip,
-    .delivery-evaluation-nav-pill {
-        transition: none;
-    }
-
-    .corporate-proposal-hero-anim {
-        animation: none !important;
-    }
-
-    .corporate-proposal-js .corporate-proposal-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .corporate-proposal-form .form-control,
-    .corporate-proposal-form .form-check-input,
-    .corporate-proposal-card,
-    .corporate-proposal-nav-pill {
-        transition: none;
-    }
-
-    .individual-development-hero-anim {
-        animation: none !important;
-    }
-
-    .individual-development-js .individual-development-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .individual-development-moment,
-    .individual-development-format,
-    .individual-development-choose-chip,
-    .individual-development-nav-pill {
-        transition: none;
-    }
-
-    .short-courses-hero-anim {
-        animation: none !important;
-    }
-
-    .short-courses-js .short-courses-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .short-courses-expect-item,
-    .short-courses-category,
-    .short-courses-category-icon,
-    .short-courses-card-row,
-    .short-courses-nav-pill {
-        transition: none;
-    }
-
-    .professional-masterclasses-hero-anim {
-        animation: none !important;
-    }
-
-    .professional-masterclasses-js .professional-masterclasses-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .professional-masterclasses-audience,
-    .professional-masterclasses-audience::before,
-    .professional-masterclasses-audience-icon,
-    .professional-masterclasses-experience-item,
-    .professional-masterclasses-filter-chip,
-    .professional-masterclasses-nav-pill {
-        transition: none;
-    }
-
-    executive-learning-hero-anim {
-        animation: none !important;
-    }
-
-    .executive-learning-js .executive-learning-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .executive-learning-theme,
-    .executive-learning-theme-icon,
-    .executive-learning-delivery-item,
-    .executive-learning-principle,
-    .executive-learning-nav-pill {
-        transition: none;
-    }
-
-    .career-development-pathways-hero-anim {
-        animation: none !important;
-    }
-
-    .career-development-pathways-js .career-development-pathways-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .career-development-pathways-stage,
-    .career-development-pathways-stage::before,
-    .career-development-pathways-question,
-    .career-development-pathways-nav-pill {
-        transition: none;
-    }
-
-    .learning-calendar-hero-anim {
-        animation: none !important;
-    }
-
-    .learning-calendar-js .learning-calendar-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .learning-calendar-filter-chip,
-    .learning-calendar-field-row,
-    .learning-calendar-nav-pill {
-        transition: none;
-    }
-
-    .professional-resources-hero-anim {
-        animation: none !important;
-    }
-
-    .professional-resources-js .professional-resources-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .professional-resources-category,
-    .professional-resources-category::before,
-    .professional-resources-category-icon,
-    .professional-resources-nav-pill {
-        transition: none;
-    }
-
-    .insights-articles-hero-anim {
-        animation: none !important;
-    }
-
-    .insights-articles-js .insights-articles-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .insights-articles-category,
-    .insights-articles-category::before,
-    .insights-articles-category-icon,
-    .insights-articles-structure-row,
-    .insights-articles-launch-row,
-    .insights-articles-nav-pill {
-        transition: none;
-    }
+/* =========================
+   03. EVENT TYPES
+========================= */
+.events-webinars-types {
+    background: var(--secondary-color);
+}
+
+.events-webinars-types .section-head {
+    margin-bottom: 40px;
+}
+
+/* Event type tile — names only, no invented descriptions */
+.events-webinars-type {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: var(--light-bg);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 1.4rem 1.3rem;
+    height: 100%;
+    overflow: hidden;
+    transition: all .3s ease;
+}
+
+.events-webinars-type::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 0;
+    background: linear-gradient(180deg, var(--primary-color), var(--primary-darker));
+    transition: height .35s ease;
+}
+
+.events-webinars-type:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-tint-2);
+}
+
+.events-webinars-type:hover::before {
+    height: 100%;
+}
+
+.events-webinars-type-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    background: var(--primary-tint);
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    transition: all .3s ease;
+}
+
+.events-webinars-type:hover .events-webinars-type-icon {
+    background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
+    color: var(--secondary-color);
+    box-shadow: 0 10px 20px rgba(255, 0, 0, .25);
+}
+
+.events-webinars-type p {
+    margin: 0 0 .9rem;
+    font-family: var(--font-head);
+    font-weight: 700;
+    color: var(--ink);
+    font-size: .96rem;
+    line-height: 1.45;
+}
+
+.events-webinars-type-num {
+    margin-top: auto;
+    font-family: var(--font-head);
+    font-size: .76rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+    color: var(--primary-dark);
+    opacity: .35;
+}
+
+
+/* =========================
+   04. EVENT PAGE REQUIREMENTS
+========================= */
+.events-webinars-requirements {
+    background: var(--light-bg);
+}
+
+.events-webinars-requirements .section-head {
+    margin-bottom: 36px;
+}
+
+/* Requirements panel with red top accent */
+.events-webinars-requirements-panel {
+    position: relative;
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--secondary-color);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 26px;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+.events-webinars-requirements-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 24px;
+    right: 24px;
+    height: 4px;
+    border-radius: 0 0 4px 4px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+}
+
+.events-webinars-requirement {
+    display: flex;
+    align-items: flex-start;
+    gap: .85rem;
+    background: var(--light-bg);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    padding: .85rem 1rem;
+    transition: all .25s ease;
+}
+
+.events-webinars-requirement:hover {
+    border-color: var(--primary-tint-2);
+    box-shadow: var(--shadow-sm);
+}
+
+.events-webinars-requirement+.events-webinars-requirement {
+    margin-top: .7rem;
+}
+
+.events-webinars-requirement-check {
+    flex: 0 0 auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--primary-tint);
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.events-webinars-requirement p {
+    margin: 0;
+    padding-top: .3rem;
+    font-family: var(--font-head);
+    font-weight: 600;
+    color: var(--ink);
+    font-size: .95rem;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   05. REGISTRATION CONFIRMATION (CLOSING BAND)
+========================= */
+.events-webinars-cta {
+    position: relative;
+    background: linear-gradient(130deg,
+            var(--primary-color) 0%,
+            var(--primary-dark) 55%,
+            var(--primary-darker) 100%);
+    color: var(--secondary-color);
+    overflow: hidden;
+    padding: 72px 0;
+    text-align: center;
+}
+
+.events-webinars-cta::before,
+.events-webinars-cta::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, .18);
+    pointer-events: none;
+}
+
+.events-webinars-cta::before {
+    width: 320px;
+    height: 320px;
+    top: -130px;
+    left: -100px;
+}
+
+.events-webinars-cta::after {
+    width: 420px;
+    height: 420px;
+    bottom: -210px;
+    right: -140px;
+    border-color: rgba(255, 255, 255, .12);
+}
+
+.events-webinars-cta .container-xxl {
+    position: relative;
+    z-index: 2;
+}
+
+.events-webinars-cta h2 {
+    color: var(--secondary-color);
+    font-size: clamp(1.5rem, 1.1rem + 2.2vw, 2.4rem);
+    line-height: 1.25;
+    margin: 0 auto 16px;
+}
+
+.events-webinars-cta p {
+    color: rgba(255, 255, 255, .94);
+    max-width: 680px;
+    margin: 0 auto 12px;
+}
+
+.events-webinars-cta strong {
+    color: var(--secondary-color);
+    font-family: var(--font-head);
+    font-weight: 800;
+}
+
+
+/* =========================
+   06. SCROLL REVEAL
+   (page-specific hook — never conflicts with the
+   reveal observers used on other pages)
+========================= */
+.events-webinars-js .events-webinars-reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity .7s cubic-bezier(.22, .61, .36, 1),
+        transform .7s cubic-bezier(.22, .61, .36, 1);
+    will-change: opacity, transform;
+}
+
+.events-webinars-js .events-webinars-reveal.is-visible {
+    opacity: 1;
+    transform: none;
 }
