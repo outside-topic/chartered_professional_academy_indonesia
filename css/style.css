@@ -7895,6 +7895,479 @@ a {
 }
 
 
+
+
+
+
+
+
+
+/* Memberhsip Benifits */
+
+
+
+
+
+
+/* =========================================================
+   MEMBERSHIP BENEFITS — PAGE-SPECIFIC STYLESHEET
+
+   • Every custom class uses the "mben-" prefix.
+   • Depends on the shared site stylesheet (style.css) for CSS
+     variables, base typography, buttons, header/topbar and
+     footer components. No global styles are modified.
+   • Mobile-first. Hardened for 430px and below.
+
+   SECTIONS
+   01. PAGE SCOPE & ACTIVE NAV STATE
+   02. HERO
+   03. BENEFIT AREAS GRID
+   04. BENEFIT AVAILABILITY
+   05. MEMBER SPOTLIGHT
+   06. SCROLL REVEAL
+   07. REDUCED MOTION
+   08. SMALL SCREEN HARDENING (≤575px / ≤430px)
+========================================================= */
+
+
+/* =========================
+   01. PAGE SCOPE & ACTIVE NAV STATE
+========================= */
+.mben-page .navbar-nav .nav-link.active {
+    color: var(--primary-dark);
+    background: var(--primary-tint);
+}
+
+
+/* =========================
+   02. HERO
+========================= */
+.mben-hero {
+    position: relative;
+    background: var(--dark-bg);
+    color: var(--secondary-color);
+    overflow: hidden;
+    padding: 88px 0 96px;
+    text-align: center;
+}
+
+.mben-hero::before {
+    content: "";
+    position: absolute;
+    top: -260px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 760px;
+    height: 760px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 0, 0, .28), transparent 65%);
+}
+
+.mben-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, .05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .05) 1px, transparent 1px);
+    background-size: 44px 44px;
+    -webkit-mask-image: radial-gradient(ellipse at 50% 18%, rgba(0, 0, 0, .85), transparent 72%);
+    mask-image: radial-gradient(ellipse at 50% 18%, rgba(0, 0, 0, .85), transparent 72%);
+}
+
+.mben-hero .container-xxl {
+    position: relative;
+    z-index: 2;
+}
+
+/* Breadcrumb */
+.mben-breadcrumb ol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .35rem .55rem;
+    list-style: none;
+    margin: 0 0 26px;
+    padding: 0;
+    font-size: .82rem;
+    font-weight: 600;
+    color: #8d97a5;
+}
+
+.mben-breadcrumb li {
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+}
+
+.mben-breadcrumb li+li::before {
+    content: "/";
+    color: rgba(255, 255, 255, .25);
+}
+
+.mben-breadcrumb a {
+    color: #c3cad4;
+    text-decoration: none;
+}
+
+.mben-breadcrumb a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.mben-breadcrumb [aria-current] {
+    color: var(--secondary-color);
+}
+
+/* Hero copy */
+.mben-hero-title {
+    color: var(--secondary-color);
+    font-size: clamp(2rem, 1.35rem + 3vw, 3.4rem);
+    line-height: 1.12;
+    letter-spacing: -.02em;
+    max-width: 880px;
+    margin: 14px auto 16px;
+}
+
+.mben-hero-lead {
+    color: #c3cad4;
+    font-size: 1.03rem;
+    max-width: 680px;
+    margin: 0 auto 30px;
+}
+
+/* In-page section navigation pills */
+.mben-hero-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .6rem;
+    margin: 0;
+}
+
+.mben-nav-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: 999px;
+    padding: .62rem 1.15rem;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: .85rem;
+    color: #c3cad4;
+    text-decoration: none;
+    transition: all .25s ease;
+}
+
+.mben-nav-pill .bi {
+    color: var(--primary-soft);
+    font-size: 1rem;
+    transition: color .25s ease;
+}
+
+.mben-nav-pill:hover {
+    color: var(--secondary-color);
+    border-color: rgba(255, 0, 0, .5);
+    background: rgba(255, 0, 0, .08);
+    transform: translateY(-2px);
+}
+
+.mben-nav-pill:hover .bi {
+    color: var(--primary-color);
+}
+
+/* Hero entrance animation (pure CSS, no JS required) */
+@keyframes mben-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.mben-hero-anim {
+    animation: mben-fade-up .8s cubic-bezier(.22, .61, .36, 1) both;
+}
+
+.mben-hero-anim-2 {
+    animation-delay: .15s;
+}
+
+.mben-hero-anim-3 {
+    animation-delay: .3s;
+}
+
+
+/* =========================
+   03. BENEFIT AREAS GRID
+========================= */
+.mben-benefits {
+    background: var(--secondary-color);
+}
+
+/* Editorial benefit card — icon + area name + member value */
+.mben-card {
+    position: relative;
+    background: var(--secondary-color);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 1.7rem 1.5rem;
+    height: 100%;
+    overflow: hidden;
+    transition: all .3s ease;
+}
+
+.mben-card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--primary-darker));
+    transition: width .35s ease;
+}
+
+.mben-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+    border-color: transparent;
+}
+
+.mben-card:hover::after {
+    width: 100%;
+}
+
+.mben-card-head {
+    display: flex;
+    align-items: center;
+    gap: .95rem;
+    margin-bottom: .9rem;
+}
+
+.mben-card-icon {
+    flex: 0 0 auto;
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: var(--primary-tint);
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    transition: all .3s ease;
+}
+
+.mben-card:hover .mben-card-icon {
+    background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
+    color: var(--secondary-color);
+    box-shadow: 0 12px 24px rgba(255, 0, 0, .3);
+}
+
+.mben-card-name {
+    font-size: 1.1rem;
+    line-height: 1.35;
+    margin: 0;
+}
+
+.mben-card p {
+    margin: 0;
+    font-size: .96rem;
+    line-height: 1.7;
+    color: var(--body-text);
+}
+
+
+/* =========================
+   04. BENEFIT AVAILABILITY
+========================= */
+.mben-availability {
+    background: var(--light-bg);
+}
+
+.mben-availability .section-title {
+    margin-bottom: 16px;
+}
+
+/* Editorial statement (sentence 1, verbatim) */
+.mben-statement {
+    margin: 0;
+    max-width: 460px;
+    padding-left: 1.5rem;
+    border-left: 4px solid var(--primary-color);
+    font-family: var(--font-head);
+    font-weight: 700;
+    color: var(--ink);
+    font-size: clamp(1.15rem, 1rem + .9vw, 1.5rem);
+    line-height: 1.6;
+    letter-spacing: -.01em;
+}
+
+/* Highlighter effect on variation factors (styling only) */
+.mben-hl {
+    background: linear-gradient(transparent 62%, var(--primary-tint-2) 62%);
+    padding: 0 .05em;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+/* Note cards (sentence 2 clauses, verbatim) */
+.mben-note {
+    display: flex;
+    align-items: flex-start;
+    gap: .9rem;
+    background: var(--secondary-color);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--primary-color);
+    border-radius: var(--radius-md);
+    padding: 1.2rem 1.3rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.mben-note+.mben-note {
+    margin-top: 1rem;
+}
+
+.mben-note>.bi {
+    flex: 0 0 auto;
+    color: var(--primary-dark);
+    font-size: 1.25rem;
+    margin-top: .15rem;
+}
+
+.mben-note p {
+    margin: 0;
+    font-weight: 600;
+    color: var(--ink);
+    font-size: .98rem;
+    line-height: 1.65;
+}
+
+/* Warning variant */
+.mben-note-warn {
+    background: var(--primary-tint);
+    border-color: var(--primary-tint-2);
+}
+
+.mben-note-warn>.bi {
+    color: var(--primary-color);
+}
+
+
+/* =========================
+   05. MEMBER SPOTLIGHT
+========================= */
+.mben-spotlight {
+    position: relative;
+    background: var(--dark-bg);
+    color: var(--secondary-color);
+    overflow: hidden;
+}
+
+.mben-spotlight::before {
+    content: "";
+    position: absolute;
+    right: -180px;
+    top: -160px;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 0, 0, .2), transparent 65%);
+}
+
+.mben-spotlight .container-xxl {
+    position: relative;
+    z-index: 2;
+}
+
+.mben-spotlight .section-title {
+    color: var(--secondary-color);
+    margin-bottom: 16px;
+}
+
+/* Statement card (sentence 1, verbatim) */
+.mben-spot-statement {
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-left: 3px solid var(--primary-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem 1.6rem;
+}
+
+.mben-spot-statement p {
+    margin: 0;
+    font-family: var(--font-head);
+    font-weight: 700;
+    color: var(--secondary-color);
+    font-size: clamp(1.1rem, 1rem + .8vw, 1.4rem);
+    line-height: 1.6;
+    letter-spacing: -.01em;
+}
+
+/* Red emphasis on spotlight themes (styling only — text unchanged) */
+.mben-hl-dark {
+    color: var(--primary-soft);
+    background: rgba(255, 0, 0, .14);
+    padding: .04em .18em;
+    border-radius: .35em;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+/* Consent note on dark surface (sentence 2, verbatim) */
+.mben-note-dark {
+    background: var(--dark-card);
+    border-color: var(--dark-border);
+    box-shadow: none;
+}
+
+.mben-note-dark>.bi {
+    color: var(--primary-soft);
+}
+
+.mben-note-dark p {
+    color: var(--secondary-color);
+}
+
+/* Documented button row */
+.mben-spot-action {
+    margin-top: 1.4rem;
+}
+
+
+/* =========================
+   06. SCROLL REVEAL
+   (page-specific hook — never conflicts with the
+   reveal observers used on other pages)
+========================= */
+.mben-js .mben-reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity .7s cubic-bezier(.22, .61, .36, 1),
+        transform .7s cubic-bezier(.22, .61, .36, 1);
+    will-change: opacity, transform;
+}
+
+.mben-js .mben-reveal.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.mben-js .mben-reveal.mben-d1 {
+    transition-delay: .1s;
+}
+
+.mben-js .mben-reveal.mben-d2 {
+    transition-delay: .2s;
+}
+
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -8113,6 +8586,22 @@ a {
     .mcat-card::before,
     .mcat-chip,
     .mcat-nav-pill {
+        transition: none;
+    }
+
+    .mben-hero-anim {
+        animation: none !important;
+    }
+
+    .mben-js .mben-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .mben-card,
+    .mben-card-icon,
+    .mben-nav-pill {
         transition: none;
     }
 }

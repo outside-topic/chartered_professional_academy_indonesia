@@ -933,6 +933,62 @@
         text-align: center;
         gap: .6rem;
     }
+
+    .mben-hero {
+        padding: 56px 0 68px;
+    }
+
+    .mben-breadcrumb {
+        margin-bottom: 20px;
+    }
+
+    .mben-hero-lead {
+        font-size: .96rem;
+        margin-bottom: 26px;
+    }
+
+    .mben-nav-pill {
+        font-size: .8rem;
+        padding: .55rem .95rem;
+        gap: .45rem;
+    }
+
+    .mben-card {
+        padding: 1.4rem 1.2rem;
+    }
+
+    .mben-card-icon {
+        width: 46px;
+        height: 46px;
+        font-size: 1.25rem;
+        border-radius: 12px;
+    }
+
+    .mben-card-name {
+        font-size: 1.03rem;
+    }
+
+    .mben-card p {
+        font-size: .92rem;
+    }
+
+    .mben-statement {
+        padding-left: 1.1rem;
+    }
+
+    .mben-note,
+    .mben-spot-statement {
+        padding: 1.1rem 1.15rem;
+    }
+
+    .mben-note p {
+        font-size: .93rem;
+    }
+
+    .mben-note>.bi,
+    .mben-spot-statement {
+        font-size: 1.1rem;
+    }
 }
 
 
@@ -1182,6 +1238,22 @@
 
     .mcat-fees-sentence {
         line-height: 2.4;
+    }
+
+    .mben-hero {
+        padding: 64px 0 76px;
+    }
+
+    .mben-card {
+        padding: 1.5rem 1.3rem;
+    }
+
+    .mben-card-head {
+        gap: .8rem;
+    }
+
+    .mben-note {
+        padding: 1.1rem 1.15rem;
     }
 }
 
