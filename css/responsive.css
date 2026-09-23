@@ -1025,6 +1025,22 @@
   .cpd-audit-card{padding:1.15rem 1.1rem;}
   .cpd-obligation p{font-size:.93rem;}
   .cpd-obligation > .bi{font-size:1.1rem;}
+  .cpc-hero{padding:56px 0 68px;}
+  .cpc-breadcrumb{margin-bottom:20px;}
+  .cpc-hero-lead{font-size:.96rem;margin-bottom:26px;}
+  .cpc-nav-pill{font-size:.8rem;padding:.55rem .95rem;gap:.45rem;}
+  .cpc-principles .section-head{margin-bottom:32px;}
+  .cpc-principle{gap:.9rem;padding:1.1rem 1.1rem;}
+  .cpc-principle-num{width:44px;height:44px;font-size:.9rem;}
+  .cpc-principle-head{gap:.6rem;}
+  .cpc-principle-icon{width:36px;height:36px;font-size:1rem;}
+  .cpc-principle h3{font-size:1.03rem;}
+  .cpc-principle p{padding-left:46px;font-size:.92rem;} /* icon 36 + gap 10 */
+  .cpc-prohibit-lead{font-size:1.02rem;}
+  .cpc-chip{font-size:.82rem;padding:.5rem .9rem;gap:.4rem;}
+  .cpc-reporting-note p,
+  .cpc-purpose-note p{font-size:.92rem;}
+  .cpc-appeal{flex-direction:column;text-align:center;gap:.6rem;}
 }
 
 
@@ -1308,6 +1324,17 @@
   .cpd-record-panel{padding:22px 18px;}
   .cpd-audit-card{padding:1.25rem 1.2rem;}
   .cpd-obligation{padding:1.05rem 1.1rem;}
+  .cpc-hero{padding:64px 0 76px;}
+  .cpc-purpose-icon{width:56px;height:56px;font-size:1.4rem;}
+  .cpc-purpose-statement{padding-left:1.15rem;}
+  .cpc-purpose-note{padding:1.05rem 1.15rem;}
+  .cpc-principle{padding:1.2rem 1.2rem;}
+  .cpc-titles-statement,
+  .cpc-reporting-statement{padding-left:1.15rem;}
+  .cpc-prohibit{padding:1.2rem 1.2rem;}
+  .cpc-reporting-note{padding:1.2rem 1.2rem;}
+  .cpc-outcomes-statement{padding:1.2rem 1.2rem;}
+  .cpc-appeal{padding:1.05rem 1.15rem;}
 }
 
 
