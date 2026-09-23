@@ -2224,6 +2224,79 @@
         font-size: .78rem;
         padding: .42rem .8rem;
     }
+
+    .insights-articles-hero {
+        padding: 56px 0 68px;
+    }
+
+    .insights-articles-breadcrumb {
+        margin-bottom: 20px;
+    }
+
+    .insights-articles-hero-lead {
+        font-size: .96rem;
+        margin-bottom: 26px;
+    }
+
+    .insights-articles-nav-pill {
+        font-size: .8rem;
+        padding: .55rem .95rem;
+        gap: .45rem;
+    }
+
+    .insights-articles-categories .section-head,
+    .insights-articles-structure .section-head,
+    .insights-articles-launch .section-head {
+        margin-bottom: 32px;
+    }
+
+    .insights-articles-category {
+        padding: 1.15rem 1.05rem;
+    }
+
+    .insights-articles-category-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 1.2rem;
+    }
+
+    .insights-articles-category p {
+        font-size: .92rem;
+    }
+
+    .insights-articles-structure-panel {
+        padding: 18px 14px;
+    }
+
+    .insights-articles-structure-row {
+        padding: .75rem .85rem;
+        gap: .7rem;
+    }
+
+    .insights-articles-structure-num {
+        width: 30px;
+        height: 30px;
+        font-size: .74rem;
+    }
+
+    .insights-articles-structure-text {
+        font-size: .9rem;
+    }
+
+    .insights-articles-launch-row {
+        gap: .8rem;
+        padding: 1rem 1.05rem;
+    }
+
+    .insights-articles-launch-num {
+        width: 44px;
+        height: 44px;
+        font-size: .9rem;
+    }
+
+    .insights-articles-launch-text {
+        font-size: .94rem;
+    }
 }
 
 
@@ -2932,6 +3005,28 @@
 
     .professional-resources-featured-card {
         padding: 26px 20px;
+    }
+
+    .insights-articles-hero {
+        padding: 64px 0 76px;
+    }
+
+    .insights-articles-category {
+        padding: 1.25rem 1.15rem;
+    }
+
+    .insights-articles-structure-panel {
+        padding: 20px;
+    }
+
+    .insights-articles-structure-row {
+        padding: .8rem .9rem;
+    }
+
+    .insights-articles-launch-row {
+        align-items: flex-start;
+        gap: .9rem;
+        padding: 1.1rem 1.15rem;
     }
 }
 

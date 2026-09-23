@@ -17393,6 +17393,487 @@ a {
 
 
 
+/* Insights and Articles */
+
+
+
+
+/* =========================================================
+   INSIGHTS AND ARTICLES — PAGE-SPECIFIC STYLESHEET
+
+   • Every custom class uses the "insights-articles-" prefix.
+   • Depends on the shared site stylesheet (style.css) for CSS
+     variables, base typography, buttons, header/topbar and
+     footer components. No global styles are modified.
+   • Mobile-first. Hardened for 430px and below.
+
+   SECTIONS
+   01. PAGE SCOPE & ACTIVE NAV STATE
+   02. HERO
+   03. EDITORIAL CATEGORIES
+   04. ARTICLE STRUCTURE
+   05. SUGGESTED LAUNCH ARTICLES
+   06. SCROLL REVEAL
+   07. REDUCED MOTION
+   08. SMALL SCREEN HARDENING (≤575px / ≤430px)
+========================================================= */
+
+
+/* =========================
+   01. PAGE SCOPE & ACTIVE NAV STATE
+========================= */
+.insights-articles-page .navbar-nav .nav-link.active {
+    color: var(--primary-dark);
+    background: var(--primary-tint);
+}
+
+
+/* =========================
+   02. HERO
+========================= */
+.insights-articles-hero {
+    position: relative;
+    background: var(--dark-bg);
+    color: var(--secondary-color);
+    overflow: hidden;
+    padding: 88px 0 96px;
+    text-align: center;
+}
+
+.insights-articles-hero::before {
+    content: "";
+    position: absolute;
+    top: -260px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 760px;
+    height: 760px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 0, 0, .28), transparent 65%);
+}
+
+.insights-articles-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, .05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .05) 1px, transparent 1px);
+    background-size: 44px 44px;
+    -webkit-mask-image: radial-gradient(ellipse at 50% 18%, rgba(0, 0, 0, .85), transparent 72%);
+    mask-image: radial-gradient(ellipse at 50% 18%, rgba(0, 0, 0, .85), transparent 72%);
+}
+
+.insights-articles-hero .container-xxl {
+    position: relative;
+    z-index: 2;
+}
+
+/* Breadcrumb */
+.insights-articles-breadcrumb ol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .35rem .55rem;
+    list-style: none;
+    margin: 0 0 26px;
+    padding: 0;
+    font-size: .82rem;
+    font-weight: 600;
+    color: #8d97a5;
+}
+
+.insights-articles-breadcrumb li {
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+}
+
+.insights-articles-breadcrumb li+li::before {
+    content: "/";
+    color: rgba(255, 255, 255, .25);
+}
+
+.insights-articles-breadcrumb a {
+    color: #c3cad4;
+    text-decoration: none;
+}
+
+.insights-articles-breadcrumb a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.insights-articles-breadcrumb [aria-current] {
+    color: var(--secondary-color);
+}
+
+/* Hero copy */
+.insights-articles-hero-title {
+    color: var(--secondary-color);
+    font-size: clamp(2rem, 1.35rem + 3vw, 3.4rem);
+    line-height: 1.12;
+    letter-spacing: -.02em;
+    max-width: 880px;
+    margin: 14px auto 16px;
+}
+
+.insights-articles-hero-lead {
+    color: #c3cad4;
+    font-size: 1.03rem;
+    max-width: 660px;
+    margin: 0 auto 30px;
+}
+
+/* In-page section navigation pills */
+.insights-articles-hero-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .6rem;
+    margin: 0;
+}
+
+.insights-articles-nav-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: 999px;
+    padding: .62rem 1.15rem;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: .85rem;
+    color: #c3cad4;
+    text-decoration: none;
+    transition: all .25s ease;
+}
+
+.insights-articles-nav-pill .bi {
+    color: var(--primary-soft);
+    font-size: 1rem;
+    transition: color .25s ease;
+}
+
+.insights-articles-nav-pill:hover {
+    color: var(--secondary-color);
+    border-color: rgba(255, 0, 0, .5);
+    background: rgba(255, 0, 0, .08);
+    transform: translateY(-2px);
+}
+
+.insights-articles-nav-pill:hover .bi {
+    color: var(--primary-color);
+}
+
+/* Hero entrance animation (pure CSS, no JS required) */
+@keyframes insights-articles-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.insights-articles-hero-anim {
+    animation: insights-articles-fade-up .8s cubic-bezier(.22, .61, .36, 1) both;
+}
+
+.insights-articles-hero-anim-2 {
+    animation-delay: .15s;
+}
+
+.insights-articles-hero-anim-3 {
+    animation-delay: .3s;
+}
+
+
+/* =========================
+   03. EDITORIAL CATEGORIES
+========================= */
+.insights-articles-categories {
+    background: var(--secondary-color);
+}
+
+.insights-articles-categories .section-head {
+    margin-bottom: 40px;
+}
+
+/* Category tile — names only, no invented descriptions */
+.insights-articles-category {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: var(--light-bg);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 1.4rem 1.3rem;
+    height: 100%;
+    overflow: hidden;
+    transition: all .3s ease;
+}
+
+.insights-articles-category::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--primary-darker));
+    transition: width .35s ease;
+}
+
+.insights-articles-category:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-tint-2);
+}
+
+.insights-articles-category:hover::before {
+    width: 100%;
+}
+
+.insights-articles-category-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    background: var(--primary-tint);
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    transition: all .3s ease;
+}
+
+.insights-articles-category:hover .insights-articles-category-icon {
+    background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
+    color: var(--secondary-color);
+    box-shadow: 0 10px 20px rgba(255, 0, 0, .25);
+}
+
+.insights-articles-category p {
+    margin: 0 0 .9rem;
+    font-family: var(--font-head);
+    font-weight: 700;
+    color: var(--ink);
+    font-size: .96rem;
+    line-height: 1.45;
+}
+
+.insights-articles-category-num {
+    margin-top: auto;
+    font-family: var(--font-head);
+    font-size: .76rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+    color: var(--primary-dark);
+    opacity: .35;
+}
+
+
+/* =========================
+   04. ARTICLE STRUCTURE
+========================= */
+.insights-articles-structure {
+    background: var(--light-bg);
+}
+
+.insights-articles-structure .section-head {
+    margin-bottom: 36px;
+}
+
+/* Structure panel with red top accent */
+.insights-articles-structure-panel {
+    position: relative;
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--secondary-color);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 26px;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+.insights-articles-structure-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 24px;
+    right: 24px;
+    height: 4px;
+    border-radius: 0 0 4px 4px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+}
+
+.insights-articles-structure-row {
+    display: flex;
+    align-items: center;
+    gap: .85rem;
+    background: var(--light-bg);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    padding: .85rem 1rem;
+    transition: all .25s ease;
+}
+
+.insights-articles-structure-row:hover {
+    border-color: var(--primary-tint-2);
+    box-shadow: var(--shadow-sm);
+}
+
+.insights-articles-structure-row+.insights-articles-structure-row {
+    margin-top: .7rem;
+}
+
+.insights-articles-structure-num {
+    flex: 0 0 auto;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: var(--primary-tint);
+    color: var(--primary-dark);
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.insights-articles-structure-text {
+    margin: 0;
+    font-family: var(--font-head);
+    font-weight: 700;
+    color: var(--ink);
+    font-size: .95rem;
+    line-height: 1.45;
+}
+
+
+/* =========================
+   05. SUGGESTED LAUNCH ARTICLES
+========================= */
+.insights-articles-launch {
+    position: relative;
+    background: var(--dark-bg);
+    color: var(--secondary-color);
+    overflow: hidden;
+}
+
+.insights-articles-launch::before {
+    content: "";
+    position: absolute;
+    right: -180px;
+    top: -160px;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 0, 0, .2), transparent 65%);
+}
+
+.insights-articles-launch .container-xxl {
+    position: relative;
+    z-index: 2;
+}
+
+.insights-articles-launch .section-title {
+    color: var(--secondary-color);
+}
+
+/* Launch article ledger rows */
+.insights-articles-launch-list {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 860px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.insights-articles-launch-row {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: var(--radius-md);
+    padding: 1.15rem 1.3rem;
+    transition: all .3s ease;
+}
+
+.insights-articles-launch-row:hover {
+    transform: translateX(6px);
+    border-color: rgba(255, 0, 0, .5);
+    background: rgba(255, 0, 0, .06);
+}
+
+.insights-articles-launch-num {
+    flex: 0 0 auto;
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
+    color: var(--secondary-color);
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: .95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(255, 0, 0, .28);
+}
+
+.insights-articles-launch-text {
+    margin: 0;
+    font-family: var(--font-head);
+    font-weight: 700;
+    color: var(--secondary-color);
+    font-size: 1rem;
+    line-height: 1.55;
+}
+
+
+/* =========================
+   06. SCROLL REVEAL
+   (page-specific hook — never conflicts with the
+   reveal observers used on other pages)
+========================= */
+.insights-articles-js .insights-articles-reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity .7s cubic-bezier(.22, .61, .36, 1),
+        transform .7s cubic-bezier(.22, .61, .36, 1);
+    will-change: opacity, transform;
+}
+
+.insights-articles-js .insights-articles-reveal.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.insights-articles-js .insights-articles-reveal.insights-articles-d1 {
+    transition-delay: .1s;
+}
+
+.insights-articles-js .insights-articles-reveal.insights-articles-d2 {
+    transition-delay: .2s;
+}
+
+
+
+
+
 
 @media (prefers-reduced-motion: reduce) {
     html {
@@ -17929,6 +18410,25 @@ a {
     .professional-resources-category::before,
     .professional-resources-category-icon,
     .professional-resources-nav-pill {
+        transition: none;
+    }
+
+    .insights-articles-hero-anim {
+        animation: none !important;
+    }
+
+    .insights-articles-js .insights-articles-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .insights-articles-category,
+    .insights-articles-category::before,
+    .insights-articles-category-icon,
+    .insights-articles-structure-row,
+    .insights-articles-launch-row,
+    .insights-articles-nav-pill {
         transition: none;
     }
 }
