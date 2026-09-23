@@ -1080,6 +1080,46 @@
   .custom-training-prop-row{gap:.75rem;}
   .custom-training-prop-num{width:34px;height:34px;font-size:.8rem;}
   .custom-training-prop-text{font-size:.92rem;}
+  .functional-academies-hero{padding:56px 0 68px;}
+  .functional-academies-breadcrumb{margin-bottom:20px;}
+  .functional-academies-hero-lead{font-size:.96rem;margin-bottom:26px;}
+  .functional-academies-nav-pill{font-size:.8rem;padding:.55rem .95rem;gap:.45rem;}
+  .functional-academies-what .section-title{margin-bottom:14px;}
+  .functional-academies-statement{padding-left:1.1rem;}
+  .functional-academies-connect-panel{padding:18px 16px;}
+  .functional-academies-connect-item{padding:.8rem .9rem;gap:.7rem;}
+  .functional-academies-connect-icon{width:36px;height:36px;font-size:1rem;}
+  .functional-academies-connect-item p{font-size:.89rem;}
+  .functional-academies-list .section-head,
+  .functional-academies-components .section-head,
+  .functional-academies-phases .section-head,
+  .functional-academies-adoption .section-head{margin-bottom:32px;}
+  .functional-academies-card-num{width:40px;height:40px;font-size:.85rem;}
+  .functional-academies-card-icon{width:38px;height:38px;font-size:1.05rem;}
+  .functional-academies-card-name{font-size:.97rem;}
+  .functional-academies-component p{font-size:.91rem;}
+  .functional-academies-component-check{width:26px;height:26px;font-size:.9rem;}
+  .functional-academies-phase-num{width:42px;height:42px;font-size:.9rem;}
+  .functional-academies-phase-icon{width:38px;height:38px;font-size:1.05rem;}
+  .functional-academies-phase p{font-size:.92rem;}
+  .functional-academies-tile{gap:.75rem;}
+  .functional-academies-tile-icon{width:40px;height:40px;font-size:1.05rem;}
+  .functional-academies-tile p{font-size:.9rem;}
+  .leadership-development-hero{padding:56px 0 68px;}
+  .leadership-development-breadcrumb{margin-bottom:20px;}
+  .leadership-development-hero-lead{font-size:.96rem;margin-bottom:26px;}
+  .leadership-development-nav-pill{font-size:.8rem;padding:.55rem .95rem;gap:.45rem;}
+  .leadership-development-pathways .section-head,
+  .leadership-development-methods .section-head{margin-bottom:32px;}
+  .leadership-development-level-num{width:42px;height:42px;font-size:.9rem;}
+  .leadership-development-level-icon{width:38px;height:38px;font-size:1.05rem;}
+  .leadership-development-level-name{font-size:1.05rem;}
+  .leadership-development-focus-chip{font-size:.78rem;padding:.35rem .75rem;}
+  .leadership-development-method p{font-size:.91rem;}
+  .leadership-development-method-icon{width:36px;height:36px;font-size:1rem;}
+  .leadership-development-measure-chip{font-size:.82rem;padding:.5rem .95rem;}
+  .leadership-development-caution p{font-size:.92rem;}
+  .leadership-development-caution > .bi{font-size:1.1rem;}
 }
 
 
@@ -1391,6 +1431,20 @@
   .custom-training-boundary-note{padding:1.2rem 1.2rem;}
   .custom-training-proposal-panel{padding:20px;}
   .custom-training-prop-row{padding:.95rem 1rem;}
+  .functional-academies-hero{padding:64px 0 76px;}
+  .functional-academies-statement{padding-left:1.15rem;}
+  .functional-academies-connect-panel{padding:22px 20px;}
+  .functional-academies-card{padding:1.4rem 1.2rem;}
+  .functional-academies-components-panel{padding:20px;}
+  .functional-academies-component{padding:.95rem 1rem;}
+  .functional-academies-phase{padding:1.35rem 1.2rem;}
+  .functional-academies-tile{padding:1rem 1.05rem;}
+  .functional-academies-cta-row{margin-top:32px;}
+  .leadership-development-hero{padding:64px 0 76px;}
+  .leadership-development-level{padding:1.4rem 1.2rem;}
+  .leadership-development-methods-panel{padding:20px;}
+  .leadership-development-method{padding:.95rem 1rem;}
+  .leadership-development-caution{padding:1.1rem 1.15rem;}
 }
 
 
