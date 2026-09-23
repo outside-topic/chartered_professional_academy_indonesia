@@ -1005,6 +1005,26 @@
   .howjoin-chip{font-size:.82rem;padding:.5rem .9rem;gap:.4rem;}
   .howjoin-note p{font-size:.92rem;}
   .howjoin-note > .bi{font-size:1.1rem;}
+  .cpd-hero{padding:56px 0 68px;}
+  .cpd-breadcrumb{margin-bottom:20px;}
+  .cpd-hero-lead{font-size:.96rem;margin-bottom:26px;}
+  .cpd-nav-pill{font-size:.8rem;padding:.55rem .95rem;gap:.45rem;}
+  .cpd-cycle .section-head,
+  .cpd-activities .section-head,
+  .cpd-record .section-head{margin-bottom:32px;}
+  .cpd-cycle-num{width:42px;height:42px;font-size:.9rem;}
+  .cpd-cycle-icon{width:38px;height:38px;font-size:1.05rem;}
+  .cpd-cycle-name{font-size:1.05rem;}
+  .cpd-cycle-card p{font-size:.91rem;}
+  .cpd-act-icon{width:36px;height:36px;font-size:1rem;}
+  .cpd-act-item p{font-size:.91rem;padding-top:.25rem;}
+  .cpd-record-panel{padding:18px 14px;}
+  .cpd-field-row{padding:.75rem .85rem;gap:.7rem;}
+  .cpd-field-num{width:30px;height:30px;font-size:.74rem;}
+  .cpd-field-text{font-size:.9rem;}
+  .cpd-audit-card{padding:1.15rem 1.1rem;}
+  .cpd-obligation p{font-size:.93rem;}
+  .cpd-obligation > .bi{font-size:1.1rem;}
 }
 
 
@@ -1281,6 +1301,13 @@
   .howjoin-evidence-card{padding:1.1rem 1.1rem;}
   .howjoin-decision-card{padding:1.25rem 1.2rem;}
   .howjoin-note{padding:1rem 1.1rem;}
+  .cpd-hero{padding:64px 0 76px;}
+  .cpd-cycle-card{padding:1.4rem 1.2rem;}
+  .cpd-act-panel{padding:20px;}
+  .cpd-act-item{padding:.95rem 1rem;}
+  .cpd-record-panel{padding:22px 18px;}
+  .cpd-audit-card{padding:1.25rem 1.2rem;}
+  .cpd-obligation{padding:1.05rem 1.1rem;}
 }
 
 
@@ -1384,31 +1411,5 @@
         display: block;
     }
 }
-
-
-
-/* =========================
-   08. REDUCED MOTION
-========================= */
-@media (prefers-reduced-motion: reduce) {
-    .pmem-hero-anim {
-        animation: none !important;
-    }
-
-    .pmem-js .pmem-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .pmem-pillar,
-    .pmem-benefit-card,
-    .pmem-benefit-icon,
-    .pmem-resp-row {
-        transition: none;
-    }
-}
-
-
 
 
