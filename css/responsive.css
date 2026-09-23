@@ -785,6 +785,74 @@
         font-size: .79rem;
         padding: .4rem .8rem;
     }
+
+    .pmem-hero {
+        padding: 56px 0 68px;
+    }
+
+    .pmem-breadcrumb {
+        margin-bottom: 20px;
+    }
+
+    .pmem-hero-lead {
+        font-size: .96rem;
+        margin-bottom: 26px;
+    }
+
+    .pmem-overview .section-title {
+        margin-bottom: 14px;
+    }
+
+    .pmem-statement {
+        padding-left: 1.1rem;
+    }
+
+    .pmem-pillars-panel {
+        padding: 20px 16px;
+    }
+
+    .pmem-pillar {
+        padding: .95rem .6rem;
+        gap: .5rem;
+    }
+
+    .pmem-pillar-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.05rem;
+    }
+
+    .pmem-pillar>span:last-child {
+        font-size: .85rem;
+    }
+
+    .pmem-benefits .section-head {
+        margin-bottom: 32px;
+    }
+
+    .pmem-benefit-card {
+        padding: 1.35rem 1.2rem;
+    }
+
+    .pmem-benefit-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1.2rem;
+    }
+
+    .pmem-benefit-card p {
+        font-size: .91rem;
+    }
+
+    .pmem-resp-num {
+        width: 44px;
+        height: 44px;
+        font-size: .95rem;
+    }
+
+    .pmem-resp-row p {
+        font-size: .94rem;
+    }
 }
 
 
@@ -1000,6 +1068,25 @@
     .cfq-accordion .accordion-body {
         padding: 0 1.15rem 1.2rem;
     }
+
+    .pmem-hero {
+        padding: 64px 0 76px;
+    }
+
+    .pmem-hero-actions .btn {
+        flex: 1 1 100%;
+        max-width: 340px;
+    }
+
+    .pmem-pillars-panel {
+        padding: 22px 20px;
+    }
+
+    .pmem-resp-row {
+        align-items: flex-start;
+        gap: .9rem;
+        padding: 1.1rem 1.15rem;
+    }
 }
 
 
@@ -1101,5 +1188,29 @@
     .navbar .dropdown:hover>.dropdown-menu,
     .navbar .dropdown:focus-within>.dropdown-menu {
         display: block;
+    }
+}
+
+
+
+/* =========================
+   08. REDUCED MOTION
+========================= */
+@media (prefers-reduced-motion: reduce) {
+    .pmem-hero-anim {
+        animation: none !important;
+    }
+
+    .pmem-js .pmem-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .pmem-pillar,
+    .pmem-benefit-card,
+    .pmem-benefit-icon,
+    .pmem-resp-row {
+        transition: none;
     }
 }
