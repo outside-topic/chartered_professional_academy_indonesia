@@ -15925,377 +15925,452 @@ a {
 /* =========================
    01. PAGE SCOPE & ACTIVE NAV STATE
 ========================= */
-.career-development-pathways-page .navbar-nav .nav-link.active{
-  color:var(--primary-dark);
-  background:var(--primary-tint);
+.career-development-pathways-page .navbar-nav .nav-link.active {
+    color: var(--primary-dark);
+    background: var(--primary-tint);
 }
 
 
 /* =========================
    02. HERO
 ========================= */
-.career-development-pathways-hero{
-  position:relative;
-  background:var(--dark-bg);
-  color:var(--secondary-color);
-  overflow:hidden;
-  padding:88px 0 96px;
-  text-align:center;
+.career-development-pathways-hero {
+    position: relative;
+    background: var(--dark-bg);
+    color: var(--secondary-color);
+    overflow: hidden;
+    padding: 88px 0 96px;
+    text-align: center;
 }
-.career-development-pathways-hero::before{
-  content:"";
-  position:absolute;
-  top:-260px;
-  left:50%;
-  transform:translateX(-50%);
-  width:760px;
-  height:760px;
-  border-radius:50%;
-  background:radial-gradient(circle, rgba(255,0,0,.28), transparent 65%);
+
+.career-development-pathways-hero::before {
+    content: "";
+    position: absolute;
+    top: -260px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 760px;
+    height: 760px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 0, 0, .28), transparent 65%);
 }
-.career-development-pathways-hero::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background-image:
-    linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
-  background-size:44px 44px;
-  -webkit-mask-image:radial-gradient(ellipse at 50% 18%, rgba(0,0,0,.85), transparent 72%);
-  mask-image:radial-gradient(ellipse at 50% 18%, rgba(0,0,0,.85), transparent 72%);
+
+.career-development-pathways-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, .05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .05) 1px, transparent 1px);
+    background-size: 44px 44px;
+    -webkit-mask-image: radial-gradient(ellipse at 50% 18%, rgba(0, 0, 0, .85), transparent 72%);
+    mask-image: radial-gradient(ellipse at 50% 18%, rgba(0, 0, 0, .85), transparent 72%);
 }
-.career-development-pathways-hero .container-xxl{
-  position:relative;
-  z-index:2;
+
+.career-development-pathways-hero .container-xxl {
+    position: relative;
+    z-index: 2;
 }
 
 /* Breadcrumb */
-.career-development-pathways-breadcrumb ol{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:.35rem .55rem;
-  list-style:none;
-  margin:0 0 26px;
-  padding:0;
-  font-size:.82rem;
-  font-weight:600;
-  color:#8d97a5;
+.career-development-pathways-breadcrumb ol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .35rem .55rem;
+    list-style: none;
+    margin: 0 0 26px;
+    padding: 0;
+    font-size: .82rem;
+    font-weight: 600;
+    color: #8d97a5;
 }
-.career-development-pathways-breadcrumb li{
-  display:flex;
-  align-items:center;
-  gap:.55rem;
+
+.career-development-pathways-breadcrumb li {
+    display: flex;
+    align-items: center;
+    gap: .55rem;
 }
-.career-development-pathways-breadcrumb li + li::before{
-  content:"/";
-  color:rgba(255,255,255,.25);
+
+.career-development-pathways-breadcrumb li+li::before {
+    content: "/";
+    color: rgba(255, 255, 255, .25);
 }
-.career-development-pathways-breadcrumb a{
-  color:#c3cad4;
-  text-decoration:none;
+
+.career-development-pathways-breadcrumb a {
+    color: #c3cad4;
+    text-decoration: none;
 }
-.career-development-pathways-breadcrumb a:hover{
-  color:var(--secondary-color);
-  text-decoration:underline;
+
+.career-development-pathways-breadcrumb a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
 }
-.career-development-pathways-breadcrumb [aria-current]{
-  color:var(--secondary-color);
+
+.career-development-pathways-breadcrumb [aria-current] {
+    color: var(--secondary-color);
 }
 
 /* Hero copy */
-.career-development-pathways-hero-title{
-  color:var(--secondary-color);
-  font-size:clamp(2rem, 1.35rem + 3vw, 3.4rem);
-  line-height:1.12;
-  letter-spacing:-.02em;
-  max-width:880px;
-  margin:14px auto 16px;
+.career-development-pathways-hero-title {
+    color: var(--secondary-color);
+    font-size: clamp(2rem, 1.35rem + 3vw, 3.4rem);
+    line-height: 1.12;
+    letter-spacing: -.02em;
+    max-width: 880px;
+    margin: 14px auto 16px;
 }
-.career-development-pathways-hero-lead{
-  color:#c3cad4;
-  font-size:1.03rem;
-  max-width:660px;
-  margin:0 auto 30px;
+
+.career-development-pathways-hero-lead {
+    color: #c3cad4;
+    font-size: 1.03rem;
+    max-width: 660px;
+    margin: 0 auto 30px;
 }
 
 /* In-page section navigation pills */
-.career-development-pathways-hero-nav{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:.6rem;
-  margin:0;
+.career-development-pathways-hero-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .6rem;
+    margin: 0;
 }
-.career-development-pathways-nav-pill{
-  display:inline-flex;
-  align-items:center;
-  gap:.55rem;
-  background:var(--dark-card);
-  border:1px solid var(--dark-border);
-  border-radius:999px;
-  padding:.62rem 1.15rem;
-  font-family:var(--font-head);
-  font-weight:700;
-  font-size:.85rem;
-  color:#c3cad4;
-  text-decoration:none;
-  transition:all .25s ease;
+
+.career-development-pathways-nav-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: 999px;
+    padding: .62rem 1.15rem;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: .85rem;
+    color: #c3cad4;
+    text-decoration: none;
+    transition: all .25s ease;
 }
-.career-development-pathways-nav-pill .bi{
-  color:var(--primary-soft);
-  font-size:1rem;
-  transition:color .25s ease;
+
+.career-development-pathways-nav-pill .bi {
+    color: var(--primary-soft);
+    font-size: 1rem;
+    transition: color .25s ease;
 }
-.career-development-pathways-nav-pill:hover{
-  color:var(--secondary-color);
-  border-color:rgba(255,0,0,.5);
-  background:rgba(255,0,0,.08);
-  transform:translateY(-2px);
+
+.career-development-pathways-nav-pill:hover {
+    color: var(--secondary-color);
+    border-color: rgba(255, 0, 0, .5);
+    background: rgba(255, 0, 0, .08);
+    transform: translateY(-2px);
 }
-.career-development-pathways-nav-pill:hover .bi{color:var(--primary-color);}
+
+.career-development-pathways-nav-pill:hover .bi {
+    color: var(--primary-color);
+}
 
 /* Hero entrance animation (pure CSS, no JS required) */
-@keyframes career-development-pathways-fade-up{
-  from{opacity:0;transform:translateY(22px);}
-  to{opacity:1;transform:none;}
+@keyframes career-development-pathways-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
 }
-.career-development-pathways-hero-anim{
-  animation:career-development-pathways-fade-up .8s cubic-bezier(.22,.61,.36,1) both;
+
+.career-development-pathways-hero-anim {
+    animation: career-development-pathways-fade-up .8s cubic-bezier(.22, .61, .36, 1) both;
 }
-.career-development-pathways-hero-anim-2{animation-delay:.15s;}
-.career-development-pathways-hero-anim-3{animation-delay:.3s;}
+
+.career-development-pathways-hero-anim-2 {
+    animation-delay: .15s;
+}
+
+.career-development-pathways-hero-anim-3 {
+    animation-delay: .3s;
+}
 
 
 /* =========================
    03. PATHWAY STAGES (6-STAGE FRAMEWORK)
 ========================= */
-.career-development-pathways-stages{background:var(--secondary-color);}
+.career-development-pathways-stages {
+    background: var(--secondary-color);
+}
 
 /* Stage card — genuine sequential pathway (01–06) */
-.career-development-pathways-stage{
-  position:relative;
-  background:var(--light-bg);
-  border:1px solid var(--line);
-  border-radius:var(--radius-lg);
-  padding:1.6rem 1.4rem 1.5rem;
-  height:100%;
-  overflow:hidden;
-  transition:all .3s ease;
+.career-development-pathways-stage {
+    position: relative;
+    background: var(--light-bg);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 1.6rem 1.4rem 1.5rem;
+    height: 100%;
+    overflow: hidden;
+    transition: all .3s ease;
 }
-.career-development-pathways-stage::before{
-  content:"";
-  position:absolute;
-  left:0;
-  top:0;
-  width:4px;
-  height:0;
-  background:linear-gradient(180deg,var(--primary-color),var(--primary-darker));
-  transition:height .35s ease;
-}
-.career-development-pathways-stage:hover{
-  transform:translateY(-5px);
-  box-shadow:var(--shadow-md);
-  border-color:var(--primary-tint-2);
-}
-.career-development-pathways-stage:hover::before{height:100%;}
 
-.career-development-pathways-stage-top{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  margin-bottom:14px;
+.career-development-pathways-stage::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 0;
+    background: linear-gradient(180deg, var(--primary-color), var(--primary-darker));
+    transition: height .35s ease;
 }
-.career-development-pathways-stage-num{
-  width:46px;
-  height:46px;
-  border-radius:14px;
-  background:linear-gradient(140deg,var(--primary-color),var(--primary-darker));
-  color:var(--secondary-color);
-  font-family:var(--font-head);
-  font-weight:800;
-  font-size:.95rem;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 10px 20px rgba(255,0,0,.25);
+
+.career-development-pathways-stage:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-tint-2);
 }
-.career-development-pathways-stage-icon{
-  width:42px;
-  height:42px;
-  border-radius:50%;
-  background:var(--secondary-color);
-  color:var(--primary-dark);
-  border:1px solid var(--primary-tint-2);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:1.15rem;
+
+.career-development-pathways-stage:hover::before {
+    height: 100%;
 }
-.career-development-pathways-stage-name{
-  font-size:1.15rem;
-  line-height:1.3;
-  margin:0 0 14px;
+
+.career-development-pathways-stage-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.career-development-pathways-stage-num {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
+    color: var(--secondary-color);
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: .95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(255, 0, 0, .25);
+}
+
+.career-development-pathways-stage-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    color: var(--primary-dark);
+    border: 1px solid var(--primary-tint-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+}
+
+.career-development-pathways-stage-name {
+    font-size: 1.15rem;
+    line-height: 1.3;
+    margin: 0 0 14px;
 }
 
 /* Field blocks — labels use the document's own column headers */
-.career-development-pathways-field{
-  border:1px solid var(--line);
-  border-radius:var(--radius-sm);
-  padding:.85rem .95rem;
-  background:var(--secondary-color);
+.career-development-pathways-field {
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    padding: .85rem .95rem;
+    background: var(--secondary-color);
 }
-.career-development-pathways-field + .career-development-pathways-field{
-  margin-top:.7rem;
+
+.career-development-pathways-field+.career-development-pathways-field {
+    margin-top: .7rem;
 }
-.career-development-pathways-field-label{
-  display:flex;
-  align-items:center;
-  gap:.4rem;
-  font-family:var(--font-head);
-  font-size:.66rem;
-  font-weight:700;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  color:var(--muted);
-  margin-bottom:4px;
+
+.career-development-pathways-field-label {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    font-family: var(--font-head);
+    font-size: .66rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 4px;
 }
-.career-development-pathways-field-text{
-  margin:0;
-  font-size:.92rem;
-  line-height:1.6;
-  color:var(--body-text);
+
+.career-development-pathways-field-text {
+    margin: 0;
+    font-size: .92rem;
+    line-height: 1.6;
+    color: var(--body-text);
 }
-.career-development-pathways-field-dev{
-  background:var(--primary-tint);
-  border-color:var(--primary-tint-2);
+
+.career-development-pathways-field-dev {
+    background: var(--primary-tint);
+    border-color: var(--primary-tint-2);
 }
-.career-development-pathways-field-dev .career-development-pathways-field-label{
-  color:var(--primary-dark);
+
+.career-development-pathways-field-dev .career-development-pathways-field-label {
+    color: var(--primary-dark);
 }
-.career-development-pathways-field-dev .career-development-pathways-field-label .bi{
-  font-size:.85rem;
-  flex:0 0 auto;
+
+.career-development-pathways-field-dev .career-development-pathways-field-label .bi {
+    font-size: .85rem;
+    flex: 0 0 auto;
 }
-.career-development-pathways-field-dev .career-development-pathways-field-text{
-  color:var(--ink);
-  font-weight:500;
+
+.career-development-pathways-field-dev .career-development-pathways-field-text {
+    color: var(--ink);
+    font-weight: 500;
 }
 
 
 /* =========================
    04. PATHWAY GUIDANCE QUESTIONS
 ========================= */
-.career-development-pathways-questions{background:var(--light-bg);}
-.career-development-pathways-questions .section-head{margin-bottom:36px;}
+.career-development-pathways-questions {
+    background: var(--light-bg);
+}
+
+.career-development-pathways-questions .section-head {
+    margin-bottom: 36px;
+}
 
 /* Questions panel with red top accent */
-.career-development-pathways-questions-panel{
-  position:relative;
-  max-width:880px;
-  margin:0 auto;
-  background:var(--secondary-color);
-  border:1px solid var(--line);
-  border-radius:var(--radius-lg);
-  padding:26px;
-  box-shadow:var(--shadow-sm);
-  overflow:hidden;
+.career-development-pathways-questions-panel {
+    position: relative;
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--secondary-color);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 26px;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
 }
-.career-development-pathways-questions-panel::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:24px;
-  right:24px;
-  height:4px;
-  border-radius:0 0 4px 4px;
-  background:linear-gradient(90deg, transparent, var(--primary-color), transparent);
+
+.career-development-pathways-questions-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 24px;
+    right: 24px;
+    height: 4px;
+    border-radius: 0 0 4px 4px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
 }
-.career-development-pathways-question{
-  display:flex;
-  align-items:flex-start;
-  gap:.85rem;
-  background:var(--light-bg);
-  border:1px solid var(--line);
-  border-radius:var(--radius-sm);
-  padding:.95rem 1.05rem;
-  transition:all .25s ease;
+
+.career-development-pathways-question {
+    display: flex;
+    align-items: flex-start;
+    gap: .85rem;
+    background: var(--light-bg);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    padding: .95rem 1.05rem;
+    transition: all .25s ease;
 }
-.career-development-pathways-question:hover{
-  border-color:var(--primary-tint-2);
-  box-shadow:var(--shadow-sm);
+
+.career-development-pathways-question:hover {
+    border-color: var(--primary-tint-2);
+    box-shadow: var(--shadow-sm);
 }
-.career-development-pathways-question + .career-development-pathways-question{
-  margin-top:.7rem;
+
+.career-development-pathways-question+.career-development-pathways-question {
+    margin-top: .7rem;
 }
-.career-development-pathways-question-num{
-  flex:0 0 auto;
-  width:34px;
-  height:34px;
-  border-radius:10px;
-  background:var(--primary-tint);
-  color:var(--primary-dark);
-  font-family:var(--font-head);
-  font-weight:800;
-  font-size:.8rem;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+
+.career-development-pathways-question-num {
+    flex: 0 0 auto;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: var(--primary-tint);
+    color: var(--primary-dark);
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.career-development-pathways-question-text{
-  margin:0;
-  padding-top:.3rem;
-  font-family:var(--font-head);
-  font-weight:600;
-  color:var(--ink);
-  font-size:.95rem;
-  line-height:1.55;
+
+.career-development-pathways-question-text {
+    margin: 0;
+    padding-top: .3rem;
+    font-family: var(--font-head);
+    font-weight: 600;
+    color: var(--ink);
+    font-size: .95rem;
+    line-height: 1.55;
 }
 
 
 /* =========================
    05. CAREER DISCLAIMER (CLOSING BAND)
 ========================= */
-.career-development-pathways-cta{
-  position:relative;
-  background:linear-gradient(130deg,
-    var(--primary-color) 0%,
-    var(--primary-dark) 55%,
-    var(--primary-darker) 100%);
-  color:var(--secondary-color);
-  overflow:hidden;
-  padding:72px 0;
-  text-align:center;
+.career-development-pathways-cta {
+    position: relative;
+    background: linear-gradient(130deg,
+            var(--primary-color) 0%,
+            var(--primary-dark) 55%,
+            var(--primary-darker) 100%);
+    color: var(--secondary-color);
+    overflow: hidden;
+    padding: 72px 0;
+    text-align: center;
 }
+
 .career-development-pathways-cta::before,
-.career-development-pathways-cta::after{
-  content:"";
-  position:absolute;
-  border-radius:50%;
-  border:2px solid rgba(255,255,255,.18);
-  pointer-events:none;
+.career-development-pathways-cta::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, .18);
+    pointer-events: none;
 }
-.career-development-pathways-cta::before{width:320px;height:320px;top:-130px;left:-100px;}
-.career-development-pathways-cta::after{width:420px;height:420px;bottom:-210px;right:-140px;border-color:rgba(255,255,255,.12);}
-.career-development-pathways-cta .container-xxl{
-  position:relative;
-  z-index:2;
+
+.career-development-pathways-cta::before {
+    width: 320px;
+    height: 320px;
+    top: -130px;
+    left: -100px;
 }
-.career-development-pathways-cta h2{
-  color:var(--secondary-color);
-  font-size:clamp(1.5rem, 1.1rem + 2.2vw, 2.4rem);
-  line-height:1.25;
-  margin:0 auto 16px;
+
+.career-development-pathways-cta::after {
+    width: 420px;
+    height: 420px;
+    bottom: -210px;
+    right: -140px;
+    border-color: rgba(255, 255, 255, .12);
 }
-.career-development-pathways-cta p{
-  color:rgba(255,255,255,.94);
-  max-width:680px;
-  margin:0 auto;
+
+.career-development-pathways-cta .container-xxl {
+    position: relative;
+    z-index: 2;
 }
-.career-development-pathways-cta strong{
-  color:var(--secondary-color);
-  font-family:var(--font-head);
-  font-weight:800;
+
+.career-development-pathways-cta h2 {
+    color: var(--secondary-color);
+    font-size: clamp(1.5rem, 1.1rem + 2.2vw, 2.4rem);
+    line-height: 1.25;
+    margin: 0 auto 16px;
+}
+
+.career-development-pathways-cta p {
+    color: rgba(255, 255, 255, .94);
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.career-development-pathways-cta strong {
+    color: var(--secondary-color);
+    font-family: var(--font-head);
+    font-weight: 800;
 }
 
 
@@ -16304,19 +16379,1015 @@ a {
    (page-specific hook — never conflicts with the
    reveal observers used on other pages)
 ========================= */
-.career-development-pathways-js .career-development-pathways-reveal{
-  opacity:0;
-  transform:translateY(26px);
-  transition:opacity .7s cubic-bezier(.22,.61,.36,1),
-             transform .7s cubic-bezier(.22,.61,.36,1);
-  will-change:opacity, transform;
+.career-development-pathways-js .career-development-pathways-reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity .7s cubic-bezier(.22, .61, .36, 1),
+        transform .7s cubic-bezier(.22, .61, .36, 1);
+    will-change: opacity, transform;
 }
-.career-development-pathways-js .career-development-pathways-reveal.is-visible{
-  opacity:1;
-  transform:none;
+
+.career-development-pathways-js .career-development-pathways-reveal.is-visible {
+    opacity: 1;
+    transform: none;
 }
-.career-development-pathways-js .career-development-pathways-reveal.career-development-pathways-d1{transition-delay:.1s;}
-.career-development-pathways-js .career-development-pathways-reveal.career-development-pathways-d2{transition-delay:.2s;}
+
+.career-development-pathways-js .career-development-pathways-reveal.career-development-pathways-d1 {
+    transition-delay: .1s;
+}
+
+.career-development-pathways-js .career-development-pathways-reveal.career-development-pathways-d2 {
+    transition-delay: .2s;
+}
+
+
+
+
+
+/* Learning Calender */
+
+
+/* =========================================================
+   LEARNING CALENDAR — PAGE-SPECIFIC STYLESHEET
+
+   • Every custom class uses the "learning-calendar-" prefix.
+   • Depends on the shared site stylesheet (style.css) for CSS
+     variables, base typography, buttons, header/topbar and
+     footer components. No global styles are modified.
+   • Mobile-first. Hardened for 430px and below.
+
+   SECTIONS
+   01. PAGE SCOPE & ACTIVE NAV STATE
+   02. HERO
+   03. CALENDAR FILTERS
+   04. EVENT CARD FIELDS
+   05. NO SUITABLE DATE (CLOSING BAND)
+   06. SCROLL REVEAL
+   07. REDUCED MOTION
+   08. SMALL SCREEN HARDENING (≤575px / ≤430px)
+========================================================= */
+
+
+/* =========================
+   01. PAGE SCOPE & ACTIVE NAV STATE
+========================= */
+.learning-calendar-page .navbar-nav .nav-link.active {
+    color: var(--primary-dark);
+    background: var(--primary-tint);
+}
+
+
+/* =========================
+   02. HERO
+========================= */
+.learning-calendar-hero {
+    position: relative;
+    background: var(--dark-bg);
+    color: var(--secondary-color);
+    overflow: hidden;
+    padding: 88px 0 96px;
+    text-align: center;
+}
+
+.learning-calendar-hero::before {
+    content: "";
+    position: absolute;
+    top: -260px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 760px;
+    height: 760px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 0, 0, .28), transparent 65%);
+}
+
+.learning-calendar-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, .05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .05) 1px, transparent 1px);
+    background-size: 44px 44px;
+    -webkit-mask-image: radial-gradient(ellipse at 50% 18%, rgba(0, 0, 0, .85), transparent 72%);
+    mask-image: radial-gradient(ellipse at 50% 18%, rgba(0, 0, 0, .85), transparent 72%);
+}
+
+.learning-calendar-hero .container-xxl {
+    position: relative;
+    z-index: 2;
+}
+
+/* Breadcrumb */
+.learning-calendar-breadcrumb ol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .35rem .55rem;
+    list-style: none;
+    margin: 0 0 26px;
+    padding: 0;
+    font-size: .82rem;
+    font-weight: 600;
+    color: #8d97a5;
+}
+
+.learning-calendar-breadcrumb li {
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+}
+
+.learning-calendar-breadcrumb li+li::before {
+    content: "/";
+    color: rgba(255, 255, 255, .25);
+}
+
+.learning-calendar-breadcrumb a {
+    color: #c3cad4;
+    text-decoration: none;
+}
+
+.learning-calendar-breadcrumb a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.learning-calendar-breadcrumb [aria-current] {
+    color: var(--secondary-color);
+}
+
+/* Hero copy */
+.learning-calendar-hero-title {
+    color: var(--secondary-color);
+    font-size: clamp(2rem, 1.35rem + 3vw, 3.4rem);
+    line-height: 1.12;
+    letter-spacing: -.02em;
+    max-width: 880px;
+    margin: 14px auto 16px;
+}
+
+.learning-calendar-hero-lead {
+    color: #c3cad4;
+    font-size: 1.03rem;
+    max-width: 660px;
+    margin: 0 auto 30px;
+}
+
+/* In-page section navigation pills */
+.learning-calendar-hero-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .6rem;
+    margin: 0;
+}
+
+.learning-calendar-nav-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: 999px;
+    padding: .62rem 1.15rem;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: .85rem;
+    color: #c3cad4;
+    text-decoration: none;
+    transition: all .25s ease;
+}
+
+.learning-calendar-nav-pill .bi {
+    color: var(--primary-soft);
+    font-size: 1rem;
+    transition: color .25s ease;
+}
+
+.learning-calendar-nav-pill:hover {
+    color: var(--secondary-color);
+    border-color: rgba(255, 0, 0, .5);
+    background: rgba(255, 0, 0, .08);
+    transform: translateY(-2px);
+}
+
+.learning-calendar-nav-pill:hover .bi {
+    color: var(--primary-color);
+}
+
+/* Hero entrance animation (pure CSS, no JS required) */
+@keyframes learning-calendar-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.learning-calendar-hero-anim {
+    animation: learning-calendar-fade-up .8s cubic-bezier(.22, .61, .36, 1) both;
+}
+
+.learning-calendar-hero-anim-2 {
+    animation-delay: .15s;
+}
+
+.learning-calendar-hero-anim-3 {
+    animation-delay: .3s;
+}
+
+
+/* =========================
+   03. CALENDAR FILTERS
+========================= */
+.learning-calendar-filters {
+    background: var(--secondary-color);
+}
+
+.learning-calendar-filters .section-head {
+    margin-bottom: 40px;
+}
+
+/* Filters panel with red top accent (dark surface) */
+.learning-calendar-filters-panel {
+    position: relative;
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--dark-bg);
+    border: 1px solid var(--dark-border);
+    border-radius: var(--radius-lg);
+    padding: 30px 26px;
+    overflow: hidden;
+}
+
+.learning-calendar-filters-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 24px;
+    right: 24px;
+    height: 4px;
+    border-radius: 0 0 4px 4px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+}
+
+.learning-calendar-filter-chips {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .6rem;
+}
+
+.learning-calendar-filter-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    background: rgba(255, 255, 255, .03);
+    border: 1px solid var(--dark-border);
+    border-radius: 999px;
+    padding: .65rem 1.15rem;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: .88rem;
+    color: var(--secondary-color);
+    transition: all .25s ease;
+}
+
+.learning-calendar-filter-chip .bi {
+    color: var(--primary-soft);
+    font-size: 1rem;
+}
+
+.learning-calendar-filter-chip:hover {
+    border-color: rgba(255, 0, 0, .5);
+    background: rgba(255, 0, 0, .06);
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   04. EVENT CARD FIELDS
+========================= */
+.learning-calendar-card {
+    background: var(--light-bg);
+}
+
+.learning-calendar-card .section-head {
+    margin-bottom: 36px;
+}
+
+/* Spec panel with red top accent */
+.learning-calendar-card-panel {
+    position: relative;
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--secondary-color);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 26px;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+.learning-calendar-card-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 24px;
+    right: 24px;
+    height: 4px;
+    border-radius: 0 0 4px 4px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+}
+
+.learning-calendar-field-row {
+    display: flex;
+    align-items: center;
+    gap: .85rem;
+    background: var(--light-bg);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    padding: .85rem 1rem;
+    transition: all .25s ease;
+}
+
+.learning-calendar-field-row:hover {
+    border-color: var(--primary-tint-2);
+    box-shadow: var(--shadow-sm);
+}
+
+.learning-calendar-field-row+.learning-calendar-field-row {
+    margin-top: .7rem;
+}
+
+.learning-calendar-field-num {
+    flex: 0 0 auto;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: var(--primary-tint);
+    color: var(--primary-dark);
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.learning-calendar-field-text {
+    margin: 0;
+    font-family: var(--font-head);
+    font-weight: 700;
+    color: var(--ink);
+    font-size: .95rem;
+    line-height: 1.45;
+}
+
+
+/* =========================
+   05. NO SUITABLE DATE (CLOSING BAND)
+========================= */
+.learning-calendar-cta {
+    position: relative;
+    background: linear-gradient(130deg,
+            var(--primary-color) 0%,
+            var(--primary-dark) 55%,
+            var(--primary-darker) 100%);
+    color: var(--secondary-color);
+    overflow: hidden;
+    padding: 72px 0;
+    text-align: center;
+}
+
+.learning-calendar-cta::before,
+.learning-calendar-cta::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, .18);
+    pointer-events: none;
+}
+
+.learning-calendar-cta::before {
+    width: 320px;
+    height: 320px;
+    top: -130px;
+    left: -100px;
+}
+
+.learning-calendar-cta::after {
+    width: 420px;
+    height: 420px;
+    bottom: -210px;
+    right: -140px;
+    border-color: rgba(255, 255, 255, .12);
+}
+
+.learning-calendar-cta .container-xxl {
+    position: relative;
+    z-index: 2;
+}
+
+.learning-calendar-cta h2 {
+    color: var(--secondary-color);
+    font-size: clamp(1.5rem, 1.1rem + 2.2vw, 2.4rem);
+    line-height: 1.25;
+    margin: 0 auto 16px;
+}
+
+.learning-calendar-cta p {
+    color: rgba(255, 255, 255, .94);
+    max-width: 640px;
+    margin: 0 auto 26px;
+}
+
+
+/* =========================
+   06. SCROLL REVEAL
+   (page-specific hook — never conflicts with the
+   reveal observers used on other pages)
+========================= */
+.learning-calendar-js .learning-calendar-reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity .7s cubic-bezier(.22, .61, .36, 1),
+        transform .7s cubic-bezier(.22, .61, .36, 1);
+    will-change: opacity, transform;
+}
+
+.learning-calendar-js .learning-calendar-reveal.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.learning-calendar-js .learning-calendar-reveal.learning-calendar-d1 {
+    transition-delay: .1s;
+}
+
+.learning-calendar-js .learning-calendar-reveal.learning-calendar-d2 {
+    transition-delay: .2s;
+}
+
+
+
+
+
+/* Professional Resources */
+
+
+
+
+
+/* =========================================================
+   PROFESSIONAL RESOURCES — PAGE-SPECIFIC STYLESHEET
+
+   • Every custom class uses the "professional-resources-" prefix.
+   • Depends on the shared site stylesheet (style.css) for CSS
+     variables, base typography, buttons, header/topbar and
+     footer components. No global styles are modified.
+   • Mobile-first. Hardened for 430px and below.
+
+   SECTIONS
+   01. PAGE SCOPE & ACTIVE NAV STATE
+   02. HERO
+   03. RESOURCE CATEGORIES
+   04. EDITORIAL PROMISE
+   05. FEATURED RESOURCE BLOCK
+   06. STAY INFORMED (CLOSING BAND)
+   07. SCROLL REVEAL
+   08. REDUCED MOTION
+   09. SMALL SCREEN HARDENING (≤575px / ≤430px)
+========================================================= */
+
+
+/* =========================
+   01. PAGE SCOPE & ACTIVE NAV STATE
+========================= */
+.professional-resources-page .navbar-nav .nav-link.active {
+    color: var(--primary-dark);
+    background: var(--primary-tint);
+}
+
+
+/* =========================
+   02. HERO
+========================= */
+.professional-resources-hero {
+    position: relative;
+    background: var(--dark-bg);
+    color: var(--secondary-color);
+    overflow: hidden;
+    padding: 88px 0 96px;
+    text-align: center;
+}
+
+.professional-resources-hero::before {
+    content: "";
+    position: absolute;
+    top: -260px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 760px;
+    height: 760px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 0, 0, .28), transparent 65%);
+}
+
+.professional-resources-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, .05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .05) 1px, transparent 1px);
+    background-size: 44px 44px;
+    -webkit-mask-image: radial-gradient(ellipse at 50% 18%, rgba(0, 0, 0, .85), transparent 72%);
+    mask-image: radial-gradient(ellipse at 50% 18%, rgba(0, 0, 0, .85), transparent 72%);
+}
+
+.professional-resources-hero .container-xxl {
+    position: relative;
+    z-index: 2;
+}
+
+/* Breadcrumb */
+.professional-resources-breadcrumb ol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .35rem .55rem;
+    list-style: none;
+    margin: 0 0 26px;
+    padding: 0;
+    font-size: .82rem;
+    font-weight: 600;
+    color: #8d97a5;
+}
+
+.professional-resources-breadcrumb li {
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+}
+
+.professional-resources-breadcrumb li+li::before {
+    content: "/";
+    color: rgba(255, 255, 255, .25);
+}
+
+.professional-resources-breadcrumb a {
+    color: #c3cad4;
+    text-decoration: none;
+}
+
+.professional-resources-breadcrumb a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.professional-resources-breadcrumb [aria-current] {
+    color: var(--secondary-color);
+}
+
+/* Hero copy */
+.professional-resources-hero-title {
+    color: var(--secondary-color);
+    font-size: clamp(2rem, 1.35rem + 3vw, 3.4rem);
+    line-height: 1.12;
+    letter-spacing: -.02em;
+    max-width: 880px;
+    margin: 14px auto 16px;
+}
+
+.professional-resources-hero-lead {
+    color: #c3cad4;
+    font-size: 1.03rem;
+    max-width: 640px;
+    margin: 0 auto 30px;
+}
+
+/* In-page section navigation pills */
+.professional-resources-hero-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .6rem;
+    margin: 0;
+}
+
+.professional-resources-nav-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: 999px;
+    padding: .62rem 1.15rem;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: .85rem;
+    color: #c3cad4;
+    text-decoration: none;
+    transition: all .25s ease;
+}
+
+.professional-resources-nav-pill .bi {
+    color: var(--primary-soft);
+    font-size: 1rem;
+    transition: color .25s ease;
+}
+
+.professional-resources-nav-pill:hover {
+    color: var(--secondary-color);
+    border-color: rgba(255, 0, 0, .5);
+    background: rgba(255, 0, 0, .08);
+    transform: translateY(-2px);
+}
+
+.professional-resources-nav-pill:hover .bi {
+    color: var(--primary-color);
+}
+
+/* Hero entrance animation (pure CSS, no JS required) */
+@keyframes professional-resources-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.professional-resources-hero-anim {
+    animation: professional-resources-fade-up .8s cubic-bezier(.22, .61, .36, 1) both;
+}
+
+.professional-resources-hero-anim-2 {
+    animation-delay: .15s;
+}
+
+.professional-resources-hero-anim-3 {
+    animation-delay: .3s;
+}
+
+
+/* =========================
+   03. RESOURCE CATEGORIES
+========================= */
+.professional-resources-categories {
+    background: var(--secondary-color);
+}
+
+.professional-resources-categories .section-head {
+    margin-bottom: 40px;
+}
+
+/* Category tile — names only, no invented descriptions */
+.professional-resources-category {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--light-bg);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 1.3rem 1.35rem;
+    height: 100%;
+    overflow: hidden;
+    transition: all .3s ease;
+}
+
+.professional-resources-category::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--primary-darker));
+    transition: width .35s ease;
+}
+
+.professional-resources-category:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-tint-2);
+}
+
+.professional-resources-category:hover::before {
+    width: 100%;
+}
+
+.professional-resources-category-icon {
+    flex: 0 0 auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+    background: var(--primary-tint);
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    transition: all .3s ease;
+}
+
+.professional-resources-category:hover .professional-resources-category-icon {
+    background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
+    color: var(--secondary-color);
+    box-shadow: 0 12px 24px rgba(255, 0, 0, .3);
+}
+
+.professional-resources-category p {
+    flex: 1 1 auto;
+    min-width: 0;
+    margin: 0;
+    font-family: var(--font-head);
+    font-weight: 700;
+    color: var(--ink);
+    font-size: .98rem;
+    line-height: 1.45;
+}
+
+.professional-resources-category-num {
+    flex: 0 0 auto;
+    font-family: var(--font-head);
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+    color: var(--primary-dark);
+    opacity: .35;
+}
+
+
+/* =========================
+   04. EDITORIAL PROMISE
+========================= */
+.professional-resources-promise {
+    background: var(--light-bg);
+}
+
+.professional-resources-promise .section-title {
+    margin-bottom: 16px;
+}
+
+/* Editorial statement (sentence 1, verbatim) */
+.professional-resources-statement {
+    margin: 0;
+    max-width: 460px;
+    padding-left: 1.5rem;
+    border-left: 4px solid var(--primary-color);
+    font-family: var(--font-head);
+    font-weight: 700;
+    color: var(--ink);
+    font-size: clamp(1.15rem, 1rem + .9vw, 1.5rem);
+    line-height: 1.6;
+    letter-spacing: -.01em;
+}
+
+/* Highlighter effect on qualities (styling only — text unchanged) */
+.professional-resources-hl {
+    background: linear-gradient(transparent 62%, var(--primary-tint-2) 62%);
+    padding: 0 .05em;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+/* Promise note cards (sentences 2 & 3, verbatim) */
+.professional-resources-note {
+    display: flex;
+    align-items: flex-start;
+    gap: .9rem;
+    background: var(--secondary-color);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--primary-color);
+    border-radius: var(--radius-md);
+    padding: 1.2rem 1.3rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.professional-resources-note+.professional-resources-note {
+    margin-top: 1rem;
+}
+
+.professional-resources-note>.bi {
+    flex: 0 0 auto;
+    color: var(--primary-dark);
+    font-size: 1.25rem;
+    margin-top: .15rem;
+}
+
+.professional-resources-note p {
+    margin: 0;
+    font-weight: 600;
+    color: var(--ink);
+    font-size: .98rem;
+    line-height: 1.65;
+}
+
+/* Promotional-content variant */
+.professional-resources-note-warn {
+    background: var(--primary-tint);
+    border-color: var(--primary-tint-2);
+}
+
+.professional-resources-note-warn>.bi {
+    color: var(--primary-color);
+}
+
+
+/* =========================
+   05. FEATURED RESOURCE BLOCK
+========================= */
+.professional-resources-featured {
+    background: var(--secondary-color);
+}
+
+.professional-resources-featured .section-head {
+    margin-bottom: 36px;
+}
+
+/* Featured card with red top accent */
+.professional-resources-featured-card {
+    position: relative;
+    max-width: 760px;
+    margin: 0 auto;
+    background: var(--light-bg);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 34px 30px;
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+}
+
+.professional-resources-featured-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 24px;
+    right: 24px;
+    height: 4px;
+    border-radius: 0 0 4px 4px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+}
+
+.professional-resources-featured-chip {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font-head);
+    font-size: .66rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--primary-dark);
+    background: var(--primary-tint);
+    border: 1px solid var(--primary-tint-2);
+    border-radius: 999px;
+    padding: .4rem .85rem;
+    margin-bottom: 18px;
+}
+
+.professional-resources-featured-title {
+    font-size: clamp(1.25rem, 1.05rem + 1vw, 1.7rem);
+    line-height: 1.35;
+    margin: 0 0 12px;
+}
+
+.professional-resources-featured-summary {
+    margin: 0 0 20px;
+    font-size: .98rem;
+    line-height: 1.75;
+    color: var(--body-text);
+}
+
+/* Details row — the document's own three metadata slots */
+.professional-resources-featured-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .55rem;
+    margin-bottom: 24px;
+}
+
+.professional-resources-featured-detail {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    background: var(--secondary-color);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: .5rem 1rem;
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: .84rem;
+    color: var(--ink);
+}
+
+.professional-resources-featured-detail .bi {
+    color: var(--primary-dark);
+    font-size: .95rem;
+}
+
+.professional-resources-featured-action {
+    padding-top: 4px;
+}
+
+
+/* =========================
+   06. STAY INFORMED (CLOSING BAND)
+========================= */
+.professional-resources-cta {
+    position: relative;
+    background: linear-gradient(130deg,
+            var(--primary-color) 0%,
+            var(--primary-dark) 55%,
+            var(--primary-darker) 100%);
+    color: var(--secondary-color);
+    overflow: hidden;
+    padding: 72px 0;
+    text-align: center;
+}
+
+.professional-resources-cta::before,
+.professional-resources-cta::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, .18);
+    pointer-events: none;
+}
+
+.professional-resources-cta::before {
+    width: 320px;
+    height: 320px;
+    top: -130px;
+    left: -100px;
+}
+
+.professional-resources-cta::after {
+    width: 420px;
+    height: 420px;
+    bottom: -210px;
+    right: -140px;
+    border-color: rgba(255, 255, 255, .12);
+}
+
+.professional-resources-cta .container-xxl {
+    position: relative;
+    z-index: 2;
+}
+
+.professional-resources-cta h2 {
+    color: var(--secondary-color);
+    font-size: clamp(1.5rem, 1.1rem + 2.2vw, 2.4rem);
+    line-height: 1.25;
+    margin: 0 auto 14px;
+}
+
+.professional-resources-cta p {
+    color: rgba(255, 255, 255, .94);
+    max-width: 560px;
+    margin: 0 auto 26px;
+}
+
+
+/* =========================
+   07. SCROLL REVEAL
+   (page-specific hook — never conflicts with the
+   reveal observers used on other pages)
+========================= */
+.professional-resources-js .professional-resources-reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity .7s cubic-bezier(.22, .61, .36, 1),
+        transform .7s cubic-bezier(.22, .61, .36, 1);
+    will-change: opacity, transform;
+}
+
+.professional-resources-js .professional-resources-reveal.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.professional-resources-js .professional-resources-reveal.professional-resources-d1 {
+    transition-delay: .1s;
+}
+
+.professional-resources-js .professional-resources-reveal.professional-resources-d2 {
+    transition-delay: .2s;
+}
+
 
 
 
@@ -16810,10 +17881,54 @@ a {
     .executive-learning-nav-pill {
         transition: none;
     }
-    .career-development-pathways-hero-anim{animation:none !important;}
-  .career-development-pathways-js .career-development-pathways-reveal{opacity:1;transform:none;transition:none;}
-  .career-development-pathways-stage,
-  .career-development-pathways-stage::before,
-  .career-development-pathways-question,
-  .career-development-pathways-nav-pill{transition:none;}
+
+    .career-development-pathways-hero-anim {
+        animation: none !important;
+    }
+
+    .career-development-pathways-js .career-development-pathways-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .career-development-pathways-stage,
+    .career-development-pathways-stage::before,
+    .career-development-pathways-question,
+    .career-development-pathways-nav-pill {
+        transition: none;
+    }
+
+    .learning-calendar-hero-anim {
+        animation: none !important;
+    }
+
+    .learning-calendar-js .learning-calendar-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .learning-calendar-filter-chip,
+    .learning-calendar-field-row,
+    .learning-calendar-nav-pill {
+        transition: none;
+    }
+
+    .professional-resources-hero-anim {
+        animation: none !important;
+    }
+
+    .professional-resources-js .professional-resources-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .professional-resources-category,
+    .professional-resources-category::before,
+    .professional-resources-category-icon,
+    .professional-resources-nav-pill {
+        transition: none;
+    }
 }
