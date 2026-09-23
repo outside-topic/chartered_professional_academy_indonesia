@@ -989,211 +989,985 @@
     .mben-spot-statement {
         font-size: 1.1rem;
     }
-    .howjoin-hero{padding:56px 0 68px;}
-  .howjoin-breadcrumb{margin-bottom:20px;}
-  .howjoin-hero-lead{font-size:.96rem;margin-bottom:26px;}
-  .howjoin-nav-pill{font-size:.8rem;padding:.55rem .95rem;gap:.45rem;}
-  .howjoin-steps .section-head{margin-bottom:36px;}
-  .howjoin-step{gap:.85rem;padding-bottom:20px;}
-  .howjoin-step::before{left:21px;top:50px;}
-  .howjoin-node{width:44px;height:44px;font-size:.95rem;}
-  .howjoin-card{padding:1.05rem 1.05rem;gap:.7rem;}
-  .howjoin-card-icon{width:38px;height:38px;font-size:1.05rem;border-radius:10px;}
-  .howjoin-card p{font-size:.92rem;}
-  .howjoin-evidence-check{width:26px;height:26px;font-size:.9rem;}
-  .howjoin-evidence-card p{font-size:.91rem;}
-  .howjoin-chip{font-size:.82rem;padding:.5rem .9rem;gap:.4rem;}
-  .howjoin-note p{font-size:.92rem;}
-  .howjoin-note > .bi{font-size:1.1rem;}
-  .cpd-hero{padding:56px 0 68px;}
-  .cpd-breadcrumb{margin-bottom:20px;}
-  .cpd-hero-lead{font-size:.96rem;margin-bottom:26px;}
-  .cpd-nav-pill{font-size:.8rem;padding:.55rem .95rem;gap:.45rem;}
-  .cpd-cycle .section-head,
-  .cpd-activities .section-head,
-  .cpd-record .section-head{margin-bottom:32px;}
-  .cpd-cycle-num{width:42px;height:42px;font-size:.9rem;}
-  .cpd-cycle-icon{width:38px;height:38px;font-size:1.05rem;}
-  .cpd-cycle-name{font-size:1.05rem;}
-  .cpd-cycle-card p{font-size:.91rem;}
-  .cpd-act-icon{width:36px;height:36px;font-size:1rem;}
-  .cpd-act-item p{font-size:.91rem;padding-top:.25rem;}
-  .cpd-record-panel{padding:18px 14px;}
-  .cpd-field-row{padding:.75rem .85rem;gap:.7rem;}
-  .cpd-field-num{width:30px;height:30px;font-size:.74rem;}
-  .cpd-field-text{font-size:.9rem;}
-  .cpd-audit-card{padding:1.15rem 1.1rem;}
-  .cpd-obligation p{font-size:.93rem;}
-  .cpd-obligation > .bi{font-size:1.1rem;}
-  .cpc-hero{padding:56px 0 68px;}
-  .cpc-breadcrumb{margin-bottom:20px;}
-  .cpc-hero-lead{font-size:.96rem;margin-bottom:26px;}
-  .cpc-nav-pill{font-size:.8rem;padding:.55rem .95rem;gap:.45rem;}
-  .cpc-principles .section-head{margin-bottom:32px;}
-  .cpc-principle{gap:.9rem;padding:1.1rem 1.1rem;}
-  .cpc-principle-num{width:44px;height:44px;font-size:.9rem;}
-  .cpc-principle-head{gap:.6rem;}
-  .cpc-principle-icon{width:36px;height:36px;font-size:1rem;}
-  .cpc-principle h3{font-size:1.03rem;}
-  .cpc-principle p{padding-left:46px;font-size:.92rem;} /* icon 36 + gap 10 */
-  .cpc-prohibit-lead{font-size:1.02rem;}
-  .cpc-chip{font-size:.82rem;padding:.5rem .9rem;gap:.4rem;}
-  .cpc-reporting-note p,
-  .cpc-purpose-note p{font-size:.92rem;}
-  .cpc-appeal{flex-direction:column;text-align:center;gap:.6rem;}
-  .cls-hero{padding:56px 0 68px;}
-  .cls-breadcrumb{margin-bottom:20px;}
-  .cls-hero-lead{font-size:.96rem;margin-bottom:26px;}
-  .cls-nav-pill{font-size:.8rem;padding:.55rem .95rem;gap:.45rem;}
-  .cls-approach .section-title{margin-bottom:14px;}
-  .cls-areas .section-head,
-  .cls-custom .section-head,
-  .cls-deliverables .section-head{margin-bottom:32px;}
-  .cls-result-row{padding:.85rem .95rem;gap:.8rem;}
-  .cls-result-icon{width:38px;height:38px;font-size:1.05rem;}
-  .cls-result-row p{font-size:.92rem;}
-  .cls-area-icon{width:42px;height:42px;font-size:1.15rem;}
-  .cls-area-name{font-size:.93rem;}
-  .cls-area-num{font-size:.72rem;}
-  .cls-custom-item p{font-size:.91rem;}
-  .cls-custom-check{width:26px;height:26px;font-size:.9rem;}
-  .cls-del-icon{width:38px;height:38px;font-size:1.05rem;}
-  .cls-del-row p{font-size:.93rem;padding-top:.3rem;}
-  .cls-cta-lead{font-size:1.05rem;}
-  .cls-chip{font-size:.82rem;padding:.5rem .95rem;}
-  .cls-cta-note{font-size:.95rem;}
-  .custom-training-hero{padding:56px 0 68px;}
-  .custom-training-breadcrumb{margin-bottom:20px;}
-  .custom-training-hero-lead{font-size:.96rem;margin-bottom:26px;}
-  .custom-training-nav-pill{font-size:.8rem;padding:.55rem .95rem;gap:.45rem;}
-  .custom-training-process .section-head,
-  .custom-training-needs .section-head,
-  .custom-training-proposal .section-head{margin-bottom:32px;}
-  .custom-training-stage-num{width:42px;height:42px;font-size:.9rem;}
-  .custom-training-stage-icon{width:38px;height:38px;font-size:1.05rem;}
-  .custom-training-stage-name{font-size:1.05rem;}
-  .custom-training-stage p{font-size:.91rem;}
-  .custom-training-need p{font-size:.91rem;}
-  .custom-training-need-check{width:26px;height:26px;font-size:.9rem;}
-  .custom-training-statement{padding-left:1.1rem;}
-  .custom-training-boundary-note{flex-direction:column;gap:.6rem;padding:1.15rem 1.15rem;}
-  .custom-training-prop-row{gap:.75rem;}
-  .custom-training-prop-num{width:34px;height:34px;font-size:.8rem;}
-  .custom-training-prop-text{font-size:.92rem;}
-  .functional-academies-hero{padding:56px 0 68px;}
-  .functional-academies-breadcrumb{margin-bottom:20px;}
-  .functional-academies-hero-lead{font-size:.96rem;margin-bottom:26px;}
-  .functional-academies-nav-pill{font-size:.8rem;padding:.55rem .95rem;gap:.45rem;}
-  .functional-academies-what .section-title{margin-bottom:14px;}
-  .functional-academies-statement{padding-left:1.1rem;}
-  .functional-academies-connect-panel{padding:18px 16px;}
-  .functional-academies-connect-item{padding:.8rem .9rem;gap:.7rem;}
-  .functional-academies-connect-icon{width:36px;height:36px;font-size:1rem;}
-  .functional-academies-connect-item p{font-size:.89rem;}
-  .functional-academies-list .section-head,
-  .functional-academies-components .section-head,
-  .functional-academies-phases .section-head,
-  .functional-academies-adoption .section-head{margin-bottom:32px;}
-  .functional-academies-card-num{width:40px;height:40px;font-size:.85rem;}
-  .functional-academies-card-icon{width:38px;height:38px;font-size:1.05rem;}
-  .functional-academies-card-name{font-size:.97rem;}
-  .functional-academies-component p{font-size:.91rem;}
-  .functional-academies-component-check{width:26px;height:26px;font-size:.9rem;}
-  .functional-academies-phase-num{width:42px;height:42px;font-size:.9rem;}
-  .functional-academies-phase-icon{width:38px;height:38px;font-size:1.05rem;}
-  .functional-academies-phase p{font-size:.92rem;}
-  .functional-academies-tile{gap:.75rem;}
-  .functional-academies-tile-icon{width:40px;height:40px;font-size:1.05rem;}
-  .functional-academies-tile p{font-size:.9rem;}
-  .leadership-development-hero{padding:56px 0 68px;}
-  .leadership-development-breadcrumb{margin-bottom:20px;}
-  .leadership-development-hero-lead{font-size:.96rem;margin-bottom:26px;}
-  .leadership-development-nav-pill{font-size:.8rem;padding:.55rem .95rem;gap:.45rem;}
-  .leadership-development-pathways .section-head,
-  .leadership-development-methods .section-head{margin-bottom:32px;}
-  .leadership-development-level-num{width:42px;height:42px;font-size:.9rem;}
-  .leadership-development-level-icon{width:38px;height:38px;font-size:1.05rem;}
-  .leadership-development-level-name{font-size:1.05rem;}
-  .leadership-development-focus-chip{font-size:.78rem;padding:.35rem .75rem;}
-  .leadership-development-method p{font-size:.91rem;}
-  .leadership-development-method-icon{width:36px;height:36px;font-size:1rem;}
-  .leadership-development-measure-chip{font-size:.82rem;padding:.5rem .95rem;}
-  .leadership-development-caution p{font-size:.92rem;}
-  .leadership-development-caution > .bi{font-size:1.1rem;}
-  .delivery-evaluation-hero{padding:56px 0 68px;}
-  .delivery-evaluation-breadcrumb{margin-bottom:20px;}
-  .delivery-evaluation-hero-lead{font-size:.96rem;margin-bottom:26px;}
-  .delivery-evaluation-nav-pill{font-size:.8rem;padding:.55rem .95rem;gap:.45rem;}
-  .delivery-evaluation-options .section-head,
-  .delivery-evaluation-standards .section-head,
-  .delivery-evaluation-framework .section-head,
-  .delivery-evaluation-reporting .section-head{margin-bottom:32px;}
-  .delivery-evaluation-mode-card{padding:1.15rem 1.05rem;}
-  .delivery-evaluation-mode-icon{width:42px;height:42px;font-size:1.15rem;}
-  .delivery-evaluation-mode-name{font-size:1.02rem;}
-  .delivery-evaluation-mode-field{padding:.75rem .85rem;}
-  .delivery-evaluation-mode-field p{font-size:.89rem;}
-  .delivery-evaluation-standard p{font-size:.91rem;}
-  .delivery-evaluation-standard-check{width:26px;height:26px;font-size:.9rem;}
-  .delivery-evaluation-area{padding:1.25rem 1.1rem;}
-  .delivery-evaluation-area-num{width:42px;height:42px;font-size:.9rem;}
-  .delivery-evaluation-area-icon{width:38px;height:38px;font-size:1.05rem;}
-  .delivery-evaluation-area p{font-size:.94rem;}
-  .delivery-evaluation-report-chip{font-size:.82rem;padding:.5rem .95rem;}
-  .delivery-evaluation-caution p{font-size:.93rem;}
-  .delivery-evaluation-caution > .bi{font-size:1.1rem;}
-  .corporate-proposal-hero{padding:56px 0 68px;}
-  .corporate-proposal-breadcrumb{margin-bottom:20px;}
-  .corporate-proposal-hero-lead{font-size:.96rem;margin-bottom:26px;}
-  .corporate-proposal-nav-pill{font-size:.8rem;padding:.55rem .95rem;gap:.45rem;}
-  .corporate-proposal-form{padding:20px 16px;}
-  .corporate-proposal-form .form-control{padding:.65rem .85rem;font-size:.93rem;}
-  .corporate-proposal-form textarea.form-control{min-height:96px;}
-  .corporate-proposal-form .form-label{font-size:.89rem;}
-  .corporate-proposal-consent-box{padding:.9rem 1rem;}
-  .corporate-proposal-actions .btn{width:100%;}
-  .corporate-proposal-next .section-head{margin-bottom:34px;}
-  .corporate-proposal-step{gap:.85rem;padding-bottom:20px;}
-  .corporate-proposal-step::before{left:21px;top:50px;}
-  .corporate-proposal-node{width:44px;height:44px;font-size:.95rem;}
-  .corporate-proposal-card{padding:1rem 1rem;gap:.75rem;}
-  .corporate-proposal-card-icon{width:38px;height:38px;font-size:1.1rem;border-radius:10px;}
-  .corporate-proposal-card p{font-size:.92rem;}
-  .corporate-proposal-response-note p{font-size:.92rem;}
-  .corporate-proposal-response-note > .bi{font-size:1.1rem;}
-  .individual-development-hero{padding:56px 0 68px;}
-  .individual-development-breadcrumb{margin-bottom:20px;}
-  .individual-development-hero-lead{font-size:.96rem;margin-bottom:26px;}
-  .individual-development-nav-pill{font-size:.8rem;padding:.55rem .95rem;gap:.45rem;}
-  .individual-development-moments .section-head,
-  .individual-development-formats .section-head{margin-bottom:32px;}
-  .individual-development-moment{padding:1.25rem 1.1rem;}
-  .individual-development-moment-num{width:42px;height:42px;font-size:.9rem;}
-  .individual-development-moment-icon{width:38px;height:38px;font-size:1.05rem;}
-  .individual-development-moment p{font-size:.94rem;}
-  .individual-development-formats-wrap{padding:18px 14px;}
-  .individual-development-format p{font-size:.91rem;}
-  .individual-development-format-check{width:26px;height:26px;font-size:.9rem;}
-  .individual-development-choose-review{font-size:1.02rem;margin:22px 0 12px;}
-  .individual-development-choose-chip{font-size:.82rem;padding:.5rem .95rem;}
-  .individual-development-choose-note p{font-size:.92rem;}
-  .individual-development-choose-note > .bi{font-size:1.1rem;}
-  .short-courses-hero{padding:56px 0 68px;}
-  .short-courses-breadcrumb{margin-bottom:20px;}
-  .short-courses-hero-lead{font-size:.96rem;margin-bottom:26px;}
-  .short-courses-nav-pill{font-size:.8rem;padding:.55rem .95rem;gap:.45rem;}
-  .short-courses-expect .section-head,
-  .short-courses-categories .section-head,
-  .short-courses-card .section-head{margin-bottom:32px;}
-  .short-courses-expect-icon{width:36px;height:36px;font-size:1rem;}
-  .short-courses-expect-item p{font-size:.91rem;padding-top:.25rem;}
-  .short-courses-category{padding:1.15rem 1.05rem;}
-  .short-courses-category-icon{width:42px;height:42px;font-size:1.2rem;}
-  .short-courses-category p{font-size:.92rem;}
-  .short-courses-card-panel{padding:18px 14px;}
-  .short-courses-card-row{padding:.75rem .85rem;gap:.7rem;}
-  .short-courses-card-num{width:30px;height:30px;font-size:.74rem;}
-  .short-courses-card-text{font-size:.9rem;}
+
+    .howjoin-hero {
+        padding: 56px 0 68px;
+    }
+
+    .howjoin-breadcrumb {
+        margin-bottom: 20px;
+    }
+
+    .howjoin-hero-lead {
+        font-size: .96rem;
+        margin-bottom: 26px;
+    }
+
+    .howjoin-nav-pill {
+        font-size: .8rem;
+        padding: .55rem .95rem;
+        gap: .45rem;
+    }
+
+    .howjoin-steps .section-head {
+        margin-bottom: 36px;
+    }
+
+    .howjoin-step {
+        gap: .85rem;
+        padding-bottom: 20px;
+    }
+
+    .howjoin-step::before {
+        left: 21px;
+        top: 50px;
+    }
+
+    .howjoin-node {
+        width: 44px;
+        height: 44px;
+        font-size: .95rem;
+    }
+
+    .howjoin-card {
+        padding: 1.05rem 1.05rem;
+        gap: .7rem;
+    }
+
+    .howjoin-card-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 1.05rem;
+        border-radius: 10px;
+    }
+
+    .howjoin-card p {
+        font-size: .92rem;
+    }
+
+    .howjoin-evidence-check {
+        width: 26px;
+        height: 26px;
+        font-size: .9rem;
+    }
+
+    .howjoin-evidence-card p {
+        font-size: .91rem;
+    }
+
+    .howjoin-chip {
+        font-size: .82rem;
+        padding: .5rem .9rem;
+        gap: .4rem;
+    }
+
+    .howjoin-note p {
+        font-size: .92rem;
+    }
+
+    .howjoin-note>.bi {
+        font-size: 1.1rem;
+    }
+
+    .cpd-hero {
+        padding: 56px 0 68px;
+    }
+
+    .cpd-breadcrumb {
+        margin-bottom: 20px;
+    }
+
+    .cpd-hero-lead {
+        font-size: .96rem;
+        margin-bottom: 26px;
+    }
+
+    .cpd-nav-pill {
+        font-size: .8rem;
+        padding: .55rem .95rem;
+        gap: .45rem;
+    }
+
+    .cpd-cycle .section-head,
+    .cpd-activities .section-head,
+    .cpd-record .section-head {
+        margin-bottom: 32px;
+    }
+
+    .cpd-cycle-num {
+        width: 42px;
+        height: 42px;
+        font-size: .9rem;
+    }
+
+    .cpd-cycle-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 1.05rem;
+    }
+
+    .cpd-cycle-name {
+        font-size: 1.05rem;
+    }
+
+    .cpd-cycle-card p {
+        font-size: .91rem;
+    }
+
+    .cpd-act-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+
+    .cpd-act-item p {
+        font-size: .91rem;
+        padding-top: .25rem;
+    }
+
+    .cpd-record-panel {
+        padding: 18px 14px;
+    }
+
+    .cpd-field-row {
+        padding: .75rem .85rem;
+        gap: .7rem;
+    }
+
+    .cpd-field-num {
+        width: 30px;
+        height: 30px;
+        font-size: .74rem;
+    }
+
+    .cpd-field-text {
+        font-size: .9rem;
+    }
+
+    .cpd-audit-card {
+        padding: 1.15rem 1.1rem;
+    }
+
+    .cpd-obligation p {
+        font-size: .93rem;
+    }
+
+    .cpd-obligation>.bi {
+        font-size: 1.1rem;
+    }
+
+    .cpc-hero {
+        padding: 56px 0 68px;
+    }
+
+    .cpc-breadcrumb {
+        margin-bottom: 20px;
+    }
+
+    .cpc-hero-lead {
+        font-size: .96rem;
+        margin-bottom: 26px;
+    }
+
+    .cpc-nav-pill {
+        font-size: .8rem;
+        padding: .55rem .95rem;
+        gap: .45rem;
+    }
+
+    .cpc-principles .section-head {
+        margin-bottom: 32px;
+    }
+
+    .cpc-principle {
+        gap: .9rem;
+        padding: 1.1rem 1.1rem;
+    }
+
+    .cpc-principle-num {
+        width: 44px;
+        height: 44px;
+        font-size: .9rem;
+    }
+
+    .cpc-principle-head {
+        gap: .6rem;
+    }
+
+    .cpc-principle-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+
+    .cpc-principle h3 {
+        font-size: 1.03rem;
+    }
+
+    .cpc-principle p {
+        padding-left: 46px;
+        font-size: .92rem;
+    }
+
+    /* icon 36 + gap 10 */
+    .cpc-prohibit-lead {
+        font-size: 1.02rem;
+    }
+
+    .cpc-chip {
+        font-size: .82rem;
+        padding: .5rem .9rem;
+        gap: .4rem;
+    }
+
+    .cpc-reporting-note p,
+    .cpc-purpose-note p {
+        font-size: .92rem;
+    }
+
+    .cpc-appeal {
+        flex-direction: column;
+        text-align: center;
+        gap: .6rem;
+    }
+
+    .cls-hero {
+        padding: 56px 0 68px;
+    }
+
+    .cls-breadcrumb {
+        margin-bottom: 20px;
+    }
+
+    .cls-hero-lead {
+        font-size: .96rem;
+        margin-bottom: 26px;
+    }
+
+    .cls-nav-pill {
+        font-size: .8rem;
+        padding: .55rem .95rem;
+        gap: .45rem;
+    }
+
+    .cls-approach .section-title {
+        margin-bottom: 14px;
+    }
+
+    .cls-areas .section-head,
+    .cls-custom .section-head,
+    .cls-deliverables .section-head {
+        margin-bottom: 32px;
+    }
+
+    .cls-result-row {
+        padding: .85rem .95rem;
+        gap: .8rem;
+    }
+
+    .cls-result-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 1.05rem;
+    }
+
+    .cls-result-row p {
+        font-size: .92rem;
+    }
+
+    .cls-area-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 1.15rem;
+    }
+
+    .cls-area-name {
+        font-size: .93rem;
+    }
+
+    .cls-area-num {
+        font-size: .72rem;
+    }
+
+    .cls-custom-item p {
+        font-size: .91rem;
+    }
+
+    .cls-custom-check {
+        width: 26px;
+        height: 26px;
+        font-size: .9rem;
+    }
+
+    .cls-del-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 1.05rem;
+    }
+
+    .cls-del-row p {
+        font-size: .93rem;
+        padding-top: .3rem;
+    }
+
+    .cls-cta-lead {
+        font-size: 1.05rem;
+    }
+
+    .cls-chip {
+        font-size: .82rem;
+        padding: .5rem .95rem;
+    }
+
+    .cls-cta-note {
+        font-size: .95rem;
+    }
+
+    .custom-training-hero {
+        padding: 56px 0 68px;
+    }
+
+    .custom-training-breadcrumb {
+        margin-bottom: 20px;
+    }
+
+    .custom-training-hero-lead {
+        font-size: .96rem;
+        margin-bottom: 26px;
+    }
+
+    .custom-training-nav-pill {
+        font-size: .8rem;
+        padding: .55rem .95rem;
+        gap: .45rem;
+    }
+
+    .custom-training-process .section-head,
+    .custom-training-needs .section-head,
+    .custom-training-proposal .section-head {
+        margin-bottom: 32px;
+    }
+
+    .custom-training-stage-num {
+        width: 42px;
+        height: 42px;
+        font-size: .9rem;
+    }
+
+    .custom-training-stage-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 1.05rem;
+    }
+
+    .custom-training-stage-name {
+        font-size: 1.05rem;
+    }
+
+    .custom-training-stage p {
+        font-size: .91rem;
+    }
+
+    .custom-training-need p {
+        font-size: .91rem;
+    }
+
+    .custom-training-need-check {
+        width: 26px;
+        height: 26px;
+        font-size: .9rem;
+    }
+
+    .custom-training-statement {
+        padding-left: 1.1rem;
+    }
+
+    .custom-training-boundary-note {
+        flex-direction: column;
+        gap: .6rem;
+        padding: 1.15rem 1.15rem;
+    }
+
+    .custom-training-prop-row {
+        gap: .75rem;
+    }
+
+    .custom-training-prop-num {
+        width: 34px;
+        height: 34px;
+        font-size: .8rem;
+    }
+
+    .custom-training-prop-text {
+        font-size: .92rem;
+    }
+
+    .functional-academies-hero {
+        padding: 56px 0 68px;
+    }
+
+    .functional-academies-breadcrumb {
+        margin-bottom: 20px;
+    }
+
+    .functional-academies-hero-lead {
+        font-size: .96rem;
+        margin-bottom: 26px;
+    }
+
+    .functional-academies-nav-pill {
+        font-size: .8rem;
+        padding: .55rem .95rem;
+        gap: .45rem;
+    }
+
+    .functional-academies-what .section-title {
+        margin-bottom: 14px;
+    }
+
+    .functional-academies-statement {
+        padding-left: 1.1rem;
+    }
+
+    .functional-academies-connect-panel {
+        padding: 18px 16px;
+    }
+
+    .functional-academies-connect-item {
+        padding: .8rem .9rem;
+        gap: .7rem;
+    }
+
+    .functional-academies-connect-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+
+    .functional-academies-connect-item p {
+        font-size: .89rem;
+    }
+
+    .functional-academies-list .section-head,
+    .functional-academies-components .section-head,
+    .functional-academies-phases .section-head,
+    .functional-academies-adoption .section-head {
+        margin-bottom: 32px;
+    }
+
+    .functional-academies-card-num {
+        width: 40px;
+        height: 40px;
+        font-size: .85rem;
+    }
+
+    .functional-academies-card-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 1.05rem;
+    }
+
+    .functional-academies-card-name {
+        font-size: .97rem;
+    }
+
+    .functional-academies-component p {
+        font-size: .91rem;
+    }
+
+    .functional-academies-component-check {
+        width: 26px;
+        height: 26px;
+        font-size: .9rem;
+    }
+
+    .functional-academies-phase-num {
+        width: 42px;
+        height: 42px;
+        font-size: .9rem;
+    }
+
+    .functional-academies-phase-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 1.05rem;
+    }
+
+    .functional-academies-phase p {
+        font-size: .92rem;
+    }
+
+    .functional-academies-tile {
+        gap: .75rem;
+    }
+
+    .functional-academies-tile-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.05rem;
+    }
+
+    .functional-academies-tile p {
+        font-size: .9rem;
+    }
+
+    .leadership-development-hero {
+        padding: 56px 0 68px;
+    }
+
+    .leadership-development-breadcrumb {
+        margin-bottom: 20px;
+    }
+
+    .leadership-development-hero-lead {
+        font-size: .96rem;
+        margin-bottom: 26px;
+    }
+
+    .leadership-development-nav-pill {
+        font-size: .8rem;
+        padding: .55rem .95rem;
+        gap: .45rem;
+    }
+
+    .leadership-development-pathways .section-head,
+    .leadership-development-methods .section-head {
+        margin-bottom: 32px;
+    }
+
+    .leadership-development-level-num {
+        width: 42px;
+        height: 42px;
+        font-size: .9rem;
+    }
+
+    .leadership-development-level-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 1.05rem;
+    }
+
+    .leadership-development-level-name {
+        font-size: 1.05rem;
+    }
+
+    .leadership-development-focus-chip {
+        font-size: .78rem;
+        padding: .35rem .75rem;
+    }
+
+    .leadership-development-method p {
+        font-size: .91rem;
+    }
+
+    .leadership-development-method-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+
+    .leadership-development-measure-chip {
+        font-size: .82rem;
+        padding: .5rem .95rem;
+    }
+
+    .leadership-development-caution p {
+        font-size: .92rem;
+    }
+
+    .leadership-development-caution>.bi {
+        font-size: 1.1rem;
+    }
+
+    .delivery-evaluation-hero {
+        padding: 56px 0 68px;
+    }
+
+    .delivery-evaluation-breadcrumb {
+        margin-bottom: 20px;
+    }
+
+    .delivery-evaluation-hero-lead {
+        font-size: .96rem;
+        margin-bottom: 26px;
+    }
+
+    .delivery-evaluation-nav-pill {
+        font-size: .8rem;
+        padding: .55rem .95rem;
+        gap: .45rem;
+    }
+
+    .delivery-evaluation-options .section-head,
+    .delivery-evaluation-standards .section-head,
+    .delivery-evaluation-framework .section-head,
+    .delivery-evaluation-reporting .section-head {
+        margin-bottom: 32px;
+    }
+
+    .delivery-evaluation-mode-card {
+        padding: 1.15rem 1.05rem;
+    }
+
+    .delivery-evaluation-mode-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 1.15rem;
+    }
+
+    .delivery-evaluation-mode-name {
+        font-size: 1.02rem;
+    }
+
+    .delivery-evaluation-mode-field {
+        padding: .75rem .85rem;
+    }
+
+    .delivery-evaluation-mode-field p {
+        font-size: .89rem;
+    }
+
+    .delivery-evaluation-standard p {
+        font-size: .91rem;
+    }
+
+    .delivery-evaluation-standard-check {
+        width: 26px;
+        height: 26px;
+        font-size: .9rem;
+    }
+
+    .delivery-evaluation-area {
+        padding: 1.25rem 1.1rem;
+    }
+
+    .delivery-evaluation-area-num {
+        width: 42px;
+        height: 42px;
+        font-size: .9rem;
+    }
+
+    .delivery-evaluation-area-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 1.05rem;
+    }
+
+    .delivery-evaluation-area p {
+        font-size: .94rem;
+    }
+
+    .delivery-evaluation-report-chip {
+        font-size: .82rem;
+        padding: .5rem .95rem;
+    }
+
+    .delivery-evaluation-caution p {
+        font-size: .93rem;
+    }
+
+    .delivery-evaluation-caution>.bi {
+        font-size: 1.1rem;
+    }
+
+    .corporate-proposal-hero {
+        padding: 56px 0 68px;
+    }
+
+    .corporate-proposal-breadcrumb {
+        margin-bottom: 20px;
+    }
+
+    .corporate-proposal-hero-lead {
+        font-size: .96rem;
+        margin-bottom: 26px;
+    }
+
+    .corporate-proposal-nav-pill {
+        font-size: .8rem;
+        padding: .55rem .95rem;
+        gap: .45rem;
+    }
+
+    .corporate-proposal-form {
+        padding: 20px 16px;
+    }
+
+    .corporate-proposal-form .form-control {
+        padding: .65rem .85rem;
+        font-size: .93rem;
+    }
+
+    .corporate-proposal-form textarea.form-control {
+        min-height: 96px;
+    }
+
+    .corporate-proposal-form .form-label {
+        font-size: .89rem;
+    }
+
+    .corporate-proposal-consent-box {
+        padding: .9rem 1rem;
+    }
+
+    .corporate-proposal-actions .btn {
+        width: 100%;
+    }
+
+    .corporate-proposal-next .section-head {
+        margin-bottom: 34px;
+    }
+
+    .corporate-proposal-step {
+        gap: .85rem;
+        padding-bottom: 20px;
+    }
+
+    .corporate-proposal-step::before {
+        left: 21px;
+        top: 50px;
+    }
+
+    .corporate-proposal-node {
+        width: 44px;
+        height: 44px;
+        font-size: .95rem;
+    }
+
+    .corporate-proposal-card {
+        padding: 1rem 1rem;
+        gap: .75rem;
+    }
+
+    .corporate-proposal-card-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 1.1rem;
+        border-radius: 10px;
+    }
+
+    .corporate-proposal-card p {
+        font-size: .92rem;
+    }
+
+    .corporate-proposal-response-note p {
+        font-size: .92rem;
+    }
+
+    .corporate-proposal-response-note>.bi {
+        font-size: 1.1rem;
+    }
+
+    .individual-development-hero {
+        padding: 56px 0 68px;
+    }
+
+    .individual-development-breadcrumb {
+        margin-bottom: 20px;
+    }
+
+    .individual-development-hero-lead {
+        font-size: .96rem;
+        margin-bottom: 26px;
+    }
+
+    .individual-development-nav-pill {
+        font-size: .8rem;
+        padding: .55rem .95rem;
+        gap: .45rem;
+    }
+
+    .individual-development-moments .section-head,
+    .individual-development-formats .section-head {
+        margin-bottom: 32px;
+    }
+
+    .individual-development-moment {
+        padding: 1.25rem 1.1rem;
+    }
+
+    .individual-development-moment-num {
+        width: 42px;
+        height: 42px;
+        font-size: .9rem;
+    }
+
+    .individual-development-moment-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 1.05rem;
+    }
+
+    .individual-development-moment p {
+        font-size: .94rem;
+    }
+
+    .individual-development-formats-wrap {
+        padding: 18px 14px;
+    }
+
+    .individual-development-format p {
+        font-size: .91rem;
+    }
+
+    .individual-development-format-check {
+        width: 26px;
+        height: 26px;
+        font-size: .9rem;
+    }
+
+    .individual-development-choose-review {
+        font-size: 1.02rem;
+        margin: 22px 0 12px;
+    }
+
+    .individual-development-choose-chip {
+        font-size: .82rem;
+        padding: .5rem .95rem;
+    }
+
+    .individual-development-choose-note p {
+        font-size: .92rem;
+    }
+
+    .individual-development-choose-note>.bi {
+        font-size: 1.1rem;
+    }
+
+    .short-courses-hero {
+        padding: 56px 0 68px;
+    }
+
+    .short-courses-breadcrumb {
+        margin-bottom: 20px;
+    }
+
+    .short-courses-hero-lead {
+        font-size: .96rem;
+        margin-bottom: 26px;
+    }
+
+    .short-courses-nav-pill {
+        font-size: .8rem;
+        padding: .55rem .95rem;
+        gap: .45rem;
+    }
+
+    .short-courses-expect .section-head,
+    .short-courses-categories .section-head,
+    .short-courses-card .section-head {
+        margin-bottom: 32px;
+    }
+
+    .short-courses-expect-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+
+    .short-courses-expect-item p {
+        font-size: .91rem;
+        padding-top: .25rem;
+    }
+
+    .short-courses-category {
+        padding: 1.15rem 1.05rem;
+    }
+
+    .short-courses-category-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 1.2rem;
+    }
+
+    .short-courses-category p {
+        font-size: .92rem;
+    }
+
+    .short-courses-card-panel {
+        padding: 18px 14px;
+    }
+
+    .short-courses-card-row {
+        padding: .75rem .85rem;
+        gap: .7rem;
+    }
+
+    .short-courses-card-num {
+        width: 30px;
+        height: 30px;
+        font-size: .74rem;
+    }
+
+    .short-courses-card-text {
+        font-size: .9rem;
+    }
+
+    .professional-masterclasses-hero {
+        padding: 56px 0 68px;
+    }
+
+    .professional-masterclasses-breadcrumb {
+        margin-bottom: 20px;
+    }
+
+    .professional-masterclasses-hero-lead {
+        font-size: .96rem;
+        margin-bottom: 26px;
+    }
+
+    .professional-masterclasses-nav-pill {
+        font-size: .8rem;
+        padding: .55rem .95rem;
+        gap: .45rem;
+    }
+
+    .professional-masterclasses-designed .section-head,
+    .professional-masterclasses-experience .section-head,
+    .professional-masterclasses-filters .section-head {
+        margin-bottom: 32px;
+    }
+
+    .professional-masterclasses-audience {
+        padding: 1.15rem 1.1rem;
+        gap: .8rem;
+    }
+
+    .professional-masterclasses-audience-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 1.15rem;
+        border-radius: 12px;
+    }
+
+    .professional-masterclasses-audience p {
+        font-size: .94rem;
+    }
+
+    .professional-masterclasses-experience-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+
+    .professional-masterclasses-experience-item p {
+        font-size: .91rem;
+        padding-top: .25rem;
+    }
+
+    .professional-masterclasses-statement {
+        padding-left: 1.1rem;
+    }
+
+    .professional-masterclasses-speaker-note p {
+        font-size: .94rem;
+    }
+
+    .professional-masterclasses-filter-chip {
+        font-size: .82rem;
+        padding: .5rem .95rem;
+        gap: .4rem;
+    }
 }
 
 
@@ -1460,90 +2234,367 @@
     .mben-note {
         padding: 1.1rem 1.15rem;
     }
-    .howjoin-hero{padding:64px 0 76px;}
-  .howjoin-step{gap:1rem;padding-bottom:22px;}
-  .howjoin-card{
-    align-items:flex-start;
-    gap:.85rem;
-    padding:1.15rem 1.2rem;
-  }
-  .howjoin-evidence-card{padding:1.1rem 1.1rem;}
-  .howjoin-decision-card{padding:1.25rem 1.2rem;}
-  .howjoin-note{padding:1rem 1.1rem;}
-  .cpd-hero{padding:64px 0 76px;}
-  .cpd-cycle-card{padding:1.4rem 1.2rem;}
-  .cpd-act-panel{padding:20px;}
-  .cpd-act-item{padding:.95rem 1rem;}
-  .cpd-record-panel{padding:22px 18px;}
-  .cpd-audit-card{padding:1.25rem 1.2rem;}
-  .cpd-obligation{padding:1.05rem 1.1rem;}
-  .cpc-hero{padding:64px 0 76px;}
-  .cpc-purpose-icon{width:56px;height:56px;font-size:1.4rem;}
-  .cpc-purpose-statement{padding-left:1.15rem;}
-  .cpc-purpose-note{padding:1.05rem 1.15rem;}
-  .cpc-principle{padding:1.2rem 1.2rem;}
-  .cpc-titles-statement,
-  .cpc-reporting-statement{padding-left:1.15rem;}
-  .cpc-prohibit{padding:1.2rem 1.2rem;}
-  .cpc-reporting-note{padding:1.2rem 1.2rem;}
-  .cpc-outcomes-statement{padding:1.2rem 1.2rem;}
-  .cpc-appeal{padding:1.05rem 1.15rem;}
-  .cls-hero{padding:64px 0 76px;}
-  .cls-hero-actions .btn{flex:1 1 100%;max-width:340px;}
-  .cls-statement{padding-left:1.15rem;}
-  .cls-result-panel{padding:22px 20px;}
-  .cls-area-row{padding:1rem 1.1rem;gap:.85rem;}
-  .cls-custom-panel{padding:20px;}
-  .cls-custom-item{padding:.95rem 1rem;}
-  .cls-del-row{padding:1rem 1.05rem;}
-  .cls-cta{padding:56px 0;}
-  .custom-training-hero{padding:64px 0 76px;}
-  .custom-training-stage{padding:1.4rem 1.2rem;}
-  .custom-training-needs-panel{padding:20px;}
-  .custom-training-need{padding:.95rem 1rem;}
-  .custom-training-statement{padding-left:1.15rem;}
-  .custom-training-boundary-note{padding:1.2rem 1.2rem;}
-  .custom-training-proposal-panel{padding:20px;}
-  .custom-training-prop-row{padding:.95rem 1rem;}
-  .functional-academies-hero{padding:64px 0 76px;}
-  .functional-academies-statement{padding-left:1.15rem;}
-  .functional-academies-connect-panel{padding:22px 20px;}
-  .functional-academies-card{padding:1.4rem 1.2rem;}
-  .functional-academies-components-panel{padding:20px;}
-  .functional-academies-component{padding:.95rem 1rem;}
-  .functional-academies-phase{padding:1.35rem 1.2rem;}
-  .functional-academies-tile{padding:1rem 1.05rem;}
-  .functional-academies-cta-row{margin-top:32px;}
-  .leadership-development-hero{padding:64px 0 76px;}
-  .leadership-development-level{padding:1.4rem 1.2rem;}
-  .leadership-development-methods-panel{padding:20px;}
-  .leadership-development-method{padding:.95rem 1rem;}
-  .leadership-development-caution{padding:1.1rem 1.15rem;}
-  .delivery-evaluation-hero{padding:64px 0 76px;}
-  .delivery-evaluation-mode-card{padding:1.25rem 1.15rem;}
-  .delivery-evaluation-standards-panel{padding:20px;}
-  .delivery-evaluation-standard{padding:.95rem 1rem;}
-  .delivery-evaluation-area{padding:1.35rem 1.2rem;}
-  .delivery-evaluation-caution{padding:1.05rem 1.15rem;}
-  .corporate-proposal-hero{padding:64px 0 76px;}
-  .corporate-proposal-form{padding:24px 20px;}
-  .corporate-proposal-form-section .section-head{margin-bottom:30px;}
-  .corporate-proposal-step{gap:1rem;padding-bottom:22px;}
-  .corporate-proposal-card{padding:1.05rem 1.1rem;}
-  .corporate-proposal-response-card{padding:1.25rem 1.2rem;}
-  .corporate-proposal-response-note{padding:1.05rem 1.1rem;}
-  .individual-development-hero{padding:64px 0 76px;}
-  .individual-development-hero-actions .btn{flex:1 1 100%;max-width:340px;}
-  .individual-development-moment{padding:1.35rem 1.2rem;}
-  .individual-development-formats-wrap{padding:20px;}
-  .individual-development-format{padding:.95rem 1rem;}
-  .individual-development-choose-statement{padding:1.25rem 1.2rem;}
-  .individual-development-choose-note{padding:1.05rem 1.15rem;}
-  .short-courses-hero{padding:64px 0 76px;}
-  .short-courses-expect-panel{padding:20px;}
-  .short-courses-expect-item{padding:.95rem 1rem;}
-  .short-courses-category{padding:1.25rem 1.15rem;}
-  .short-courses-card-panel{padding:20px;}
+
+    .howjoin-hero {
+        padding: 64px 0 76px;
+    }
+
+    .howjoin-step {
+        gap: 1rem;
+        padding-bottom: 22px;
+    }
+
+    .howjoin-card {
+        align-items: flex-start;
+        gap: .85rem;
+        padding: 1.15rem 1.2rem;
+    }
+
+    .howjoin-evidence-card {
+        padding: 1.1rem 1.1rem;
+    }
+
+    .howjoin-decision-card {
+        padding: 1.25rem 1.2rem;
+    }
+
+    .howjoin-note {
+        padding: 1rem 1.1rem;
+    }
+
+    .cpd-hero {
+        padding: 64px 0 76px;
+    }
+
+    .cpd-cycle-card {
+        padding: 1.4rem 1.2rem;
+    }
+
+    .cpd-act-panel {
+        padding: 20px;
+    }
+
+    .cpd-act-item {
+        padding: .95rem 1rem;
+    }
+
+    .cpd-record-panel {
+        padding: 22px 18px;
+    }
+
+    .cpd-audit-card {
+        padding: 1.25rem 1.2rem;
+    }
+
+    .cpd-obligation {
+        padding: 1.05rem 1.1rem;
+    }
+
+    .cpc-hero {
+        padding: 64px 0 76px;
+    }
+
+    .cpc-purpose-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 1.4rem;
+    }
+
+    .cpc-purpose-statement {
+        padding-left: 1.15rem;
+    }
+
+    .cpc-purpose-note {
+        padding: 1.05rem 1.15rem;
+    }
+
+    .cpc-principle {
+        padding: 1.2rem 1.2rem;
+    }
+
+    .cpc-titles-statement,
+    .cpc-reporting-statement {
+        padding-left: 1.15rem;
+    }
+
+    .cpc-prohibit {
+        padding: 1.2rem 1.2rem;
+    }
+
+    .cpc-reporting-note {
+        padding: 1.2rem 1.2rem;
+    }
+
+    .cpc-outcomes-statement {
+        padding: 1.2rem 1.2rem;
+    }
+
+    .cpc-appeal {
+        padding: 1.05rem 1.15rem;
+    }
+
+    .cls-hero {
+        padding: 64px 0 76px;
+    }
+
+    .cls-hero-actions .btn {
+        flex: 1 1 100%;
+        max-width: 340px;
+    }
+
+    .cls-statement {
+        padding-left: 1.15rem;
+    }
+
+    .cls-result-panel {
+        padding: 22px 20px;
+    }
+
+    .cls-area-row {
+        padding: 1rem 1.1rem;
+        gap: .85rem;
+    }
+
+    .cls-custom-panel {
+        padding: 20px;
+    }
+
+    .cls-custom-item {
+        padding: .95rem 1rem;
+    }
+
+    .cls-del-row {
+        padding: 1rem 1.05rem;
+    }
+
+    .cls-cta {
+        padding: 56px 0;
+    }
+
+    .custom-training-hero {
+        padding: 64px 0 76px;
+    }
+
+    .custom-training-stage {
+        padding: 1.4rem 1.2rem;
+    }
+
+    .custom-training-needs-panel {
+        padding: 20px;
+    }
+
+    .custom-training-need {
+        padding: .95rem 1rem;
+    }
+
+    .custom-training-statement {
+        padding-left: 1.15rem;
+    }
+
+    .custom-training-boundary-note {
+        padding: 1.2rem 1.2rem;
+    }
+
+    .custom-training-proposal-panel {
+        padding: 20px;
+    }
+
+    .custom-training-prop-row {
+        padding: .95rem 1rem;
+    }
+
+    .functional-academies-hero {
+        padding: 64px 0 76px;
+    }
+
+    .functional-academies-statement {
+        padding-left: 1.15rem;
+    }
+
+    .functional-academies-connect-panel {
+        padding: 22px 20px;
+    }
+
+    .functional-academies-card {
+        padding: 1.4rem 1.2rem;
+    }
+
+    .functional-academies-components-panel {
+        padding: 20px;
+    }
+
+    .functional-academies-component {
+        padding: .95rem 1rem;
+    }
+
+    .functional-academies-phase {
+        padding: 1.35rem 1.2rem;
+    }
+
+    .functional-academies-tile {
+        padding: 1rem 1.05rem;
+    }
+
+    .functional-academies-cta-row {
+        margin-top: 32px;
+    }
+
+    .leadership-development-hero {
+        padding: 64px 0 76px;
+    }
+
+    .leadership-development-level {
+        padding: 1.4rem 1.2rem;
+    }
+
+    .leadership-development-methods-panel {
+        padding: 20px;
+    }
+
+    .leadership-development-method {
+        padding: .95rem 1rem;
+    }
+
+    .leadership-development-caution {
+        padding: 1.1rem 1.15rem;
+    }
+
+    .delivery-evaluation-hero {
+        padding: 64px 0 76px;
+    }
+
+    .delivery-evaluation-mode-card {
+        padding: 1.25rem 1.15rem;
+    }
+
+    .delivery-evaluation-standards-panel {
+        padding: 20px;
+    }
+
+    .delivery-evaluation-standard {
+        padding: .95rem 1rem;
+    }
+
+    .delivery-evaluation-area {
+        padding: 1.35rem 1.2rem;
+    }
+
+    .delivery-evaluation-caution {
+        padding: 1.05rem 1.15rem;
+    }
+
+    .corporate-proposal-hero {
+        padding: 64px 0 76px;
+    }
+
+    .corporate-proposal-form {
+        padding: 24px 20px;
+    }
+
+    .corporate-proposal-form-section .section-head {
+        margin-bottom: 30px;
+    }
+
+    .corporate-proposal-step {
+        gap: 1rem;
+        padding-bottom: 22px;
+    }
+
+    .corporate-proposal-card {
+        padding: 1.05rem 1.1rem;
+    }
+
+    .corporate-proposal-response-card {
+        padding: 1.25rem 1.2rem;
+    }
+
+    .corporate-proposal-response-note {
+        padding: 1.05rem 1.1rem;
+    }
+
+    .individual-development-hero {
+        padding: 64px 0 76px;
+    }
+
+    .individual-development-hero-actions .btn {
+        flex: 1 1 100%;
+        max-width: 340px;
+    }
+
+    .individual-development-moment {
+        padding: 1.35rem 1.2rem;
+    }
+
+    .individual-development-formats-wrap {
+        padding: 20px;
+    }
+
+    .individual-development-format {
+        padding: .95rem 1rem;
+    }
+
+    .individual-development-choose-statement {
+        padding: 1.25rem 1.2rem;
+    }
+
+    .individual-development-choose-note {
+        padding: 1.05rem 1.15rem;
+    }
+
+    .short-courses-hero {
+        padding: 64px 0 76px;
+    }
+
+    .short-courses-expect-panel {
+        padding: 20px;
+    }
+
+    .short-courses-expect-item {
+        padding: .95rem 1rem;
+    }
+
+    .short-courses-category {
+        padding: 1.25rem 1.15rem;
+    }
+
+    .short-courses-card-panel {
+        padding: 20px;
+    }
+
+    .professional-masterclasses-hero {
+        padding: 64px 0 76px;
+    }
+
+    .professional-masterclasses-audience {
+        padding: 1.25rem 1.2rem;
+        gap: .9rem;
+    }
+
+    .professional-masterclasses-audience-icon {
+        width: 46px;
+        height: 46px;
+        font-size: 1.25rem;
+    }
+
+    .professional-masterclasses-experience-panel {
+        padding: 20px;
+    }
+
+    .professional-masterclasses-experience-item {
+        padding: .95rem 1rem;
+    }
+
+    .professional-masterclasses-statement {
+        padding-left: 1.15rem;
+    }
+
+    .professional-masterclasses-speaker-note {
+        padding: 1.15rem 1.15rem;
+    }
+
+    .professional-masterclasses-filters-panel {
+        padding: 24px 20px;
+    }
 }
 
 
@@ -1647,5 +2698,3 @@
         display: block;
     }
 }
-
-

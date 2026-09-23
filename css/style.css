@@ -14820,6 +14820,550 @@ a {
 
 
 
+/* Porfessional Masterclass */
+
+
+
+
+
+
+/* =========================================================
+   PROFESSIONAL MASTERCLASSES — PAGE-SPECIFIC STYLESHEET
+
+   • Every custom class uses the "professional-masterclasses-" prefix.
+   • Depends on the shared site stylesheet (style.css) for CSS
+     variables, base typography, buttons, header/topbar and
+     footer components. No global styles are modified.
+   • Mobile-first. Hardened for 430px and below.
+
+   SECTIONS
+   01. PAGE SCOPE & ACTIVE NAV STATE
+   02. HERO
+   03. DESIGNED FOR (AUDIENCE CARDS)
+   04. MASTERCLASS EXPERIENCE
+   05. SPEAKER INFORMATION
+   06. UPCOMING LISTING FILTERS
+   07. SCROLL REVEAL
+   08. REDUCED MOTION
+   09. SMALL SCREEN HARDENING (≤575px / ≤430px)
+========================================================= */
+
+
+/* =========================
+   01. PAGE SCOPE & ACTIVE NAV STATE
+========================= */
+.professional-masterclasses-page .navbar-nav .nav-link.active {
+    color: var(--primary-dark);
+    background: var(--primary-tint);
+}
+
+
+/* =========================
+   02. HERO
+========================= */
+.professional-masterclasses-hero {
+    position: relative;
+    background: var(--dark-bg);
+    color: var(--secondary-color);
+    overflow: hidden;
+    padding: 88px 0 96px;
+    text-align: center;
+}
+
+.professional-masterclasses-hero::before {
+    content: "";
+    position: absolute;
+    top: -260px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 760px;
+    height: 760px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 0, 0, .28), transparent 65%);
+}
+
+.professional-masterclasses-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, .05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .05) 1px, transparent 1px);
+    background-size: 44px 44px;
+    -webkit-mask-image: radial-gradient(ellipse at 50% 18%, rgba(0, 0, 0, .85), transparent 72%);
+    mask-image: radial-gradient(ellipse at 50% 18%, rgba(0, 0, 0, .85), transparent 72%);
+}
+
+.professional-masterclasses-hero .container-xxl {
+    position: relative;
+    z-index: 2;
+}
+
+/* Breadcrumb */
+.professional-masterclasses-breadcrumb ol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .35rem .55rem;
+    list-style: none;
+    margin: 0 0 26px;
+    padding: 0;
+    font-size: .82rem;
+    font-weight: 600;
+    color: #8d97a5;
+}
+
+.professional-masterclasses-breadcrumb li {
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+}
+
+.professional-masterclasses-breadcrumb li+li::before {
+    content: "/";
+    color: rgba(255, 255, 255, .25);
+}
+
+.professional-masterclasses-breadcrumb a {
+    color: #c3cad4;
+    text-decoration: none;
+}
+
+.professional-masterclasses-breadcrumb a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.professional-masterclasses-breadcrumb [aria-current] {
+    color: var(--secondary-color);
+}
+
+/* Hero copy */
+.professional-masterclasses-hero-title {
+    color: var(--secondary-color);
+    font-size: clamp(2rem, 1.35rem + 3vw, 3.4rem);
+    line-height: 1.12;
+    letter-spacing: -.02em;
+    max-width: 880px;
+    margin: 14px auto 16px;
+}
+
+.professional-masterclasses-hero-lead {
+    color: #c3cad4;
+    font-size: 1.03rem;
+    max-width: 640px;
+    margin: 0 auto 30px;
+}
+
+/* In-page section navigation pills */
+.professional-masterclasses-hero-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .6rem;
+    margin: 0;
+}
+
+.professional-masterclasses-nav-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: 999px;
+    padding: .62rem 1.15rem;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: .85rem;
+    color: #c3cad4;
+    text-decoration: none;
+    transition: all .25s ease;
+}
+
+.professional-masterclasses-nav-pill .bi {
+    color: var(--primary-soft);
+    font-size: 1rem;
+    transition: color .25s ease;
+}
+
+.professional-masterclasses-nav-pill:hover {
+    color: var(--secondary-color);
+    border-color: rgba(255, 0, 0, .5);
+    background: rgba(255, 0, 0, .08);
+    transform: translateY(-2px);
+}
+
+.professional-masterclasses-nav-pill:hover .bi {
+    color: var(--primary-color);
+}
+
+/* Hero entrance animation (pure CSS, no JS required) */
+@keyframes professional-masterclasses-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.professional-masterclasses-hero-anim {
+    animation: professional-masterclasses-fade-up .8s cubic-bezier(.22, .61, .36, 1) both;
+}
+
+.professional-masterclasses-hero-anim-2 {
+    animation-delay: .15s;
+}
+
+.professional-masterclasses-hero-anim-3 {
+    animation-delay: .3s;
+}
+
+
+/* =========================
+   03. DESIGNED FOR (AUDIENCE CARDS)
+========================= */
+.professional-masterclasses-designed {
+    background: var(--light-bg);
+}
+
+.professional-masterclasses-designed .section-head {
+    margin-bottom: 40px;
+}
+
+.professional-masterclasses-audience {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    background: var(--secondary-color);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 1.4rem 1.4rem;
+    height: 100%;
+    overflow: hidden;
+    transition: all .3s ease;
+}
+
+.professional-masterclasses-audience::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--primary-darker));
+    transition: width .35s ease;
+}
+
+.professional-masterclasses-audience {
+    position: relative;
+}
+
+.professional-masterclasses-audience:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-tint-2);
+}
+
+.professional-masterclasses-audience:hover::before {
+    width: 100%;
+}
+
+.professional-masterclasses-audience-icon {
+    flex: 0 0 auto;
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: var(--primary-tint);
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    transition: all .3s ease;
+}
+
+.professional-masterclasses-audience:hover .professional-masterclasses-audience-icon {
+    background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
+    color: var(--secondary-color);
+    box-shadow: 0 12px 24px rgba(255, 0, 0, .3);
+}
+
+.professional-masterclasses-audience p {
+    margin: 0;
+    font-family: var(--font-head);
+    font-weight: 600;
+    color: var(--ink);
+    font-size: .98rem;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   04. MASTERCLASS EXPERIENCE
+========================= */
+.professional-masterclasses-experience {
+    background: var(--secondary-color);
+}
+
+.professional-masterclasses-experience .section-head {
+    margin-bottom: 36px;
+}
+
+/* Experience panel with red top accent */
+.professional-masterclasses-experience-panel {
+    position: relative;
+    max-width: 920px;
+    margin: 0 auto;
+    background: var(--light-bg);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 26px;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+.professional-masterclasses-experience-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 24px;
+    right: 24px;
+    height: 4px;
+    border-radius: 0 0 4px 4px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+}
+
+.professional-masterclasses-experience-item {
+    display: flex;
+    align-items: flex-start;
+    gap: .9rem;
+    background: var(--secondary-color);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    padding: 1.05rem 1.15rem;
+    height: 100%;
+    transition: all .25s ease;
+}
+
+.professional-masterclasses-experience-item:hover {
+    border-color: var(--primary-tint-2);
+    box-shadow: var(--shadow-sm);
+    transform: translateY(-2px);
+}
+
+.professional-masterclasses-experience-icon {
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary-tint);
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.professional-masterclasses-experience-item p {
+    margin: 0;
+    padding-top: .3rem;
+    font-family: var(--font-head);
+    font-weight: 600;
+    color: var(--ink);
+    font-size: .95rem;
+    line-height: 1.55;
+}
+
+
+/* =========================
+   05. SPEAKER INFORMATION
+========================= */
+.professional-masterclasses-speaker {
+    background: var(--light-bg);
+}
+
+.professional-masterclasses-speaker .section-title {
+    margin-bottom: 16px;
+}
+
+/* Editorial statement (sentence 1, verbatim) */
+.professional-masterclasses-statement {
+    margin: 0;
+    max-width: 480px;
+    padding-left: 1.5rem;
+    border-left: 4px solid var(--primary-color);
+    font-family: var(--font-head);
+    font-weight: 700;
+    color: var(--ink);
+    font-size: clamp(1.15rem, 1rem + .9vw, 1.5rem);
+    line-height: 1.6;
+    letter-spacing: -.01em;
+}
+
+/* Highlighter effect (styling only — text unchanged) */
+.professional-masterclasses-hl {
+    background: linear-gradient(transparent 62%, var(--primary-tint-2) 62%);
+    padding: 0 .05em;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+/* Caution note (sentence 2, verbatim) */
+.professional-masterclasses-speaker-note {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+    background: var(--secondary-color);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--primary-color);
+    border-radius: var(--radius-md);
+    padding: 1.35rem 1.4rem;
+    box-shadow: var(--shadow-sm);
+    height: 100%;
+}
+
+.professional-masterclasses-speaker-note>.bi {
+    flex: 0 0 auto;
+    color: var(--primary-dark);
+    font-size: 1.3rem;
+}
+
+.professional-masterclasses-speaker-note p {
+    margin: 0;
+    font-family: var(--font-head);
+    font-weight: 700;
+    color: var(--ink);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   06. UPCOMING LISTING FILTERS
+========================= */
+.professional-masterclasses-filters {
+    position: relative;
+    background: var(--dark-bg);
+    color: var(--secondary-color);
+    overflow: hidden;
+}
+
+.professional-masterclasses-filters::before {
+    content: "";
+    position: absolute;
+    right: -180px;
+    top: -160px;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 0, 0, .2), transparent 65%);
+}
+
+.professional-masterclasses-filters .container-xxl {
+    position: relative;
+    z-index: 2;
+}
+
+.professional-masterclasses-filters .section-title {
+    color: var(--secondary-color);
+}
+
+/* Filters panel with red top accent (dark surface) */
+.professional-masterclasses-filters-panel {
+    position: relative;
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: var(--radius-lg);
+    padding: 30px 26px;
+    overflow: hidden;
+}
+
+.professional-masterclasses-filters-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 24px;
+    right: 24px;
+    height: 4px;
+    border-radius: 0 0 4px 4px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+}
+
+.professional-masterclasses-filter-chips {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .6rem;
+}
+
+.professional-masterclasses-filter-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    background: rgba(255, 255, 255, .03);
+    border: 1px solid var(--dark-border);
+    border-radius: 999px;
+    padding: .65rem 1.15rem;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: .88rem;
+    color: var(--secondary-color);
+    transition: all .25s ease;
+}
+
+.professional-masterclasses-filter-chip .bi {
+    color: var(--primary-soft);
+    font-size: 1rem;
+}
+
+.professional-masterclasses-filter-chip:hover {
+    border-color: rgba(255, 0, 0, .5);
+    background: rgba(255, 0, 0, .06);
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   07. SCROLL REVEAL
+   (page-specific hook — never conflicts with the
+   reveal observers used on other pages)
+========================= */
+.professional-masterclasses-js .professional-masterclasses-reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity .7s cubic-bezier(.22, .61, .36, 1),
+        transform .7s cubic-bezier(.22, .61, .36, 1);
+    will-change: opacity, transform;
+}
+
+.professional-masterclasses-js .professional-masterclasses-reveal.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.professional-masterclasses-js .professional-masterclasses-reveal.professional-masterclasses-d1 {
+    transition-delay: .1s;
+}
+
+.professional-masterclasses-js .professional-masterclasses-reveal.professional-masterclasses-d2 {
+    transition-delay: .2s;
+}
+
+
+
+
+
+
+
 
 
 
@@ -15271,6 +15815,25 @@ a {
     .short-courses-category-icon,
     .short-courses-card-row,
     .short-courses-nav-pill {
+        transition: none;
+    }
+
+    .professional-masterclasses-hero-anim {
+        animation: none !important;
+    }
+
+    .professional-masterclasses-js .professional-masterclasses-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .professional-masterclasses-audience,
+    .professional-masterclasses-audience::before,
+    .professional-masterclasses-audience-icon,
+    .professional-masterclasses-experience-item,
+    .professional-masterclasses-filter-chip,
+    .professional-masterclasses-nav-pill {
         transition: none;
     }
 }
