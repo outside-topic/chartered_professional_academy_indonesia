@@ -2351,6 +2351,23 @@
         font-size: .91rem;
         padding-top: .25rem;
     }
+    .downloads-guides-hero{padding:56px 0 68px;}
+  .downloads-guides-breadcrumb{margin-bottom:20px;}
+  .downloads-guides-hero-lead{font-size:.96rem;margin-bottom:26px;}
+  .downloads-guides-nav-pill{font-size:.8rem;padding:.55rem .95rem;gap:.45rem;}
+  .downloads-guides-library .section-head,
+  .downloads-guides-form .section-head{margin-bottom:32px;}
+  .downloads-guides-resource{padding:1.15rem 1.05rem;}
+  .downloads-guides-resource-icon{width:42px;height:42px;font-size:1.2rem;}
+  .downloads-guides-resource p{font-size:.92rem;}
+  .downloads-guides-form-card{padding:20px 16px;}
+  .downloads-guides-form-card .form-control{padding:.65rem .85rem;font-size:.93rem;}
+  .downloads-guides-form-card .form-label{font-size:.89rem;}
+  .downloads-guides-consent-box{padding:.9rem 1rem;}
+  .downloads-guides-actions .btn{width:100%;}
+  .downloads-guides-usage-card{padding:1.15rem 1.1rem;}
+  .downloads-guides-usage-note p{font-size:.92rem;}
+  .downloads-guides-usage-note > .bi{font-size:1.1rem;}
 }
 
 
@@ -3098,6 +3115,11 @@
     .events-webinars-requirement {
         padding: .8rem .9rem;
     }
+    .downloads-guides-hero{padding:64px 0 76px;}
+  .downloads-guides-resource{padding:1.25rem 1.15rem;}
+  .downloads-guides-form-card{padding:24px 20px;}
+  .downloads-guides-usage-card{padding:1.25rem 1.2rem;}
+  .downloads-guides-usage-note{padding:1.05rem 1.15rem;}
 }
 
 
