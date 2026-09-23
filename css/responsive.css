@@ -1041,6 +1041,27 @@
   .cpc-reporting-note p,
   .cpc-purpose-note p{font-size:.92rem;}
   .cpc-appeal{flex-direction:column;text-align:center;gap:.6rem;}
+  .cls-hero{padding:56px 0 68px;}
+  .cls-breadcrumb{margin-bottom:20px;}
+  .cls-hero-lead{font-size:.96rem;margin-bottom:26px;}
+  .cls-nav-pill{font-size:.8rem;padding:.55rem .95rem;gap:.45rem;}
+  .cls-approach .section-title{margin-bottom:14px;}
+  .cls-areas .section-head,
+  .cls-custom .section-head,
+  .cls-deliverables .section-head{margin-bottom:32px;}
+  .cls-result-row{padding:.85rem .95rem;gap:.8rem;}
+  .cls-result-icon{width:38px;height:38px;font-size:1.05rem;}
+  .cls-result-row p{font-size:.92rem;}
+  .cls-area-icon{width:42px;height:42px;font-size:1.15rem;}
+  .cls-area-name{font-size:.93rem;}
+  .cls-area-num{font-size:.72rem;}
+  .cls-custom-item p{font-size:.91rem;}
+  .cls-custom-check{width:26px;height:26px;font-size:.9rem;}
+  .cls-del-icon{width:38px;height:38px;font-size:1.05rem;}
+  .cls-del-row p{font-size:.93rem;padding-top:.3rem;}
+  .cls-cta-lead{font-size:1.05rem;}
+  .cls-chip{font-size:.82rem;padding:.5rem .95rem;}
+  .cls-cta-note{font-size:.95rem;}
 }
 
 
@@ -1335,6 +1356,15 @@
   .cpc-reporting-note{padding:1.2rem 1.2rem;}
   .cpc-outcomes-statement{padding:1.2rem 1.2rem;}
   .cpc-appeal{padding:1.05rem 1.15rem;}
+  .cls-hero{padding:64px 0 76px;}
+  .cls-hero-actions .btn{flex:1 1 100%;max-width:340px;}
+  .cls-statement{padding-left:1.15rem;}
+  .cls-result-panel{padding:22px 20px;}
+  .cls-area-row{padding:1rem 1.1rem;gap:.85rem;}
+  .cls-custom-panel{padding:20px;}
+  .cls-custom-item{padding:.95rem 1rem;}
+  .cls-del-row{padding:1rem 1.05rem;}
+  .cls-cta{padding:56px 0;}
 }
 
 

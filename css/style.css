@@ -10160,6 +10160,565 @@ a {
 
 
 
+
+
+/* Corportate Trainning Solutions */
+
+
+
+
+
+
+/* =========================================================
+   CORPORATE LEARNING SOLUTIONS — PAGE-SPECIFIC STYLESHEET
+
+   • Every custom class uses the "cls-" prefix.
+   • Depends on the shared site stylesheet (style.css) for CSS
+     variables, base typography, buttons, header/topbar and
+     footer components. No global styles are modified.
+   • Mobile-first. Hardened for 430px and below.
+
+   SECTIONS
+   01. PAGE SCOPE & ACTIVE NAV STATE
+   02. HERO
+   03. FROM TRAINING ACTIVITY TO CAPABILITY IMPROVEMENT
+   04. CORPORATE SOLUTION AREAS
+   05. WHAT CAN BE CUSTOMIZED
+   06. POSSIBLE DELIVERABLES
+   07. START WITH A FOCUSED CONVERSATION (CTA BAND)
+   08. SCROLL REVEAL
+   09. REDUCED MOTION
+   10. SMALL SCREEN HARDENING (≤575px / ≤430px)
+========================================================= */
+
+
+/* =========================
+   01. PAGE SCOPE & ACTIVE NAV STATE
+========================= */
+.cls-page .navbar-nav .nav-link.active{
+  color:var(--primary-dark);
+  background:var(--primary-tint);
+}
+
+
+/* =========================
+   02. HERO
+========================= */
+.cls-hero{
+  position:relative;
+  background:var(--dark-bg);
+  color:var(--secondary-color);
+  overflow:hidden;
+  padding:88px 0 96px;
+  text-align:center;
+}
+.cls-hero::before{
+  content:"";
+  position:absolute;
+  top:-260px;
+  left:50%;
+  transform:translateX(-50%);
+  width:760px;
+  height:760px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(255,0,0,.28), transparent 65%);
+}
+.cls-hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+  background-size:44px 44px;
+  -webkit-mask-image:radial-gradient(ellipse at 50% 18%, rgba(0,0,0,.85), transparent 72%);
+  mask-image:radial-gradient(ellipse at 50% 18%, rgba(0,0,0,.85), transparent 72%);
+}
+.cls-hero .container-xxl{
+  position:relative;
+  z-index:2;
+}
+
+/* Breadcrumb */
+.cls-breadcrumb ol{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:.35rem .55rem;
+  list-style:none;
+  margin:0 0 26px;
+  padding:0;
+  font-size:.82rem;
+  font-weight:600;
+  color:#8d97a5;
+}
+.cls-breadcrumb li{
+  display:flex;
+  align-items:center;
+  gap:.55rem;
+}
+.cls-breadcrumb li + li::before{
+  content:"/";
+  color:rgba(255,255,255,.25);
+}
+.cls-breadcrumb a{
+  color:#c3cad4;
+  text-decoration:none;
+}
+.cls-breadcrumb a:hover{
+  color:var(--secondary-color);
+  text-decoration:underline;
+}
+.cls-breadcrumb [aria-current]{
+  color:var(--secondary-color);
+}
+
+/* Hero copy */
+.cls-hero-title{
+  color:var(--secondary-color);
+  font-size:clamp(2rem, 1.35rem + 3vw, 3.4rem);
+  line-height:1.12;
+  letter-spacing:-.02em;
+  max-width:880px;
+  margin:14px auto 16px;
+}
+.cls-hero-lead{
+  color:#c3cad4;
+  font-size:1.03rem;
+  max-width:660px;
+  margin:0 auto 30px;
+}
+.cls-hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:.9rem;
+}
+
+/* In-page section navigation pills */
+.cls-hero-nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:.6rem;
+  margin:0;
+}
+.cls-nav-pill{
+  display:inline-flex;
+  align-items:center;
+  gap:.55rem;
+  background:var(--dark-card);
+  border:1px solid var(--dark-border);
+  border-radius:999px;
+  padding:.62rem 1.15rem;
+  font-family:var(--font-head);
+  font-weight:700;
+  font-size:.85rem;
+  color:#c3cad4;
+  text-decoration:none;
+  transition:all .25s ease;
+}
+.cls-nav-pill .bi{
+  color:var(--primary-soft);
+  font-size:1rem;
+  transition:color .25s ease;
+}
+.cls-nav-pill:hover{
+  color:var(--secondary-color);
+  border-color:rgba(255,0,0,.5);
+  background:rgba(255,0,0,.08);
+  transform:translateY(-2px);
+}
+.cls-nav-pill:hover .bi{color:var(--primary-color);}
+
+/* Hero entrance animation (pure CSS, no JS required) */
+@keyframes cls-fade-up{
+  from{opacity:0;transform:translateY(22px);}
+  to{opacity:1;transform:none;}
+}
+.cls-hero-anim{
+  animation:cls-fade-up .8s cubic-bezier(.22,.61,.36,1) both;
+}
+.cls-hero-anim-2{animation-delay:.15s;}
+.cls-hero-anim-3{animation-delay:.3s;}
+
+
+/* =========================
+   03. FROM TRAINING ACTIVITY TO CAPABILITY IMPROVEMENT
+========================= */
+.cls-approach{background:var(--secondary-color);}
+.cls-approach .section-title{margin-bottom:18px;}
+
+/* Editorial statement (paragraph 1, verbatim) */
+.cls-statement{
+  margin:0;
+  max-width:480px;
+  padding-left:1.5rem;
+  border-left:4px solid var(--primary-color);
+  font-size:1rem;
+  line-height:1.8;
+  color:var(--body-text);
+}
+.cls-statement span{
+  font-family:var(--font-head);
+  font-weight:700;
+  color:var(--ink);
+}
+
+/* Highlighter effect (styling only — text unchanged) */
+.cls-hl{
+  background:linear-gradient(transparent 62%, var(--primary-tint-2) 62%);
+  padding:0 .05em;
+  -webkit-box-decoration-break:clone;
+  box-decoration-break:clone;
+}
+
+/* Result panel (paragraph 2 reorganized) */
+.cls-result-panel{
+  background:var(--light-bg);
+  border:1px solid var(--line);
+  border-radius:var(--radius-lg);
+  padding:26px;
+}
+.cls-result-lead{
+  margin:0 0 14px;
+  font-family:var(--font-head);
+  font-weight:700;
+  color:var(--ink);
+  font-size:1.02rem;
+}
+.cls-result-row{
+  display:flex;
+  align-items:center;
+  gap:.95rem;
+  background:var(--secondary-color);
+  border:1px solid var(--line);
+  border-radius:var(--radius-md);
+  padding:.95rem 1.1rem;
+  transition:all .25s ease;
+}
+.cls-result-row + .cls-result-row{margin-top:.65rem;}
+.cls-result-row:hover{
+  border-color:var(--primary-tint-2);
+  box-shadow:var(--shadow-sm);
+  transform:translateX(4px);
+}
+.cls-result-icon{
+  flex:0 0 auto;
+  width:42px;
+  height:42px;
+  border-radius:12px;
+  background:var(--primary-tint);
+  color:var(--primary-dark);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.15rem;
+}
+.cls-result-row p{
+  margin:0;
+  padding-top:.25rem;
+  font-family:var(--font-head);
+  font-weight:700;
+  color:var(--ink);
+  font-size:.96rem;
+  line-height:1.45;
+}
+
+
+/* =========================
+   04. CORPORATE SOLUTION AREAS
+========================= */
+.cls-areas{background:var(--light-bg);}
+.cls-areas .section-head{margin-bottom:40px;}
+
+/* Numbered area row (names only — no invented descriptions) */
+.cls-area-row{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  background:var(--secondary-color);
+  border:1px solid var(--line);
+  border-radius:var(--radius-md);
+  padding:1.05rem 1.2rem;
+  height:100%;
+  transition:all .3s ease;
+}
+.cls-area-row:hover{
+  transform:translateY(-3px);
+  box-shadow:var(--shadow-md);
+  border-color:var(--primary-tint-2);
+}
+.cls-area-icon{
+  flex:0 0 auto;
+  width:46px;
+  height:46px;
+  border-radius:12px;
+  background:var(--primary-tint);
+  color:var(--primary-dark);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.25rem;
+  transition:all .3s ease;
+}
+.cls-area-row:hover .cls-area-icon{
+  background:linear-gradient(140deg,var(--primary-color),var(--primary-darker));
+  color:var(--secondary-color);
+  box-shadow:0 10px 20px rgba(255,0,0,.25);
+}
+.cls-area-name{
+  flex:1 1 auto;
+  min-width:0;
+  margin:0;
+  font-family:var(--font-head);
+  font-weight:700;
+  color:var(--ink);
+  font-size:.97rem;
+  line-height:1.45;
+}
+.cls-area-num{
+  flex:0 0 auto;
+  font-family:var(--font-head);
+  font-size:.78rem;
+  font-weight:800;
+  letter-spacing:.12em;
+  color:var(--primary-dark);
+  opacity:.35;
+}
+
+
+/* =========================
+   05. WHAT CAN BE CUSTOMIZED
+========================= */
+.cls-custom{background:var(--secondary-color);}
+.cls-custom .section-head{margin-bottom:36px;}
+
+/* Checklist panel with red top accent */
+.cls-custom-panel{
+  position:relative;
+  max-width:880px;
+  margin:0 auto;
+  background:var(--light-bg);
+  border:1px solid var(--line);
+  border-radius:var(--radius-lg);
+  padding:28px;
+  overflow:hidden;
+}
+.cls-custom-panel::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:24px;
+  right:24px;
+  height:4px;
+  border-radius:0 0 4px 4px;
+  background:linear-gradient(90deg, transparent, var(--primary-color), transparent);
+}
+.cls-custom-item{
+  display:flex;
+  align-items:flex-start;
+  gap:.85rem;
+  background:var(--secondary-color);
+  border:1px solid var(--line);
+  border-radius:var(--radius-md);
+  padding:1.05rem 1.15rem;
+  height:100%;
+  transition:all .25s ease;
+}
+.cls-custom-item:hover{
+  border-color:var(--primary-tint-2);
+  box-shadow:var(--shadow-sm);
+  transform:translateY(-2px);
+}
+.cls-custom-check{
+  flex:0 0 auto;
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  background:var(--primary-tint);
+  color:var(--primary-dark);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1rem;
+  margin-top:.1rem;
+}
+.cls-custom-item p{
+  margin:0;
+  padding-top:.3rem;
+  font-family:var(--font-head);
+  font-weight:600;
+  color:var(--ink);
+  font-size:.95rem;
+  line-height:1.55;
+}
+
+
+/* =========================
+   06. POSSIBLE DELIVERABLES
+========================= */
+.cls-deliverables{
+  position:relative;
+  background:var(--dark-bg);
+  color:var(--secondary-color);
+  overflow:hidden;
+}
+.cls-deliverables::before{
+  content:"";
+  position:absolute;
+  right:-180px;
+  top:-160px;
+  width:520px;
+  height:520px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(255,0,0,.2), transparent 65%);
+}
+.cls-deliverables .container-xxl{
+  position:relative;
+  z-index:2;
+}
+.cls-deliverables .section-title{color:var(--secondary-color);}
+
+/* Deliverable rows (dark surface) */
+.cls-del-row{
+  display:flex;
+  align-items:flex-start;
+  gap:1rem;
+  background:var(--dark-card);
+  border:1px solid var(--dark-border);
+  border-radius:var(--radius-md);
+  padding:1.1rem 1.2rem;
+  height:100%;
+  transition:all .3s ease;
+}
+.cls-del-row:hover{
+  border-color:rgba(255,0,0,.5);
+  background:rgba(255,0,0,.06);
+  transform:translateY(-2px);
+}
+.cls-del-icon{
+  flex:0 0 auto;
+  width:42px;
+  height:42px;
+  border-radius:12px;
+  background:rgba(255,0,0,.16);
+  color:var(--primary-soft);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.15rem;
+}
+.cls-del-row p{
+  margin:0;
+  padding-top:.4rem;
+  font-family:var(--font-head);
+  font-weight:600;
+  color:var(--secondary-color);
+  font-size:.97rem;
+  line-height:1.5;
+}
+
+
+/* =========================
+   07. START WITH A FOCUSED CONVERSATION (CTA BAND)
+========================= */
+.cls-cta{
+  position:relative;
+  background:linear-gradient(130deg,
+    var(--primary-color) 0%,
+    var(--primary-dark) 55%,
+    var(--primary-darker) 100%);
+  color:var(--secondary-color);
+  overflow:hidden;
+  padding:72px 0;
+  text-align:center;
+}
+.cls-cta::before,
+.cls-cta::after{
+  content:"";
+  position:absolute;
+  border-radius:50%;
+  border:2px solid rgba(255,255,255,.18);
+  pointer-events:none;
+}
+.cls-cta::before{width:320px;height:320px;top:-130px;left:-100px;}
+.cls-cta::after{width:420px;height:420px;bottom:-210px;right:-140px;border-color:rgba(255,255,255,.12);}
+.cls-cta .container-xxl{
+  position:relative;
+  z-index:2;
+}
+.cls-cta h2{
+  color:var(--secondary-color);
+  font-size:clamp(1.5rem, 1.1rem + 2.2vw, 2.4rem);
+  line-height:1.25;
+  margin:0 auto 20px;
+}
+.cls-cta-lead{
+  font-family:var(--font-head);
+  font-weight:700;
+  color:var(--secondary-color);
+  font-size:1.12rem;
+  margin:0 0 16px;
+}
+
+/* Conversation chips on the red band */
+.cls-chips{
+  list-style:none;
+  margin:0 auto;
+  padding:0;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:.6rem;
+  max-width:760px;
+}
+.cls-chip{
+  display:inline-flex;
+  align-items:center;
+  background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.35);
+  border-radius:999px;
+  padding:.6rem 1.15rem;
+  font-family:var(--font-head);
+  font-weight:700;
+  font-size:.88rem;
+  color:var(--secondary-color);
+  transition:all .25s ease;
+}
+.cls-chip:hover{
+  background:rgba(255,255,255,.22);
+  transform:translateY(-2px);
+}
+
+.cls-cta-note{
+  color:rgba(255,255,255,.92);
+  max-width:560px;
+  margin:20px auto 26px;
+}
+
+
+/* =========================
+   08. SCROLL REVEAL
+   (page-specific hook — never conflicts with the
+   reveal observers used on other pages)
+========================= */
+.cls-js .cls-reveal{
+  opacity:0;
+  transform:translateY(26px);
+  transition:opacity .7s cubic-bezier(.22,.61,.36,1),
+             transform .7s cubic-bezier(.22,.61,.36,1);
+  will-change:opacity, transform;
+}
+.cls-js .cls-reveal.is-visible{
+  opacity:1;
+  transform:none;
+}
+.cls-js .cls-reveal.cls-d1{transition-delay:.1s;}
+.cls-js .cls-reveal.cls-d2{transition-delay:.2s;}
+
+
+
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -10463,4 +11022,13 @@ a {
     .cpc-nav-pill {
         transition: none;
     }
+    .cls-hero-anim{animation:none !important;}
+  .cls-js .cls-reveal{opacity:1;transform:none;transition:none;}
+  .cls-result-row,
+  .cls-area-row,
+  .cls-area-icon,
+  .cls-custom-item,
+  .cls-del-row,
+  .cls-chip,
+  .cls-nav-pill{transition:none;}
 }
