@@ -216,13 +216,15 @@ a {
 
 
 /* =========================
-   4. ANNOUNCEMENT BAR
+   4A. TOP ANNOUNCEMENT BAR — SHELL & ROTATING MESSAGES
+   (the red bar itself + the rotating announcement slides)
 ========================= */
 .topbar {
     background: var(--primary-color);
     color: var(--secondary-color);
 }
 
+/* Shared wrapper for both rows (messages + utility) */
 .topbar-inner {
     display: flex;
     flex-direction: column;
@@ -271,6 +273,11 @@ a {
     color: var(--primary-tint-2);
 }
 
+
+/* =========================
+   4B. TOPBAR UTILITY LINKS
+   (Verify Credential / Member Login row + separators)
+========================= */
 .topbar-utility {
     display: flex;
     flex-wrap: wrap;
@@ -292,7 +299,6 @@ a {
 
 .topbar-utility a:hover {
     color: var(--secondary-color);
-    text-decoration: underline;
 }
 
 .topbar-sep {
@@ -300,6 +306,46 @@ a {
     width: 1px;
     height: 12px;
     background: rgba(255, 255, 255, .45);
+}
+
+
+/* =========================
+   4C. TOPBAR DROPDOWN MENUS
+   (Certifications / Membership / Partners / Resources quick menus)
+========================= */
+/* Raise the bar above the sticky header (z-index 1030)
+   so the dropdowns open OVER it instead of underneath */
+.topbar {
+    position: relative;
+    z-index: 1040;
+}
+
+.topbar-menus {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .15rem .6rem;
+    /* same rhythm as the utility links */
+}
+
+.topbar .topbar-link {
+    white-space: nowrap;
+}
+
+/* Open state of a topbar dropdown toggle */
+.topbar .topbar-link.show {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* Menus inherit the topbar's centered text — reset so items read normally */
+.topbar .dropdown-menu {
+    text-align: left;
+}
+
+/* White focus ring — the default red one is invisible on the red bar
+   (applies across the whole topbar, announcement links included) */
+.topbar :focus-visible {
+    outline-color: var(--secondary-color);
 }
 
 
@@ -423,6 +469,42 @@ a {
     color: var(--primary-dark);
 }
 
+
+/* =========================
+   TOPBAR QUICK MENUS
+========================= */
+.topbar {
+    position: relative;
+    z-index: 1040;
+    /* lets the topbar dropdowns open OVER the sticky header (z-index 1030) */
+}
+
+.topbar-menus {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .15rem .6rem;
+    /* same rhythm as the existing utility links */
+}
+
+.topbar .topbar-link {
+    white-space: nowrap;
+}
+
+/* Open state of a topbar dropdown toggle */
+.topbar .topbar-link.show {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* Menus inherit the topbar's centered text — reset so items read normally */
+.topbar .dropdown-menu {
+    text-align: left;
+}
+
+/* The red focus ring is invisible on the red bar — use white there */
+.topbar :focus-visible {
+    outline-color: var(--secondary-color);
+}
 
 
 

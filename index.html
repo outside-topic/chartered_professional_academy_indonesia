@@ -27,187 +27,230 @@
 </head>
 
 <body id="top">
-
     <!-- =========================
-       TOP ANNOUNCEMENT BAR
-  ========================== -->
-    <div class="topbar" role="region" aria-label="Announcements and utility navigation">
-        <div class="container-xl">
-            <div class="topbar-inner">
+     TOP ANNOUNCEMENT BAR
+========================== -->
+<div class="topbar" role="region" aria-label="Announcements and utility navigation">
+    <div class="container-xl">
+        <div class="topbar-inner">
 
-                <!-- Suggested rotating messages (from document) -->
-                <div class="topbar-message" id="topbarMessage" aria-live="polite">
-                    <p class="topbar-slide is-active">
-                        <span>New certification intakes now open</span>
-                        <a href="#">View upcoming programmes</a>
-                    </p>
-                    <p class="topbar-slide">
-                        <span>Build a customized learning programme for your team</span>
-                        <a href="#">Speak with our corporate learning team</a>
-                    </p>
-                    <p class="topbar-slide">
-                        <span>Already certified</span>
-                        <a href="#">Record your CPD and maintain your professional standing</a>
-                    </p>
-                </div>
-
-                <!-- Utility navigation (from document) -->
-                <nav class="topbar-utility" aria-label="Utility">
-                    <!-- <a class=" dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">Certifications</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Explore Certifications</a></li>
-                        <li><a class="dropdown-item" href="#">Certification Areas</a></li>
-                        <li><a class="dropdown-item" href="#">Certification Pathway</a></li>
-                        <li><a class="dropdown-item" href="#">Assessment</a></li>
-                        <li><a class="dropdown-item" href="#">Renewal and CPD</a></li>
-                        <li><a class="dropdown-item" href="#">FAQs</a></li>
-                    </ul> -->
-                    <span class="topbar-sep" aria-hidden="true"></span>
-                    <a href="#"><i class="bi bi-patch-check" aria-hidden="true"></i>Verify Credential</a>
-                    <span class="topbar-sep" aria-hidden="true"></span>
-                    <a href="#"><i class="bi bi-person" aria-hidden="true"></i>Member Login</a>
-                </nav>
+            <!-- Rotating messages (unchanged) -->
+            <div class="topbar-message">
+                
             </div>
-        </div>
-    </div>
 
-    <!-- =========================
-       HEADER NAVIGATION
-  ========================== -->
-    <header class="site-header" id="siteHeader">
-        <div class="container-xl">
-            <nav class="navbar navbar-expand-xl" aria-label="Main navigation">
+            <!-- Utility + section quick menus -->
+            <nav class="topbar-utility" aria-label="Utility and quick navigation">
 
-                <!-- Brand -->
-                <a class="navbar-brand d-flex align-items-center" href="index.html"></a>
+                <!-- Moved from main navbar (desktop only) -->
+                <div class="topbar-menus d-none d-xl-flex">
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-                    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                    <div class="dropdown topbar-drop">
+                        <a class="topbar-link dropdown-toggle" href="#" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Certifications
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="professional_certifications.html">Explore Certifications</a></li>
+                            <li><a class="dropdown-item" href="certification_areas.html">Certification Areas</a></li>
+                            <li><a class="dropdown-item" href="certification_pathway.html">Certification Pathway</a></li>
+                            <li><a class="dropdown-item" href="assesment_and _certifiation_standard.html">Assessment</a></li>
+                            <li><a class="dropdown-item" href="certification_renewal_and_cpd.html">Renewal and CPD</a></li>
+                            <li><a class="dropdown-item" href="certificatoin_faq.html">FAQs</a></li>
+                        </ul>
+                    </div>
 
-                <div class="collapse navbar-collapse align-middle align-content-center" id="mainNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#top">Home</a></li>
+                    <span class="topbar-sep" aria-hidden="true"></span>
 
-                        <!-- About -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">About</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="about_cap_indonesia.html">About CPA Indonesia</a></li>
-                                <li><a class="dropdown-item" href="purpose_vision_mission.html">Purpose Vision and
-                                        Values</a></li>
-                                <li><a class="dropdown-item" href="governance_quality_and_standards.html">Governance and
-                                        Quality</a></li>
-                                <li><a class="dropdown-item" href="why_choose_us.html">Why Choose Us</a></li>
-                            </ul>
-                        </li>
+                    <div class="dropdown topbar-drop">
+                        <a class="topbar-link dropdown-toggle" href="#" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Membership
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="professional_membership.html">Membership Overview</a></li>
+                            <li><a class="dropdown-item" href="membership_catageories.html">Membership Categories</a></li>
+                            <li><a class="dropdown-item" href="membership_benifits.html">Benefits</a></li>
+                            <li><a class="dropdown-item" href="how_to_join.html">How to Join</a></li>
+                            <li><a class="dropdown-item" href="cpd.html">CPD</a></li>
+                            <li><a class="dropdown-item" href="#">Code of Professional Conduct</a></li>
+                        </ul>
+                    </div>
 
-                        <!-- Certifications -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">Certifications</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="professional_certifications.html">Explore Certifications</a></li>
-                                <li><a class="dropdown-item" href="certification_areas.html">Certification Areas</a></li>
-                                <li><a class="dropdown-item" href="certification_pathway.html">Certification Pathway</a></li>
-                                <li><a class="dropdown-item" href="assesment_and _certifiation_standard.html">Assessment</a></li>
-                                <li><a class="dropdown-item" href="certification_renewal_and_cpd.html">Renewal and CPD</a></li>
-                                <li><a class="dropdown-item" href="certificatoin_faq.html">FAQs</a></li>
-                            </ul>
-                        </li>
+                    <span class="topbar-sep" aria-hidden="true"></span>
 
-                        <!-- Membership -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">Membership</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="professional_membership.html">Membership Overview</a></li>
-                                <li><a class="dropdown-item" href="membership_catageories.html">Membership Categories</a></li>
-                                <li><a class="dropdown-item" href="membership_benifits.html">Benefits</a></li>
-                                <li><a class="dropdown-item" href="how_to_join.html">How to Join</a></li>
-                                <li><a class="dropdown-item" href="cpd.html">CPD</a></li>
-                                <li><a class="dropdown-item" href="#">Code of Professional Conduct</a></li>
-                            </ul>
-                        </li>
+                    <div class="dropdown topbar-drop">
+                        <a class="topbar-link dropdown-toggle" href="#" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Partners
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="become_a_learning_partner.html">Become a Learning Partner</a></li>
+                            <li><a class="dropdown-item" href="corporate_and_institutional_partnership.html">Corporate Partnerships</a></li>
+                            <li><a class="dropdown-item" href="faculty_trainer_and_subject_expert.html">Faculty and Trainers</a></li>
+                        </ul>
+                    </div>
 
-                        <!-- Corporate Training -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">Corporate Training</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="corporate_trainning_solutions.html">Corporate Solutions</a></li>
-                                <li><a class="dropdown-item" href="customized_trainning.html">Customized Training</a></li>
-                                <li><a class="dropdown-item" href="functional_academies.html">Functional Academies</a></li>
-                                <li><a class="dropdown-item" href="leadership_deevlopement.html">Leadership Development</a></li>
-                                <li><a class="dropdown-item" href="delivery_and_evaluation_approch.html">Delivery Approach</a></li>
-                                <li><a class="dropdown-item" href="request_a_corporate_trainning_proposal.html">Request a Proposal</a></li>
-                            </ul>
-                        </li>
+                    <span class="topbar-sep" aria-hidden="true"></span>
 
-                        <!-- Professional Development -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">Professional Development</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="individual_professional_developement.html">Overview</a></li>
-                                <li><a class="dropdown-item" href="short_courses.html">Short Courses</a></li>
-                                <li><a class="dropdown-item" href="professional_masterclass.html">Masterclasses</a></li>
-                                <li><a class="dropdown-item" href="executive_learning.html">Executive Learning</a></li>
-                                <li><a class="dropdown-item" href="career_developementpathways.html">Career Pathways</a></li>
-                                <li><a class="dropdown-item" href="learning_calender.html">Learning Calendar</a></li>
-                            </ul>
-                        </li>
-
-                        <!-- Resources -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="professional_resources.html" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">Resources</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="Insights_and_Articles.html">Insights</a></li>
-                                <li><a class="dropdown-item" href="events_and_webinars.html">Events and Webinars</a></li>
-                                <li><a class="dropdown-item" href="download_and_guides.html">Downloads</a></li>
-                                <li><a class="dropdown-item" href="success_stories.html">Success Stories</a></li>
-                                <li><a class="dropdown-item" href="help_centre.html">Help Centre</a></li>
-                            </ul>
-                        </li>
-
-                        <!-- Partners -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">Partners</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="become_a_learning_partner.html">Become a Learning Partner</a></li>
-                                <li><a class="dropdown-item" href="corporate_and_institutional_partnership.html">Corporate Partnerships</a></li>
-                                <li><a class="dropdown-item" href="faculty_trainer_and_subject_expert.html">Faculty and Trainers</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item d-xl-none">
-                            <a class="nav-link" href="verify_a _credential.html"><i class="bi bi-patch-check me-1" aria-hidden="true"></i>Verify
-                                Credential</a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                    </ul>
-
-                    <!-- Header buttons — collapsed / mobile menu (from document) -->
-                    <div class="d-flex d-xl-none  gap-2 mt-3 pt-3 ">
-                        <a href="#" class="btn btn-outline-brand btn-sm"><i class="bi bi-person me-2"></i>LMS Login</a>
-                        <a href="#" class="btn btn-brand btn-sm d-none">Find a Certification</a>
+                    <div class="dropdown topbar-drop">
+                        <a class="topbar-link dropdown-toggle" href="#" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Resources
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="Insights_and_Articles.html">Insights</a></li>
+                            <li><a class="dropdown-item" href="events_and_webinars.html">Events and Webinars</a></li>
+                            <li><a class="dropdown-item" href="download_and_guides.html">Downloads</a></li>
+                            <li><a class="dropdown-item" href="success_stories.html">Success Stories</a></li>
+                            <li><a class="dropdown-item" href="help_centre.html">Help Centre</a></li>
+                        </ul>
                     </div>
                 </div>
 
-                <!-- Header buttons — desktop (from document) -->
-                <div class="d-none d-xl-flex align-items-center gap-2 ms-3">
+                <span class="topbar-sep d-none d-xl-inline-block" aria-hidden="true"></span>
+
+                <a href="">Verify Credential</a>
+                <span class="topbar-sep" aria-hidden="true"></span>
+                <a href="#">Member Login</a>
+            </nav>
+        </div>
+    </div>
+</div>
+    
+
+    <header class="site-header" id="siteHeader">
+    <div class="container-xl">
+        <nav class="navbar navbar-expand-xl" aria-label="Main navigation">
+
+            <a class="navbar-brand d-flex align-items-center" href="index.html"></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse align-middle align-content-center" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#top">Home</a></li>
+
+                    <!-- About -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">About</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="about_cap_indonesia.html">About CPA Indonesia</a></li>
+                            <li><a class="dropdown-item" href="purpose_vision_mission.html">Purpose Vision and
+                                    Values</a></li>
+                            <li><a class="dropdown-item" href="governance_quality_and_standards.html">Governance and
+                                    Quality</a></li>
+                            <li><a class="dropdown-item" href="why_choose_us.html">Why Choose Us</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Certifications — mobile menu only (desktop: topbar) -->
+                    <li class="nav-item dropdown d-xl-none">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Certifications</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="professional_certifications.html">Explore Certifications</a></li>
+                            <li><a class="dropdown-item" href="certification_areas.html">Certification Areas</a></li>
+                            <li><a class="dropdown-item" href="certification_pathway.html">Certification Pathway</a></li>
+                            <li><a class="dropdown-item" href="assesment_and _certifiation_standard.html">Assessment</a></li>
+                            <li><a class="dropdown-item" href="certification_renewal_and_cpd.html">Renewal and CPD</a></li>
+                            <li><a class="dropdown-item" href="certificatoin_faq.html">FAQs</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Membership — mobile menu only (desktop: topbar) -->
+                    <li class="nav-item dropdown d-xl-none">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Membership</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="professional_membership.html">Membership Overview</a></li>
+                            <li><a class="dropdown-item" href="membership_catageories.html">Membership Categories</a></li>
+                            <li><a class="dropdown-item" href="membership_benifits.html">Benefits</a></li>
+                            <li><a class="dropdown-item" href="how_to_join.html">How to Join</a></li>
+                            <li><a class="dropdown-item" href="cpd.html">CPD</a></li>
+                            <li><a class="dropdown-item" href="#">Code of Professional Conduct</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Corporate Training -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Corporate Training</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="corporate_trainning_solutions.html">Corporate Solutions</a></li>
+                            <li><a class="dropdown-item" href="customized_trainning.html">Customized Training</a></li>
+                            <li><a class="dropdown-item" href="functional_academies.html">Functional Academies</a></li>
+                            <li><a class="dropdown-item" href="leadership_deevlopement.html">Leadership Development</a></li>
+                            <li><a class="dropdown-item" href="delivery_and_evaluation_approch.html">Delivery Approach</a></li>
+                            <li><a class="dropdown-item" href="request_a_corporate_trainning_proposal.html">Request a Proposal</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Professional Development -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Professional Development</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="individual_professional_developement.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="short_courses.html">Short Courses</a></li>
+                            <li><a class="dropdown-item" href="professional_masterclass.html">Masterclasses</a></li>
+                            <li><a class="dropdown-item" href="executive_learning.html">Executive Learning</a></li>
+                            <li><a class="dropdown-item" href="career_developementpathways.html">Career Pathways</a></li>
+                            <li><a class="dropdown-item" href="learning_calender.html">Learning Calendar</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Resources — mobile menu only (desktop: topbar) -->
+                    <li class="nav-item dropdown d-xl-none">
+                        <a class="nav-link dropdown-toggle" href="professional_resources.html" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Resources</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Insights_and_Articles.html">Insights</a></li>
+                            <li><a class="dropdown-item" href="events_and_webinars.html">Events and Webinars</a></li>
+                            <li><a class="dropdown-item" href="download_and_guides.html">Downloads</a></li>
+                            <li><a class="dropdown-item" href="success_stories.html">Success Stories</a></li>
+                            <li><a class="dropdown-item" href="help_centre.html">Help Centre</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Partners — mobile menu only (desktop: topbar) -->
+                    <li class="nav-item dropdown d-xl-none">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Partners</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="become_a_learning_partner.html">Become a Learning Partner</a></li>
+                            <li><a class="dropdown-item" href="corporate_and_institutional_partnership.html">Corporate Partnerships</a></li>
+                            <li><a class="dropdown-item" href="faculty_trainer_and_subject_expert.html">Faculty and Trainers</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item d-xl-none">
+                        <a class="nav-link" href="verify_a _credential.html"><i class="bi bi-patch-check me-1" aria-hidden="true"></i>Verify
+                            Credential</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+
+                <!-- Header buttons — mobile menu (unchanged) -->
+                <div class="d-flex d-xl-none gap-2 mt-3 pt-3">
                     <a href="#" class="btn btn-outline-brand btn-sm"><i class="bi bi-person me-2"></i>LMS Login</a>
                     <a href="#" class="btn btn-brand btn-sm d-none">Find a Certification</a>
                 </div>
+            </div>
 
-            </nav>
-        </div>
-    </header>
+            <!-- Header buttons — desktop (unchanged) -->
+            <div class="d-none d-xl-flex align-items-center gap-2 ms-3">
+                <a href="#" class="btn btn-outline-brand btn-sm"><i class="bi bi-person me-2"></i>LMS Login</a>
+                <a href="#" class="btn btn-brand btn-sm d-none">Find a Certification</a>
+            </div>
+
+        </nav>
+    </div>
+</header>
 
     <main id="main">
 

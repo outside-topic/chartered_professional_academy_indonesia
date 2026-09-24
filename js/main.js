@@ -12,6 +12,7 @@ document.documentElement.classList.add('js');
 // Shared reduced-motion preference (respects user settings).
 const prefersReducedMotion =
   window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isDesktop = window.innerWidth >= 1200; // matches navbar-expand-xl
 
 
 /* =========================
@@ -2652,41 +2653,7 @@ const prefersReducedMotion =
 
 
 
-/* =========================================================
-   CONTACT CPA INDONESIA — PAGE SCRIPT (contact-cpa.js)
 
-   • No inline JavaScript is used anywhere in the page.
-   • Everything is wrapped in ONE IIFE, so this file can
-     never collide with script.js (Home) or any other page
-     script (about, pvm, gqs, wcc, pcert, carea, cpath, acs,
-     crcpd, cfq, pmem, mcat, mben, howjoin, cpd, cpc, cls,
-     custom-training, functional-academies,
-     leadership-development, delivery-evaluation,
-     corporate-proposal, individual-development,
-     short-courses, professional-masterclasses,
-     executive-learning, career-development-pathways,
-     learning-calendar, professional-resources,
-     insights-articles, events-webinars, downloads-guides,
-     success-stories, help-centre, learning-partner,
-     corporate-partnerships, faculty-experts,
-     verify-credential) — no shared globals.
-
-   • NO fake form submission is implemented: the document
-     specifies the contact form fields but provides no
-     submission endpoint, and defines no success message.
-     The submit handler only prevents native navigation so
-     the page does not reload with query data. Connect a
-     real endpoint here when the backend becomes available.
-
-   INTEGRATION NOTE
-   The [SHARED] sections reproduce the header/topbar/footer
-   behaviours that already exist in script.js. Include this
-   file as-is if script.js is only loaded on the Home page.
-   If script.js is ALREADY loaded on every page, delete the
-   [SHARED] block below and keep only the page-specific
-   sections — they use the contact-cpa- hook and never
-   conflict with the other pages' observers.
-========================================================= */
 
 (function () {
   'use strict';
