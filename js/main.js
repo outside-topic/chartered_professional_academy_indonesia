@@ -2531,3 +2531,226 @@ const prefersReducedMotion =
     items.forEach(function (el) { observer.observe(el); });
   })();
 })();
+
+
+
+
+
+
+
+// Verify a Credential
+
+
+
+
+
+
+(function () {
+  'use strict';
+
+  /* =========================
+     GLOBAL HELPERS
+  ========================= */
+
+  // Enables reveal styles only when JS is available, so no
+  // content is ever hidden for users without JavaScript.
+  document.documentElement.classList.add('verify-credential-js');
+
+  // Shared reduced-motion preference (respects user settings).
+  var prefersReducedMotion =
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* =========================
+     SCROLL REVEAL JS  (page-specific — always required)
+     Reveals .verify-credential-reveal blocks as they enter
+     the viewport. Falls back to fully visible without JS or
+     IntersectionObserver support.
+  ========================= */
+  (function scrollReveal() {
+    var items = document.querySelectorAll('.verify-credential-reveal');
+    if (!items.length) return;
+
+    var showAll = function () {
+      items.forEach(function (el) { el.classList.add('is-visible'); });
+    };
+
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+      showAll();
+      return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    items.forEach(function (el) { observer.observe(el); });
+  })();
+
+  /* =========================
+     VERIFY FORM INTERACTION (page-specific)
+
+     Front-end only. The document provides the verification
+     fields, the recommended result display and the
+     manual-verification fallback — but no API endpoint or
+     response format (brief §21). Therefore:
+
+     • "Verify Now" reveals the documented RESULT TEMPLATE
+       (structure only — no fabricated credential data).
+     • Editing the input afterwards hides the template again,
+       so a stale result never sits beside a changed number.
+     • No fake success/error states, statuses or demo values
+       are ever injected.
+
+     Replace this handler with a real endpoint call when the
+     verification backend becomes available.
+  ========================= */
+  (function verifyForm() {
+    var form = document.getElementById('verifyCredentialForm');
+    var resultCard = document.getElementById('verifyCredentialResultCard');
+    var input = document.getElementById('vc-number');
+    if (!form || !resultCard) return;
+
+    form.addEventListener('submit', function (event) {
+      // No backend endpoint exists — prevent page reload with
+      // query data; do not simulate a verification result.
+      event.preventDefault();
+
+      // Reveal the documented result-template state.
+      resultCard.classList.remove('verify-credential-is-hidden');
+
+      // Bring the result into view for keyboard and screen-
+      // reader users after the interaction.
+      resultCard.scrollIntoView({
+        behavior: prefersReducedMotion ? 'auto' : 'smooth',
+        block: 'nearest'
+      });
+    });
+
+    // If the credential number changes after a result has been
+    // shown, hide the template so the displayed structure is
+    // never mistaken for the result of the new number.
+    if (input) {
+      input.addEventListener('input', function () {
+        resultCard.classList.add('verify-credential-is-hidden');
+      });
+    }
+  })();
+})();
+
+
+
+
+
+// Contact
+
+
+
+
+
+/* =========================================================
+   CONTACT CPA INDONESIA — PAGE SCRIPT (contact-cpa.js)
+
+   • No inline JavaScript is used anywhere in the page.
+   • Everything is wrapped in ONE IIFE, so this file can
+     never collide with script.js (Home) or any other page
+     script (about, pvm, gqs, wcc, pcert, carea, cpath, acs,
+     crcpd, cfq, pmem, mcat, mben, howjoin, cpd, cpc, cls,
+     custom-training, functional-academies,
+     leadership-development, delivery-evaluation,
+     corporate-proposal, individual-development,
+     short-courses, professional-masterclasses,
+     executive-learning, career-development-pathways,
+     learning-calendar, professional-resources,
+     insights-articles, events-webinars, downloads-guides,
+     success-stories, help-centre, learning-partner,
+     corporate-partnerships, faculty-experts,
+     verify-credential) — no shared globals.
+
+   • NO fake form submission is implemented: the document
+     specifies the contact form fields but provides no
+     submission endpoint, and defines no success message.
+     The submit handler only prevents native navigation so
+     the page does not reload with query data. Connect a
+     real endpoint here when the backend becomes available.
+
+   INTEGRATION NOTE
+   The [SHARED] sections reproduce the header/topbar/footer
+   behaviours that already exist in script.js. Include this
+   file as-is if script.js is only loaded on the Home page.
+   If script.js is ALREADY loaded on every page, delete the
+   [SHARED] block below and keep only the page-specific
+   sections — they use the contact-cpa- hook and never
+   conflict with the other pages' observers.
+========================================================= */
+
+(function () {
+  'use strict';
+
+  /* =========================
+     GLOBAL HELPERS
+  ========================= */
+
+  // Enables reveal styles only when JS is available, so no
+  // content is ever hidden for users without JavaScript.
+  document.documentElement.classList.add('contact-cpa-js');
+
+  // Shared reduced-motion preference (respects user settings).
+  var prefersReducedMotion =
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* =========================
+     SCROLL REVEAL JS  (page-specific — always required)
+     Reveals .contact-cpa-reveal blocks as they enter the
+     viewport. Falls back to fully visible without JS or
+     IntersectionObserver support.
+  ========================= */
+  (function scrollReveal() {
+    var items = document.querySelectorAll('.contact-cpa-reveal');
+    if (!items.length) return;
+
+    var showAll = function () {
+      items.forEach(function (el) { el.classList.add('is-visible'); });
+    };
+
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+      showAll();
+      return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    items.forEach(function (el) { observer.observe(el); });
+  })();
+
+  /* =========================
+     CONTACT FORM INTERACTION (page-specific)
+
+     The document specifies the 10 contact form fields but no
+     submission endpoint and no success message. This handler
+     therefore only stops native form navigation so the page
+     does not reload with query data — it does NOT simulate a
+     submission or show a fabricated confirmation. Connect a
+     real endpoint here when the backend becomes available.
+  ========================= */
+  (function formGuard() {
+    var form = document.getElementById('contactCpaForm');
+    if (!form) return;
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+    });
+  })();
+
+})();
