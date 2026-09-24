@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- SEO METADATA (from document) -->
-  <title>Professional Learning Success Stories | CPA Indonesia</title>
-  <meta name="description" content="Read how professionals and organizations applied CPA Indonesia learning to workplace capability and performance priorities." />
-  <link rel="canonical" href="/resources/success-stories/" />
+  <title>CPA Indonesia Help Centre</title>
+  <meta name="description" content="Get help with programmes, enrolment, payments, learning access, assessment, certificates, membership, CPD and account support." />
+  <link rel="canonical" href="/help/" />
   <meta name="theme-color" content="#ff0000" />
 
   <!-- Fonts (same as Home) -->
@@ -22,9 +22,8 @@
   <!-- SHARED site stylesheet (variables, base, buttons, header/topbar, footer — unchanged) -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/responsive.css" />
-  
 </head>
-<body id="top" class="success-stories-page">
+<body id="top" class="help-centre-page">
 
   <!-- Accessibility: skip link -->
   <a class="visually-hidden-focusable" href="#main">Skip to main content</a>
@@ -154,16 +153,16 @@
               </ul>
             </li>
 
-            <!-- Resources (current section) -->
+            <!-- Resources -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle active" href="#" role="button"
-                 data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">Resources</a>
+              <a class="nav-link dropdown-toggle" href="#" role="button"
+                 data-bs-toggle="dropdown" aria-expanded="false">Resources</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="/resources/insights/">Insights</a></li>
                 <li><a class="dropdown-item" href="/resources/events/">Events and Webinars</a></li>
                 <li><a class="dropdown-item" href="/resources/downloads/">Downloads</a></li>
-                <li><a class="dropdown-item" href="/resources/success-stories/" aria-current="page">Success Stories</a></li>
-                <li><a class="dropdown-item" href="#">Help Centre</a></li>
+                <li><a class="dropdown-item" href="/resources/success-stories/">Success Stories</a></li>
+                <li><a class="dropdown-item" href="/help/" aria-current="page">Help Centre</a></li>
               </ul>
             </li>
 
@@ -206,160 +205,241 @@
     <!-- =========================
          HERO
     ========================== -->
-    <section class="success-stories-hero" aria-labelledby="successStoriesHeroTitle">
+    <section class="help-centre-hero" aria-labelledby="helpCentreHeroTitle">
       <div class="container-xl">
 
-        <div class="success-stories-hero-anim">
-          <nav class="success-stories-breadcrumb" aria-label="Breadcrumb">
+        <div class="help-centre-hero-anim">
+          <nav class="help-centre-breadcrumb" aria-label="Breadcrumb">
             <ol>
               <li><a href="/">Home</a></li>
-              <li><a href="/resources/">Resources</a></li>
-              <li><span aria-current="page">Success Stories</span></li>
+              <li><span aria-current="page">Help Centre</span></li>
             </ol>
           </nav>
         </div>
 
-        <div class="success-stories-hero-anim success-stories-hero-anim-2">
-          <p class="eyebrow eyebrow-on-dark">professional training success stories Indonesia</p>
-          <h1 class="success-stories-hero-title" id="successStoriesHeroTitle">Success Stories</h1>
-          <p class="success-stories-hero-lead">Read how professionals and organizations applied CPA Indonesia learning to workplace capability and performance priorities.</p>
+        <div class="help-centre-hero-anim help-centre-hero-anim-2">
+          <p class="eyebrow eyebrow-on-dark">CPA Indonesia help</p>
+          <h1 class="help-centre-hero-title" id="helpCentreHeroTitle">Help Centre</h1>
+          <p class="help-centre-hero-lead">Get help with programmes, enrolment, payments, learning access, assessment, certificates, membership, CPD and account support.</p>
         </div>
 
         <!-- In-page section navigation (document content blocks) -->
-        <nav class="success-stories-hero-anim success-stories-hero-anim-3 success-stories-hero-nav" aria-label="Page sections">
-          <a class="success-stories-nav-pill" href="#success-stories-individual"><i class="bi bi-person" aria-hidden="true"></i>Individual story structure</a>
-          <a class="success-stories-nav-pill" href="#success-stories-corporate"><i class="bi bi-building" aria-hidden="true"></i>Corporate case structure</a>
-          <a class="success-stories-nav-pill" href="#success-stories-evidence"><i class="bi bi-shield-check" aria-hidden="true"></i>Evidence standard</a>
+        <nav class="help-centre-hero-anim help-centre-hero-anim-3 help-centre-hero-nav" aria-label="Page sections">
+          <a class="help-centre-nav-pill" href="#help-centre-categories"><i class="bi bi-grid" aria-hidden="true"></i>Help categories</a>
+          <a class="help-centre-nav-pill" href="#help-centre-questions"><i class="bi bi-question-circle" aria-hidden="true"></i>Popular help questions</a>
+          <a class="help-centre-nav-pill" href="#help-centre-contact"><i class="bi bi-headset" aria-hidden="true"></i>Contact support</a>
         </nav>
 
       </div>
     </section>
 
     <!-- =========================
-         PAGE INTRODUCTION
+         SEARCH
+         (document page purpose: "Provide one searchable support
+          destination" — filters real categories and questions only)
     ========================== -->
-    <section class="success-stories-intro" aria-label="Introduction">
+    <section class="help-centre-search" aria-label="Search the Help Centre">
       <div class="container-xl">
-        <div class="success-stories-reveal">
-          <p>See how learners and organizations have applied development to real responsibilities, projects and performance priorities.</p>
+        <div class="help-centre-reveal">
+          <form class="help-centre-search-card" role="search" novalidate>
+            <label class="visually-hidden" for="help-centre-search-input">Search help categories and popular help questions</label>
+            <div class="help-centre-search-field">
+              <i class="bi bi-search" aria-hidden="true"></i>
+              <input type="search" id="help-centre-search-input"
+                     placeholder="Search help categories and popular help questions"
+                     autocomplete="off" />
+              <button type="button" class="help-centre-search-clear help-centre-is-hidden"
+                      id="helpCentreSearchClear" aria-label="Clear search">
+                <i class="bi bi-x-lg" aria-hidden="true"></i>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </section>
 
     <!-- =========================
-         INDIVIDUAL STORY STRUCTURE
+         HELP CATEGORIES
     ========================== -->
-    <section class="section success-stories-individual" id="success-stories-individual" aria-labelledby="successStoriesIndividualTitle">
+    <section class="section help-centre-categories" id="help-centre-categories" aria-labelledby="helpCentreCategoriesTitle">
       <div class="container-xl">
 
-        <div class="section-head text-center success-stories-reveal">
-          <h2 class="section-title" id="successStoriesIndividualTitle">Individual story structure</h2>
+        <div class="section-head text-center help-centre-reveal">
+          <h2 class="section-title" id="helpCentreCategoriesTitle">Help categories</h2>
         </div>
 
-        <ol class="success-stories-list">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3 g-lg-4">
 
-          <li class="success-stories-row success-stories-reveal">
-            <span class="success-stories-row-num" aria-hidden="true">01</span>
-            <p class="success-stories-row-text">Starting role and development need</p>
+          <div class="col help-centre-reveal">
+            <div class="help-centre-category h-100" data-help-searchable>
+              <span class="help-centre-category-icon"><i class="bi bi-compass" aria-hidden="true"></i></span>
+              <p>Choosing a programme</p>
+              <span class="help-centre-category-num" aria-hidden="true">01</span>
+            </div>
+          </div>
+
+          <div class="col help-centre-reveal help-centre-d1">
+            <div class="help-centre-category h-100" data-help-searchable>
+              <span class="help-centre-category-icon"><i class="bi bi-ui-forms" aria-hidden="true"></i></span>
+              <p>Applications and enrolment</p>
+              <span class="help-centre-category-num" aria-hidden="true">02</span>
+            </div>
+          </div>
+
+          <div class="col help-centre-reveal help-centre-d2">
+            <div class="help-centre-category h-100" data-help-searchable>
+              <span class="help-centre-category-icon"><i class="bi bi-receipt" aria-hidden="true"></i></span>
+              <p>Payments and invoices</p>
+              <span class="help-centre-category-num" aria-hidden="true">03</span>
+            </div>
+          </div>
+
+          <div class="col help-centre-reveal">
+            <div class="help-centre-category h-100" data-help-searchable>
+              <span class="help-centre-category-icon"><i class="bi bi-laptop" aria-hidden="true"></i></span>
+              <p>Learning access</p>
+              <span class="help-centre-category-num" aria-hidden="true">04</span>
+            </div>
+          </div>
+
+          <div class="col help-centre-reveal help-centre-d1">
+            <div class="help-centre-category h-100" data-help-searchable>
+              <span class="help-centre-category-icon"><i class="bi bi-clipboard-data" aria-hidden="true"></i></span>
+              <p>Assessment and results</p>
+              <span class="help-centre-category-num" aria-hidden="true">05</span>
+            </div>
+          </div>
+
+          <div class="col help-centre-reveal help-centre-d2">
+            <div class="help-centre-category h-100" data-help-searchable>
+              <span class="help-centre-category-icon"><i class="bi bi-patch-check" aria-hidden="true"></i></span>
+              <p>Certificates and verification</p>
+              <span class="help-centre-category-num" aria-hidden="true">06</span>
+            </div>
+          </div>
+
+          <div class="col help-centre-reveal">
+            <div class="help-centre-category h-100" data-help-searchable>
+              <span class="help-centre-category-icon"><i class="bi bi-person-badge" aria-hidden="true"></i></span>
+              <p>Membership and renewal</p>
+              <span class="help-centre-category-num" aria-hidden="true">07</span>
+            </div>
+          </div>
+
+          <div class="col help-centre-reveal help-centre-d1">
+            <div class="help-centre-category h-100" data-help-searchable>
+              <span class="help-centre-category-icon"><i class="bi bi-journal-bookmark" aria-hidden="true"></i></span>
+              <p>CPD</p>
+              <span class="help-centre-category-num" aria-hidden="true">08</span>
+            </div>
+          </div>
+
+          <div class="col help-centre-reveal help-centre-d2">
+            <div class="help-centre-category h-100" data-help-searchable>
+              <span class="help-centre-category-icon"><i class="bi bi-calendar-event" aria-hidden="true"></i></span>
+              <p>Events</p>
+              <span class="help-centre-category-num" aria-hidden="true">09</span>
+            </div>
+          </div>
+
+          <div class="col help-centre-reveal">
+            <div class="help-centre-category h-100" data-help-searchable>
+              <span class="help-centre-category-icon"><i class="bi bi-balance" aria-hidden="true"></i></span>
+              <p>Complaints and appeals</p>
+              <span class="help-centre-category-num" aria-hidden="true">10</span>
+            </div>
+          </div>
+
+          <div class="col help-centre-reveal help-centre-d1">
+            <div class="help-centre-category h-100" data-help-searchable>
+              <span class="help-centre-category-icon"><i class="bi bi-shield-lock" aria-hidden="true"></i></span>
+              <p>Privacy and account support</p>
+              <span class="help-centre-category-num" aria-hidden="true">11</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         POPULAR HELP QUESTIONS
+         (document provides questions only — no answers exist,
+          so none were invented; items are informational)
+    ========================== -->
+    <section class="section help-centre-questions" id="help-centre-questions" aria-labelledby="helpCentreQuestionsTitle">
+      <div class="container-xl">
+
+        <div class="section-head text-center help-centre-reveal">
+          <h2 class="section-title" id="helpCentreQuestionsTitle">Popular help questions</h2>
+        </div>
+
+        <ol class="help-centre-questions-list">
+
+          <li class="help-centre-question help-centre-reveal" data-help-searchable>
+            <span class="help-centre-question-num" aria-hidden="true">01</span>
+            <p class="help-centre-question-text">How do I choose the right certification level?</p>
           </li>
 
-          <li class="success-stories-row success-stories-reveal">
-            <span class="success-stories-row-num" aria-hidden="true">02</span>
-            <p class="success-stories-row-text">Reason for choosing the programme</p>
+          <li class="help-centre-question help-centre-reveal" data-help-searchable>
+            <span class="help-centre-question-num" aria-hidden="true">02</span>
+            <p class="help-centre-question-text">How can my employer pay for my programme?</p>
           </li>
 
-          <li class="success-stories-row success-stories-reveal">
-            <span class="success-stories-row-num" aria-hidden="true">03</span>
-            <p class="success-stories-row-text">Learning or certification experience</p>
+          <li class="help-centre-question help-centre-reveal" data-help-searchable>
+            <span class="help-centre-question-num" aria-hidden="true">03</span>
+            <p class="help-centre-question-text">Where can I find assessment deadlines?</p>
           </li>
 
-          <li class="success-stories-row success-stories-reveal">
-            <span class="success-stories-row-num" aria-hidden="true">04</span>
-            <p class="success-stories-row-text">How the learning was applied</p>
+          <li class="help-centre-question help-centre-reveal" data-help-searchable>
+            <span class="help-centre-question-num" aria-hidden="true">04</span>
+            <p class="help-centre-question-text">How do I correct my name before certificate issue?</p>
           </li>
 
-          <li class="success-stories-row success-stories-reveal">
-            <span class="success-stories-row-num" aria-hidden="true">05</span>
-            <p class="success-stories-row-text">Specific result supported by evidence</p>
+          <li class="help-centre-question help-centre-reveal" data-help-searchable>
+            <span class="help-centre-question-num" aria-hidden="true">05</span>
+            <p class="help-centre-question-text">How can I verify a certificate?</p>
           </li>
 
-          <li class="success-stories-row success-stories-reveal">
-            <span class="success-stories-row-num" aria-hidden="true">06</span>
-            <p class="success-stories-row-text">What the person plans to develop next</p>
+          <li class="help-centre-question help-centre-reveal" data-help-searchable>
+            <span class="help-centre-question-num" aria-hidden="true">06</span>
+            <p class="help-centre-question-text">How do I renew membership?</p>
           </li>
 
-          <li class="success-stories-row success-stories-reveal">
-            <span class="success-stories-row-num" aria-hidden="true">07</span>
-            <p class="success-stories-row-text">Consent-approved quotation</p>
+          <li class="help-centre-question help-centre-reveal" data-help-searchable>
+            <span class="help-centre-question-num" aria-hidden="true">07</span>
+            <p class="help-centre-question-text">How do I submit an appeal or complaint?</p>
           </li>
 
         </ol>
 
-      </div>
-    </section>
-
-    <!-- =========================
-         CORPORATE CASE STRUCTURE
-    ========================== -->
-    <section class="section success-stories-corporate" id="success-stories-corporate" aria-labelledby="successStoriesCorporateTitle">
-      <div class="container-xl">
-
-        <div class="section-head text-center success-stories-reveal">
-          <h2 class="section-title" id="successStoriesCorporateTitle">Corporate case structure</h2>
+        <!-- Empty search state — the handbook's own "Empty search" microcopy -->
+        <div class="help-centre-empty help-centre-is-hidden" id="helpCentreEmpty" role="status">
+          <i class="bi bi-search" aria-hidden="true"></i>
+          <p>No matching results were found. Try a broader keyword or browse by professional area.</p>
         </div>
 
-        <ol class="success-stories-list success-stories-list-dark">
-
-          <li class="success-stories-row success-stories-row-dark success-stories-reveal">
-            <span class="success-stories-row-num" aria-hidden="true">01</span>
-            <p class="success-stories-row-text">Organization context and challenge</p>
-          </li>
-
-          <li class="success-stories-row success-stories-row-dark success-stories-reveal">
-            <span class="success-stories-row-num" aria-hidden="true">02</span>
-            <p class="success-stories-row-text">Target roles and desired capability</p>
-          </li>
-
-          <li class="success-stories-row success-stories-row-dark success-stories-reveal">
-            <span class="success-stories-row-num" aria-hidden="true">03</span>
-            <p class="success-stories-row-text">Learning solution and delivery</p>
-          </li>
-
-          <li class="success-stories-row success-stories-row-dark success-stories-reveal">
-            <span class="success-stories-row-num" aria-hidden="true">04</span>
-            <p class="success-stories-row-text">Application and reinforcement</p>
-          </li>
-
-          <li class="success-stories-row success-stories-row-dark success-stories-reveal">
-            <span class="success-stories-row-num" aria-hidden="true">05</span>
-            <p class="success-stories-row-text">Participation and assessment evidence</p>
-          </li>
-
-          <li class="success-stories-row success-stories-row-dark success-stories-reveal">
-            <span class="success-stories-row-num" aria-hidden="true">06</span>
-            <p class="success-stories-row-text">Observed outcomes and limitations</p>
-          </li>
-
-          <li class="success-stories-row success-stories-row-dark success-stories-reveal">
-            <span class="success-stories-row-num" aria-hidden="true">07</span>
-            <p class="success-stories-row-text">Sponsor perspective and next phase</p>
-          </li>
-
-        </ol>
-
       </div>
     </section>
 
     <!-- =========================
-         EVIDENCE STANDARD (CLOSING BAND)
+         CONTACT SUPPORT (CLOSING BAND)
     ========================== -->
-    <section class="success-stories-cta" id="success-stories-evidence" aria-labelledby="successStoriesEvidenceTitle">
+    <section class="help-centre-cta" id="help-centre-contact" aria-labelledby="helpCentreCtaTitle">
       <div class="container-xl">
-        <div class="success-stories-reveal">
-          <h2 id="successStoriesEvidenceTitle">Evidence standard</h2>
-          <p>Use <strong>precise descriptions and verifiable numbers</strong>.</p>
-          <p>Avoid claiming that training alone caused a business result unless the evaluation design supports that conclusion.</p>
-          <p>Do not publish confidential data, client logos or personal details without approval.</p>
+        <div class="help-centre-reveal">
+          <h2 id="helpCentreCtaTitle">Contact support</h2>
+          <p>If the answer is not available, send a support request with your
+          <strong>full name</strong>, <strong>registered email</strong>,
+          <strong>programme or membership details</strong> and a
+          <strong>clear description of the issue</strong>.</p>
+
+          <div class="help-centre-cta-note">
+            <i class="bi bi-shield-lock" aria-hidden="true"></i>
+            <p>Do not send passwords or unnecessary identity documents.</p>
+          </div>
+
+          <a href="#" class="btn btn-light-brand btn-lg mt-2">Submit a Support Request</a>
         </div>
       </div>
     </section>
