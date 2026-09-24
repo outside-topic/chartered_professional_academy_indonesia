@@ -2470,11 +2470,64 @@ const prefersReducedMotion =
     items.forEach(function (el) { observer.observe(el); });
   })();
 
-  /* =====================================================
-     [SHARED] Everything below mirrors script.js behaviour.
-     Delete this block if script.js is already loaded on
-     every page of the site.
-  ===================================================== */
-
   
+})();
+
+
+
+
+
+
+// Faculty and trainer
+
+
+
+
+
+
+(function () {
+  'use strict';
+
+  /* =========================
+     GLOBAL HELPERS
+  ========================= */
+
+  // Enables reveal styles only when JS is available, so no
+  // content is ever hidden for users without JavaScript.
+  document.documentElement.classList.add('faculty-experts-js');
+
+  // Shared reduced-motion preference (respects user settings).
+  var prefersReducedMotion =
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* =========================
+     SCROLL REVEAL JS  (page-specific — always required)
+     Reveals .faculty-experts-reveal blocks as they enter the
+     viewport. Falls back to fully visible without JS or
+     IntersectionObserver support.
+  ========================= */
+  (function scrollReveal() {
+    var items = document.querySelectorAll('.faculty-experts-reveal');
+    if (!items.length) return;
+
+    var showAll = function () {
+      items.forEach(function (el) { el.classList.add('is-visible'); });
+    };
+
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+      showAll();
+      return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    items.forEach(function (el) { observer.observe(el); });
+  })();
 })();
