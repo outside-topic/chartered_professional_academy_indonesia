@@ -2248,3 +2248,89 @@ const prefersReducedMotion =
     });
   })();
 })();
+
+
+
+
+// Success Stories
+
+
+
+
+/* =========================================================
+   SUCCESS STORIES — PAGE SCRIPT (success-stories.js)
+
+   • No inline JavaScript is used anywhere in the page.
+   • Everything is wrapped in ONE IIFE, so this file can
+     never collide with script.js (Home) or any other page
+     script (about, pvm, gqs, wcc, pcert, carea, cpath, acs,
+     crcpd, cfq, pmem, mcat, mben, howjoin, cpd, cpc, cls,
+     custom-training, functional-academies,
+     leadership-development, delivery-evaluation,
+     corporate-proposal, individual-development,
+     short-courses, professional-masterclasses,
+     executive-learning, career-development-pathways,
+     learning-calendar, professional-resources,
+     insights-articles, events-webinars,
+     downloads-guides) — no shared globals.
+
+   • No filtering JavaScript is added: the document defines
+     story STRUCTURES and an evidence standard but lists no
+     actual stories to filter (brief §16).
+
+   INTEGRATION NOTE
+   The [SHARED] sections reproduce the header/topbar/footer
+   behaviours that already exist in script.js. Include this
+   file as-is if script.js is only loaded on the Home page.
+   If script.js is ALREADY loaded on every page, delete the
+   [SHARED] block below and keep only the page-specific
+   SCROLL REVEAL section — it uses the success-stories- hook
+   and never conflicts with the other pages' observers.
+========================================================= */
+
+(function () {
+  'use strict';
+
+  /* =========================
+     GLOBAL HELPERS
+  ========================= */
+
+  // Enables reveal styles only when JS is available, so no
+  // content is ever hidden for users without JavaScript.
+  document.documentElement.classList.add('success-stories-js');
+
+  // Shared reduced-motion preference (respects user settings).
+  var prefersReducedMotion =
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* =========================
+     SCROLL REVEAL JS  (page-specific — always required)
+     Reveals .success-stories-reveal blocks as they enter the
+     viewport. Falls back to fully visible without JS or
+     IntersectionObserver support.
+  ========================= */
+  (function scrollReveal() {
+    var items = document.querySelectorAll('.success-stories-reveal');
+    if (!items.length) return;
+
+    var showAll = function () {
+      items.forEach(function (el) { el.classList.add('is-visible'); });
+    };
+
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+      showAll();
+      return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    items.forEach(function (el) { observer.observe(el); });
+  })();
+})();
