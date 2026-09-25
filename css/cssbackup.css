@@ -2721,7 +2721,7 @@ a {
 /* =========================================================
    GOVERNANCE, QUALITY & STANDARDS — PAGE-SPECIFIC STYLESHEET
 
-   • Every custom class uses the "gqs-" prefix.
+   • Every custom class uses the "-" prefix.
    • Depends on the shared site stylesheet (style.css) for CSS
      variables, base typography, buttons, header/topbar and
      footer components. No global styles are modified.
