@@ -463,6 +463,14 @@ a {
     padding: .5rem .75rem;
 }
 
+.colors{
+    color: #000 !important;
+    
+}
+.colors:hover{
+    background: var(--primary-tint) !important;
+    color: var(--primary-dark) !important;
+}
 .dropdown-item:hover,
 .dropdown-item:focus {
     background: var(--primary-tint);
@@ -4503,7 +4511,8 @@ a {
 .carea-filters {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 15px;
+    border-radius: 15px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -5740,27 +5749,6 @@ a {
 
 
 
-/* =========================================================
-   CERTIFICATION RENEWAL & CPD — PAGE-SPECIFIC STYLESHEET
-
-   • Every custom class uses the "crcpd-" prefix.
-   • Depends on the shared site stylesheet (style.css) for CSS
-     variables, base typography, buttons, header/topbar and
-     footer components. No global styles are modified.
-   • Mobile-first. Hardened for 430px and below.
-
-   SECTIONS
-   01. PAGE SCOPE & ACTIVE NAV STATE
-   02. HERO
-   03. KEEPING PROFESSIONAL RECOGNITION CURRENT
-   04. TYPICAL RENEWAL EVIDENCE
-   05. SUGGESTED CPD CATEGORIES
-   06. CPD QUALITY
-   07. LAPSED CREDENTIALS
-   08. SCROLL REVEAL
-   09. REDUCED MOTION
-   10. SMALL SCREEN HARDENING (≤575px / ≤430px)
-========================================================= */
 
 
 /* =========================
