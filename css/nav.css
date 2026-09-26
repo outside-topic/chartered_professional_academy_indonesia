@@ -1,0 +1,1104 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-height: 300vh;
+
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background: #f7f7fa;
+
+    color: #070940;
+}
+
+
+/* =========================================================
+   FLOATING NAVBAR
+========================================================= */
+
+.create_cust_navbar {
+
+    position: fixed;
+
+    top: 50px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: calc(100% - 30px);
+    max-width: 720px;
+
+    min-height: 65px;
+
+    padding: 9px 10px 9px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 38.19%,
+            rgba(255, 255, 255, 0.8) 100%
+        );
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border: 0.5px solid rgba(255, 255, 255, 0.9);
+
+    border-radius: 999px;
+
+    box-shadow:
+        0px 4px 60px 0px #0709402E;
+
+    z-index: 1050;
+
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.create_nav_logo {
+
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    text-decoration: none;
+
+}
+
+
+.create_nav_logo img {
+
+    display: block;
+
+    width: 55px;
+    height: auto;
+
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
+
+.create_nav_links {
+
+    display: flex;
+    align-items: center;
+
+    gap: 3px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+}
+
+
+.create_nav_item {
+
+    position: relative;
+
+}
+
+
+/* =========================================================
+   NAV LINK
+========================================================= */
+
+.create_nav_link {
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 11px 16px;
+
+    border: 0;
+
+    border-radius: 999px;
+
+    background: transparent;
+
+    color: #070940;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    line-height: 1;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+.create_nav_link:hover {
+
+    background: #070940;
+
+    color: #ffffff;
+
+}
+
+
+/* =========================================================
+   MEGA MENU TRIGGER
+========================================================= */
+
+.create_mega_trigger i {
+
+    font-size: 9px;
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+.create_has_mega:hover
+.create_mega_trigger i {
+
+    transform: rotate(180deg);
+
+}
+
+
+/* =========================================================
+   MEGA MENU
+========================================================= */
+
+.create_mega_menu {
+
+    position: absolute;
+
+    top: calc(100% + 15px);
+
+    left: 50%;
+
+    width: 500px;
+
+    padding: 25px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+
+    transform:
+        translateX(-50%)
+        translateY(10px);
+
+    background:
+        rgba(255, 255, 255, 0.96);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border:
+        1px solid rgba(7, 9, 64, 0.07);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 70px rgba(7, 9, 64, 0.13);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease,
+        transform 0.3s ease;
+
+    z-index: 20;
+
+}
+
+
+/* Mega menu little arrow */
+
+.create_mega_menu::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -7px;
+    left: 50%;
+
+    width: 14px;
+    height: 14px;
+
+    background: #ffffff;
+
+    transform: translateX(-50%) rotate(45deg);
+
+    border-left:
+        1px solid rgba(7, 9, 64, 0.05);
+
+    border-top:
+        1px solid rgba(7, 9, 64, 0.05);
+
+}
+
+
+/* Show mega menu */
+
+.create_has_mega:hover
+.create_mega_menu {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+
+}
+
+
+/* =========================================================
+   MEGA MENU COLUMN
+========================================================= */
+
+.create_mega_column {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+
+}
+
+
+.create_mega_title {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    padding-left: 10px;
+
+    color: #8a8b9c;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+
+    text-transform: uppercase;
+
+}
+
+
+/* =========================================================
+   MEGA MENU LINKS
+========================================================= */
+
+.create_mega_column a {
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 9px 10px;
+
+    border-radius: 12px;
+
+    color: #070940;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.25s ease,
+        padding-left 0.25s ease;
+
+}
+
+
+.create_mega_column a:hover {
+
+    padding-left: 15px;
+
+    background: #f3f4f8;
+
+}
+
+
+/* =========================================================
+   MEGA MENU ICON
+========================================================= */
+
+.create_mega_icon {
+
+    width: 32px;
+    height: 32px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: #f2f3f7;
+
+    color: #070940;
+
+    font-size: 12px;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease;
+
+}
+
+
+.create_mega_column a:hover
+.create_mega_icon {
+
+    background: #070940;
+
+    color: #ffffff;
+
+}
+
+
+/* =========================================================
+   CONTACT NAV ITEM
+========================================================= */
+
+.create_contact_item
+.create_nav_link {
+
+    padding-right: 8px;
+
+}
+
+
+/* Contact icon */
+
+.create_contact_icon {
+
+    width: 27px;
+    height: 27px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f1f2f6;
+
+    color: #070940;
+
+    transition:
+        background-color 0.3s ease;
+
+}
+
+
+.create_contact_item:hover
+.create_contact_icon {
+
+    background: rgba(255, 255, 255, 0.15);
+
+}
+
+
+.create_contact_icon i {
+
+    font-size: 10px;
+
+    transition:
+        transform 0.35s cubic-bezier(.2,.8,.2,1);
+
+}
+
+
+.create_contact_item:hover
+.create_contact_icon i {
+
+    transform:
+        rotate(25deg)
+        translate(1px, -1px);
+
+}
+
+
+/* =========================================================
+   NAV TOGGLE
+========================================================= */
+
+.create_nav_toggle {
+
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    padding: 0;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background: #070940;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+
+}
+
+
+.create_nav_toggle:hover {
+
+    background: #171a67;
+
+    transform: rotate(8deg);
+
+}
+
+
+.create_nav_toggle span {
+
+    display: block;
+
+    width: 17px;
+    height: 1.5px;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+/* =========================================================
+   OFFCANVAS
+========================================================= */
+
+.create_nav_offcanvas {
+
+    width: min(420px, 90vw) !important;
+
+    border: 0 !important;
+
+    border-radius: 30px 0 0 30px;
+
+    background: #ffffff;
+
+    box-shadow:
+        -20px 0 70px rgba(7, 9, 64, 0.12);
+
+}
+
+
+/* =========================================================
+   OFFCANVAS HEADER
+========================================================= */
+
+.create_offcanvas_header {
+
+    padding:
+        25px
+        25px
+        15px;
+
+}
+
+
+.create_offcanvas_logo {
+
+    width: 90px;
+
+    height: auto;
+
+    display: block;
+
+}
+
+
+.create_offcanvas_close {
+
+    width: 32px;
+    height: 32px;
+
+    padding: 0;
+
+    opacity: 0.7;
+
+}
+
+
+/* =========================================================
+   OFFCANVAS BODY
+========================================================= */
+
+.create_offcanvas_body {
+
+    display: flex;
+    flex-direction: column;
+
+    padding:
+        15px
+        25px
+        30px;
+
+}
+
+
+/* =========================================================
+   OFFCANVAS NAV
+========================================================= */
+
+.create_offcanvas_nav {
+
+    list-style: none;
+
+    margin: 10px 0 0;
+    padding: 0;
+
+}
+
+
+.create_offcanvas_nav > li {
+
+    border-bottom:
+        1px solid #eeeeF3;
+
+}
+
+
+/* =========================================================
+   OFFCANVAS MAIN LINKS
+========================================================= */
+
+.create_offcanvas_nav > li > a {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    padding: 17px 5px;
+
+    color: #070940;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition:
+        padding-left 0.25s ease,
+        color 0.25s ease;
+
+}
+
+
+.create_offcanvas_nav > li > a:hover {
+
+    padding-left: 12px;
+
+    color: #171a67;
+
+}
+
+
+.create_offcanvas_nav > li > a > i {
+
+    font-size: 10px;
+
+    opacity: 0;
+
+    transform: translateX(-5px);
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+
+}
+
+
+.create_offcanvas_nav > li > a:hover > i {
+
+    opacity: 1;
+
+    transform: translateX(0);
+
+}
+
+
+/* =========================================================
+   OFFCANVAS DROPDOWN
+========================================================= */
+
+.create_offcanvas_dropdown_btn {
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 17px 5px;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #070940;
+
+    font-family: inherit;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    text-align: left;
+
+    cursor: pointer;
+
+}
+
+
+.create_offcanvas_dropdown_btn i {
+
+    font-size: 10px;
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+.create_offcanvas_dropdown_btn:not(.collapsed) i {
+
+    transform: rotate(180deg);
+
+}
+
+
+/* =========================================================
+   OFFCANVAS SUBMENU
+========================================================= */
+
+.create_offcanvas_submenu {
+
+    padding:
+        0
+        0
+        12px
+        15px;
+
+}
+
+
+.create_offcanvas_submenu a {
+
+    display: block;
+
+    padding: 10px 5px;
+
+    color: #7c7e90;
+
+    font-size: 14px;
+
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease,
+        padding-left 0.25s ease;
+
+}
+
+
+.create_offcanvas_submenu a:hover {
+
+    padding-left: 10px;
+
+    color: #070940;
+
+}
+
+
+/* =========================================================
+   OFFCANVAS CONTACT
+========================================================= */
+
+.create_offcanvas_contact a {
+
+    margin-top: 10px;
+    margin-bottom: 5px;
+
+    padding:
+        15px
+        12px !important;
+
+    border-radius: 14px;
+
+    background: #070940;
+
+    color: #ffffff !important;
+
+}
+
+
+.create_offcanvas_contact a:hover {
+
+    padding-left: 17px !important;
+
+}
+
+
+.create_offcanvas_contact_icon {
+
+    width: 27px;
+    height: 27px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.12);
+
+}
+
+
+.create_offcanvas_contact_icon i {
+
+    font-size: 10px;
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+.create_offcanvas_contact a:hover
+.create_offcanvas_contact_icon i {
+
+    transform:
+        rotate(25deg);
+
+}
+
+
+/* =========================================================
+   OFFCANVAS BOTTOM
+========================================================= */
+
+.create_offcanvas_bottom {
+
+    margin-top: auto;
+
+    padding-top: 50px;
+
+}
+
+
+.create_offcanvas_bottom p {
+
+    margin-bottom: 18px;
+
+    color: #8a8b9c;
+
+    font-size: 13px;
+
+}
+
+
+.create_offcanvas_socials {
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+
+.create_offcanvas_socials a {
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f3f4f7;
+
+    color: #070940;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+
+}
+
+
+.create_offcanvas_socials a:hover {
+
+    background: #070940;
+
+    color: #ffffff;
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+
+    .create_cust_navbar {
+
+        top: 20px;
+
+        width: calc(100% - 24px);
+
+        padding:
+            9px
+            10px
+            9px
+            18px;
+
+    }
+
+
+    /* Hide desktop navigation */
+
+    .create_nav_links {
+
+        display: none;
+
+    }
+
+
+    .create_nav_logo img {
+
+        width: 75px;
+
+    }
+
+
+    .create_nav_toggle {
+
+        width: 44px;
+        height: 44px;
+
+    }
+
+
+    /* Mega menu isn't needed */
+
+    .create_mega_menu {
+
+        display: none !important;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+
+    .create_cust_navbar {
+
+        top: 15px;
+
+        width: calc(100% - 20px);
+
+        min-height: 58px;
+
+        padding:
+            7px
+            8px
+            7px
+            15px;
+
+    }
+
+
+    .create_nav_logo img {
+
+        width: 70px;
+
+    }
+
+
+    .create_nav_toggle {
+
+        width: 42px;
+        height: 42px;
+
+    }
+
+
+    .create_nav_toggle span {
+
+        width: 16px;
+
+    }
+
+
+    .create_nav_offcanvas {
+
+        width: 88vw !important;
+
+        border-radius:
+            25px
+            0
+            0
+            25px;
+
+    }
+
+
+    .create_offcanvas_header {
+
+        padding:
+            22px
+            20px
+            15px;
+
+    }
+
+
+    .create_offcanvas_body {
+
+        padding:
+            10px
+            20px
+            25px;
+
+    }
+
+
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 360px) {
+
+
+    .create_cust_navbar {
+
+        width: calc(100% - 16px);
+
+        padding-left: 12px;
+
+    }
+
+
+    .create_nav_logo img {
+
+        width: 65px;
+
+    }
+
+
+    .create_nav_toggle {
+
+        width: 40px;
+        height: 40px;
+
+    }
+
+
+    .create_nav_offcanvas {
+
+        width: 92vw !important;
+
+    }
+
+}

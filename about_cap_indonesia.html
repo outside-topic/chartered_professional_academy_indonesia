@@ -19,19 +19,23 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
 
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" >
+
   <!-- SHARED site stylesheet (variables, base, buttons, header/topbar, footer — unchanged from Home) -->
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="./css/nav.css">
   <link rel="stylesheet" href="css/responsive.css" />
 </head>
 <body id="top" class="about-cpa-page">
   <!-- =========================
      TOP ANNOUNCEMENT BAR
 ========================== -->
-    <div class="topbar" role="region" aria-label="Announcements and utility navigation">
+    <!-- <div class="topbar" role="region" aria-label="Announcements and utility navigation">
         <div class="container-xl">
             <div class="topbar-inner">
 
-                <!-- Rotating messages (unchanged) -->
+                
                 <div class="topbar-message d-flex align-items-center">
                     <div class="topbar-marquee">
                         <div class="topbar-marquee-content">
@@ -49,7 +53,6 @@
                             <span>•</span>
                            
 
-                            <!-- Duplicate for seamless infinite loop -->
                             <span>New certification intakes now open  View upcoming programmes</span>
                             <span>•</span>
                             <span>Build a customized learning programme for your team  Speak with our corporate learning team</span>
@@ -66,10 +69,10 @@
                     </div>
                 </div>
 
-                <!-- Utility + section quick menus -->
+               
                 <nav class="topbar-utility d-none d-sm-block" aria-label="Utility and quick navigation">
 
-                    <!-- Moved from main navbar (desktop only) -->
+                    
                     <div class="topbar-menus d-none d-xl-flex ">
 
                         <div class="dropdown topbar-drop">
@@ -154,10 +157,10 @@
                 </nav>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
-    <header class="site-header" id="siteHeader">
+    <!-- <header class="site-header" id="siteHeader">
         <div class="container-xl">
             <nav class="navbar navbar-expand-xl" aria-label="Main navigation">
 
@@ -172,7 +175,7 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
 
-                        <!-- About -->
+                       
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">About</a>
@@ -187,7 +190,7 @@
                             </ul>
                         </li>
 
-                        <!-- Certifications — mobile menu only (desktop: topbar) -->
+                        
                         <li class="nav-item dropdown d-xl-none">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">Certifications</a>
@@ -206,7 +209,7 @@
                             </ul>
                         </li>
 
-                        <!-- Membership — mobile menu only (desktop: topbar) -->
+                        
                         <li class="nav-item dropdown d-xl-none">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">Membership</a>
@@ -222,7 +225,7 @@
                             </ul>
                         </li>
 
-                        <!-- Corporate Training -->
+                        
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">Corporate Training</a>
@@ -242,7 +245,7 @@
                             </ul>
                         </li>
 
-                        <!-- Professional Development -->
+                        
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">Professional Development</a>
@@ -258,7 +261,7 @@
                             </ul>
                         </li>
 
-                        <!-- Resources — mobile menu only (desktop: topbar) -->
+                        
                         <li class="nav-item dropdown d-xl-none">
                             <a class="nav-link dropdown-toggle" href="professional_resources.html" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">Resources</a>
@@ -272,7 +275,7 @@
                             </ul>
                         </li>
 
-                        <!-- Partners — mobile menu only (desktop: topbar) -->
+                       
                         <li class="nav-item dropdown d-xl-none">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">Partners</a>
@@ -295,20 +298,380 @@
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
 
-                    <!-- Header buttons — mobile menu (unchanged) -->
+                   
                     <div class="d-flex d-xl-none gap-2 mt-3 pt-3">
                         <a href="#" class="btn btn-outline-brand btn-sm"><i class="bi bi-person me-2"></i>LMS Login</a>
                     </div>
                 </div>
 
-                <!-- Header buttons — desktop (unchanged) -->
+                
                 <div class="d-none d-xl-flex align-items-center gap-2 ms-3">
                     <a href="#" class="btn btn-outline-brand btn-sm"><i class="bi bi-person me-2"></i>LMS Login</a>
                 </div>
 
             </nav>
         </div>
-    </header>
+    </header> -->
+
+    <!-- =====================================================
+         FLOATING NAVBAR
+    ====================================================== -->
+
+    <nav class="create_cust_navbar">
+
+        <!-- Logo -->
+        <a href="#" class="create_nav_logo">
+            <img src="./demo_logo.png" alt="Logo">
+        </a>
+
+
+        <!-- Desktop Navigation -->
+        <ul class="create_nav_links">
+
+
+            <!-- About -->
+            <li class="create_nav_item">
+
+                <a href="#" class="create_nav_link">
+                    <span>About</span>
+                </a>
+
+            </li>
+
+
+            <!-- Services + Mega Menu -->
+            <li class="create_nav_item create_has_mega">
+
+                <button
+                    type="button"
+                    class="create_nav_link create_mega_trigger"
+                >
+
+                    <span>Services</span>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </button>
+
+
+                <!-- Mega Menu -->
+                <div class="create_mega_menu">
+
+
+                    <!-- Column 1 -->
+                    <div class="create_mega_column">
+
+                        <span class="create_mega_title">
+                            Development
+                        </span>
+
+                        <a href="#">
+                            <span class="create_mega_icon">
+                                <i class="fa-solid fa-code"></i>
+                            </span>
+
+                            Web Development
+                        </a>
+
+                        <a href="#">
+                            <span class="create_mega_icon">
+                                <i class="fa-brands fa-laravel"></i>
+                            </span>
+
+                            Laravel Development
+                        </a>
+
+                        <a href="#">
+                            <span class="create_mega_icon">
+                                <i class="fa-brands fa-react"></i>
+                            </span>
+
+                            React Development
+                        </a>
+
+                    </div>
+
+
+                    <!-- Column 2 -->
+                    <div class="create_mega_column">
+
+                        <span class="create_mega_title">
+                            Design
+                        </span>
+
+                        <a href="#">
+                            <span class="create_mega_icon">
+                                <i class="fa-solid fa-pen-ruler"></i>
+                            </span>
+
+                            UI/UX Design
+                        </a>
+
+                        <a href="#">
+                            <span class="create_mega_icon">
+                                <i class="fa-solid fa-palette"></i>
+                            </span>
+
+                            Website Design
+                        </a>
+
+                        <a href="#">
+                            <span class="create_mega_icon">
+                                <i class="fa-solid fa-layer-group"></i>
+                            </span>
+
+                            Landing Pages
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </li>
+
+
+            <!-- Contact -->
+            <li class="create_nav_item create_contact_item">
+
+                <a href="#" class="create_nav_link">
+
+                    <span>Contact</span>
+
+                    <span class="create_contact_icon">
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </span>
+
+                </a>
+
+            </li>
+
+
+        </ul>
+
+
+        <!-- Offcanvas Toggle -->
+        <button
+            class="create_nav_toggle"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#createNavOffcanvas"
+            aria-controls="createNavOffcanvas"
+            aria-label="Open navigation"
+        >
+
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </nav>
+
+
+
+
+    <!-- =====================================================
+         BOOTSTRAP OFFCANVAS
+    ====================================================== -->
+
+    <div
+        class="offcanvas offcanvas-end create_nav_offcanvas"
+        tabindex="-1"
+        id="createNavOffcanvas"
+        aria-labelledby="createNavOffcanvasLabel"
+    >
+
+
+        <!-- Offcanvas Header -->
+        <div class="offcanvas-header create_offcanvas_header">
+
+            <a href="#">
+                <img
+                    src="./demo_logo.png"
+                    alt="Logo"
+                    class="create_offcanvas_logo"
+                >
+            </a>
+
+            <button
+                type="button"
+                class="btn-close create_offcanvas_close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+            ></button>
+
+        </div>
+
+
+
+        <!-- Offcanvas Body -->
+        <div class="offcanvas-body create_offcanvas_body">
+
+
+            <ul class="create_offcanvas_nav">
+
+
+                <!-- Home -->
+                <li>
+
+                    <a href="#">
+                        <span>Home</span>
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </li>
+
+
+                <!-- About -->
+                <li>
+
+                    <a href="#">
+                        <span>About</span>
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </li>
+
+
+                <!-- Services Dropdown -->
+                <li class="create_offcanvas_dropdown">
+
+
+                    <button
+                        type="button"
+                        class="create_offcanvas_dropdown_btn collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#createServicesDropdown"
+                        aria-expanded="false"
+                        aria-controls="createServicesDropdown"
+                    >
+
+                        <span>Services</span>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </button>
+
+
+                    <div
+                        class="collapse"
+                        id="createServicesDropdown"
+                    >
+
+                        <div class="create_offcanvas_submenu">
+
+                            <a href="#">
+                                Web Development
+                            </a>
+
+                            <a href="#">
+                                Laravel Development
+                            </a>
+
+                            <a href="#">
+                                React Development
+                            </a>
+
+                            <a href="#">
+                                UI/UX Design
+                            </a>
+
+                            <a href="#">
+                                Website Design
+                            </a>
+
+                            <a href="#">
+                                Landing Pages
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                </li>
+
+
+                <!-- Portfolio -->
+                <li>
+
+                    <a href="#">
+                        <span>Portfolio</span>
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </li>
+
+
+                <!-- Blog -->
+                <li>
+
+                    <a href="#">
+                        <span>Blog</span>
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </li>
+
+
+                <!-- Contact -->
+                <li class="create_offcanvas_contact">
+
+                    <a href="#">
+
+                        <span>Contact</span>
+
+                        <span class="create_offcanvas_contact_icon">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </span>
+
+                    </a>
+
+                </li>
+
+
+            </ul>
+
+
+            <!-- Bottom information -->
+            <div class="create_offcanvas_bottom">
+
+                <p>
+                    Let's build something meaningful.
+                </p>
+
+                <div class="create_offcanvas_socials">
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
 
   <main id="main">
 
