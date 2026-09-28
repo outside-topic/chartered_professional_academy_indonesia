@@ -1,13 +1,13 @@
 :root {
-    --primary-color: #ff0000;
-    --secondary-color: #ffffff;
+    --primary-color: #082340;
+    --secondary-color: #b29750;
 
     /* Brand-derived shades */
-    --primary-dark: #cc0000;
-    --primary-darker: #8f0000;
-    --primary-tint: #fff1f1;
-    --primary-tint-2: #ffdede;
-    --primary-soft: #ff6b6b;
+    --primary-dark: #061a30;
+    --primary-darker: #04111f;
+    --primary-tint: #eef3f8;
+    --primary-tint-2: #dce7f1;
+    --primary-soft: #3d5d7c;
 
     /* Neutrals */
     --ink: #12161c;
@@ -17,8 +17,8 @@
     --line: #e8eaef;
 
     /* Dark surfaces */
-    --dark-bg: #0b0e13;
-    --dark-bg-2: #12161e;
+    --dark-bg: #082340;
+    --dark-bg-2: #0d1b2a;
     --dark-card: rgba(255, 255, 255, .045);
     --dark-border: rgba(255, 255, 255, .09);
     --dark-text: #aab3bf;
@@ -31,10 +31,13 @@
     --radius-lg: 22px;
     --radius-md: 16px;
     --radius-sm: 12px;
-    --shadow-sm: 0 6px 18px rgba(18, 22, 28, .07);
-    --shadow-md: 0 14px 34px rgba(18, 22, 28, .10);
-    --shadow-lg: 0 26px 64px rgba(18, 22, 28, .16);
-    --shadow-red: 0 14px 30px rgba(255, 0, 0, .28);
+
+    --shadow-sm: 0 6px 18px rgba(8, 35, 64, .07);
+    --shadow-md: 0 14px 34px rgba(8, 35, 64, .10);
+    --shadow-lg: 0 26px 64px rgba(178, 151, 80, .16);
+
+    /* Brand shadow */
+    --shadow-primary: 0 14px 30px rgba(8, 35, 64, .28);
 }
 
 
@@ -86,6 +89,9 @@ a {
     border-radius: 4px;
 }
 
+.navbar{
+    padding: 0px;
+}
 
 /* =========================
    3. SHARED COMPONENTS
@@ -160,7 +166,7 @@ a {
     background: var(--primary-color);
     border: 1px solid var(--primary-color);
     color: var(--secondary-color);
-    box-shadow: 0 10px 24px rgba(255, 0, 0, .22);
+    box-shadow: 0 10px 24px rgba(8, 35, 64, .22);
 }
 
 .btn-brand:hover,
@@ -380,7 +386,7 @@ a {
 }
 
 .navbar-toggler:focus {
-    box-shadow: 0 0 0 3px rgba(255, 0, 0, .25);
+    box-shadow: 0 0 0 3px rgba(8, 35, 64, .25);
 }
 
 /* Brand */
@@ -397,7 +403,7 @@ a {
     font-family: var(--font-head);
     font-weight: 800;
     font-size: .95rem;
-    box-shadow: 0 8px 18px rgba(255, 0, 0, .28);
+    box-shadow: 0 8px 18px rgba(8, 35, 64, .28);
 }
 
 .brand-text {
@@ -544,7 +550,7 @@ a {
     width: 640px;
     height: 640px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 0, 0, .30), transparent 65%);
+    background: radial-gradient(circle, rgba(178, 151, 80, .30), transparent 65%);
 }
 
 .hero::after {
@@ -666,66 +672,7 @@ a {
     animation: fadeUp .8s cubic-bezier(.22, .61, .36, 1) both;
 }
 
-.hero-anim-2 {
-    animation-delay: .18s;
-}
 
-/* Credential placeholder visual */
-.hero-visual {
-    position: relative;
-    max-width: 460px;
-    margin: 0 auto;
-    padding: 28px 0 44px;
-}
-
-.cert-card {
-    position: relative;
-    background: var(--secondary-color);
-    border-top: 6px solid var(--primary-color);
-    border-radius: var(--radius-lg);
-    padding: 26px;
-    color: var(--ink);
-    box-shadow: 0 30px 70px rgba(0, 0, 0, .45);
-}
-
-.cert-head {
-    display: flex;
-    align-items: center;
-    gap: .85rem;
-    margin-bottom: 20px;
-}
-
-.cert-seal {
-    width: 52px;
-    height: 52px;
-    flex: 0 0 auto;
-    border-radius: 50%;
-    background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
-    color: var(--secondary-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.4rem;
-    box-shadow: 0 10px 22px rgba(255, 0, 0, .35);
-}
-
-.cert-title {
-    font-family: var(--font-head);
-    font-weight: 800;
-    font-size: 1.1rem;
-    line-height: 1.2;
-    color: var(--ink);
-    margin: 0;
-}
-
-.cert-sub {
-    font-size: .66rem;
-    font-weight: 600;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin: 2px 0 0;
-}
 
 .cert-line {
     height: 10px;
@@ -746,65 +693,7 @@ a {
     width: 58%;
 }
 
-.cert-tagline {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: .5rem;
-    margin: 20px 0 0;
-    padding-top: 16px;
-    border-top: 1px dashed var(--line);
-    font-family: var(--font-head);
-    font-weight: 700;
-    font-size: .8rem;
-    color: var(--ink);
-}
 
-.cert-tagline .dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--primary-color);
-    display: inline-block;
-}
-
-.float-orb {
-    position: absolute;
-    top: 4px;
-    right: -4px;
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
-    border: 4px solid var(--dark-bg);
-    color: var(--secondary-color);
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 16px 34px rgba(255, 0, 0, .4);
-}
-
-.float-badge {
-    position: absolute;
-    left: -6px;
-    bottom: 6px;
-    display: flex;
-    align-items: center;
-    gap: .55rem;
-    background: var(--secondary-color);
-    color: var(--ink);
-    border-radius: 999px;
-    padding: .6rem 1rem;
-    font-weight: 700;
-    font-size: .82rem;
-    box-shadow: 0 16px 36px rgba(0, 0, 0, .35);
-}
-
-.float-badge .bi {
-    color: var(--primary-color);
-    font-size: 1.1rem;
-}
 
 @keyframes floatY {
 
@@ -818,9 +707,7 @@ a {
     }
 }
 
-.float-badge {
-    animation: floatY 5s ease-in-out infinite;
-}
+
 
 
 /* =========================
@@ -878,7 +765,7 @@ a {
 .grow-card:hover .grow-icon {
     background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
     color: var(--secondary-color);
-    box-shadow: 0 12px 24px rgba(255, 0, 0, .3);
+    box-shadow: 0 12px 24px rgba(8, 35, 64, .3);
 }
 
 .grow-card h3 {
@@ -919,7 +806,7 @@ a {
     bottom: -34px;
     font-size: 170px;
     line-height: 1;
-    color: rgba(255, 0, 0, .08);
+    color: rgba(8, 35, 64, .08);
     pointer-events: none;
 }
 
@@ -1031,7 +918,7 @@ a {
     width: 520px;
     height: 520px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 0, 0, .22), transparent 65%);
+    background: radial-gradient(circle, rgba(178, 151, 80, .22), transparent 65%);
 }
 
 .corporate .container-xl {
@@ -1080,7 +967,7 @@ a {
 }
 
 .delivery-item:hover {
-    border-color: rgba(255, 0, 0, .5);
+    border-color: rgba(178, 151, 80, .5);
     transform: translateX(6px);
 }
 
@@ -1089,8 +976,8 @@ a {
     width: 46px;
     height: 46px;
     border-radius: 12px;
-    background: rgba(255, 0, 0, .16);
-    color: var(--primary-soft);
+    background: rgba(178, 151, 80, 1);
+    color: var(--primary-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1135,9 +1022,9 @@ a {
     font-weight: 700;
     letter-spacing: .14em;
     text-transform: uppercase;
-    color: var(--primary-soft);
-    background: rgba(255, 0, 0, .12);
-    border: 1px solid rgba(255, 0, 0, .3);
+    color: var(--primary-color);
+    background: rgba(178, 151, 80, 1);
+    border: 1px solid rgba(178, 151, 80, .3);
     border-radius: 999px;
     padding: .4rem .8rem;
     margin-bottom: 18px;
@@ -1161,7 +1048,7 @@ a {
     align-items: center;
     justify-content: center;
     font-size: 1.4rem;
-    box-shadow: 0 10px 22px rgba(255, 0, 0, .35);
+    box-shadow: 0 10px 22px rgba(178, 151, 80, .35);
 }
 
 .member-name {
@@ -1248,7 +1135,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .25);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .25);
 }
 
 .step-icon {
@@ -1334,7 +1221,7 @@ a {
 /* Footer CTA + newsletter panel */
 .footer-cta-panel {
     background: linear-gradient(180deg, rgba(255, 0, 0, .10), rgba(255, 0, 0, .02));
-    border: 1px solid rgba(255, 0, 0, .28);
+    border: 1px solid rgba(8, 35, 64, .28);
     border-radius: var(--radius-lg);
     padding: 34px 28px;
     margin: 56px 0;
@@ -1395,7 +1282,7 @@ a {
 .newsletter-field input:focus {
     outline: 0;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(255, 0, 0, .2);
+    box-shadow: 0 0 0 3px rgba(178, 151, 80, .2);
 }
 
 .newsletter-note {
@@ -1431,7 +1318,7 @@ a {
 }
 
 .footer-contact .bi {
-    color: var(--primary-soft);
+    color: var(--secondary-color);
     margin-top: .2rem;
     flex: 0 0 auto;
 }
@@ -1574,8 +1461,8 @@ a {
     letter-spacing: .14em;
     text-transform: uppercase;
     color: var(--primary-soft);
-    background: rgba(255, 0, 0, .12);
-    border: 1px solid rgba(255, 0, 0, .3);
+    background: rgba(178, 151, 80, .12);
+    border: 1px solid rgba(178, 151, 80, .3);
     border-radius: 999px;
     padding: .4rem .8rem;
     margin-bottom: 18px;
@@ -1599,7 +1486,7 @@ a {
     align-items: center;
     justify-content: center;
     font-size: 1.4rem;
-    box-shadow: 0 10px 22px rgba(255, 0, 0, .35);
+    box-shadow: 0 10px 22px rgba(178, 151, 80, .35);
 }
 
 .about-cpa-brand-name {
@@ -1755,7 +1642,7 @@ a {
 .about-cpa-do-card:hover .about-cpa-do-icon {
     background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
     color: var(--secondary-color);
-    box-shadow: 0 12px 24px rgba(255, 0, 0, .3);
+    box-shadow: 0 12px 24px rgba(178, 151, 80, .3);
 }
 
 .about-cpa-do-card p {
@@ -1829,7 +1716,7 @@ a {
     width: 520px;
     height: 520px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 0, 0, .2), transparent 65%);
+    background: radial-gradient(circle, rgba(178, 151, 80, .2), transparent 65%);
 }
 
 .about-cpa-approach .container-xl {
@@ -1867,7 +1754,7 @@ a {
     top: 52px;
     bottom: 2px;
     width: 2px;
-    background: linear-gradient(180deg, rgba(255, 0, 0, .55), rgba(255, 255, 255, .08));
+    background: linear-gradient(180deg, rgba(178, 151, 80, .55), rgba(255, 255, 255, .08));
 }
 
 .about-cpa-step:last-child::before {
@@ -1889,7 +1776,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .28);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .28);
 }
 
 .about-cpa-step-text {
@@ -2076,8 +1963,8 @@ a {
 
 .pvm-nav-pill:hover {
     color: var(--secondary-color);
-    border-color: rgba(255, 0, 0, .5);
-    background: rgba(255, 0, 0, .08);
+    border-color: rgba(178, 151, 80, .5);
+    background: rgba(178, 151, 80, .08);
     transform: translateY(-2px);
 }
 
@@ -2152,7 +2039,7 @@ a {
     width: 560px;
     height: 560px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 0, 0, .22), transparent 65%);
+    background: radial-gradient(circle, rgba(178, 151, 80, .22), transparent 65%);
 }
 
 .pvm-vision .container-xl {
@@ -2199,7 +2086,7 @@ a {
     align-items: center;
     justify-content: center;
     font-size: 1.4rem;
-    box-shadow: 0 14px 30px rgba(255, 0, 0, .35);
+    box-shadow: 0 14px 30px rgba(178, 151, 80, .35);
 }
 
 .pvm-vision-label {
@@ -2225,7 +2112,7 @@ a {
 
 .pvm-hl-dark {
     color: var(--primary-soft);
-    background: rgba(255, 0, 0, .14);
+    background: rgba(178, 151, 80, .14);
     padding: .04em .18em;
     border-radius: .35em;
     -webkit-box-decoration-break: clone;
@@ -2286,7 +2173,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .25);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .25);
 }
 
 .pvm-mission-icon {
@@ -2360,7 +2247,7 @@ a {
     justify-content: center;
     font-size: 1.45rem;
     margin-bottom: 1.05rem;
-    box-shadow: 0 10px 22px rgba(255, 0, 0, .28);
+    box-shadow: 0 10px 22px rgba(8, 35, 64, .28);
     transition: transform .3s ease;
 }
 
@@ -2472,7 +2359,7 @@ a {
 .gqs-principle-card:hover .gqs-principle-icon {
     background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
     color: var(--secondary-color);
-    box-shadow: 0 12px 24px rgba(255, 0, 0, .3);
+    box-shadow: 0 12px 24px rgba(178, 151, 80, .3);
 }
 
 .gqs-principle-card p {
@@ -2523,7 +2410,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .25);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .25);
 }
 
 .gqs-step-icon {
@@ -2677,7 +2564,7 @@ a {
     width: 520px;
     height: 520px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 0, 0, .2), transparent 65%);
+    background: radial-gradient(circle, rgba(178, 151, 80, .2), transparent 65%);
 }
 
 .gqs-recognition .container-xl {
@@ -2710,7 +2597,7 @@ a {
 /* Red emphasis on the compliance phrase (styling only) */
 .gqs-hl-dark {
     color: var(--primary-soft);
-    background: rgba(255, 0, 0, .14);
+    background: rgba(178, 151, 80, .14);
     padding: .04em .18em;
     border-radius: .35em;
     -webkit-box-decoration-break: clone;
@@ -2886,7 +2773,7 @@ a {
 .wcc-expect-row:hover .wcc-expect-icon {
     background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
     color: var(--secondary-color);
-    box-shadow: 0 12px 24px rgba(255, 0, 0, .3);
+    box-shadow: 0 12px 24px rgba(178, 151, 80, .3);
 }
 
 .wcc-expect-num {
@@ -2941,7 +2828,7 @@ a {
     width: 560px;
     height: 560px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 0, 0, .2), transparent 65%);
+    background: radial-gradient(circle, rgba(178, 151, 80, .2), transparent 65%);
 }
 
 .wcc-question::after {
@@ -2952,7 +2839,7 @@ a {
     width: 480px;
     height: 480px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 0, 0, .12), transparent 65%);
+    background: radial-gradient(circle, rgba(178, 151, 80, .12), transparent 65%);
 }
 
 .wcc-question .container-xl {
@@ -2986,8 +2873,8 @@ a {
 
 .wcc-question-card:hover {
     transform: translateY(-5px);
-    border-color: rgba(255, 0, 0, .5);
-    background: rgba(255, 0, 0, .06);
+    border-color: rgba(178, 151, 80, .5);
+    background: rgba(178, 151, 80, .06);
 }
 
 .wcc-question-num {
@@ -3012,7 +2899,7 @@ a {
     align-items: center;
     justify-content: center;
     font-size: 1.4rem;
-    box-shadow: 0 12px 26px rgba(255, 0, 0, .3);
+    box-shadow: 0 12px 26px rgba(178, 151, 80, .3);
     transition: transform .3s ease;
 }
 
@@ -3237,7 +3124,7 @@ a {
     width: 560px;
     height: 560px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 0, 0, .2), transparent 65%);
+    background: radial-gradient(circle, rgba(178, 151, 80, .2), transparent 65%);
 }
 
 .pcert-stages .container-xl {
@@ -3260,8 +3147,8 @@ a {
 
 .pcert-stage-card:hover {
     transform: translateY(-5px);
-    border-color: rgba(255, 0, 0, .5);
-    background: rgba(255, 0, 0, .06);
+    border-color: rgba(178, 151, 80, .5);
+    background: rgba(178, 151, 80, .06);
 }
 
 .pcert-stage-top {
@@ -3283,14 +3170,14 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .28);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .28);
 }
 
 .pcert-stage-icon {
     width: 42px;
     height: 42px;
     border-radius: 50%;
-    background: rgba(255, 0, 0, .16);
+    background: rgba(178, 151, 80, .16);
     color: var(--primary-soft);
     display: flex;
     align-items: center;
@@ -3486,7 +3373,7 @@ a {
 .carea-card:hover .carea-card-icon {
     background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
     color: var(--secondary-color);
-    box-shadow: 0 12px 24px rgba(255, 0, 0, .3);
+    box-shadow: 0 12px 24px rgba(178, 151, 80, .3);
 }
 
 .carea-card-num {
@@ -3666,7 +3553,7 @@ a {
     top: 58px;
     bottom: 2px;
     width: 2px;
-    background: linear-gradient(180deg, rgba(255, 0, 0, .5), var(--line));
+    background: linear-gradient(180deg, rgba(178, 151, 80, .5), var(--line));
 }
 
 .cpath-step:last-child::before {
@@ -3689,7 +3576,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .28);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .28);
 }
 
 /* Step card */
@@ -4015,7 +3902,7 @@ a {
 .acs-method-card:hover .acs-method-icon {
     background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
     color: var(--secondary-color);
-    box-shadow: 0 12px 24px rgba(255, 0, 0, .3);
+    box-shadow: 0 12px 24px rgba(178, 151, 80, .3);
 }
 
 .acs-method-card p {
@@ -4046,7 +3933,7 @@ a {
     width: 520px;
     height: 520px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 0, 0, .2), transparent 65%);
+    background: radial-gradient(circle, rgba(178, 151, 80, .2), transparent 65%);
 }
 
 .acs-resp .container-xl {
@@ -4080,8 +3967,8 @@ a {
 
 .acs-resp-row:hover {
     transform: translateX(6px);
-    border-color: rgba(255, 0, 0, .5);
-    background: rgba(255, 0, 0, .06);
+    border-color: rgba(178, 151, 80, .5);
+    background: rgba(178, 151, 80, .06);
 }
 
 .acs-resp-num {
@@ -4097,7 +3984,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .28);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .28);
 }
 
 .acs-resp-row p {
@@ -4351,7 +4238,7 @@ a {
 /* Red emphasis on dark (styling only — text unchanged) */
 .acs-hl-dark {
     color: var(--primary-soft);
-    background: rgba(255, 0, 0, .14);
+    background: rgba(178, 151, 80, .14);
     padding: .04em .18em;
     border-radius: .35em;
     -webkit-box-decoration-break: clone;
@@ -4383,8 +4270,8 @@ a {
 }
 
 .acs-chip-dark:hover {
-    border-color: rgba(255, 0, 0, .5);
-    background: rgba(255, 0, 0, .06);
+    border-color: rgba(178, 151, 80, .5);
+    background: rgba(178, 151, 80, .06);
     box-shadow: none;
 }
 
@@ -4496,7 +4383,7 @@ a {
     align-items: center;
     justify-content: center;
     font-size: 1.45rem;
-    box-shadow: 0 10px 22px rgba(255, 0, 0, .3);
+    box-shadow: 0 10px 22px rgba(178, 151, 80, .3);
 }
 
 .crcpd-status-icon-neutral {
@@ -4614,7 +4501,7 @@ a {
     width: 560px;
     height: 560px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 0, 0, .2), transparent 65%);
+    background: radial-gradient(circle, rgba(178, 151, 80, .2), transparent 65%);
 }
 
 .crcpd-categories .container-xl {
@@ -4637,8 +4524,8 @@ a {
 
 .crcpd-cat-card:hover {
     transform: translateY(-5px);
-    border-color: rgba(255, 0, 0, .5);
-    background: rgba(255, 0, 0, .06);
+    border-color: rgba(178, 151, 80, .5);
+    background: rgba(178, 151, 80, .06);
 }
 
 .crcpd-cat-top {
@@ -4660,14 +4547,14 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .28);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .28);
 }
 
 .crcpd-cat-icon {
     width: 42px;
     height: 42px;
     border-radius: 50%;
-    background: rgba(255, 0, 0, .16);
+    background: rgba(178, 151, 80, .16);
     color: var(--primary-soft);
     display: flex;
     align-items: center;
@@ -4740,7 +4627,7 @@ a {
     align-items: center;
     justify-content: center;
     font-size: 1.15rem;
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .25);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .25);
 }
 
 .crcpd-quality-tile p {
@@ -4835,7 +4722,7 @@ a {
 /* Red emphasis on statuses (styling only — text unchanged) */
 .crcpd-hl-dark {
     color: var(--primary-soft);
-    background: rgba(255, 0, 0, .14);
+    background: rgba(178, 151, 80, .14);
     padding: .04em .18em;
     border-radius: .35em;
     -webkit-box-decoration-break: clone;
@@ -4881,8 +4768,8 @@ a {
 }
 
 .crcpd-chip:hover {
-    border-color: rgba(255, 0, 0, .5);
-    background: rgba(255, 0, 0, .06);
+    border-color: rgba(178, 151, 80, .5);
+    background: rgba(178, 151, 80, .06);
     transform: translateY(-2px);
 }
 
@@ -5008,7 +4895,7 @@ a {
 }
 
 .cfq-accordion .accordion-button:focus-visible {
-    box-shadow: inset 0 0 0 3px rgba(255, 0, 0, .25);
+    box-shadow: inset 0 0 0 3px rgba(8, 35, 64, .25);
 }
 
 /* Question number badge */
@@ -5031,7 +4918,7 @@ a {
 .cfq-accordion .accordion-button:not(.collapsed) .cfq-q-num {
     background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
     color: var(--secondary-color);
-    box-shadow: 0 8px 18px rgba(255, 0, 0, .25);
+    box-shadow: 0 8px 18px rgba(8, 35, 64, .25);
 }
 
 /* Question text */
@@ -5243,7 +5130,7 @@ a {
     align-items: center;
     justify-content: center;
     font-size: 1.15rem;
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .25);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .25);
 }
 
 .pmem-pillar>span:last-child {
@@ -5316,7 +5203,7 @@ a {
 .pmem-benefit-card:hover .pmem-benefit-icon {
     background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
     color: var(--secondary-color);
-    box-shadow: 0 12px 24px rgba(255, 0, 0, .3);
+    box-shadow: 0 12px 24px rgba(178, 151, 80, .3);
 }
 
 .pmem-benefit-card p {
@@ -5347,7 +5234,7 @@ a {
     width: 520px;
     height: 520px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 0, 0, .2), transparent 65%);
+    background: radial-gradient(circle, rgba(178, 151, 80, .2), transparent 65%);
 }
 
 .pmem-resp .container-xl {
@@ -5389,8 +5276,8 @@ a {
 
 .pmem-resp-row:hover {
     transform: translateX(6px);
-    border-color: rgba(255, 0, 0, .5);
-    background: rgba(255, 0, 0, .06);
+    border-color: rgba(178, 151, 80, .5);
+    background: rgba(178, 151, 80, .06);
 }
 
 .pmem-resp-num {
@@ -5406,7 +5293,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .28);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .28);
 }
 
 .pmem-resp-row p {
@@ -5576,7 +5463,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .25);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .25);
 }
 
 .mcat-card-icon {
@@ -5731,7 +5618,7 @@ a {
     width: 520px;
     height: 520px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 0, 0, .2), transparent 65%);
+    background: radial-gradient(circle, rgba(178, 151, 80, .2), transparent 65%);
 }
 
 .mcat-upgrade .container-xl {
@@ -5766,7 +5653,7 @@ a {
 /* Red emphasis on criteria (styling only — text unchanged) */
 .mcat-hl-dark {
     color: var(--primary-soft);
-    background: rgba(255, 0, 0, .14);
+    background: rgba(178, 151, 80, .14);
     padding: .04em .18em;
     border-radius: .35em;
     -webkit-box-decoration-break: clone;
@@ -5967,7 +5854,7 @@ a {
 .mben-card:hover .mben-card-icon {
     background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
     color: var(--secondary-color);
-    box-shadow: 0 12px 24px rgba(255, 0, 0, .3);
+    box-shadow: 0 12px 24px rgba(178, 151, 80, .3);
 }
 
 .mben-card-name {
@@ -6078,7 +5965,7 @@ a {
     width: 520px;
     height: 520px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 0, 0, .2), transparent 65%);
+    background: radial-gradient(circle, rgba(178, 151, 80, .2), transparent 65%);
 }
 
 .mben-spotlight .container-xl {
@@ -6113,7 +6000,7 @@ a {
 /* Red emphasis on spotlight themes (styling only — text unchanged) */
 .mben-hl-dark {
     color: var(--primary-soft);
-    background: rgba(255, 0, 0, .14);
+    background: rgba(178, 151, 80, .14);
     padding: .04em .18em;
     border-radius: .35em;
     -webkit-box-decoration-break: clone;
@@ -6212,7 +6099,7 @@ a {
     top: 58px;
     bottom: 2px;
     width: 2px;
-    background: linear-gradient(180deg, rgba(255, 0, 0, .5), var(--line));
+    background: linear-gradient(180deg, rgba(178, 151, 80, .5), var(--line));
 }
 
 .howjoin-step:last-child::before {
@@ -6235,7 +6122,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .28);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .28);
 }
 
 /* Step card */
@@ -6350,7 +6237,7 @@ a {
     width: 520px;
     height: 520px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 0, 0, .2), transparent 65%);
+    background: radial-gradient(circle, rgba(178, 151, 80, .2), transparent 65%);
 }
 
 .howjoin-decision .container-xl {
@@ -6385,7 +6272,7 @@ a {
 /* Red emphasis (styling only — text unchanged) */
 .howjoin-hl-dark {
     color: var(--primary-soft);
-    background: rgba(255, 0, 0, .14);
+    background: rgba(178, 151, 80, .14);
     padding: .04em .18em;
     border-radius: .35em;
     -webkit-box-decoration-break: clone;
@@ -6431,8 +6318,8 @@ a {
 }
 
 .howjoin-chip:hover {
-    border-color: rgba(255, 0, 0, .5);
-    background: rgba(255, 0, 0, .06);
+    border-color: rgba(178, 151, 80, .5);
+    background: rgba(178, 151, 80, .06);
     transform: translateY(-2px);
 }
 
@@ -6598,7 +6485,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .25);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .25);
 }
 
 .cpd-cycle-icon {
@@ -6785,7 +6672,7 @@ a {
     width: 520px;
     height: 520px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 0, 0, .2), transparent 65%);
+    background: radial-gradient(circle, rgba(178, 151, 80, .2), transparent 65%);
 }
 
 .cpd-audit .container-xl {
@@ -6820,7 +6707,7 @@ a {
 /* Red emphasis (styling only — text unchanged) */
 .cpd-hl-dark {
     color: var(--primary-soft);
-    background: rgba(255, 0, 0, .14);
+    background: rgba(178, 151, 80, .14);
     padding: .04em .18em;
     border-radius: .35em;
     -webkit-box-decoration-break: clone;
@@ -6861,7 +6748,7 @@ a {
 
 /* Warning variant */
 .cpd-obligation-warn {
-    border-color: rgba(255, 0, 0, .35);
+    border-color: rgba(178, 151, 80, .35);
 }
 
 .cpd-obligation-warn>.bi {
@@ -7220,7 +7107,7 @@ a {
     width: 520px;
     height: 520px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 0, 0, .2), transparent 65%);
+    background: radial-gradient(circle, rgba(178, 151, 80, .2), transparent 65%);
 }
 
 .cpc-outcomes .container-xl {
@@ -7277,8 +7164,8 @@ a {
 }
 
 .cpc-chip-dark:hover {
-    border-color: rgba(255, 0, 0, .5);
-    background: rgba(255, 0, 0, .06);
+    border-color: rgba(178, 151, 80, .5);
+    background: rgba(178, 151, 80, .06);
 }
 
 /* Appeal note (sentence 2, verbatim) */
@@ -7492,7 +7379,7 @@ a {
 .cls-area-row:hover .cls-area-icon {
     background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
     color: var(--secondary-color);
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .25);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .25);
 }
 
 .cls-area-name {
@@ -7612,7 +7499,7 @@ a {
     width: 520px;
     height: 520px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 0, 0, .2), transparent 65%);
+    background: radial-gradient(circle, rgba(178, 151, 80, .2), transparent 65%);
 }
 
 .cls-deliverables .container-xl {
@@ -7638,8 +7525,8 @@ a {
 }
 
 .cls-del-row:hover {
-    border-color: rgba(255, 0, 0, .5);
-    background: rgba(255, 0, 0, .06);
+    border-color: rgba(178, 151, 80, .5);
+    background: rgba(178, 151, 80, .06);
     transform: translateY(-2px);
 }
 
@@ -7648,7 +7535,7 @@ a {
     width: 42px;
     height: 42px;
     border-radius: 12px;
-    background: rgba(255, 0, 0, .16);
+    background: rgba(178, 151, 80, .16);
     color: var(--primary-soft);
     display: flex;
     align-items: center;
@@ -7831,20 +7718,7 @@ a {
     margin-bottom: 14px;
 }
 
-.custom-training-stage-num {
-    width: 46px;
-    height: 46px;
-    border-radius: 14px;
-    background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
-    color: var(--secondary-color);
-    font-family: var(--font-head);
-    font-weight: 800;
-    font-size: .95rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .25);
-}
+
 
 .custom-training-stage-icon {
     width: 42px;
@@ -7996,7 +7870,6 @@ a {
     border-left: 3px solid var(--primary-color);
     border-radius: var(--radius-md);
     padding: 1.35rem 1.4rem;
-    height: 100%;
 }
 
 .custom-training-boundary-note>.bi {
@@ -8034,7 +7907,7 @@ a {
     width: 520px;
     height: 520px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 0, 0, .2), transparent 65%);
+    background: radial-gradient(circle, rgba(178, 151, 80, .2), transparent 65%);
 }
 
 .custom-training-proposal .container-xl {
@@ -8069,8 +7942,8 @@ a {
 }
 
 .custom-training-prop-row:hover {
-    border-color: rgba(255, 0, 0, .5);
-    background: rgba(255, 0, 0, .06);
+    border-color: rgba(178, 151, 80, .5);
+    background: rgba(178, 151, 80, .06);
     transform: translateX(4px);
 }
 
@@ -8087,7 +7960,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 8px 18px rgba(255, 0, 0, .25);
+    box-shadow: 0 8px 18px rgba(8, 35, 64, .25);
 }
 
 .custom-training-prop-text {
@@ -8286,7 +8159,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .25);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .25);
 }
 
 .functional-academies-card-icon {
@@ -8404,7 +8277,7 @@ a {
     width: 520px;
     height: 520px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 0, 0, .2), transparent 65%);
+    background: radial-gradient(circle, rgba(178, 151, 80, .2), transparent 65%);
 }
 
 .functional-academies-phases .container-xl {
@@ -8431,8 +8304,8 @@ a {
 
 .functional-academies-phase:hover {
     transform: translateY(-5px);
-    border-color: rgba(255, 0, 0, .5);
-    background: rgba(255, 0, 0, .06);
+    border-color: rgba(178, 151, 80, .5);
+    background: rgba(178, 151, 80, .06);
 }
 
 .functional-academies-phase-num {
@@ -8447,7 +8320,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .28);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .28);
     margin-bottom: 16px;
 }
 
@@ -8455,8 +8328,8 @@ a {
     width: 42px;
     height: 42px;
     border-radius: 50%;
-    background: rgba(255, 0, 0, .16);
-    color: var(--primary-soft);
+    background: rgba(178, 151, 80, .16);
+    color: var(--secondary-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8523,7 +8396,7 @@ a {
     align-items: center;
     justify-content: center;
     font-size: 1.15rem;
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .25);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .25);
 }
 
 .functional-academies-tile p {
@@ -8771,7 +8644,7 @@ a {
     width: 520px;
     height: 520px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 0, 0, .2), transparent 65%);
+    background: radial-gradient(circle, rgba(178, 151, 80, .2), transparent 65%);
 }
 
 .leadership-development-measuring .container-xl {
@@ -8818,8 +8691,8 @@ a {
 }
 
 .leadership-development-measure-chip:hover {
-    border-color: rgba(255, 0, 0, .5);
-    background: rgba(255, 0, 0, .06);
+    border-color: rgba(178, 151, 80, .5);
+    background: rgba(178, 151, 80, .06);
     transform: translateY(-2px);
 }
 
@@ -8903,6 +8776,10 @@ a {
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-sm);
+}
+
+.table-responsive{
+    overflow-y: hidden;
 }
 
 /* Scoped Bootstrap table overrides */
@@ -8992,7 +8869,7 @@ a {
     align-items: center;
     justify-content: center;
     font-size: 1.25rem;
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .25);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .25);
 }
 
 .delivery-evaluation-mode-name {
@@ -9143,7 +9020,7 @@ a {
     width: 520px;
     height: 520px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 0, 0, .2), transparent 65%);
+    background: radial-gradient(circle, rgba(178, 151, 80, .2), transparent 65%);
 }
 
 .delivery-evaluation-framework .container-xl {
@@ -9167,8 +9044,8 @@ a {
 
 .delivery-evaluation-area:hover {
     transform: translateY(-5px);
-    border-color: rgba(255, 0, 0, .5);
-    background: rgba(255, 0, 0, .06);
+    border-color: rgba(178, 151, 80, .5);
+    background: rgba(178, 151, 80, .06);
 }
 
 .delivery-evaluation-area-top {
@@ -9178,27 +9055,14 @@ a {
     margin-bottom: 14px;
 }
 
-.delivery-evaluation-area-num {
-    width: 46px;
-    height: 46px;
-    border-radius: 14px;
-    background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
-    color: var(--secondary-color);
-    font-family: var(--font-head);
-    font-weight: 800;
-    font-size: .95rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .28);
-}
+
 
 .delivery-evaluation-area-icon {
     width: 42px;
     height: 42px;
     border-radius: 50%;
-    background: rgba(255, 0, 0, .16);
-    color: var(--primary-soft);
+    background: rgba(178, 151, 80, .16);
+    color: var(--secondary-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9391,7 +9255,7 @@ a {
 .corporate-proposal-form .form-control:focus {
     border-color: var(--primary-color);
     background: var(--secondary-color);
-    box-shadow: 0 0 0 3px rgba(255, 0, 0, .12);
+    box-shadow: 0 0 0 3px rgba(178, 151, 80, .12);
 }
 
 .corporate-proposal-form textarea.form-control {
@@ -9485,7 +9349,7 @@ a {
     top: 58px;
     bottom: 2px;
     width: 2px;
-    background: linear-gradient(180deg, rgba(255, 0, 0, .5), var(--line));
+    background: linear-gradient(180deg, rgba(178, 151, 80, .5), var(--line));
 }
 
 .corporate-proposal-step:last-child::before {
@@ -9508,7 +9372,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .28);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .28);
 }
 
 /* Step card */
@@ -9570,7 +9434,7 @@ a {
     width: 520px;
     height: 520px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 0, 0, .2), transparent 65%);
+    background: radial-gradient(circle, rgba(178, 151, 80, .2), transparent 65%);
 }
 
 .corporate-proposal-response .container-xl {
@@ -9606,7 +9470,7 @@ a {
 /* Red emphasis (styling only — text unchanged) */
 .corporate-proposal-hl-dark {
     color: var(--primary-soft);
-    background: rgba(255, 0, 0, .14);
+    background: rgba(178, 151, 80, .14);
     padding: .04em .18em;
     border-radius: .35em;
     -webkit-box-decoration-break: clone;
@@ -9717,7 +9581,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .25);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .25);
 }
 
 .individual-development-moment-icon {
@@ -9840,7 +9704,7 @@ a {
     width: 520px;
     height: 520px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 0, 0, .2), transparent 65%);
+    background: radial-gradient(circle, rgba(178, 151, 80, .2), transparent 65%);
 }
 
 .individual-development-choose .container-xl {
@@ -9877,7 +9741,7 @@ a {
 /* Red emphasis (styling only — text unchanged) */
 .individual-development-hl-dark {
     color: var(--primary-soft);
-    background: rgba(255, 0, 0, .14);
+    background: rgba(178, 151, 80, .14);
     padding: .04em .18em;
     border-radius: .35em;
     -webkit-box-decoration-break: clone;
@@ -9920,8 +9784,8 @@ a {
 }
 
 .individual-development-choose-chip:hover {
-    border-color: rgba(255, 0, 0, .5);
-    background: rgba(255, 0, 0, .06);
+    border-color: rgba(178, 151, 80, .5);
+    background: rgba(178, 151, 80, .06);
     transform: translateY(-2px);
 }
 
@@ -10185,7 +10049,7 @@ a {
 .short-courses-category:hover .short-courses-category-icon {
     background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
     color: var(--secondary-color);
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .25);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .25);
 }
 
 .short-courses-category p {
@@ -10440,7 +10304,7 @@ a {
 .professional-masterclasses-audience:hover .professional-masterclasses-audience-icon {
     background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
     color: var(--secondary-color);
-    box-shadow: 0 12px 24px rgba(255, 0, 0, .3);
+    box-shadow: 0 12px 24px rgba(178, 151, 80, .3);
 }
 
 .professional-masterclasses-audience p {
@@ -10611,7 +10475,7 @@ a {
     width: 520px;
     height: 520px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 0, 0, .2), transparent 65%);
+    background: radial-gradient(circle, rgba(178, 151, 80, .2), transparent 65%);
 }
 
 .professional-masterclasses-filters .container-xl {
@@ -10677,8 +10541,8 @@ a {
 }
 
 .professional-masterclasses-filter-chip:hover {
-    border-color: rgba(255, 0, 0, .5);
-    background: rgba(255, 0, 0, .06);
+    border-color: rgba(178, 151, 80, .5);
+    background: rgba(178, 151, 80, .06);
     transform: translateY(-2px);
 }
 
@@ -10766,7 +10630,7 @@ a {
 .executive-learning-theme:hover .executive-learning-theme-icon {
     background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
     color: var(--secondary-color);
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .25);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .25);
 }
 
 .executive-learning-theme-name {
@@ -10886,7 +10750,7 @@ a {
     width: 520px;
     height: 520px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 0, 0, .2), transparent 65%);
+    background: radial-gradient(circle, rgba(178, 151, 80, .2), transparent 65%);
 }
 
 .executive-learning-principles .container-xl {
@@ -10920,8 +10784,8 @@ a {
 }
 
 .executive-learning-principle:hover {
-    border-color: rgba(255, 0, 0, .5);
-    background: rgba(255, 0, 0, .06);
+    border-color: rgba(178, 151, 80, .5);
+    background: rgba(178, 151, 80, .06);
     transform: translateY(-3px);
 }
 
@@ -10936,7 +10800,7 @@ a {
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .28);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .28);
 }
 
 .executive-learning-principle p {
@@ -11106,7 +10970,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .25);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .25);
 }
 
 .career-development-pathways-stage-icon {
@@ -11416,8 +11280,8 @@ a {
 }
 
 .learning-calendar-filter-chip:hover {
-    border-color: rgba(255, 0, 0, .5);
-    background: rgba(255, 0, 0, .06);
+    border-color: rgba(178, 151, 80, .5);
+    background: rgba(178, 151, 80, .06);
     transform: translateY(-2px);
 }
 
@@ -11654,7 +11518,7 @@ a {
 .professional-resources-category:hover .professional-resources-category-icon {
     background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
     color: var(--secondary-color);
-    box-shadow: 0 12px 24px rgba(255, 0, 0, .3);
+    box-shadow: 0 12px 24px rgba(178, 151, 80, .3);
 }
 
 .professional-resources-category p {
@@ -11909,27 +11773,6 @@ a {
 }
 
 
-/* =========================
-   07. SCROLL REVEAL
-   (page-specific hook — never conflicts with the
-   reveal observers used on other pages)
-========================= */
-.professional-resources-js .professional-resources-reveal {
-    opacity: 0;
-    transform: translateY(26px);
-    transition: opacity .7s cubic-bezier(.22, .61, .36, 1),
-        transform .7s cubic-bezier(.22, .61, .36, 1);
-    will-change: opacity, transform;
-}
-
-.professional-resources-js .professional-resources-reveal.is-visible {
-    opacity: 1;
-    transform: none;
-}
-
-
-
-
 
 
 
@@ -12005,7 +11848,7 @@ a {
 .insights-articles-category:hover .insights-articles-category-icon {
     background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
     color: var(--secondary-color);
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .25);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .25);
 }
 
 .insights-articles-category p {
@@ -12126,7 +11969,7 @@ a {
     width: 520px;
     height: 520px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 0, 0, .2), transparent 65%);
+    background: radial-gradient(circle, rgba(178, 151, 80, .2), transparent 65%);
 }
 
 .insights-articles-launch .container-xl {
@@ -12162,8 +12005,8 @@ a {
 
 .insights-articles-launch-row:hover {
     transform: translateX(6px);
-    border-color: rgba(255, 0, 0, .5);
-    background: rgba(255, 0, 0, .06);
+    border-color: rgba(178, 151, 80, .5);
+    background: rgba(178, 151, 80, .06);
 }
 
 .insights-articles-launch-num {
@@ -12179,7 +12022,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .28);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .28);
 }
 
 .insights-articles-launch-text {
@@ -12192,23 +12035,7 @@ a {
 }
 
 
-/* =========================
-   06. SCROLL REVEAL
-   (page-specific hook — never conflicts with the
-   reveal observers used on other pages)
-========================= */
-.insights-articles-js .insights-articles-reveal {
-    opacity: 0;
-    transform: translateY(26px);
-    transition: opacity .7s cubic-bezier(.22, .61, .36, 1),
-        transform .7s cubic-bezier(.22, .61, .36, 1);
-    will-change: opacity, transform;
-}
 
-.insights-articles-js .insights-articles-reveal.is-visible {
-    opacity: 1;
-    transform: none;
-}
 
 
 
@@ -12287,7 +12114,7 @@ a {
 .events-webinars-type:hover .events-webinars-type-icon {
     background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
     color: var(--secondary-color);
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .25);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .25);
 }
 
 .events-webinars-type p {
@@ -12458,18 +12285,7 @@ a {
    (page-specific hook — never conflicts with the
    reveal observers used on other pages)
 ========================= */
-.events-webinars-js .events-webinars-reveal {
-    opacity: 0;
-    transform: translateY(26px);
-    transition: opacity .7s cubic-bezier(.22, .61, .36, 1),
-        transform .7s cubic-bezier(.22, .61, .36, 1);
-    will-change: opacity, transform;
-}
 
-.events-webinars-js .events-webinars-reveal.is-visible {
-    opacity: 1;
-    transform: none;
-}
 
 
 
@@ -12555,7 +12371,7 @@ a {
 .downloads-guides-resource:hover .downloads-guides-resource-icon {
     background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
     color: var(--secondary-color);
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .25);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .25);
 }
 
 .downloads-guides-resource p {
@@ -12630,7 +12446,7 @@ a {
 .downloads-guides-form-card .form-control:focus {
     border-color: var(--primary-color);
     background: var(--secondary-color);
-    box-shadow: 0 0 0 3px rgba(255, 0, 0, .12);
+    box-shadow: 0 0 0 3px rgba(178, 151, 80, .12);
 }
 
 /* Checkbox (optional consent) */
@@ -12698,7 +12514,7 @@ a {
     width: 520px;
     height: 520px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 0, 0, .2), transparent 65%);
+    background: radial-gradient(circle, rgba(178, 151, 80, .2), transparent 65%);
 }
 
 .downloads-guides-usage .container-xl {
@@ -12733,7 +12549,7 @@ a {
 /* Red emphasis (styling only — text unchanged) */
 .downloads-guides-hl-dark {
     color: var(--primary-soft);
-    background: rgba(255, 0, 0, .14);
+    background: rgba(178, 151, 80, .14);
     padding: .04em .18em;
     border-radius: .35em;
     -webkit-box-decoration-break: clone;
@@ -12764,25 +12580,6 @@ a {
     color: var(--secondary-color);
     font-size: .97rem;
     line-height: 1.65;
-}
-
-
-/* =========================
-   06. SCROLL REVEAL
-   (page-specific hook — never conflicts with the
-   reveal observers used on other pages)
-========================= */
-.downloads-guides-js .downloads-guides-reveal {
-    opacity: 0;
-    transform: translateY(26px);
-    transition: opacity .7s cubic-bezier(.22, .61, .36, 1),
-        transform .7s cubic-bezier(.22, .61, .36, 1);
-    will-change: opacity, transform;
-}
-
-.downloads-guides-js .downloads-guides-reveal.is-visible {
-    opacity: 1;
-    transform: none;
 }
 
 
@@ -12842,7 +12639,7 @@ a {
     width: 520px;
     height: 520px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 0, 0, .2), transparent 65%);
+    background: radial-gradient(circle, rgba(178, 151, 80, .2), transparent 65%);
 }
 
 .success-stories-corporate .container-xl {
@@ -12896,7 +12693,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .25);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .25);
 }
 
 .success-stories-row-text {
@@ -12919,8 +12716,8 @@ a {
 }
 
 .success-stories-row-dark:hover {
-    border-color: rgba(255, 0, 0, .5);
-    background: rgba(255, 0, 0, .06);
+    border-color: rgba(178, 151, 80, .5);
+    background: rgba(178, 151, 80, .06);
     box-shadow: none;
 }
 
@@ -12993,31 +12790,6 @@ a {
 }
 
 
-/* =========================
-   06. SCROLL REVEAL
-   (page-specific hook — never conflicts with the
-   reveal observers used on other pages)
-========================= */
-.success-stories-js .success-stories-reveal {
-    opacity: 0;
-    transform: translateY(26px);
-    transition: opacity .7s cubic-bezier(.22, .61, .36, 1),
-        transform .7s cubic-bezier(.22, .61, .36, 1);
-    will-change: opacity, transform;
-}
-
-.success-stories-js .success-stories-reveal.is-visible {
-    opacity: 1;
-    transform: none;
-}
-
-.success-stories-js .success-stories-reveal.success-stories-d1 {
-    transition-delay: .1s;
-}
-
-.success-stories-js .success-stories-reveal.success-stories-d2 {
-    transition-delay: .2s;
-}
 
 
 
@@ -13060,7 +12832,7 @@ a {
 
 .help-centre-search-field:focus-within {
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(255, 0, 0, .12);
+    box-shadow: 0 0 0 3px rgba(178, 151, 80, .12);
 }
 
 .help-centre-search-field .bi-search {
@@ -13167,7 +12939,7 @@ a {
 .help-centre-category:hover .help-centre-category-icon {
     background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
     color: var(--secondary-color);
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .25);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .25);
 }
 
 .help-centre-category p {
@@ -13479,7 +13251,7 @@ a {
 .learning-partner-eligibility-card:hover .learning-partner-eligibility-icon {
     background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
     color: var(--secondary-color);
-    box-shadow: 0 12px 24px rgba(255, 0, 0, .3);
+    box-shadow: 0 12px 24px rgba(178, 151, 80, .3);
 }
 
 .learning-partner-eligibility-card p {
@@ -13588,7 +13360,7 @@ a {
     width: 520px;
     height: 520px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 0, 0, .2), transparent 65%);
+    background: radial-gradient(circle, rgba(178, 151, 80, .2), transparent 65%);
 }
 
 .learning-partner-resp .container-xl {
@@ -13618,7 +13390,7 @@ a {
 /* Highlighter effect (styling only — text unchanged) */
 .learning-partner-hl {
     color: var(--primary-soft);
-    background: rgba(255, 0, 0, .14);
+    background: rgba(178, 151, 80, .14);
     padding: .04em .18em;
     border-radius: .35em;
     -webkit-box-decoration-break: clone;
@@ -13656,8 +13428,8 @@ a {
 
 .learning-partner-resp-row:hover {
     transform: translateX(6px);
-    border-color: rgba(255, 0, 0, .5);
-    background: rgba(255, 0, 0, .06);
+    border-color: rgba(178, 151, 80, .5);
+    background: rgba(178, 151, 80, .06);
 }
 
 .learning-partner-resp-icon {
@@ -13671,7 +13443,7 @@ a {
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .28);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .28);
 }
 
 .learning-partner-resp-row p {
@@ -13722,7 +13494,7 @@ a {
     top: 58px;
     bottom: 2px;
     width: 2px;
-    background: linear-gradient(180deg, rgba(255, 0, 0, .5), var(--line));
+    background: linear-gradient(180deg, rgba(178, 151, 80, .5), var(--line));
 }
 
 .learning-partner-step:last-child::before {
@@ -13745,7 +13517,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .28);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .28);
 }
 
 /* Step card */
@@ -13849,31 +13621,7 @@ a {
 }
 
 
-/* =========================
-   08. SCROLL REVEAL
-   (page-specific hook — never conflicts with the
-   reveal observers used on other pages)
-========================= */
-.learning-partner-js .learning-partner-reveal {
-    opacity: 0;
-    transform: translateY(26px);
-    transition: opacity .7s cubic-bezier(.22, .61, .36, 1),
-        transform .7s cubic-bezier(.22, .61, .36, 1);
-    will-change: opacity, transform;
-}
 
-.learning-partner-js .learning-partner-reveal.is-visible {
-    opacity: 1;
-    transform: none;
-}
-
-.learning-partner-js .learning-partner-reveal.learning-partner-d1 {
-    transition-delay: .1s;
-}
-
-.learning-partner-js .learning-partner-reveal.learning-partner-d2 {
-    transition-delay: .2s;
-}
 
 
 
@@ -13951,7 +13699,7 @@ a {
 .corporate-partnerships-collab:hover .corporate-partnerships-collab-icon {
     background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
     color: var(--secondary-color);
-    box-shadow: 0 12px 24px rgba(255, 0, 0, .3);
+    box-shadow: 0 12px 24px rgba(178, 151, 80, .3);
 }
 
 .corporate-partnerships-collab p {
@@ -14145,31 +13893,7 @@ a {
 }
 
 
-/* =========================
-   06. SCROLL REVEAL
-   (page-specific hook — never conflicts with the
-   reveal observers used on other pages)
-========================= */
-.corporate-partnerships-js .corporate-partnerships-reveal {
-    opacity: 0;
-    transform: translateY(26px);
-    transition: opacity .7s cubic-bezier(.22, .61, .36, 1),
-        transform .7s cubic-bezier(.22, .61, .36, 1);
-    will-change: opacity, transform;
-}
 
-.corporate-partnerships-js .corporate-partnerships-reveal.is-visible {
-    opacity: 1;
-    transform: none;
-}
-
-.corporate-partnerships-js .corporate-partnerships-reveal.corporate-partnerships-d1 {
-    transition-delay: .1s;
-}
-
-.corporate-partnerships-js .corporate-partnerships-reveal.corporate-partnerships-d2 {
-    transition-delay: .2s;
-}
 
 
 
@@ -14323,7 +14047,7 @@ a {
 .faculty-experts-role:hover .faculty-experts-role-icon {
     background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
     color: var(--secondary-color);
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .25);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .25);
 }
 
 .faculty-experts-role p {
@@ -14354,7 +14078,7 @@ a {
     width: 520px;
     height: 520px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 0, 0, .2), transparent 65%);
+    background: radial-gradient(circle, rgba(178, 151, 80, .2), transparent 65%);
 }
 
 .faculty-experts-process .container-xl {
@@ -14393,7 +14117,7 @@ a {
     top: 58px;
     bottom: 2px;
     width: 2px;
-    background: linear-gradient(180deg, rgba(255, 0, 0, .5), rgba(255, 255, 255, .09));
+    background: linear-gradient(180deg, rgba(178, 151, 80, .5), rgba(255, 255, 255, .09));
 }
 
 .faculty-experts-step:last-child::before {
@@ -14416,7 +14140,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 20px rgba(255, 0, 0, .28);
+    box-shadow: 0 10px 20px rgba(8, 35, 64, .28);
 }
 
 /* Step card */
@@ -14435,8 +14159,8 @@ a {
 
 .faculty-experts-card:hover {
     transform: translateY(-3px);
-    border-color: rgba(255, 0, 0, .5);
-    background: rgba(255, 0, 0, .06);
+    border-color: rgba(178, 151, 80, .5);
+    background: rgba(178, 151, 80, .06);
 }
 
 .faculty-experts-card-icon {
@@ -14444,7 +14168,7 @@ a {
     width: 44px;
     height: 44px;
     border-radius: 12px;
-    background: rgba(255, 0, 0, .16);
+    background: rgba(178, 151, 80, .16);
     color: var(--primary-soft);
     display: flex;
     align-items: center;
@@ -14565,31 +14289,7 @@ a {
 }
 
 
-/* =========================
-   07. SCROLL REVEAL
-   (page-specific hook — never conflicts with the
-   reveal observers used on other pages)
-========================= */
-.faculty-experts-js .faculty-experts-reveal {
-    opacity: 0;
-    transform: translateY(26px);
-    transition: opacity .7s cubic-bezier(.22, .61, .36, 1),
-        transform .7s cubic-bezier(.22, .61, .36, 1);
-    will-change: opacity, transform;
-}
 
-.faculty-experts-js .faculty-experts-reveal.is-visible {
-    opacity: 1;
-    transform: none;
-}
-
-.faculty-experts-js .faculty-experts-reveal.faculty-experts-d1 {
-    transition-delay: .1s;
-}
-
-.faculty-experts-js .faculty-experts-reveal.faculty-experts-d2 {
-    transition-delay: .2s;
-}
 
 
 
@@ -14609,252 +14309,7 @@ a {
 /* =========================
    03. VERIFICATION FORM
 ========================= */
-.verify-credential-form {
-    background: var(--light-bg);
-}
 
-.verify-credential-form .section-head {
-    margin-bottom: 36px;
-}
-
-/* Form card with red top accent */
-.verify-credential-form-card {
-    position: relative;
-    max-width: 680px;
-    margin: 0 auto;
-    background: var(--secondary-color);
-    border: 1px solid var(--line);
-    border-radius: var(--radius-lg);
-    padding: 34px 30px;
-    box-shadow: var(--shadow-sm);
-    overflow: hidden;
-}
-
-.verify-credential-form-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 24px;
-    right: 24px;
-    height: 4px;
-    border-radius: 0 0 4px 4px;
-    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
-}
-
-/* Input */
-.verify-credential-input-group {
-    margin-bottom: 1.25rem;
-}
-
-.verify-credential-label {
-    font-family: var(--font-head);
-    font-weight: 700;
-    color: var(--ink);
-    font-size: .94rem;
-    margin-bottom: .45rem;
-}
-
-.verify-credential-form-card .form-control {
-    border: 1px solid var(--line);
-    border-radius: var(--radius-sm);
-    background: var(--light-bg);
-    color: var(--ink);
-    padding: .8rem 1rem;
-    font-size: 1rem;
-    transition: border-color .25s ease, background .25s ease, box-shadow .25s ease;
-}
-
-.verify-credential-form-card .form-control:focus {
-    border-color: var(--primary-color);
-    background: var(--secondary-color);
-    box-shadow: 0 0 0 3px rgba(255, 0, 0, .12);
-}
-
-/* Documented conditional verification-field notes */
-.verify-credential-info-strip {
-    display: flex;
-    align-items: flex-start;
-    gap: .75rem;
-    background: var(--light-bg);
-    border: 1px solid var(--line);
-    border-radius: var(--radius-sm);
-    padding: .8rem 1rem;
-}
-
-.verify-credential-info-strip+.verify-credential-info-strip {
-    margin-top: .6rem;
-}
-
-.verify-credential-info-strip>.bi {
-    flex: 0 0 auto;
-    color: var(--primary-dark);
-    font-size: 1.05rem;
-    margin-top: .15rem;
-}
-
-.verify-credential-info-strip p {
-    margin: 0;
-    font-family: var(--font-head);
-    font-weight: 600;
-    color: var(--ink);
-    font-size: .9rem;
-    line-height: 1.55;
-}
-
-/* Acknowledgement checkbox (documented "where required") */
-.verify-credential-consent-box {
-    background: var(--primary-tint);
-    border: 1px solid var(--primary-tint-2);
-    border-radius: var(--radius-md);
-    padding: 1.05rem 1.2rem;
-    margin-bottom: 1.4rem;
-}
-
-.verify-credential-consent {
-    margin: 0;
-}
-
-.verify-credential-form-card .form-check-input {
-    width: 1.25rem;
-    height: 1.25rem;
-    margin-top: .15rem;
-    border: 1.5px solid var(--line);
-    border-radius: .4rem;
-    transition: all .2s ease;
-}
-
-.verify-credential-form-card .form-check-input:checked {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-}
-
-.verify-credential-form-card .form-check-input:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(255, 0, 0, .15);
-}
-
-.verify-credential-form-card .form-check-label {
-    font-family: var(--font-head);
-    font-weight: 600;
-    color: var(--ink);
-    font-size: .93rem;
-    line-height: 1.55;
-}
-
-/* Submit area */
-.verify-credential-actions {
-    display: flex;
-    justify-content: center;
-}
-
-
-/* =========================
-   04. RESULT TEMPLATE
-========================= */
-.verify-credential-result {
-    background: var(--secondary-color);
-}
-
-.verify-credential-result .section-head {
-    margin-bottom: 36px;
-}
-
-/* Result card */
-.verify-credential-result-card {
-    max-width: 720px;
-    margin: 0 auto;
-    background: var(--secondary-color);
-    border: 1px solid var(--line);
-    border-top: 4px solid var(--primary-color);
-    border-radius: var(--radius-lg);
-    padding: 30px 28px;
-    box-shadow: var(--shadow-md);
-}
-
-/* Status row */
-.verify-credential-result-status {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    background: var(--primary-tint);
-    border: 1px solid var(--primary-tint-2);
-    border-radius: var(--radius-md);
-    padding: 1.1rem 1.25rem;
-    margin-bottom: 18px;
-}
-
-.verify-credential-result-icon {
-    flex: 0 0 auto;
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
-    color: var(--secondary-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    box-shadow: 0 10px 22px rgba(255, 0, 0, .3);
-}
-
-.verify-credential-result-label {
-    display: block;
-    font-family: var(--font-head);
-    font-size: .66rem;
-    font-weight: 700;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    color: var(--primary-dark);
-    margin-bottom: 2px;
-}
-
-.verify-credential-result-text {
-    margin: 0;
-    font-family: var(--font-head);
-    font-weight: 700;
-    color: var(--ink);
-    font-size: 1.02rem;
-    line-height: 1.5;
-}
-
-/* Documented result field slots */
-.verify-credential-result-fields {
-    border: 1px solid var(--line);
-    border-radius: var(--radius-md);
-    overflow: hidden;
-}
-
-.verify-credential-result-row {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    padding: .9rem 1.15rem;
-    background: var(--light-bg);
-}
-
-.verify-credential-result-row:nth-child(even) {
-    background: var(--secondary-color);
-}
-
-.verify-credential-result-row+.verify-credential-result-row {
-    border-top: 1px solid var(--line);
-}
-
-.verify-credential-result-slot-label {
-    font-family: var(--font-head);
-    font-size: .66rem;
-    font-weight: 700;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    color: var(--muted);
-}
-
-.verify-credential-result-slot-text {
-    margin: 0;
-    font-size: .94rem;
-    line-height: 1.6;
-    color: var(--body-text);
-}
 
 
 /* =========================
@@ -14997,122 +14452,7 @@ a {
 }
 
 
-/* =========================
-   07. HIDDEN STATE
-========================= */
-.verify-credential-is-hidden {
-    display: none !important;
-}
 
-
-/* =========================
-   08. SCROLL REVEAL
-   (page-specific hook — never conflicts with the
-   reveal observers used on other pages)
-========================= */
-.verify-credential-js .verify-credential-reveal {
-    opacity: 0;
-    transform: translateY(26px);
-    transition: opacity .7s cubic-bezier(.22, .61, .36, 1),
-        transform .7s cubic-bezier(.22, .61, .36, 1);
-    will-change: opacity, transform;
-}
-
-.verify-credential-js .verify-credential-reveal.is-visible {
-    opacity: 1;
-    transform: none;
-}
-
-.verify-credential-js .verify-credential-reveal.verify-credential-d1 {
-    transition-delay: .1s;
-}
-
-.verify-credential-js .verify-credential-reveal.verify-credential-d2 {
-    transition-delay: .2s;
-}
-
-
-
-
-
-
-/* Contact */
-
-
-
-
-
-
-
-/* =========================
-   03. ENQUIRY TYPES
-========================= */
-.contact-cpa-types {
-    background: var(--secondary-color);
-}
-
-.contact-cpa-types .section-head {
-    margin-bottom: 40px;
-}
-
-/* Types panel with red top accent (dark surface) */
-.contact-cpa-types-panel {
-    position: relative;
-    max-width: 880px;
-    margin: 0 auto;
-    background: var(--dark-bg);
-    border: 1px solid var(--dark-border);
-    border-radius: var(--radius-lg);
-    padding: 30px 26px;
-    overflow: hidden;
-}
-
-.contact-cpa-types-panel::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 24px;
-    right: 24px;
-    height: 4px;
-    border-radius: 0 0 4px 4px;
-    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
-}
-
-.contact-cpa-type-chips {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: .6rem;
-}
-
-.contact-cpa-type-chip {
-    display: inline-flex;
-    align-items: center;
-    gap: .5rem;
-    background: rgba(255, 255, 255, .03);
-    border: 1px solid var(--dark-border);
-    border-radius: 999px;
-    padding: .65rem 1.15rem;
-    font-family: var(--font-head);
-    font-weight: 700;
-    font-size: .88rem;
-    color: var(--secondary-color);
-    transition: all .25s ease;
-}
-
-.contact-cpa-type-chip .bi {
-    color: var(--primary-soft);
-    font-size: 1rem;
-}
-
-.contact-cpa-type-chip:hover {
-    border-color: rgba(255, 0, 0, .5);
-    background: rgba(255, 0, 0, .06);
-    transform: translateY(-2px);
-}
 
 
 /* =========================
@@ -15175,19 +14515,10 @@ a {
 .contact-cpa-card:hover .contact-cpa-card-icon {
     background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
     color: var(--secondary-color);
-    box-shadow: 0 12px 24px rgba(255, 0, 0, .3);
+    box-shadow: 0 12px 24px rgba(178, 151, 80, .3);
 }
 
-.contact-cpa-card-label {
-    display: block;
-    font-family: var(--font-head);
-    font-size: .66rem;
-    font-weight: 700;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 6px;
-}
+
 
 .contact-cpa-card-text {
     margin: 0;
@@ -15204,13 +14535,7 @@ a {
 /* =========================
    05. CONTACT FORM
 ========================= */
-.contact-cpa-form {
-    background: var(--secondary-color);
-}
 
-.contact-cpa-form .section-head {
-    margin-bottom: 36px;
-}
 
 /* Form card with red top accent */
 .contact-cpa-form-card {
@@ -15262,7 +14587,7 @@ a {
 
 .contact-cpa-form-card .form-control:focus {
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(255, 0, 0, .12);
+    box-shadow: 0 0 0 3px rgba(178, 151, 80, .12);
 }
 
 .contact-cpa-form-card textarea.form-control {
@@ -15459,31 +14784,7 @@ a {
 }
 
 
-/* =========================
-   08. SCROLL REVEAL
-   (page-specific hook — never conflicts with the
-   reveal observers used on other pages)
-========================= */
-.contact-cpa-js .contact-cpa-reveal {
-    opacity: 0;
-    transform: translateY(26px);
-    transition: opacity .7s cubic-bezier(.22, .61, .36, 1),
-        transform .7s cubic-bezier(.22, .61, .36, 1);
-    will-change: opacity, transform;
-}
 
-.contact-cpa-js .contact-cpa-reveal.is-visible {
-    opacity: 1;
-    transform: none;
-}
-
-.contact-cpa-js .contact-cpa-reveal.contact-cpa-d1 {
-    transition-delay: .1s;
-}
-
-.contact-cpa-js .contact-cpa-reveal.contact-cpa-d2 {
-    transition-delay: .2s;
-}
 
 
 
@@ -15533,7 +14834,7 @@ IMPORTANT:
     width: 760px;
     height: 760px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 0, 0, .28), transparent 65%);
+    background: radial-gradient(circle, rgba(8, 35, 64, .28), transparent 65%);
 }
 
 .page-hero::after {
@@ -15572,11 +14873,7 @@ IMPORTANT:
     margin: 14px auto 16px;
 }
 
-/* About page has a slightly different bottom margin in the source CSS. */
-.page-hero-title--about {
-    line-height: 1.14;
-    margin-bottom: 18px;
-}
+
 
 /* Common hero lead */
 .page-hero-lead {
@@ -15587,19 +14884,7 @@ IMPORTANT:
 }
 
 /* Small modifier classes preserve the source page-specific widths. */
-.page-hero-lead--600 { max-width: 600px; }
-.page-hero-lead--620 { max-width: 620px; }
-.page-hero-lead--640 { max-width: 640px; }
-.page-hero-lead--660 { max-width: 660px; }
-.page-hero-lead--680 { max-width: 680px; }
-.page-hero-lead--about {
-    font-size: 1.05rem;
-    max-width: 640px;
-    margin-bottom: 32px;
-}
-.page-hero-lead--no-bottom {
-    margin-bottom: 0;
-}
+
 
 /* Hero navigation */
 .page-hero-nav {
@@ -15628,19 +14913,19 @@ IMPORTANT:
 
 .page-nav-pill:hover {
     color: var(--secondary-color);
-    border-color: rgba(255, 0, 0, .5);
-    background: rgba(255, 0, 0, .08);
+    border-color: rgba(178, 151, 80, .5);
+    background: rgba(178, 151, 80, .08);
     transform: translateY(-2px);
 }
 
 .page-nav-pill .bi {
-    color: var(--primary-soft);
+    color: var(--secondary-color);
     font-size: 1rem;
     transition: color .25s ease;
 }
 
 .page-nav-pill:hover .bi {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 /* Hero animation */

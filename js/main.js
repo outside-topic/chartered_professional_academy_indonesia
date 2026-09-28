@@ -2364,51 +2364,7 @@ const prefersReducedMotion =
     items.forEach(function (el) { observer.observe(el); });
   })();
 
-  /* =========================
-     HELP CENTRE SEARCH JS  (page-specific)
-     Client-side filter over the real document content:
-     the 11 help-category cards and the 7 popular help
-     questions. No fake results, no backend. Shows the
-     handbook's own "Empty search" microcopy when nothing
-     matches, and a clear button when a query is active.
-  ========================= */
-  (function helpSearch() {
-    var input = document.getElementById('help-centre-search-input');
-    var clearBtn = document.getElementById('helpCentreSearchClear');
-    var emptyState = document.getElementById('helpCentreEmpty');
-    if (!input) return;
-
-    var items = document.querySelectorAll('[data-help-searchable]');
-
-    var applyFilter = function () {
-      var query = input.value.trim().toLowerCase();
-      var visibleCount = 0;
-
-      items.forEach(function (el) {
-        var matches = el.textContent.toLowerCase().indexOf(query) !== -1;
-        var show = query === '' || matches;
-        el.classList.toggle('help-centre-is-hidden', !show);
-        if (show) visibleCount++;
-      });
-
-      if (emptyState) {
-        emptyState.classList.toggle('help-centre-is-hidden', visibleCount > 0);
-      }
-      if (clearBtn) {
-        clearBtn.classList.toggle('help-centre-is-hidden', query === '');
-      }
-    };
-
-    input.addEventListener('input', applyFilter);
-
-    if (clearBtn) {
-      clearBtn.addEventListener('click', function () {
-        input.value = '';
-        applyFilter();
-        input.focus();
-      });
-    }
-  })();
+ 
 })();
 
 
