@@ -227,7 +227,8 @@ a {
 ========================= */
 .topbar {
     background: var(--primary-color);
-    color: var(--secondary-color);
+    /* color: var(--secondary-color); */
+    color: #ffc836;
 }
 
 /* Shared wrapper for both rows (messages + utility) */
