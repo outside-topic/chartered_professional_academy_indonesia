@@ -2878,17 +2878,6 @@ a {
     background: rgba(178, 151, 80, .06);
 }
 
-.wcc-question-num {
-    position: absolute;
-    top: 14px;
-    right: 16px;
-    font-family: var(--font-head);
-    font-size: .72rem;
-    font-weight: 800;
-    letter-spacing: .12em;
-    color: rgba(255, 107, 107, .55);
-}
-
 .wcc-question-icon {
     width: 56px;
     height: 56px;
@@ -3159,20 +3148,7 @@ a {
     margin-bottom: 16px;
 }
 
-.pcert-stage-num {
-    width: 48px;
-    height: 48px;
-    border-radius: 14px;
-    background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
-    color: var(--secondary-color);
-    font-family: var(--font-head);
-    font-weight: 800;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 10px 20px rgba(8, 35, 64, .28);
-}
+
 
 .pcert-stage-icon {
     width: 42px;
@@ -3281,19 +3257,6 @@ a {
    (page-specific hook — never conflicts with the
    reveal observers used on other pages)
 ========================= */
-.pcert-js .pcert-reveal {
-    opacity: 0;
-    transform: translateY(26px);
-    transition: opacity .7s cubic-bezier(.22, .61, .36, 1),
-        transform .7s cubic-bezier(.22, .61, .36, 1);
-    will-change: opacity, transform;
-}
-
-.pcert-js .pcert-reveal.is-visible {
-    opacity: 1;
-    transform: none;
-}
-
 
 
 
@@ -3478,23 +3441,6 @@ a {
 }
 
 
-/* =========================
-   05. SCROLL REVEAL
-   (page-specific hook — never conflicts with the
-   reveal observers used on other pages)
-========================= */
-.carea-js .carea-reveal {
-    opacity: 0;
-    transform: translateY(26px);
-    transition: opacity .7s cubic-bezier(.22, .61, .36, 1),
-        transform .7s cubic-bezier(.22, .61, .36, 1);
-    will-change: opacity, transform;
-}
-
-.carea-js .carea-reveal.is-visible {
-    opacity: 1;
-    transform: none;
-}
 
 
 
@@ -4775,23 +4721,6 @@ a {
 }
 
 
-/* =========================
-   08. SCROLL REVEAL
-   (page-specific hook — never conflicts with the
-   reveal observers used on other pages)
-========================= */
-.crcpd-js .crcpd-reveal {
-    opacity: 0;
-    transform: translateY(26px);
-    transition: opacity .7s cubic-bezier(.22, .61, .36, 1),
-        transform .7s cubic-bezier(.22, .61, .36, 1);
-    will-change: opacity, transform;
-}
-
-.crcpd-js .crcpd-reveal.is-visible {
-    opacity: 1;
-    transform: none;
-}
 
 
 
@@ -4843,10 +4772,7 @@ a {
     box-shadow: var(--shadow-sm);
 }
 
-.cfq-item.is-open {
-    border-color: var(--primary-tint-2);
-    box-shadow: var(--shadow-md);
-}
+
 
 /* Remove Bootstrap's group divider + radius handling
    (scoped to this accordion only) */
@@ -5020,25 +4946,6 @@ a {
     border-color: var(--primary-tint-2);
     box-shadow: var(--shadow-sm);
     transform: translateY(-2px);
-}
-
-
-/* =========================
-   04. SCROLL REVEAL
-   (page-specific hook — never conflicts with the
-   reveal observers used on other pages)
-========================= */
-.cfq-js .cfq-reveal {
-    opacity: 0;
-    transform: translateY(26px);
-    transition: opacity .7s cubic-bezier(.22, .61, .36, 1),
-        transform .7s cubic-bezier(.22, .61, .36, 1);
-    will-change: opacity, transform;
-}
-
-.cfq-js .cfq-reveal.is-visible {
-    opacity: 1;
-    transform: none;
 }
 
 
@@ -13172,31 +13079,8 @@ a {
 }
 
 
-/* =========================
-   08. SCROLL REVEAL
-   (page-specific hook — never conflicts with the
-   reveal observers used on other pages)
-========================= */
-.help-centre-js .help-centre-reveal {
-    opacity: 0;
-    transform: translateY(26px);
-    transition: opacity .7s cubic-bezier(.22, .61, .36, 1),
-        transform .7s cubic-bezier(.22, .61, .36, 1);
-    will-change: opacity, transform;
-}
 
-.help-centre-js .help-centre-reveal.is-visible {
-    opacity: 1;
-    transform: none;
-}
 
-.help-centre-js .help-centre-reveal.help-centre-d1 {
-    transition-delay: .1s;
-}
-
-.help-centre-js .help-centre-reveal.help-centre-d2 {
-    transition-delay: .2s;
-}
 
 
 
