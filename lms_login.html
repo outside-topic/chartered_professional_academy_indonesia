@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#082340">
+<meta name="description" content="Secure member login for Chartered Professional Academy — access your certifications, membership and professional development programmes.">
+<title>Member Login — Chartered Professional Academy</title>
+
+<!-- Fonts: Plus Jakarta Sans (headings) + Inter (body) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Bootstrap 5 (CSS only — no Bootstrap JS components are used on this page) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+<style>
+/* ==========================================================================
+   CHARTERED PROFESSIONAL ACADEMY — MEMBER LOGIN
+   --------------------------------------------------------------------------
+   1. DESIGN TOKENS   — DEMO ONLY (see note)
+   2. PAGE BASE
+   3. LAYOUT SHELL
+   4. BRAND PANEL (left)
+   5. BRAND LOCKUP / CREST
+   6. AUTH AREA & LOGIN CARD (right)
+   7. FORM FIELDS
+   8. LOGIN BUTTON & STATUS
+   9. LINKS & META
+   10. ANIMATIONS
+   11. RESPONSIVE
+   12. REDUCED MOTION / ACCESSIBILITY
+   ========================================================================== */
+
+/* ==========================================================================
+   1. DESIGN TOKENS — DEMO ONLY
+   These variables ALREADY EXIST in the site's global stylesheet.
+   They are duplicated here ONLY so this page can be previewed standalone.
+   >>> DO NOT duplicate this :root block when integrating into production. <<<
+   ========================================================================== */
+:root {
+    --primary-color: #082340;
+    --secondary-color: #b29750;
+
+    /* Brand-derived shades */
+    --primary-dark: #061a30;
+    --primary-darker: #04111f;
+    --primary-tint: #eef3f8;
+    --primary-tint-2: #dce7f1;
+    --primary-soft: #3d5d7c;
+
+    /* Neutrals */
+    --ink: #12161c;
+    --body-text: #454e5b;
+    --muted: #6d7683;
+    --light-bg: #f6f7fa;
+    --line: #e8eaef;
+
+    /* Dark surfaces */
+    --dark-bg: #082340;
+    --dark-bg-2: #0d1b2a;
+    --dark-card: rgba(255, 255, 255, .045);
+    --dark-border: rgba(255, 255, 255, .09);
+    --dark-text: #aab3bf;
+
+    /* Type */
+    --font-head: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+
+    /* Shape & elevation */
+    --radius-lg: 22px;
+    --radius-md: 16px;
+    --radius-sm: 12px;
+
+    --shadow-sm: 0 6px 18px rgba(8, 35, 64, .07);
+    --shadow-md: 0 14px 34px rgba(8, 35, 64, .10);
+    --shadow-lg: 0 26px 64px rgba(178, 151, 80, .16);
+
+    /* Brand shadow */
+    --shadow-primary: 0 14px 30px rgba(8, 35, 64, .28);
+
+    /* Semantic token — used for form validation only (not a brand color) */
+    --color-danger: #b42318;
+}
+
+/* ==========================================================================
+   2. PAGE BASE
+   ========================================================================== */
+body {
+    min-height: 100vh;
+    background: var(--light-bg);
+    color: var(--body-text);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+:focus-visible { outline: 2px solid var(--secondary-color); outline-offset: 2px; }
+
+.skip-link {
+    position: fixed;
+    top: -60px;
+    left: 16px;
+    z-index: 200;
+    padding: 10px 18px;
+    background: var(--primary-color);
+    color: #fff;
+    font: 600 13px/1 var(--font-body);
+    border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+    text-decoration: none;
+    transition: top .2s ease;
+}
+.skip-link:focus { top: 0; }
+
+/* ==========================================================================
+   3. LAYOUT SHELL — split screen (brand panel / login area)
+   ========================================================================== */
+.auth-shell {
+    display: grid;
+    grid-template-columns: minmax(0, 42fr) minmax(0, 58fr); /* ≈ 40 / 60 split */
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+.auth-shell > * { min-width: 0; }
+
+/* ==========================================================================
+   4. BRAND PANEL (left) — deep navy with subtle CSS-only decoration
+   ========================================================================== */
+.brand-panel {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    background:
+        radial-gradient(900px 600px at -12% 112%, rgba(178, 151, 80, .09), transparent 62%),
+        var(--primary-color);
+    color: #fff;
+}
+
+/* Subtle dot grid, fading toward the bottom-left */
+.brand-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, .06) 1px, transparent 1.4px);
+    background-size: 26px 26px;
+    -webkit-mask-image: linear-gradient(215deg, rgba(0, 0, 0, .9) 0%, transparent 62%);
+            mask-image: linear-gradient(215deg, rgba(0, 0, 0, .9) 0%, transparent 62%);
+    pointer-events: none;
+}
+
+.brand-panel__inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    padding: clamp(28px, 3.6vw, 54px);
+}
+
+/* Decorative shapes (kept intentionally quiet) */
+.deco { position: absolute; pointer-events: none; }
+.deco-ring { border-radius: 50%; border: 1px solid rgba(255, 255, 255, .08); }
+.deco-ring--lg   { width: 560px; height: 560px; top: -200px; right: -180px; animation: drift 28s ease-in-out infinite; }
+.deco-ring--gold { width: 320px; height: 320px; bottom: -110px; left: -120px; border-color: rgba(178, 151, 80, .30); animation: drift 18s ease-in-out infinite; }
+.deco-ring--sm   { width: 120px; height: 120px; right: 12%; top: 30%; border-color: rgba(178, 151, 80, .35); }
+.deco-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--secondary-color);
+    right: calc(12% + 58px); top: calc(30% + 56px);
+    opacity: .9;
+}
+
+/* Statement block — vertically centered in the remaining space */
+.brand-panel__statement {
+    margin-block: auto;
+    padding-block: 56px;
+    max-width: 30rem;
+    animation: fade-up .6s .15s cubic-bezier(.22, .75, .3, 1) both;
+}
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 22px;
+    font: 600 11px/1 var(--font-head);
+    letter-spacing: .24em;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+}
+.eyebrow::before {
+    content: "";
+    width: 28px; height: 1px;
+    background: currentColor;
+    opacity: .85;
+}
+
+.statement {
+    margin: 0;
+    max-width: 24ch;
+    font: 700 clamp(1.55rem, 1rem + 1.45vw, 2.1rem)/1.3 var(--font-head);
+    letter-spacing: -.02em;
+    color: #fff;
+}
+.statement em { font-style: normal; color: var(--secondary-color); }
+
+.statement-sub {
+    margin: 18px 0 0;
+    max-width: 36ch;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--dark-text);
+}
+
+.brand-panel__meta {
+    margin: 0;
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--dark-border);
+    font-size: 12.5px;
+    letter-spacing: .02em;
+    color: var(--dark-text);
+}
+
+/* Small tag shown only in the compact mobile header band */
+.brand-panel__tag {
+    display: none;
+    margin-left: auto;
+    font: 600 10.5px/1 var(--font-head);
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+}
+
+/* ==========================================================================
+   5. BRAND LOCKUP / CREST
+   (Text + CSS/SVG crest fallback — replace with the official logo asset.)
+   ========================================================================== */
+.brand-lockup {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    animation: fade-up .6s .05s cubic-bezier(.22, .75, .3, 1) both;
+}
+.brand-crest { display: inline-flex; flex: 0 0 auto; }
+.brand-crest svg { display: block; }
+
+/* Crest coloring per surface */
+.brand-panel .brand-crest { --crest-stroke: var(--secondary-color); --crest-text: var(--secondary-color); }
+.brand-panel .brand-crest svg { width: 52px; height: 61px; }
+
+.auth-card .brand-crest { --crest-stroke: var(--secondary-color); --crest-text: var(--primary-color); }
+.auth-card .brand-crest svg { width: 40px; height: 47px; }
+
+.brand-name {
+    font: 700 15px/1.22 var(--font-head);
+    letter-spacing: .02em;
+    color: #fff;
+}
+
+/* ==========================================================================
+   6. AUTH AREA & LOGIN CARD (right)
+   ========================================================================== */
+.auth-area {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(28px, 5vh, 72px) clamp(20px, 4vw, 56px);
+}
+
+/* Faint background geometry behind the card */
+.auth-area::before,
+.auth-area::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+.auth-area::before { width: 540px; height: 540px; top: -190px; right: -160px; border: 1px solid rgba(8, 35, 64, .06); }
+.auth-area::after  { width: 240px; height: 240px; bottom: -110px; left: -80px;  border: 1px solid rgba(178, 151, 80, .16); }
+
+.auth-card {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 456px;
+    padding: clamp(28px, 3.2vw, 44px);
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    animation: card-in .6s .08s cubic-bezier(.22, .75, .3, 1) both;
+}
+
+.auth-card__brand { display: flex; align-items: center; gap: 12px; margin-bottom: 26px; }
+.auth-card__brand .brand-name { color: var(--primary-color); font-size: 13px; }
+
+.gold-rule {
+    display: block;
+    width: 42px; height: 3px;
+    margin-bottom: 18px;
+    border-radius: 99px;
+    background: var(--secondary-color);
+}
+
+.auth-title {
+    margin: 0 0 10px;
+    font: 800 clamp(1.5rem, 1.15rem + .8vw, 1.8rem)/1.18 var(--font-head);
+    letter-spacing: -.02em;
+    color: var(--primary-color);
+}
+
+.auth-sub {
+    margin: 0 0 30px;
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--muted);
+}
+
+/* ==========================================================================
+   7. FORM FIELDS
+   ========================================================================== */
+.field { margin-bottom: 20px; }
+
+.field__label {
+    display: block;
+    margin-bottom: 8px;
+    font: 600 13px/1.2 var(--font-body);
+    letter-spacing: .01em;
+    color: var(--ink);
+}
+
+.field__head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+.field__head .field__label { margin-bottom: 0; }
+
+.field__control { position: relative; }
+
+.field__icon {
+    position: absolute;
+    top: 50%; left: 16px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: var(--muted);
+    pointer-events: none;
+    transition: color .2s ease;
+}
+.field__control:focus-within .field__icon { color: var(--secondary-color); }
+
+.auth-input {
+    width: 100%;
+    height: 54px;
+    padding: 0 16px 0 45px;
+    font: 500 15px/1.2 var(--font-body);
+    color: var(--ink);
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    box-shadow: none;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+.auth-input::placeholder { color: var(--muted); opacity: 1; }
+.auth-input:hover { border-color: var(--primary-tint-2); }
+.auth-input:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3.5px rgba(178, 151, 80, .16);
+    outline: none;
+}
+.auth-input--pw { padding-right: 54px; }
+
+/* Keep autofilled fields clean on iOS/Chrome */
+.auth-input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 44px #fff inset;
+    -webkit-text-fill-color: var(--ink);
+    caret-color: var(--ink);
+}
+
+/* Show / hide password toggle */
+.pw-toggle {
+    position: absolute;
+    top: 50%; right: 8px;
+    transform: translateY(-50%);
+    display: grid;
+    place-items: center;
+    width: 38px; height: 38px;
+    border: 0;
+    border-radius: 9px;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    transition: color .2s ease, background-color .2s ease;
+}
+.pw-toggle:hover { color: var(--primary-color); background: var(--primary-tint); }
+.pw-toggle:focus-visible { outline: 2px solid var(--secondary-color); outline-offset: 1px; }
+.pw-toggle .bi { font-size: 17px; }
+
+/* Inline validation messages */
+.field__error {
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+    margin: 9px 0 0;
+    font-size: 12.5px;
+    line-height: 1.45;
+    color: var(--color-danger);
+}
+.field__error[hidden] { display: none; }
+.field__error .bi { flex: 0 0 auto; font-size: 13px; margin-top: 1px; }
+
+.field.is-invalid .auth-input { border-color: var(--color-danger); }
+.field.is-invalid .auth-input:focus { box-shadow: 0 0 0 3.5px rgba(180, 35, 24, .12); }
+.field.is-invalid .field__icon { color: var(--color-danger); }
+
+/* ==========================================================================
+   8. LOGIN BUTTON & STATUS
+   ========================================================================== */
+.btn-login {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    height: 54px;
+    margin-top: 6px;
+    font: 600 15.5px/1 var(--font-head);
+    letter-spacing: .015em;
+    color: #fff;
+    background: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+.btn-login:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-primary);
+}
+.btn-login:active { transform: translateY(0); box-shadow: none; }
+.btn-login:focus-visible { outline: 2px solid var(--secondary-color); outline-offset: 3px; }
+.btn-login .bi-arrow-right { font-size: 17px; transition: transform .2s ease; }
+.btn-login:hover .bi-arrow-right { transform: translateX(3px); }
+.btn-login:disabled { opacity: .8; cursor: default; transform: none; box-shadow: none; }
+
+/* Loading spinner (shown while the simulated request runs) */
+.btn-login .spinner {
+    display: none;
+    width: 16px; height: 16px;
+    border: 2px solid rgba(255, 255, 255, .35);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin .7s linear infinite;
+}
+.btn-login.is-loading .spinner { display: inline-block; }
+.btn-login.is-loading .bi-arrow-right { display: none; }
+
+.form-status {
+    display: none;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 16px 0 0;
+    font: 500 13.5px/1.5 var(--font-body);
+    color: var(--primary-color);
+}
+.form-status.is-visible { display: flex; }
+.form-status .bi { color: var(--secondary-color); font-size: 15px; margin-top: 1px; }
+
+/* ==========================================================================
+   9. LINKS & META
+   ========================================================================== */
+.auth-back { margin-top: 20px; text-align: center; }
+
+.link-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font: 500 14px/1 var(--font-body);
+    color: var(--body-text);
+    text-decoration: none;
+    transition: color .2s ease;
+}
+.link-back .bi { font-size: 18px; transition: transform .2s ease; }
+.link-back:hover { color: var(--primary-color); }
+.link-back:hover .bi { transform: translateX(-3px); }
+
+.link-forgot {
+    font: 600 12.5px/1.2 var(--font-body);
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color .18s ease;
+}
+.link-forgot:hover { color: var(--primary-soft); text-decoration: underline; }
+
+.auth-secure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 24px 0 0;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: var(--muted);
+    text-align: center;
+}
+.auth-secure .bi { flex: 0 0 auto; color: var(--secondary-color); font-size: 14px; }
+
+/* ==========================================================================
+   10. ANIMATIONS
+   ========================================================================== */
+@keyframes card-in {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-up {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes drift {
+    0%, 100% { transform: translate(0, 0); }
+    50%      { transform: translate(-14px, 16px); }
+}
+@keyframes spin { to { transform: rotate(1turn); } }
+
+/* ==========================================================================
+   11. RESPONSIVE
+   ========================================================================== */
+
+/* Small desktop / large laptop — slightly narrower brand panel */
+@media (max-width: 1199.98px) {
+    .auth-shell { grid-template-columns: minmax(0, 37fr) minmax(0, 63fr); }
+    .brand-panel__inner { padding: clamp(26px, 3vw, 40px); }
+    .statement { font-size: clamp(1.45rem, .95rem + 1.2vw, 1.8rem); }
+}
+
+/* Tablet & below — brand panel becomes a compact navy header band */
+@media (max-width: 991.98px) {
+    .auth-shell { grid-template-columns: 1fr; }
+
+    .brand-panel { border-bottom: 1px solid var(--dark-border); }
+    .brand-panel::before,
+    .brand-panel .deco { display: none; }
+    .brand-panel__inner {
+        flex-direction: row;
+        align-items: center;
+        gap: 14px;
+        padding: 15px clamp(20px, 4vw, 32px);
+    }
+    .brand-panel__statement,
+    .brand-panel__meta { display: none; }
+    .brand-panel .brand-crest svg { width: 38px; height: 45px; }
+    .brand-name { font-size: 13px; }
+    .brand-panel__tag { display: inline-block; }
+    .brand-panel .brand-lockup { animation: none; }
+
+    .auth-card__brand { display: none; } /* branding already present in the band */
+    .auth-area { padding: 40px 20px 48px; }
+    .auth-area::before { width: 420px; height: 420px; top: -160px; right: -150px; }
+}
+
+/* Mobile — form-first layout, comfortable touch sizes */
+@media (max-width: 575.98px) {
+    .auth-area { padding: 30px 16px 40px; }
+    .auth-card { padding: 30px 22px 26px; border-radius: var(--radius-md); }
+    .auth-title { font-size: 24px; }
+    .auth-sub { margin-bottom: 26px; font-size: 14.5px; }
+    .auth-input,
+    .btn-login { height: 52px; }
+    .auth-input { font-size: 16px; } /* prevents iOS zoom-on-focus */
+    .field { margin-bottom: 18px; }
+}
+
+/* ==========================================================================
+   12. REDUCED MOTION / ACCESSIBILITY
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#email">Skip to login form</a>
+
+<main class="auth-shell">
+
+    <!-- ==================================================
+         BRAND PANEL (left — becomes a compact band on mobile)
+         ================================================== -->
+    <aside class="brand-panel" aria-label="Chartered Professional Academy">
+        <span class="deco deco-ring deco-ring--lg" aria-hidden="true"></span>
+        <span class="deco deco-ring deco-ring--gold" aria-hidden="true"></span>
+        <span class="deco deco-ring deco-ring--sm" aria-hidden="true"></span>
+        <span class="deco deco-dot" aria-hidden="true"></span>
+
+        <div class="brand-panel__inner">
+
+            <!-- LOGO: replace this crest + text lockup with the official
+                 academy logo asset (e.g. <img src="logo.svg" …>) when available -->
+            <a href="#" class="brand-lockup" aria-label="Chartered Professional Academy — home">
+                <img src="images/CPA Futter logo-02.png" style="width: 50% !important;" class="img-fluid" alt="">
+            </a>
+
+            <div class="brand-panel__statement">
+                <p class="eyebrow">Member Learning Portal</p>
+                <p class="statement"><em>Learn. Develop. Advance.</em></p>
+                <p class="statement-sub">Access your courses and professional development resources.</p>
+            </div>
+
+            <p class="brand-panel__meta">© 2025 Chartered Professional Academy Indonesia</p>
+
+            <span class="brand-panel__tag">Member Portal</span>
+        </div>
+    </aside>
+
+    <!-- ==================================================
+         LOGIN AREA (right)
+         ================================================== -->
+    <section class="auth-area" aria-label="Member login">
+        <article class="auth-card">
+
+            <!-- Compact brand lockup (visible on desktop card only) -->
+            <div class="auth-card__brand">
+                <img src="images/CPA logo White.jpg.jpeg" class="img-fluid" style="width: 50%;" alt="">
+            </div>
+
+            <span class="gold-rule" aria-hidden="true"></span>
+
+            <h1 class="auth-title">Welcome back</h1>
+            <p class="auth-sub">Sign in to continue your professional development journey.</p>
+
+            <form id="loginForm" novalidate>
+
+                <!-- Email -->
+                <div class="field" id="fieldEmail">
+                    <label class="field__label" for="email">Email address</label>
+                    <div class="field__control">
+                        <i class="bi bi-envelope field__icon" aria-hidden="true"></i>
+                        <input type="email" id="email" name="email" class="form-control auth-input"
+                               placeholder="name@organization.com" autocomplete="email" required
+                               aria-describedby="emailError">
+                    </div>
+                    <p class="field__error" id="emailError" hidden></p>
+                </div>
+
+                <!-- Password -->
+                <div class="field" id="fieldPassword">
+                    <div class="field__head">
+                        <label class="field__label" for="password">Password</label>
+                        <a href="#" class="link-forgot">Forgot password?</a>
+                    </div>
+                    <div class="field__control">
+                        <i class="bi bi-lock field__icon" aria-hidden="true"></i>
+                        <input type="password" id="password" name="password" class="form-control auth-input auth-input--pw"
+                               placeholder="Enter your password" autocomplete="current-password" required
+                               aria-describedby="passwordError">
+                        <button type="button" class="pw-toggle" id="pwToggle"
+                                aria-label="Show password" aria-pressed="false">
+                            <i class="bi bi-eye" id="pwIcon" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <p class="field__error" id="passwordError" hidden></p>
+                </div>
+
+                <button type="submit" class="btn-login" id="loginBtn">
+                    <span class="spinner" aria-hidden="true"></span>
+                    <span>Login</span>
+                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                </button>
+
+                <div class="form-status" id="formStatus" role="status"></div>
+            </form>
+
+            <div class="auth-back">
+                <a href="#" class="link-back">
+                    <i class="bi bi-arrow-left-short" aria-hidden="true"></i> Back to website
+                </a>
+            </div>
+
+            <p class="auth-secure">
+                <i class="bi bi-shield-check" aria-hidden="true"></i>
+                Secure, encrypted connection — your credentials are never shared.
+            </p>
+
+        </article>
+    </section>
+
+</main>
+
+<!-- Reusable crest symbol (swap for the real logo asset when available) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="cpa-crest" viewBox="0 0 44 52">
+        <path d="M4 8.6 22 3l18 5.6v14.6c0 13.2-7.4 22.5-18 26.6C11.4 45.7 4 36.4 4 23.2Z"
+              style="fill:none;stroke:var(--crest-stroke,#b29750);stroke-width:2.4;stroke-linejoin:round"/>
+        <text x="22" y="29.5" text-anchor="middle"
+              style="font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:11.5px;font-weight:800;letter-spacing:.05em;fill:var(--crest-text,#b29750)">CPA</text>
+    </symbol>
+</svg>
+
+<script>
+/* ============================================================
+   LOGIN PAGE INTERACTIONS — vanilla JS, no dependencies
+   1. Password show / hide toggle (accessible)
+   2. Login form validation + simulated submit (demo only —
+      replace the timeout with a real fetch() to your auth API)
+   ============================================================ */
+(function () {
+    'use strict';
+
+    /* ---------- 1. Password show / hide toggle ---------- */
+    var pwInput  = document.getElementById('password');
+    var pwToggle = document.getElementById('pwToggle');
+    var pwIcon   = document.getElementById('pwIcon');
+
+    pwToggle.addEventListener('click', function () {
+        var show = pwInput.type === 'password';
+        pwInput.type = show ? 'text' : 'password';
+        pwIcon.classList.toggle('bi-eye', !show);
+        pwIcon.classList.toggle('bi-eye-slash', show);
+        pwToggle.setAttribute('aria-pressed', String(show));
+        pwToggle.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
+    });
+
+    /* ---------- 2. Login form (front-end demo) ---------- */
+    var form   = document.getElementById('loginForm');
+    var email  = document.getElementById('email');
+    var btn    = document.getElementById('loginBtn');
+    var status = document.getElementById('formStatus');
+
+    var fields = [
+        { input: email,   wrap: document.getElementById('fieldEmail'),    error: document.getElementById('emailError')    },
+        { input: pwInput, wrap: document.getElementById('fieldPassword'), error: document.getElementById('passwordError') }
+    ];
+
+    function setError(field, message) {
+        field.wrap.classList.add('is-invalid');
+        field.input.setAttribute('aria-invalid', 'true');
+        field.error.innerHTML = '<i class="bi bi-exclamation-circle" aria-hidden="true"></i><span>' + message + '</span>';
+        field.error.hidden = false;
+    }
+
+    function clearError(field) {
+        field.wrap.classList.remove('is-invalid');
+        field.input.removeAttribute('aria-invalid');
+        field.error.hidden = true;
+    }
+
+    fields.forEach(function (field) {
+        field.input.addEventListener('input', function () { clearError(field); });
+    });
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        status.classList.remove('is-visible');
+
+        var firstInvalid = null;
+
+        if (!email.value.trim()) {
+            setError(fields[0], 'Please enter the email address linked to your membership.');
+            firstInvalid = firstInvalid || email;
+        } else if (!email.checkValidity()) {
+            setError(fields[0], 'That email address doesn\u2019t look right — e.g. name@company.com.');
+            firstInvalid = firstInvalid || email;
+        } else {
+            clearError(fields[0]);
+        }
+
+        if (!pwInput.value) {
+            setError(fields[1], 'Please enter your password.');
+            firstInvalid = firstInvalid || pwInput;
+        } else {
+            clearError(fields[1]);
+        }
+
+        if (firstInvalid) {
+            firstInvalid.focus();
+            return;
+        }
+
+        /* Simulated request — replace with a real fetch() call */
+        btn.classList.add('is-loading');
+        btn.disabled = true;
+
+        window.setTimeout(function () {
+            btn.classList.remove('is-loading');
+            btn.disabled = false;
+            status.innerHTML = '<i class="bi bi-check2-circle" aria-hidden="true"></i><span>Signed in successfully — redirecting to your member dashboard\u2026</span>';
+            status.classList.add('is-visible');
+        }, 1100);
+    });
+})();
+</script>
+
+</body>
+</html>

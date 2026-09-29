@@ -370,9 +370,7 @@ a {
     transition: box-shadow .3s ease;
 }
 
-.site-header.is-scrolled {
-    box-shadow: 0 10px 30px rgba(18, 22, 28, .08);
-}
+
 
 .navbar {
     --bs-navbar-padding-y: .55rem;
@@ -390,53 +388,6 @@ a {
     box-shadow: 0 0 0 3px rgba(8, 35, 64, .25);
 }
 
-/* Brand */
-.brand-mark {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 42px;
-    height: 42px;
-    flex: 0 0 auto;
-    border-radius: 12px;
-    background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
-    color: var(--secondary-color);
-    font-family: var(--font-head);
-    font-weight: 800;
-    font-size: .95rem;
-    box-shadow: 0 8px 18px rgba(8, 35, 64, .28);
-}
-
-.brand-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.15;
-    margin-left: .65rem;
-}
-
-.brand-text strong {
-    font-family: var(--font-head);
-    font-weight: 800;
-    font-size: 1.05rem;
-    color: var(--ink);
-    letter-spacing: -.01em;
-}
-
-.brand-text small {
-    font-size: .64rem;
-    font-weight: 600;
-    letter-spacing: .09em;
-    text-transform: uppercase;
-    color: var(--muted);
-}
-
-.brand-text-light strong {
-    color: var(--secondary-color);
-}
-
-.brand-text-light small {
-    color: #8d97a5;
-}
 
 /* Nav links */
 .navbar-nav .nav-link {
@@ -2161,21 +2112,7 @@ a {
     flex: 0 0 auto;
 }
 
-.pvm-mission-num {
-    width: 48px;
-    height: 48px;
-    flex: 0 0 auto;
-    border-radius: 14px;
-    background: linear-gradient(140deg, var(--primary-color), var(--primary-darker));
-    color: var(--secondary-color);
-    font-family: var(--font-head);
-    font-weight: 800;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 10px 20px rgba(8, 35, 64, .25);
-}
+
 
 .pvm-mission-icon {
     width: 44px;
@@ -2269,23 +2206,7 @@ a {
 }
 
 
-/* =========================
-   07. SCROLL REVEAL
-   (page-specific hook — never conflicts with the
-   .about-cpa-reveal observer used on the About page)
-========================= */
-.pvm-js .pvm-reveal {
-    opacity: 0;
-    transform: translateY(26px);
-    transition: opacity .7s cubic-bezier(.22, .61, .36, 1),
-        transform .7s cubic-bezier(.22, .61, .36, 1);
-    will-change: opacity, transform;
-}
 
-.pvm-js .pvm-reveal.is-visible {
-    opacity: 1;
-    transform: none;
-}
 
 
 
@@ -3719,23 +3640,6 @@ a {
 }
 
 
-/* =========================
-   06. SCROLL REVEAL
-   (page-specific hook — never conflicts with the
-   reveal observers used on other pages)
-========================= */
-.cpath-js .cpath-reveal {
-    opacity: 0;
-    transform: translateY(26px);
-    transition: opacity .7s cubic-bezier(.22, .61, .36, 1),
-        transform .7s cubic-bezier(.22, .61, .36, 1);
-    will-change: opacity, transform;
-}
-
-.cpath-js .cpath-reveal.is-visible {
-    opacity: 1;
-    transform: none;
-}
 
 
 
@@ -4238,27 +4142,7 @@ a {
 }
 
 
-/* =========================
-   09. SCROLL REVEAL
-   (page-specific hook — never conflicts with the
-   reveal observers used on other pages)
-========================= */
-.acs-js .acs-reveal {
-    opacity: 0;
-    transform: translateY(26px);
-    transition: opacity .7s cubic-bezier(.22, .61, .36, 1),
-        transform .7s cubic-bezier(.22, .61, .36, 1);
-    will-change: opacity, transform;
-}
-
-.acs-js .acs-reveal.is-visible {
-    opacity: 1;
-    transform: none;
-}
-
-
-
-
+ 
 
 
 
